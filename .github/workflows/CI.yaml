@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:34
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: dependencies
+        run: |
+          sudo dnf install --assumeyes npm flatpak make desktop-file-utils gjs gtk3-devel
+          # Fixes npm ERR! Cannot read property 'length' of undefined
+          # sudo npm install -g npm
+          npm ci --ignore-scripts
+          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+          flatpak install --assumeyes --noninteractive flathub org.freedesktop.appstream-glib
+
+      - name: tests
+        run: |
+          ./node_modules/.bin/eslint --cache .
+          flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.appdata.xml
+          # --file-forwarding does not work on Github actions for some reason
+          # F: Can't get document portal mount path
+          # flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//40 --no-hints @@ data/re.sonny.Junction.desktop @@
+          desktop-file-validate --no-hints data/re.sonny.Junction.desktop
+          # Requires display server
+          # Unable to init server: Could not connect: Connection refused
+          # gtk-builder-tool validate src/*.ui
+          gjs -m test/*.test.js

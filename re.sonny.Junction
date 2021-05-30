@@ -1,0 +1,41 @@
+#!/usr/bin/env -S gjs -m
+
+// -*- mode: js; -*-
+
+globalThis.__DEV__ = true;
+
+import { programInvocationName } from "system";
+import GLib from "gi://GLib";
+
+const byteArray = imports.byteArray;
+
+const [filename] = GLib.filename_from_uri(import.meta.url);
+const dirname = GLib.path_get_dirname(filename);
+
+const [, , stderr, status] = GLib.spawn_command_line_sync(
+  `glib-compile-schemas --strict ${GLib.canonicalize_filename(
+    "./data",
+    dirname,
+  )}`,
+);
+if (status !== 0) {
+  throw new Error(byteArray.toString(stderr));
+}
+
+GLib.setenv(
+  "GSETTINGS_SCHEMA_DIR",
+  GLib.canonicalize_filename("./data", dirname),
+  true,
+);
+
+const loop = GLib.MainLoop.new(null, false);
+import("./src/main.js")
+  .then(({ default: main }) => {
+    loop.quit();
+    main([programInvocationName, ...ARGV], {
+      version: "dev",
+    });
+  })
+  .catch(logError);
+
+loop.run();

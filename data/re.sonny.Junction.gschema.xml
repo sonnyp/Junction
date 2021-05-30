@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist gettext-domain="Junction">
+  <schema id="re.sonny.Junction" path="/re/sonny/Junction/" />
+</schemalist>

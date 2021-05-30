@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component type="desktop">
+  <id>re.sonny.Junction</id>
+  <launchable type="desktop-id">re.sonny.Junction.desktop</launchable>
+  <name>Junction</name>
+  <developer_name>Sonny Piers</developer_name>
+  <update_contact>sonny@fastmail.net</update_contact>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <summary>Application chooser</summary>
+  <description>
+    <p>
+      Junction lets you choose the application to open a file
+      or URL.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>a</li>
+      <li>b</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/sonnyp/Junction</url>
+  <url type="bugtracker">https://github.com/sonnyp/Junction/issues</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-light.png
+      </image>
+      <caption>Junction main window</caption>
+    </screenshot>
+    <screenshot>
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-dark.png
+      </image>
+      <caption>Junction main window - dark mode</caption>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="1.0.0" date="2021-04-06">
+      <description>
+        <p>Initial release.</p>
+        <ul>
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>HighContrast</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
+</component>

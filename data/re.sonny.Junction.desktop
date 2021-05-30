@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Junction
+Comment=Application chooser
+Exec=re.sonny.Junction
+Terminal=false
+Type=Application
+Categories=Settings;System;Utility;DesktopSettings;GNOME;GTK;
+StartupNotify=true
+Icon=re.sonny.Junction
+# Unfortunally desktop entry specificiation does not support globs
+# so we can't do video/*;x-scheme-handler/* and so on
+MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;inode/directory;x-scheme-handler/file;
+StartupNotify=true
