@@ -2,12 +2,14 @@
 Name=Junction
 Comment=Application chooser
 Exec=re.sonny.Junction
+# Exec=gjs -m /home/sonny/Projects/GNOME/Junction/re.sonny.Junction %u
 Terminal=false
 Type=Application
-Categories=Settings;System;Utility;DesktopSettings;GNOME;GTK;
-StartupNotify=true
+Categories=Settings;System;Utility;GNOME;GTK;
 Icon=re.sonny.Junction
 # Unfortunally desktop entry specificiation does not support globs
 # so we can't do video/*;x-scheme-handler/* and so on
-MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;inode/directory;x-scheme-handler/file;
+# MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;inode/directory;x-scheme-handler/file;
+MimeType=x-scheme-handler/http;x-scheme-handler/https;text/html;text/xml;application/xhtml+xml;
 StartupNotify=true
+Keywords=Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;

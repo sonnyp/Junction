@@ -1,0 +1,41 @@
+window {
+  border-radius: 18px;
+  background: none;
+  background-color: rgba(20, 20, 20, 0.95);
+  border: none;
+}
+
+.list {
+  background: none;
+  margin: 12px;
+  margin-bottom: 0;
+}
+
+button {
+  border-radius: 18px;
+  background: none;
+  padding: 18px 12px;
+  font-size: 0.6rem;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+entry {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 18px;
+  margin-top: 6px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 6px;
+  /* Non dark theme */
+  color: white;
+  border: solid 1px black;
+}

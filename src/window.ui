@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+  <object class="GtkApplicationWindow" id="window">
+    <property name="resizable">False</property>
+    <property name="decorated">False</property>
+    <!-- <property name="title">Junction</property> -->
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="list">
+            <style>
+              <class name="list" />
+            </style>
+            <property name="orientation">horizontal</property>
+            <property name="homogeneous">True</property>
+            <property name="spacing">18</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry">
+            <property name="input-purpose">url</property>
+            <property name="xalign">0.5</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

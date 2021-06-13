@@ -14,7 +14,7 @@ flatpak:
 	flatpak-builder --user  --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.yaml
 	flatpak --user remote-add --no-gpg-verify --if-not-exists Junction repo
 	flatpak --user install --reinstall --assumeyes Junction re.sonny.Junction
-	flatpak run re.sonny.Junction
+	# flatpak run re.sonny.Junction
 
 bundle:
 	flatpak-builder --user  --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.yaml
@@ -22,10 +22,13 @@ bundle:
 
 test:
 	./node_modules/.bin/eslint --cache .
-	flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.appdata.xml
+	# flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.appdata.xml
 	desktop-file-validate --no-hints data/re.sonny.Junction.desktop
 	# gtk-builder-tool validate src/*.ui
-	gjs -m test/*.test.js
+	# gjs -m test/*.test.js
 
 clean:
 	rm -rf build install .eslintcache
+
+dev:
+	cp data/re.sonny.Junction.desktop ~/.local/share/applications/ && update-desktop-database ~/.local/share/applications

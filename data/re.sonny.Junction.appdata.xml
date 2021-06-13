@@ -24,15 +24,9 @@
   <screenshots>
     <screenshot type="default">
       <image>
-        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-light.png
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png
       </image>
-      <caption>Junction main window</caption>
-    </screenshot>
-    <screenshot>
-      <image>
-        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-dark.png
-      </image>
-      <caption>Junction main window - dark mode</caption>
+      <caption>Choose browser to open link with</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />

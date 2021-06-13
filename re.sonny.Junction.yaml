@@ -2,15 +2,31 @@ app-id: re.sonny.Junction
 runtime: org.gnome.Platform
 runtime-version: "40"
 sdk: org.gnome.Sdk
-command: re.sonny.Junction
+command: junction-wrapper
 finish-args:
   - "--share=ipc"
   - "--socket=fallback-x11"
   - "--socket=wayland"
+
+  - "--filesystem=host:ro"
+  - "--filesystem=xdg-data/applications:ro"
+  - "--talk-name=org.freedesktop.Flatpak"
+
   # We use FLATPAK_ID
   # https://github.com/flatpak/flatpak/releases/tag/1.1.2
   - "--require-version=1.1.2"
 modules:
+  - name: wrapper
+    buildsystem: simple
+    build-commands:
+      - install -D junction-wrapper /app/bin/junction-wrapper
+    sources:
+      - type: script
+        dest-filename: junction-wrapper
+        commands:
+          - "export PATH=$PATH:/run/host/usr/bin"
+          - "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share" # https://github.com/flatpak/flatpak/issues/1299
+          - re.sonny.Junction "$@"
   - name: Junction
     buildsystem: meson
     builddir: true
