@@ -41,7 +41,7 @@ export default function Window({ application, file }) {
     }
   }
 
-  Entry({ builder, value, scheme });
+  const { entry } = Entry({ builder, value, scheme });
 
   const applications = getApplications(content_type);
   log(applications.map((appInfo) => appInfo.get_name()));
@@ -53,7 +53,7 @@ export default function Window({ application, file }) {
     image.pixel_size = 92;
     button.set_child(image);
     button.connect("clicked", () => {
-      openWithApplication(appInfo, value);
+      openWithApplication(appInfo, entry.get_text());
       // Ctrl+Click should not close Junction
       // but it's not possible to do that with GtkButton
       // I was told to implement my own widget and do the following

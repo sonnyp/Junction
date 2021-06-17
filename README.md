@@ -40,7 +40,9 @@ Junction is not yet capable of handling all files automatically but if you set J
 
 ## Features
 
-- Displays the URL / path
+- Choose application to open URL or path
+- Displays the URL or path
+- Edit URL before opening
 - Shows a hint for unecrypted link
 - Ctrl+C or ESC to cancel
 - Keyboard navigation

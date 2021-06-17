@@ -18,6 +18,10 @@ export default function Entry({ builder, value, scheme }) {
     entry.set_icon_activatable(Gtk.EntryIconPosition.PRIMARY, false);
   }
 
+  if (scheme === "file") {
+    entry.set_editable(false);
+  }
+
   const eventController = new Gtk.EventControllerFocus();
   entry.add_controller(eventController);
   eventController.connect("enter", () => {
