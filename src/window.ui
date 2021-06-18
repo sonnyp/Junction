@@ -21,6 +21,15 @@
           <object class="GtkEntry" id="entry">
             <property name="input-purpose">url</property>
             <property name="xalign">0.5</property>
+            <!-- TODO: file a bug - does not seem to be working -->
+            <property name="primary-icon-activatable">False</property>
+            <property
+              name="primary-icon-tooltip-text"
+            ><![CDATA[This site has no security. An attacker could see any information you send, or control the content that you see.]]></property>
+            <property name="secondary-icon-name">edit-copy-symbolic</property>
+            <property
+              name="secondary-icon-tooltip-text"
+            ><![CDATA[Copy to Clipboard]]></property>
           </object>
         </child>
       </object>

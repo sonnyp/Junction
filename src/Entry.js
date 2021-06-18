@@ -1,5 +1,6 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
+import Gdk from "gi://Gdk";
 
 export default function Entry({ builder, value, scheme }) {
   const entry = builder.get_object("entry");
@@ -13,14 +14,18 @@ export default function Entry({ builder, value, scheme }) {
       Gtk.EntryIconPosition.PRIMARY,
       "channel-insecure-symbolic",
     );
-    // TODO: file a bug
-    // does not seem to be working
-    entry.set_icon_activatable(Gtk.EntryIconPosition.PRIMARY, false);
   }
 
   if (scheme === "file") {
     entry.set_editable(false);
   }
+
+  entry.connect("icon-release", (position) => {
+    if (!position === Gtk.EntryIconPosition.SECONDARY) return;
+    const display = Gdk.Display.get_default();
+    const clipboard = display.get_clipboard();
+    clipboard.set(entry.get_text());
+  });
 
   const eventController = new Gtk.EventControllerFocus();
   entry.add_controller(eventController);

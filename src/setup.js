@@ -3,5 +3,6 @@
 // import "gi://Gio";
 // import "gi://GLib";
 import Gtk from "gi://Gtk?version=4.0";
+import "gi://Gdk?version=4.0";
 
 Gtk.init();
