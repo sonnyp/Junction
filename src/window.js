@@ -1,6 +1,7 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
+import Gdk from "gi://Gdk";
 
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
@@ -8,7 +9,11 @@ import Entry from "./Entry.js";
 export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
 
-  // const Clipboard = Gtk.Clipboard.get_default(Gdk.Display.get_default());
+  function copyToClipboard() {
+    const display = Gdk.Display.get_default();
+    const clipboard = display.get_clipboard();
+    clipboard.set(entry.get_text());
+  }
 
   const window = builder.get_object("window");
   loadStyleSheet(relativePath("./window.css"));
@@ -41,7 +46,7 @@ export default function Window({ application, file }) {
     }
   }
 
-  const { entry } = Entry({ builder, value, scheme });
+  const { entry } = Entry({ builder, value, scheme, copyToClipboard });
 
   const applications = getApplications(content_type);
   log(applications.map((appInfo) => appInfo.get_name()));
@@ -98,6 +103,13 @@ export default function Window({ application, file }) {
   //   application.quit();
   // });
 
+  const shortcut = new Gtk.Shortcut({
+    trigger: Gtk.ShortcutTrigger.parse_string("<Control>C"),
+    action: Gtk.CallbackAction.new(copyToClipboard),
+  });
+  const shortcutController = new Gtk.ShortcutController();
+  shortcutController.add_shortcut(shortcut);
+  window.add_controller(shortcutController);
   window.present();
 
   return { window };

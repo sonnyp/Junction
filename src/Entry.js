@@ -1,8 +1,7 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
-import Gdk from "gi://Gdk";
 
-export default function Entry({ builder, value, scheme }) {
+export default function Entry({ builder, value, scheme, copyToClipboard }) {
   const entry = builder.get_object("entry");
 
   entry.set_text(value);
@@ -22,9 +21,7 @@ export default function Entry({ builder, value, scheme }) {
 
   entry.connect("icon-release", (position) => {
     if (!position === Gtk.EntryIconPosition.SECONDARY) return;
-    const display = Gdk.Display.get_default();
-    const clipboard = display.get_clipboard();
-    clipboard.set(entry.get_text());
+    copyToClipboard();
   });
 
   const eventController = new Gtk.EventControllerFocus();

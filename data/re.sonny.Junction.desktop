@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Junction
 Comment=Application chooser
-Exec=re.sonny.Junction
-# Exec=gjs -m /home/sonny/Projects/GNOME/Junction/re.sonny.Junction %u
+#Exec=re.sonny.Junction
+Exec=gjs -m /home/sonny/Projects/GNOME/Junction/re.sonny.Junction %u
 Terminal=false
 Type=Application
 Categories=Settings;System;Utility;GNOME;GTK;

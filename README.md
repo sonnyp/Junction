@@ -30,21 +30,24 @@ flatpak install re.sonny.Junction
 
 Make sure Junction is your default browser (Settings -> Default Applications -> Web in GNOME).
 
-Junction will pop up automatically when you click on a link.
+Junction will pop up automatically when you open a link in a desktop application.
 
 Use the mouse or keyboard navigation to choose the application to open the link or file with.
 
-`Ctrl+C` or `ESC` to cancel.
+You can also copy the link to clipboard with `<Ctrl>C` or with the "Copy to clipboard" icon.
 
-Junction is not yet capable of handling all files automatically but if you set Junction as the default application for Music, Video, Mail, ... it should work as expected.
+`<Ctrl>W` or `ESC` to cancel.
+
+Junction is not yet capable of handling all files automatically but if you set Junction as the default application for Mail, Calendar, Music, Video, Photos, it should work as expected.
 
 ## Features
 
-- Choose application to open URL or path
+- Choose application to open with
 - Displays the URL or path
 - Edit URL before opening
 - Shows a hint for unecrypted link
-- Ctrl+C or ESC to cancel
+- `<Ctrl>W` or ESC to cancel
+- `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
 
 ## Install
@@ -92,16 +95,14 @@ ninja -C build uninstall
 Help welcome! Feel free to open an issue and I'd be happy to assist.
 
 - "Remember for"
-- Copy to clipboard shortcut and button
 - Ctrl+Click / Ctrl+Enter to open in multiple applications
-- Browser extension (trigger Junction from browser links)
 - [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window
 - For files
   - Open/reveal in file manager
   - Remember application for pattern
   - Remember application for file type
   - Replace home dir path with ~
-  - Hide scheme unless `http`
+  - Replace `file:///` with `/`
 - For URLs
   - HTTPS Everywhere support
   - Removes tracking elements from URLs
@@ -110,6 +111,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Firefox profiles
   - Protect against [homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack)
   - URL rewrite (e.g. `https://meet.jit.si/foo` -> `jitsi-meet://VerbalSelvesTipRound `)
+  - Hide scheme unless `http`
 - Customizable (show/hide URI bar and so on)
 - Open with any application
 - Hide specific applications
@@ -120,8 +122,9 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 
 - Scriptable
 - Stylable
-- Protect from malicious domains / URLs
-- Parental control
+- Browser extension (trigger Junction from browser links)
+  - Protect from malicious domains / URLs
+  - Parental control
 - URL/file preview
 - share intent https://wiki.gnome.org/Design/OS/Sharing
 - application url handling (Jitsi desktop can handle https://meet.jit.si urls)
