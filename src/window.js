@@ -5,6 +5,7 @@ import Gdk from "gi://Gdk";
 
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
+import AppButton from "./AppButton.js";
 
 export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
@@ -53,26 +54,11 @@ export default function Window({ application, file }) {
   const list = builder.get_object("list");
 
   applications.forEach((appInfo) => {
-    const button = new Gtk.Button();
-    const image = Gtk.Image.new_from_gicon(appInfo.get_icon());
-    image.pixel_size = 92;
-    button.set_child(image);
-    button.connect("clicked", () => {
-      openWithApplication(appInfo, entry.get_text());
-      // Ctrl+Click should not close Junction
-      // but it's not possible to do that with GtkButton
-      // I was told to implement my own widget and do the following
-      // const eventController = new Gtk.GestureClick();
-      // widget.add_controller(eventController);
-      // eventController.connect("released", () => {
-      //   const evt = eventController.get_current_event();
-      //   const modifier_state = evt.get_modifier_state();
-      //   // Ctrl click
-      //   if (modifier_state & Gdk.ModifierType.CONTROL_MASK) return;
-      //   window.close();
-      // });
-      // but I'm too lazy ATM to implement a custom widget for this
-      window.close();
+    const { button } = AppButton({
+      appInfo,
+      content_type,
+      entry,
+      window,
     });
     list.append(button);
   });
@@ -132,11 +118,4 @@ function getApplications(content_type) {
       return appInfo.should_show() && !excluded_apps.includes(appInfo.get_id());
     },
   );
-}
-
-function openWithApplication(app, value) {
-  const success = app.launch_uris([value], null);
-  if (!success) {
-    throw new Error(`Could not launch ${value} with ${app.get_id()}`);
-  }
 }

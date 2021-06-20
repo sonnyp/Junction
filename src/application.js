@@ -56,10 +56,14 @@ function setAsDefaultApplication() {
     return appInfo.get_id() === "re.sonny.Junction.desktop";
   });
   if (appInfo) {
-    appInfo.set_as_default_for_type("x-scheme-handler/http");
-    appInfo.set_as_default_for_type("x-scheme-handler/https");
-    appInfo.set_as_default_for_type("text/html");
-    appInfo.set_as_default_for_type("text/xml");
-    appInfo.set_as_default_for_type("application/xhtml+xml");
+    types.forEach((appInfo) => appInfo.set_as_default_for_type);
   }
 }
+
+const types = [
+  "x-scheme-handler/http",
+  "x-scheme-handler/https",
+  "text/html",
+  "text/xml",
+  "application/xhtml+xml",
+];

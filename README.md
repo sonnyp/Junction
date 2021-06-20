@@ -43,9 +43,10 @@ Junction is not yet capable of handling all files automatically but if you set J
 ## Features
 
 - Choose application to open with
-- Displays the URL or path
+- List applications by last use
+- Shows the URL or path before opening
 - Edit URL before opening
-- Shows a hint for unecrypted link
+- Shows a hint for unencrypted link
 - `<Ctrl>W` or ESC to cancel
 - `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
@@ -95,6 +96,7 @@ ninja -C build uninstall
 Help welcome! Feel free to open an issue and I'd be happy to assist.
 
 - "Remember for"
+- No application to handle this type - search for one?
 - Ctrl+Click / Ctrl+Enter to open in multiple applications
 - [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window
 - For files
@@ -110,13 +112,14 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for content-type
   - Firefox profiles
   - Protect against [homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack)
-  - URL rewrite (e.g. `https://meet.jit.si/foo` -> `jitsi-meet://VerbalSelvesTipRound `)
+  - URL rewrite (e.g. `https://meet.jit.si/example` -> `jitsi-meet://example `)
   - Hide scheme unless `http`
 - Customizable (show/hide URI bar and so on)
 - Open with any application
 - Hide specific applications
 - mailto pattern matching
 - Search bar
+- Open file read only
 
 ## Some crazy/maybe-bad ideas:
 
@@ -127,7 +130,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Parental control
 - URL/file preview
 - share intent https://wiki.gnome.org/Design/OS/Sharing
-- application url handling (Jitsi desktop can handle https://meet.jit.si urls)
+- allow desktop applications to be primary application of an url origin
 
 ## Development
 
