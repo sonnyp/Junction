@@ -10,7 +10,7 @@ finish-args:
 
   - "--filesystem=host:ro"
   - "--filesystem=xdg-data/applications:ro"
-  - "--talk-name=org.freedesktop.Flatpak"
+  - "--talk-name=org.freedesktop.Flatpak" # flatpak-spawn
 
   # We use FLATPAK_ID
   # https://github.com/flatpak/flatpak/releases/tag/1.1.2
@@ -24,7 +24,7 @@ modules:
       - type: script
         dest-filename: junction-wrapper
         commands:
-          - "export PATH=$PATH:/run/host/usr/bin"
+          - "export PATH=$PATH:/run/host/usr/bin" # AppInfo needs the exec path to exist
           - "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share" # https://github.com/flatpak/flatpak/issues/1299
           - re.sonny.Junction "$@"
   - name: Junction

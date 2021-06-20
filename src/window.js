@@ -63,32 +63,6 @@ export default function Window({ application, file }) {
     list.append(button);
   });
 
-  // Could be a fallback?
-  // const dialog = Gtk.AppChooserDialog.new_for_content_type(
-  //   window,
-  //   Gtk.DialogFlags.MODAL,
-  //   content_type,
-  // );
-  // dialog
-  //   .get_header_bar()
-  //   ?.get_title_widget()
-  //   ?.get_last_child()
-  //   ?.set_label(display_name);
-  // dialog.connect("response", (self, response_type) => {
-  //   if (__DEV__) {
-  //     logEnum(Gtk.ResponseType, response_type);
-  //   }
-
-  //   if (response_type === Gtk.ResponseType.OK) {
-  //     const app = dialog.get_app_info();
-  //     log(`Opening ${file.get_uri()} with ${app.get_id()}`);
-  //     openWithApplication(app, file);
-  //   }
-
-  //   dialog.destroy();
-  //   application.quit();
-  // });
-
   const shortcut = new Gtk.Shortcut({
     trigger: Gtk.ShortcutTrigger.parse_string("<Control>C"),
     action: Gtk.CallbackAction.new(copyToClipboard),

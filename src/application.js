@@ -15,7 +15,7 @@ export default function Application({ version }) {
   // It's probably what > 80% of users want by default but perhaps consider
   // a setting to turn this off
   // The flatpak story is unclear https://github.com/flatpak/xdg-desktop-portal/issues/126
-  setAsDefaultApplication();
+  // setAsDefaultApplication();
 
   application.connect("open", (self, [file]) => {
     Window({ application, file });
@@ -51,19 +51,19 @@ export default function Application({ version }) {
   return application;
 }
 
-function setAsDefaultApplication() {
-  const appInfo = Gio.AppInfo.get_all().find((appInfo) => {
-    return appInfo.get_id() === "re.sonny.Junction.desktop";
-  });
-  if (appInfo) {
-    types.forEach((appInfo) => appInfo.set_as_default_for_type);
-  }
-}
+// function setAsDefaultApplication() {
+//   const appInfo = Gio.AppInfo.get_all().find((appInfo) => {
+//     return appInfo.get_id() === "re.sonny.Junction.desktop";
+//   });
+//   if (appInfo) {
+//     types.forEach((appInfo) => appInfo.set_as_default_for_type);
+//   }
+// }
 
-const types = [
-  "x-scheme-handler/http",
-  "x-scheme-handler/https",
-  "text/html",
-  "text/xml",
-  "application/xhtml+xml",
-];
+// const types = [
+//   "x-scheme-handler/http",
+//   "x-scheme-handler/https",
+//   "text/html",
+//   "text/xml",
+//   "application/xhtml+xml",
+// ];

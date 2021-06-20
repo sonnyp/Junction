@@ -18,6 +18,7 @@ export default function main(argv, { version }) {
   log(`_: ${GLib.getenv("_")}`);
   log(`PWD: ${GLib.get_current_dir()}`);
   log(`XDG_DATA_DIRS ${GLib.getenv("XDG_DATA_DIRS")}`);
+  log(`PATH ${GLib.getenv("PATH")}`);
 
   const restart = new Gio.SimpleAction({
     name: "restart",

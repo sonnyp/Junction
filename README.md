@@ -98,7 +98,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - "Remember for"
 - No application to handle this type - search for one?
 - Ctrl+Click / Ctrl+Enter to open in multiple applications
-- [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window
+- [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window / private window
 - For files
   - Open/reveal in file manager
   - Remember application for pattern
