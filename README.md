@@ -28,7 +28,7 @@ flatpak install re.sonny.Junction
 
 ## Usage
 
-Make sure Junction is your default browser (Settings -> Default Applications -> Web in GNOME).
+Make sure Junction is your default browser (Settings -> Default Applications -> Web in GNOME). Or `xdg-settings set default-web-browser re.sonny.Junction.desktop`
 
 Junction will pop up automatically when you open a link in a desktop application.
 
@@ -99,6 +99,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - No application to handle this type - search for one?
 - Ctrl+Click / Ctrl+Enter to open in multiple applications
 - [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window / private window
+- Implement `org.freedesktop.impl.portal.AppChooser`
 - For files
   - Open/reveal in file manager
   - Remember application for pattern

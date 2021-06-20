@@ -11,10 +11,8 @@ run-host:
 	GSETTINGS_SCHEMA_DIR=./data ./install/bin/re.sonny.Junction
 
 flatpak:
-	flatpak-builder --user  --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.yaml
-	flatpak --user remote-add --no-gpg-verify --if-not-exists Junction repo
-	flatpak --user install --reinstall --assumeyes Junction re.sonny.Junction
-	# flatpak run re.sonny.Junction
+	flatpak-builder --user --force-clean --install-deps-from=flathub --install flatpak re.sonny.Junction.yaml
+	# flatpak run re.sonny.Junction https://gnome.org
 
 bundle:
 	flatpak-builder --user  --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.yaml

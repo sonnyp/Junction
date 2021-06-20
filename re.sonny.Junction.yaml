@@ -8,9 +8,12 @@ finish-args:
   - "--socket=fallback-x11"
   - "--socket=wayland"
 
+  - "--filesystem=home:ro"
   - "--filesystem=host:ro"
   - "--filesystem=xdg-data/applications:ro"
-  - "--talk-name=org.freedesktop.Flatpak" # flatpak-spawn
+  - "--filesystem=xdg-data/flatpak:ro" # --user flatpak applications
+  - "--filesystem=/var/lib/flatpak:ro" # --system flatpak applications
+  - "--talk-name=org.freedesktop.Flatpak" # flatpak-spawn --host
 
   # We use FLATPAK_ID
   # https://github.com/flatpak/flatpak/releases/tag/1.1.2
@@ -25,7 +28,7 @@ modules:
         dest-filename: junction-wrapper
         commands:
           - "export PATH=$PATH:/run/host/usr/bin" # AppInfo needs the exec path to exist
-          - "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share" # https://github.com/flatpak/flatpak/issues/1299
+          - "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:~/.local/share/flatpak/exports/share" # https://github.com/flatpak/flatpak/issues/1299 & icon supports for --user flatpaks
           - re.sonny.Junction "$@"
   - name: Junction
     buildsystem: meson
@@ -33,3 +36,5 @@ modules:
     sources:
       - type: dir
         path: ./
+    post-install:
+      - "desktop-file-edit --set-key=Exec --set-value='/app/bin/junction-wrapper %u' /app/share/applications/re.sonny.Junction.desktop"
