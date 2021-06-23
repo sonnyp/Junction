@@ -39,3 +39,9 @@ import("./src/main.js")
   .catch(logError);
 
 loop.run();
+
+// You probably should not do this but
+// if you want this development version of Junction to be the default handler
+// cp data/re.sonny.Junction.desktop ~/.local/share/applications/ && update-desktop-database ~/.local/share/applications
+// and edit ~/.local/share/applications/re.sonny.Junction.desktop Exec to be
+// gjs -m path-to/Junction/re.sonny.Junction %u

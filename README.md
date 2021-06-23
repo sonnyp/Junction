@@ -50,6 +50,7 @@ Junction is not yet capable of handling all files automatically but if you set J
 - `<Ctrl>W` or ESC to cancel
 - `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
+- Middle click to keep Junction open and open in multiple applications
 
 ## Install
 
@@ -106,6 +107,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for file type
   - Replace home dir path with ~
   - Replace `file:///` with `/`
+  - Open file read only
 - For URLs
   - HTTPS Everywhere support
   - Removes tracking elements from URLs
@@ -120,7 +122,6 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - Hide specific applications
 - mailto pattern matching
 - Search bar
-- Open file read only
 
 ## Some crazy/maybe-bad ideas:
 
