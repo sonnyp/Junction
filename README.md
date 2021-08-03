@@ -109,7 +109,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Replace `file:///` with `/`
   - Open file read only
 - For URLs
-  - HTTPS Everywhere support
+  - HTTPS Everywhere / hsts support
   - Removes tracking elements from URLs
   - Remember application for domain/pattern
   - Remember application for content-type
@@ -117,11 +117,13 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Protect against [homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack)
   - URL rewrite (e.g. `https://meet.jit.si/example` -> `jitsi-meet://example `)
   - Hide scheme unless `http`
+  - https://publicsuffix.org/list/ support for rules
 - Customizable (show/hide URI bar and so on)
 - Open with any application
 - Hide specific applications
 - mailto pattern matching
 - Search bar
+- Open multiple URLs one by one then select app
 
 ## Some crazy/maybe-bad ideas:
 
@@ -142,6 +144,13 @@ cd Junction
 ```
 
 Make changes and hit `Ctrl+Shift+Q` on the Junction window to restart it.
+
+To setup development version as default application first install the desktop file with
+
+```
+cd Junction
+make dev
+```
 
 To pass the tests you have to install a few dependencies
 

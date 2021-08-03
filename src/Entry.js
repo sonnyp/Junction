@@ -1,8 +1,8 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 
-export default function Entry({ builder, value, scheme, copyToClipboard }) {
-  const entry = builder.get_object("entry");
+export default function Entry({ entry, value, scheme, copyToClipboard }) {
+  // const entry = builder.get_object("entry");
 
   entry.set_text(value);
   entry.set_tooltip_text(value);

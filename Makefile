@@ -30,3 +30,6 @@ clean:
 
 dev:
 	cp data/re.sonny.Junction.desktop ~/.local/share/applications/ && update-desktop-database ~/.local/share/applications
+	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
+	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop
+	update-desktop-database ~/.local/share/applications
