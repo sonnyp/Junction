@@ -6,7 +6,7 @@ Junction lets you choose the application to open files and links.
 
 ![screenshot](data/screenshot.png)
 
-There is more to it - it's an experiment to improve file and url handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
+There is more to it - it's an experiment to improve files and URLs handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
 
 If you have any idea worth exploring in that area please feel free to open an issue.
 
@@ -42,14 +42,15 @@ Junction is not yet capable of handling all files automatically but if you set J
 
 ## Features
 
-- Choose application to open with
-- List applications by last use
-- Shows the URL or path before opening
-- Edit URL before opening
-- Shows a hint for unencrypted link
+- Choose the application to open with
+- List options by last used
+- Show the location before opening
+- Edit the URL before opening
+- Show a hint for insecure link
 - `<Ctrl>W` or ESC to cancel
 - `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
+- Middle click to keep Junction open and open in multiple applications
 
 ## Install
 
@@ -106,8 +107,9 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for file type
   - Replace home dir path with ~
   - Replace `file:///` with `/`
+  - Open file read only
 - For URLs
-  - HTTPS Everywhere support
+  - HTTPS Everywhere / hsts support
   - Removes tracking elements from URLs
   - Remember application for domain/pattern
   - Remember application for content-type
@@ -115,12 +117,13 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Protect against [homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack)
   - URL rewrite (e.g. `https://meet.jit.si/example` -> `jitsi-meet://example `)
   - Hide scheme unless `http`
+  - https://publicsuffix.org/list/ support for rules
 - Customizable (show/hide URI bar and so on)
 - Open with any application
 - Hide specific applications
 - mailto pattern matching
 - Search bar
-- Open file read only
+- Open multiple URLs one by one then select app
 
 ## Some crazy/maybe-bad ideas:
 
@@ -141,6 +144,13 @@ cd Junction
 ```
 
 Make changes and hit `Ctrl+Shift+Q` on the Junction window to restart it.
+
+To setup development version as default application first install the desktop file with
+
+```
+cd Junction
+make dev
+```
 
 To pass the tests you have to install a few dependencies
 

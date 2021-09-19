@@ -1,12 +1,20 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 
-export default function Entry({ builder, value, scheme, copyToClipboard }) {
-  const entry = builder.get_object("entry");
+export default function Entry({ entry, value, scheme, copyToClipboard }) {
+  // const entry = builder.get_object("entry");
 
   entry.set_text(value);
-  // "Scroll" to end - the path for url or basename for files is more important
-  entry.set_position(-1);
+  entry.set_tooltip_text(value);
+
+  // Maybe an elipsis in the middle in "view" mode
+  // would be best
+  if (scheme === "file") {
+    // "Scroll" to end
+    // for urls we want to see the hostname
+    // for files we want to see the filename
+    entry.set_position(-1);
+  }
 
   if (scheme === "http") {
     entry.set_icon_from_icon_name(

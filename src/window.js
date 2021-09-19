@@ -48,7 +48,12 @@ export default function Window({ application, file }) {
     }
   }
 
-  const { entry } = Entry({ builder, value, scheme, copyToClipboard });
+  const { entry } = Entry({
+    entry: builder.get_object("entry"),
+    value,
+    scheme,
+    copyToClipboard,
+  });
 
   const applications = getApplications(content_type);
   log(applications.map((appInfo) => appInfo.get_name()));
@@ -73,7 +78,26 @@ export default function Window({ application, file }) {
   window.add_controller(shortcutController);
   window.present();
 
-  return { window };
+  function addResource(resource) {
+    const entry = new Gtk.Entry({
+      "input-purpose": "url",
+      xalign: 0.5,
+      "primary-icon-activatable": false,
+      "primary-icon-tooltip-text":
+        "This site has no security. An attacker could see any information you send, or control the content that you see.",
+      "secondary-icon-name": "edit-copy-symbolic",
+      "secondary-icon-tooltip-text": "Copy to Clipboard",
+    });
+    Entry({
+      entry,
+      value: resource,
+      scheme,
+      copyToClipboard,
+    });
+    return entry;
+  }
+
+  return { window, addResource };
 }
 
 const excluded_apps = [

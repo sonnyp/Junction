@@ -86,6 +86,8 @@ function flatpakAppInfo(path) {
     return null;
   }
 
+  // Also required for dbus activation
+  // https://gitlab.gnome.org/GNOME/glib/-/blob/ed49de8b0f1b7466676940d71e57641ddf2dcbc6/gio/gdesktopappinfo.c#L1893
   appInfo.get_id = function get_id() {
     return GLib.path_get_basename(path);
   };
