@@ -9,14 +9,26 @@
   <project_license>GPL-3.0-or-later</project_license>
   <summary>Application chooser</summary>
   <description>
-    <p>
-      Junction lets you choose the application to open a file
-      or URL.
-    </p>
+    <p>Junction lets you choose the application to open files and links.</p>
     <p>Features:</p>
     <ul>
-      <li>a</li>
-      <li>b</li>
+      <li>Choose the application to open with</li>
+      <li>List options by last used</li>
+      <li>Show the location before opening</li>
+      <li>Edit the URL before opening</li>
+      <li>Show a hint for insecure link</li>
+      <li>
+        <code>&lt;Ctrl&gt;W</code>
+        or ESC to cancel
+      </li>
+      <li>
+        <code>&lt;Ctrl&gt;C</code>
+        or button to copy location to clipboard
+      </li>
+      <li>Keyboard navigation</li>
+      <li>
+        Middle click to keep Junction open and open in multiple applications
+      </li>
     </ul>
   </description>
   <url type="homepage">https://github.com/sonnyp/Junction</url>
@@ -26,21 +38,12 @@
       <image>
         https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png
       </image>
-      <caption>Choose browser to open link with</caption>
+      <caption>Choose the browser to open the link with</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.0.0" date="2021-04-06">
-      <description>
-        <p>Initial release.</p>
-        <ul>
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-        </ul>
-      </description>
-    </release>
+    <release version="1.0.0" date="2021-09-19" />
   </releases>
   <kudos>
     <kudo>HiDpiIcon</kudo>

@@ -6,7 +6,7 @@ Junction lets you choose the application to open files and links.
 
 ![screenshot](data/screenshot.png)
 
-There is more to it - it's an experiment to improve file and url handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
+There is more to it - it's an experiment to improve files and URLs handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
 
 If you have any idea worth exploring in that area please feel free to open an issue.
 
@@ -42,11 +42,11 @@ Junction is not yet capable of handling all files automatically but if you set J
 
 ## Features
 
-- Choose application to open with
-- List applications by last use
-- Shows the URL or path before opening
-- Edit URL before opening
-- Shows a hint for unencrypted link
+- Choose the application to open with
+- List options by last used
+- Show the location before opening
+- Edit the URL before opening
+- Show a hint for insecure link
 - `<Ctrl>W` or ESC to cancel
 - `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
