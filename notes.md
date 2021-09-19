@@ -15,6 +15,7 @@ https://github.com/flatpak/xdg-desktop-portal/issues/472
 https://github.com/flathub/org.gnome.Lollypop/issues/99
 https://github.com/flathub/com.github.donadigo.appeditor/blob/master/com.github.donadigo.appeditor.json
 https://github.com/flatpak/flatpak/issues/1286
+https://news.ycombinator.com/item?id=28576147
 
 # portal app chooser
 
