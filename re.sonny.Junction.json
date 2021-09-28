@@ -44,5 +44,6 @@
         "desktop-file-edit --set-key=Exec --set-value='/app/bin/junction-wrapper %u' /app/share/applications/re.sonny.Junction.desktop"
       ]
     }
-  ]
+  ],
+  "x-run-args": ["https://www.gnome.org/"]
 }
