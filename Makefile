@@ -20,7 +20,7 @@ bundle:
 
 test:
 	./node_modules/.bin/eslint --cache .
-	# flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.appdata.xml
+	# flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
 	desktop-file-validate --no-hints data/re.sonny.Junction.desktop
 	# gtk-builder-tool validate src/*.ui
 	# gjs -m test/*.test.js

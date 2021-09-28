@@ -34,7 +34,7 @@ jobs:
       - name: tests
         run: |
           ./node_modules/.bin/eslint --cache .
-          # flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.appdata.xml
+          # flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
           # --file-forwarding does not work on Github actions for some reason
           # F: Can't get document portal mount path
           # flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//40 --no-hints @@ data/re.sonny.Junction.desktop @@
