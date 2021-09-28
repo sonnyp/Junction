@@ -187,7 +187,7 @@ Use [GNOME Builder](https://wiki.gnome.org/Apps/Builder) or
 
 ```sh
 cd Junction
-flatpak-builder --user --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.yaml
+flatpak-builder --user --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.json
 flatpak --user remote-add --no-gpg-verify --if-not-exists Junction repo
 flatpak --user install --reinstall --assumeyes Junction re.sonny.Junction
 ```
