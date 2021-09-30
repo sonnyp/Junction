@@ -1,6 +1,6 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
-// import GLib from "gi://GLib";
+import GLib from "gi://GLib";
 
 import Window from "./window.js";
 
@@ -10,23 +10,22 @@ export default function Application({ version }) {
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
 
-  // Set Junction as the default application for http and https
-  // is this user hostile?
-  // It's probably what > 80% of users want by default but perhaps consider
-  // a setting to turn this off
-  // The flatpak story is unclear https://github.com/flatpak/xdg-desktop-portal/issues/126
-  // setAsDefaultApplication();
-
   application.connect("open", (self, [file]) => {
     Window({ application, file });
   });
 
-  // application.connect("activate", () => {
-  //   Window({
-  //     application,
-  //     file: Gio.File.new_for_path(GLib.get_current_dir()),
-  //   });
-  // });
+  application.connect("activate", () => {
+    Window({
+      application,
+      file: Gio.File.new_for_uri("https://github.com/sonnyp/Junction"),
+    });
+    // Set Junction as the default application for http and https
+    // is this user hostile?
+    // It's probably what > 80% of users want by default but perhaps consider
+    // a setting to turn this off
+    // The flatpak story is unclear https://github.com/flatpak/xdg-desktop-portal/issues/126
+    setAsDefaultApplication();
+  });
 
   const quit = new Gio.SimpleAction({
     name: "quit",
@@ -60,10 +59,19 @@ export default function Application({ version }) {
 //   }
 // }
 
-// const types = [
-//   "x-scheme-handler/http",
-//   "x-scheme-handler/https",
-//   "text/html",
-//   "text/xml",
-//   "application/xhtml+xml",
-// ];
+function setAsDefaultApplication() {
+  for (const type of types) {
+    const cmd =
+      (GLib.getenv("FLATPAK_ID") ? "flatpak-spawn --host " : "") +
+      `gio mime ${type} re.sonny.Junction.desktop`;
+    GLib.spawn_command_line_async(cmd);
+  }
+}
+
+const types = [
+  "x-scheme-handler/http",
+  "x-scheme-handler/https",
+  "text/html",
+  // "text/xml",
+  "application/xhtml+xml",
+];
