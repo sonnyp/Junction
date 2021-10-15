@@ -3,13 +3,20 @@ import "./setup.js";
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
+import { bindtextdomain, textdomain } from "gettext";
 
 import Application from "./application.js";
 
 GLib.set_prgname("re.sonny.Junction");
 GLib.set_application_name("Junction");
 
-export default function main(argv, { version }) {
+export default function main(argv, { version, datadir }) {
+  bindtextdomain(
+    "re.sonny.Junction",
+    GLib.build_filenamev([datadir, "locale"]),
+  );
+  textdomain("re.sonny.Junction");
+
   const application = Application({ version });
 
   log("argv " + argv.join(" "));

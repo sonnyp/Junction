@@ -1,1 +1,1 @@
-i18n.gettext('Junction', preset: 'glib')
+i18n.gettext('re.sonny.Junction', preset: 'glib')

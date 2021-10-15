@@ -34,6 +34,7 @@ import("./src/main.js")
     loop.quit();
     main([programInvocationName, ...ARGV], {
       version: "dev",
+      datadir: ".",
     });
   })
   .catch(logError);

@@ -22,7 +22,6 @@
         <property name="spacing">14</property>
         <child>
           <object class="GtkImage">
-            <!-- test-pass-symbolic -->
             <property name="icon-name">emblem-default-symbolic</property>
             <property name="pixel-size">128</property>
           </object>
@@ -56,7 +55,7 @@
   <menu id="menu_app">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_About Junction</attribute>
+        <attribute name="label" translatable="yes">About Junction</attribute>
         <attribute name="action">app.about</attribute>
       </item>
     </section>

@@ -1,4 +1,5 @@
 [Desktop Entry]
+# TRANSLATORS: Don't translate
 Name=Junction
 Comment=Application chooser
 Exec=re.sonny.Junction %u
@@ -11,4 +12,5 @@ Icon=re.sonny.Junction
 # MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;inode/directory;x-scheme-handler/file;
 MimeType=x-scheme-handler/http;x-scheme-handler/https;text/html;text/xml;application/xhtml+xml;
 StartupNotify=true
+# TRANSLATORS: Don't translate
 Keywords=Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;
