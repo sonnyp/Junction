@@ -1,8 +1,9 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
-import GLib from "gi://GLib";
 
 import Window from "./window.js";
+import Welcome from "./welcome.js";
+import About from "./about.js";
 
 export default function Application({ version }) {
   const application = new Gtk.Application({
@@ -15,16 +16,9 @@ export default function Application({ version }) {
   });
 
   application.connect("activate", () => {
-    Window({
+    Welcome({
       application,
-      file: Gio.File.new_for_uri("https://github.com/sonnyp/Junction"),
     });
-    // Set Junction as the default application for http and https
-    // is this user hostile?
-    // It's probably what > 80% of users want by default but perhaps consider
-    // a setting to turn this off
-    // The flatpak story is unclear https://github.com/flatpak/xdg-desktop-portal/issues/126
-    setAsDefaultApplication();
   });
 
   const quit = new Gio.SimpleAction({
@@ -37,41 +31,16 @@ export default function Application({ version }) {
   application.add_action(quit);
   application.set_accels_for_action("app.quit", ["<Ctrl>Q"]);
 
-  const close = new Gio.SimpleAction({
-    name: "close",
+  application.set_accels_for_action("win.close", ["<Ctrl>W", "Escape"]);
+
+  const showAboutDialog = new Gio.SimpleAction({
+    name: "about",
     parameter_type: null,
   });
-  close.connect("activate", () => {
-    application.get_active_window()?.close();
+  showAboutDialog.connect("activate", () => {
+    About({ application, version });
   });
-  application.add_action(close);
-  application.set_accels_for_action("app.close", ["<Ctrl>W", "Escape"]);
+  application.add_action(showAboutDialog);
 
   return application;
 }
-
-// function setAsDefaultApplication() {
-//   const appInfo = Gio.AppInfo.get_all().find((appInfo) => {
-//     return appInfo.get_id() === "re.sonny.Junction.desktop";
-//   });
-//   if (appInfo) {
-//     types.forEach((appInfo) => appInfo.set_as_default_for_type);
-//   }
-// }
-
-function setAsDefaultApplication() {
-  for (const type of types) {
-    const cmd =
-      (GLib.getenv("FLATPAK_ID") ? "flatpak-spawn --host " : "") +
-      `gio mime ${type} re.sonny.Junction.desktop`;
-    GLib.spawn_command_line_async(cmd);
-  }
-}
-
-const types = [
-  "x-scheme-handler/http",
-  "x-scheme-handler/https",
-  "text/html",
-  // "text/xml",
-  "application/xhtml+xml",
-];

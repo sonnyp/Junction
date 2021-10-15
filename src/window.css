@@ -1,4 +1,4 @@
-window {
+window.main {
   border-radius: 18px;
   background: none;
   background-color: rgba(20, 20, 20, 0.95);
@@ -11,7 +11,7 @@ window {
   margin-bottom: 0;
 }
 
-button {
+.list button {
   border-radius: 18px;
   background: none;
   padding: 18px 12px;
@@ -20,15 +20,15 @@ button {
   outline: none;
 }
 
-button:hover {
+.list button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-button:focus {
+.list button:focus {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-entry {
+entry.uri {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 18px;
   margin-top: 6px;

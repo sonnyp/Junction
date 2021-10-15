@@ -25,3 +25,10 @@ export function loadStyleSheet(path) {
     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
   );
 }
+
+export function spawn(cmd) {
+  if (GLib.getenv("FLATPAK_ID")) {
+    cmd = `flatpak-spawn --host ${cmd}`;
+  }
+  return GLib.spawn_command_line_async(cmd);
+}

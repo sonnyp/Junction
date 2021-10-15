@@ -97,6 +97,15 @@ export default function Window({ application, file }) {
     return entry;
   }
 
+  const close = new Gio.SimpleAction({
+    name: "close",
+    parameter_type: null,
+  });
+  close.connect("activate", () => {
+    application.get_active_window()?.close();
+  });
+  window.add_action(close);
+
   return { window, addResource };
 }
 

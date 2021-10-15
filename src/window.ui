@@ -3,7 +3,6 @@
   <object class="GtkApplicationWindow" id="window">
     <property name="resizable">False</property>
     <property name="decorated">False</property>
-    <!-- <property name="title">Junction</property> -->
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
@@ -25,14 +24,22 @@
             <property name="primary-icon-activatable">False</property>
             <property
               name="primary-icon-tooltip-text"
-            ><![CDATA[This site has no security. An attacker could see any information you send, or control the content that you see.]]></property>
+              translatable="yes"
+            >This site has no security. An attacker could see any information you send, or control the content that you see.</property>
             <property name="secondary-icon-name">edit-copy-symbolic</property>
             <property
               name="secondary-icon-tooltip-text"
-            ><![CDATA[Copy to Clipboard]]></property>
+              translatable="yes"
+            >Copy to Clipboard</property>
+            <style>
+              <class name="uri" />
+            </style>
           </object>
         </child>
       </object>
     </child>
+    <style>
+      <class name="main" />
+    </style>
   </object>
 </interface>
