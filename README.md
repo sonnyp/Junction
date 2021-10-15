@@ -1,4 +1,4 @@
-<!-- <img style="vertical-align: middle;" src="data/icons/re.sonny.Junction.svg" width="120" height="120" align="left"> -->
+<img style="vertical-align: middle;" src="data/icons/re.sonny.Junction.svg" width="120" height="120" align="left">
 
 # Junction
 
@@ -9,20 +9,6 @@ Junction lets you choose the application to open files and links.
 There is more to it - it's an experiment to improve files and URLs handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
 
 If you have any idea worth exploring in that area please feel free to open an issue.
-
-<!-- <a href='https://flathub.org/apps/details/re.sonny.Junction'><img width='180' height='60' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a> -->
-
-<!-- ## Installation
-
-[Setup flatpak](https://flatpak.org/setup/) then
-
-```sh
-flatpak install re.sonny.Junction
-```
-
-|      Distro      |                   Package Name/Link                    |                   Maintainer                    |
-| :--------------: | :----------------------------------------------------: | :---------------------------------------------: |
-| Arch Linux (aur) | [`commit`](https://aur.archlinux.org/packages/commit/) | [Mark Wagie](https://github.com/yochananmarqos) | -->
 
 ⚠ Junction is a work in progress
 
@@ -51,6 +37,26 @@ Junction is not yet capable of handling all files automatically but if you set J
 - `<Ctrl>C` or button to copy location to clipboard
 - Keyboard navigation
 - Middle click to keep Junction open and open in multiple applications
+
+## Tips and trick
+
+### Open Junction in the center of the screen
+
+On GNOME you can make all new windows open in the center using
+
+```sh
+gsettings set org.gnome.mutter center-new-windows true
+```
+
+See https://gitlab.gnome.org/GNOME/mutter/-/issues/246
+
+or set and use the move-to-center keybinding
+
+```sh
+gsettings set org.gnome.desktop.wm.keybindings move-to-center "['<Super><Control><Shift>Space']"
+```
+
+</details>
 
 ## Install
 
