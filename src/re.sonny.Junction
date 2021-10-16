@@ -11,4 +11,5 @@ import main from "file://@datadir@/@PACKAGE_NAME@/main.js";
 
 main([programInvocationName, ...ARGV], {
   version: "@PACKAGE_VERSION@",
+  datadir: "@datadir@",
 });

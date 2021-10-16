@@ -11,6 +11,14 @@
   <translation type="gettext">re.sonny.Junction</translation>
   <description>
     <p>Junction lets you choose the application to open files and links.</p>
+    <p>
+      After installing make sure to launch the application.
+    </p>
+    <p>
+      Junction will pop up automatically when you open a link in a desktop application.
+
+      Use the mouse or keyboard navigation to choose the application to open the link or file with.
+    </p>
     <p>Features:</p>
     <ul>
       <li>Choose the application to open with</li>
@@ -18,17 +26,11 @@
       <li>Show the location before opening</li>
       <li>Edit the URL before opening</li>
       <li>Show a hint for insecure link</li>
-      <li>
-        <code>&lt;Ctrl&gt;W</code>
-        or ESC to cancel
-      </li>
-      <li>
-        <code>&lt;Ctrl&gt;C</code>
-        or button to copy location to clipboard
-      </li>
+      <li>Esc to cancel</li>
+      <li>Copy to clipboard</li>
       <li>Keyboard navigation</li>
       <li>
-        Middle click to keep Junction open and open in multiple applications
+        Middle click to open in multiple applications
       </li>
     </ul>
   </description>
@@ -44,7 +46,10 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.0.0" date="2021-09-19" />
+    <release version="1.0.0" date="2021-10-16">
+      <description
+      >This is the first release of Junction. We hope you like it.</description>
+    </release>
   </releases>
   <kudos>
     <kudo>HiDpiIcon</kudo>

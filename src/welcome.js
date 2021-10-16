@@ -22,15 +22,17 @@ export default function Welcome({ application }) {
 }
 
 function setAsDefaultApplicationForWeb() {
-  for (const type of types) {
-    spawn(`gio mime ${type} re.sonny.Junction.desktop`);
-  }
+  spawn(`xdg-settings set default-web-browser re.sonny.Junction.desktop`);
+  spawn(`xdg-mime default re.sonny.Junction.desktop application/xhtml+xml`);
 }
 
-const types = [
-  "x-scheme-handler/http",
-  "x-scheme-handler/https",
-  "text/html",
-  "text/xml",
-  "application/xhtml+xml",
-];
+// const types = [
+//   "x-scheme-handler/http",
+//   "x-scheme-handler/https",
+//   "text/html",
+//   "text/xml",
+//   "application/xhtml+xml",
+// ];
+// for (const type of types) {
+//   spawn(`gio mime ${type} re.sonny.Junction.desktop`);
+// }

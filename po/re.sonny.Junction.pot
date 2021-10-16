@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 01:50+0200\n"
+"POT-Creation-Date: 2021-10-16 02:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,13 +90,14 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: src/window.ui:28
+#. TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906
+#: src/window.ui:29
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
 msgstr ""
 
-#: src/window.ui:33
+#: src/window.ui:34
 msgid "Copy to Clipboard"
 msgstr ""
 

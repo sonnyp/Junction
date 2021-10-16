@@ -28,7 +28,7 @@ bundle:
 
 test:
 	./node_modules/.bin/eslint --cache .
-	# flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
+	flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
 	desktop-file-validate --no-hints data/re.sonny.Junction.desktop
 	gtk4-builder-tool validate src/*.ui
 	# gjs -m test/*.test.js
@@ -37,9 +37,11 @@ test:
 
 clean:
 	rm -rf build install .eslintcache
+	rm ~/.local/share/applications/re.sonny.Junction.desktop
+	update-desktop-database ~/.local/share/applications
 
 dev:
-	cp data/re.sonny.Junction.desktop ~/.local/share/applications/ && update-desktop-database ~/.local/share/applications
+	cp data/re.sonny.Junction.desktop ~/.local/share/applications/
 	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
 	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop
 	update-desktop-database ~/.local/share/applications

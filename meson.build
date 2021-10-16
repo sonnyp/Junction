@@ -1,4 +1,4 @@
-project('re.sonny.Junction', version: '2.1.0', meson_version: '>= 0.50.0',)
+project('re.sonny.Junction', version: '1.0.0', meson_version: '>= 0.50.0',)
 
 i18n = import('i18n')
 
