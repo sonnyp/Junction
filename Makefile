@@ -29,7 +29,7 @@ bundle:
 test:
 	./node_modules/.bin/eslint --cache .
 	flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
-	desktop-file-validate --no-hints data/re.sonny.Junction.desktop
+	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//41 --no-hints @@ data/re.sonny.Junction.desktop @@
 	gtk4-builder-tool validate src/*.ui
 	# gjs -m test/*.test.js
 	flatpak-builder --show-manifest re.sonny.Junction.json
