@@ -1,5 +1,4 @@
 import Gtk from "gi://Gtk";
-// import GLib from "gi://GLib";
 
 import { relativePath, loadStyleSheet, spawn } from "./util.js";
 
@@ -11,10 +10,6 @@ export default function Welcome({ application }) {
   window.set_application(application);
 
   setAsDefaultApplicationForWeb();
-
-  // builder.get_object("install_button").connect("clicked", () => {
-  //   setAsDefaultApplicationForWeb();
-  // });
 
   window.present();
 
