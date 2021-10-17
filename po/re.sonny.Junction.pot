@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-16 02:18+0200\n"
+"POT-Creation-Date: 2021-10-17 14:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,47 +42,62 @@ msgid "Junction lets you choose the application to open files and links."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:14
-msgid "Features:"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:16
-msgid "Choose the application to open with"
+msgid "After installing make sure to launch the application."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "List options by last used"
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:18
-msgid "Show the location before opening"
+#: data/re.sonny.Junction.metainfo.xml:22
+msgid "Features:"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:19
-msgid "Edit the URL before opening"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:20
-msgid "Show a hint for insecure link"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:21
-msgid "<code>&lt;Ctrl&gt;W</code> or ESC to cancel"
+#: data/re.sonny.Junction.metainfo.xml:24
+msgid "Choose the application to open with"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:25
-msgid "<code>&lt;Ctrl&gt;C</code> or button to copy location to clipboard"
+msgid "List options by last used"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:26
+msgid "Show the location before opening"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:27
+msgid "Edit the URL before opening"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:28
+msgid "Show a hint for insecure link"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:29
-msgid "Keyboard navigation"
+msgid "Esc to cancel"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:30
-msgid "Middle click to keep Junction open and open in multiple applications"
+msgid "Copy to clipboard"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:42
+#: data/re.sonny.Junction.metainfo.xml:31
+msgid "Keyboard navigation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:32
+msgid "Middle click to open in multiple applications"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:44
 msgid "Choose the browser to open the link with"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:51
+msgid "This is the first release of Junction. We hope you like it."
 msgstr ""
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
