@@ -126,6 +126,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - mailto pattern matching
 - Search bar
 - Open multiple URLs one by one then select app
+- History of uris
 
 ## Some crazy/maybe-bad ideas:
 

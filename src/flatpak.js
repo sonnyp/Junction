@@ -21,13 +21,19 @@ export function getFlatpakApplications(content_type) {
 function getApplicationsForPath(path, content_type) {
   const file = Gio.File.new_for_path(path);
 
-  const en = file.enumerate_children(
-    "standard::name",
-    Gio.FileQueryInfoFlags.NONE,
-    null,
-  );
-
   const apps = [];
+
+  let en;
+  try {
+    en = file.enumerate_children(
+      "standard::name",
+      Gio.FileQueryInfoFlags.NONE,
+      null,
+    );
+  } catch (err) {
+    logError(err);
+    return apps;
+  }
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
