@@ -92,11 +92,9 @@ ninja -C build uninstall
 
 ## Planned:
 
-There is more to it - it's an experiment to improve files and URLs handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
+Junction is also an experiment to improve file and url handling on the Linux desktop - specially on GNOME - by taking inspiration from various systems and possibly doing some of the work usually left to the browser or file manager.
 
 If you have any idea worth exploring in that area please feel free to open an issue.
-
-⚠ Junction is a work in progress
 
 Help welcome! Feel free to open an issue and I'd be happy to assist.
 

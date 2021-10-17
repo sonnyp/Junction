@@ -40,5 +40,5 @@ if compile_schemas.found()
   )
 endif
 
-# Install the icon.
 install_data('icons/re.sonny.Junction.svg', install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps'))
+install_data('icons/re.sonny.Junction-symbolic.svg', install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps'))

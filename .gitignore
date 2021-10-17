@@ -9,3 +9,4 @@ install
 .eslintcache
 *~
 *.compiled
+Junction.flatpak

@@ -37,7 +37,7 @@ test:
 
 clean:
 	rm -rf build install .eslintcache
-	rm ~/.local/share/applications/re.sonny.Junction.desktop
+	rm -f ~/.local/share/applications/re.sonny.Junction.desktop
 	update-desktop-database ~/.local/share/applications
 
 dev:
