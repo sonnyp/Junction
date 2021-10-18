@@ -78,25 +78,6 @@ export default function Window({ application, file }) {
   window.add_controller(shortcutController);
   window.present();
 
-  function addResource(resource) {
-    const entry = new Gtk.Entry({
-      "input-purpose": "url",
-      xalign: 0.5,
-      "primary-icon-activatable": false,
-      "primary-icon-tooltip-text":
-        "This site has no security. An attacker could see any information you send, or control the content that you see.",
-      "secondary-icon-name": "edit-copy-symbolic",
-      "secondary-icon-tooltip-text": "Copy to Clipboard",
-    });
-    Entry({
-      entry,
-      value: resource,
-      scheme,
-      copyToClipboard,
-    });
-    return entry;
-  }
-
   const close = new Gio.SimpleAction({
     name: "close",
     parameter_type: null,
@@ -106,7 +87,7 @@ export default function Window({ application, file }) {
   });
   window.add_action(close);
 
-  return { window, addResource };
+  return { window };
 }
 
 const excluded_apps = [

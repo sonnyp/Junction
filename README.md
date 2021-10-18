@@ -128,6 +128,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - Open multiple URLs one by one then select app
 - History of uris
 - Read from clipboard when opening
+- Reveal in terminal
 
 ## Some crazy/maybe-bad ideas:
 
