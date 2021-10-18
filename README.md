@@ -127,6 +127,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - Search bar
 - Open multiple URLs one by one then select app
 - History of uris
+- Read from clipboard when opening
 
 ## Some crazy/maybe-bad ideas:
 

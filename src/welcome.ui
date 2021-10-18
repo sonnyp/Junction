@@ -55,6 +55,13 @@
   <menu id="menu_app">
     <section>
       <item>
+        <attribute
+          name="label"
+          translatable="yes"
+        >Keyboard Shortcuts</attribute>
+        <attribute name="action">app.shortcuts</attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">About Junction</attribute>
         <attribute name="action">app.about</attribute>
       </item>

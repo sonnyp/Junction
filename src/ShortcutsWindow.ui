@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+  <object class="GtkShortcutsWindow" id="shortcuts_window">
+    <property name="modal">true</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <child>
+          <object class="GtkShortcutsGroup">
+            <!-- <property
+              name="title"
+              translatable="yes"
+            >Choosing application</property> -->
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">Escape &lt;Primary&gt;W</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Discard and close</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;C</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Copy to Clipboard</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <!-- <property name="title" translatable="yes">General</property> -->
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Keyboard Shortcuts</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;Q</property>
+                <property name="title" translatable="yes">Quit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
