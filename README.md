@@ -10,33 +10,59 @@ Junction lets you choose the application to open files and links.
 
 ## Usage
 
-Make sure Junction is your default browser (Settings -> Default Applications -> Web in GNOME). Or `xdg-settings set default-web-browser re.sonny.Junction.desktop`
+Set Junction as the default application for a resource and let it do the rest. Junction will pop up and offer multiple options to handle it.
 
-Junction will pop up automatically when you open a link in a desktop application.
+`Settings` -> `Default Applications`
+
+Here are some advanced examples for the terminal
+
+<details>
+  <summary>Set Junction as default browser</summary>
+  <code>
+  xdg-settings set default-web-browser re.sonny.Junction.desktop
+  </code>
+</details>
+
+<details>
+  <summary>Set Junction as default for all files</summary>
+  <code>
+   xdg-mime default re.sonny.Junction.desktop x-scheme-handler/file
+  </code>
+
+Please note that this may not be respected by all applications but the command `xdg-open` will.
+
+</details>
+
+<details>
+  <summary>Set Junction as default for png</summary>
+  <code>
+  xdg-mime default re.sonny.Junction.desktop image/png
+  </code>
+</details>
+
+<details>
+  <summary>Set Junction as default email composer</summary>
+  <code>
+  xdg-settings set default-url-scheme-handler mailto re.sonny.Junction.desktop
+  </code>
+</details>
+
+<details>
+  <summary>Set Junction as default folder opener</summary>
+  <code>
+  xdg-settings default re.sonny.Junction.desktop inode/directory
+  </code>
+</details>
 
 Use the mouse or keyboard navigation to choose the application to open the link or file with.
 
-You can also copy the link to clipboard with `<Ctrl>C` or with the "Copy to clipboard" icon.
+You can press `<Ctrl>W` or `Esc` to close and cancel.
 
-`<Ctrl>W` or `ESC` to cancel.
+You can copy the link to clipboard with `<Ctrl>C` or with the the "Copy to Clipboard" button.
 
 ## Tips and trick
 
-Junction is not yet capable of handling all files automatically but if you set Junction as the default application for Mail, Calendar, Music, Video, Photos, it should work as expected.
-
-### Set Junction as default Web handler
-
-```sh
-xdg-settings set default-web-browser re.sonny.Junction.desktop
-```
-
-### Set Junction as default application for type
-
-```sh
-xdg-mime default re.sonny.Junction.desktop image/png
-```
-
-### Open Junction in the center of the screen
+### Make Junction appear in the center of the screen
 
 On GNOME you can make all new windows open in the center using
 
@@ -46,51 +72,15 @@ gsettings set org.gnome.mutter center-new-windows true
 
 See https://gitlab.gnome.org/GNOME/mutter/-/issues/246
 
-or set and use the move-to-center keybinding
+### Open a file with Junction in the terminal
 
-```sh
-gsettings set org.gnome.desktop.wm.keybindings move-to-center "['<Super><Control><Shift>Space']"
+Set Junction as default application to open files with
+
+```
+xdg-mime default re.sonny.Junction.desktop x-scheme-handler/filev
 ```
 
-## Install
-
-<details>
-<summary>
-user
-</summary>
-
-`~/.local/bin` must be in `$PATH`
-
-```sh
-cd Junction
-meson --prefix ~/.local build
-ninja -C build install
-```
-
-</details>
-
-<details>
-<summary>
-system
-</summary>
-
-```sh
-cd Junction
-meson build
-ninja -C build install
-```
-
-</details>
-
-<details>
-<summary>uninstall</summary>
-
-```sh
-cd Junction
-ninja -C build uninstall
-```
-
-</details>
+and use `xdg-open`.
 
 ## Planned:
 
@@ -197,6 +187,46 @@ cd Junction
 flatpak-builder --user --force-clean --repo=repo --install-deps-from=flathub flatpak re.sonny.Junction.json
 flatpak --user remote-add --no-gpg-verify --if-not-exists Junction repo
 flatpak --user install --reinstall --assumeyes Junction re.sonny.Junction
+```
+
+</details>
+
+## Install
+
+<details>
+<summary>
+user
+</summary>
+
+`~/.local/bin` must be in `$PATH`
+
+```sh
+cd Junction
+meson --prefix ~/.local build
+ninja -C build install
+```
+
+</details>
+
+<details>
+<summary>
+system
+</summary>
+
+```sh
+cd Junction
+meson build
+ninja -C build install
+```
+
+</details>
+
+<details>
+<summary>uninstall</summary>
+
+```sh
+cd Junction
+ninja -C build uninstall
 ```
 
 </details>

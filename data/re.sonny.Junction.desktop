@@ -10,7 +10,7 @@ Icon=re.sonny.Junction
 # Unfortunally desktop entry specificiation does not support globs
 # so we can't do video/*;x-scheme-handler/* and so on
 # MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;inode/directory;x-scheme-handler/file;
-MimeType=x-scheme-handler/http;x-scheme-handler/https;text/html;text/xml;application/xhtml+xml;
+MimeType=x-scheme-handler/http;x-scheme-handler/https;
 StartupNotify=true
 # TRANSLATORS: Don't translate
 Keywords=Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;
