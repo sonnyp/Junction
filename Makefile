@@ -33,7 +33,7 @@ test:
 	gtk4-builder-tool validate src/*.ui
 	# gjs -m test/*.test.js
 	flatpak-builder --show-manifest re.sonny.Junction.json
-	# find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
+	find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
 
 clean:
 	rm -rf build install .eslintcache

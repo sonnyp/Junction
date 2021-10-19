@@ -12,7 +12,11 @@ Junction lets you choose the application to open files and links.
 
 Set Junction as the default application for a resource and let it do the rest. Junction will pop up and offer multiple options to handle it.
 
-`Settings` -> `Default Applications`
+Use the mouse or keyboard navigation to choose the application to open the link or file with.
+
+You can press `<Ctrl>W` or `Esc` to close and cancel.
+
+You can copy the link to clipboard with `<Ctrl>C` or with the the "Copy to Clipboard" button.
 
 Here are some advanced examples for the terminal
 
@@ -54,12 +58,6 @@ Please note that this may not be respected by all applications but the command `
   </code>
 </details>
 
-Use the mouse or keyboard navigation to choose the application to open the link or file with.
-
-You can press `<Ctrl>W` or `Esc` to close and cancel.
-
-You can copy the link to clipboard with `<Ctrl>C` or with the the "Copy to Clipboard" button.
-
 ## Tips and trick
 
 ### Make Junction appear in the center of the screen
@@ -77,7 +75,7 @@ See https://gitlab.gnome.org/GNOME/mutter/-/issues/246
 Set Junction as default application to open files with
 
 ```
-xdg-mime default re.sonny.Junction.desktop x-scheme-handler/filev
+xdg-mime default re.sonny.Junction.desktop x-scheme-handler/file
 ```
 
 and use `xdg-open`.
