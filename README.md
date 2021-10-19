@@ -6,6 +6,8 @@ Junction lets you choose the application to open files and links.
 
 ![screenshot](data/screenshot.png)
 
+<a href='https://flathub.org/apps/details/re.sonny.Junction'><img width='180' height='60' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+
 ## Usage
 
 Make sure Junction is your default browser (Settings -> Default Applications -> Web in GNOME). Or `xdg-settings set default-web-browser re.sonny.Junction.desktop`
