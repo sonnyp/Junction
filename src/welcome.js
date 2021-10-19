@@ -17,8 +17,8 @@ export default function Welcome({ application }) {
 }
 
 function setAsDefaultApplicationForWeb() {
-  spawn(`xdg-settings set default-web-browser re.sonny.Junction.desktop`);
-  spawn(`xdg-mime default re.sonny.Junction.desktop application/xhtml+xml`);
+  spawn("gio mime x-scheme-handler/https re.sonny.Junction.desktop");
+  spawn("gio mime x-scheme-handler/http re.sonny.Junction.desktop");
 }
 
 // const types = [
