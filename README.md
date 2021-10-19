@@ -14,11 +14,15 @@ Set Junction as the default application for a resource and let it do the rest. J
 
 Use the mouse or keyboard navigation to choose the application to open the link or file with.
 
+If you use middle click, Junction will remain open an you can open the resource in multiple applications.
+
 You can press `<Ctrl>W` or `Esc` to close and cancel.
 
 You can copy the link to clipboard with `<Ctrl>C` or with the the "Copy to Clipboard" button.
 
-## Tips and trick
+If you want your favorite websites to use Junction when opening links, you can use [Tangram](https://github.com/sonnyp/Tangram/).
+
+## Tips and tricks
 
 <details>
   <summary>Set Junction as default browser</summary>
