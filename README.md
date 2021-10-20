@@ -14,7 +14,7 @@ Set Junction as the default application for a resource and let it do the rest. J
 
 Use the mouse or keyboard navigation to choose the application to open the link or file with.
 
-If you use middle click, Junction will remain open an you can open the resource in multiple applications.
+If you use middle click, Junction will remain open - allowing you to open the resource in multiple applications.
 
 You can press `<Ctrl>W` or `Esc` to close and cancel.
 
@@ -93,6 +93,15 @@ xdg-mime default re.sonny.Junction.desktop x-scheme-handler/file
 ```
 
 Then you can use `xdg-open my-file`.
+
+</details>
+
+<details>
+  <summary>Add custom scripts to Junction</summary>
+
+You can make Junction list your own scripts by creating `desktop` file for them in `~/.local/share/applications`.
+
+See https://wiki.archlinux.org/title/desktop_entries (distro agnostic).
 
 </details>
 
