@@ -12,18 +12,6 @@ Junction lets you choose the application to open files and links.
 
 Set Junction as the default application for a resource and let it do the rest. Junction will pop up and offer multiple options to handle it.
 
-Use the mouse or keyboard navigation to choose the application to open the link or file with.
-
-If you use middle click, Junction will remain open - allowing you to open the resource in multiple applications.
-
-You can press `<Ctrl>W` or `Esc` to close and cancel.
-
-You can copy the link to clipboard with `<Ctrl>C` or with the the "Copy to Clipboard" button.
-
-If you want your favorite websites to use Junction when opening links, you can use [Tangram](https://github.com/sonnyp/Tangram/).
-
-## Tips and tricks
-
 <details>
   <summary>Set Junction as default browser</summary>
   <code>
@@ -62,6 +50,26 @@ Please note that this may not be respected by all applications but the command `
   </code>
 </details>
 
+## Tips and tricks
+
+<details>
+  <summary>Keyboard navigation</summary>
+
+Use the arrows to select your choice and press ⏎ to confirm.
+
+Press `<Ctrl>C` to copy the resource location to the clipboard.
+
+Press `<Ctrl>W` or `Esc` to close and cancel.
+
+</details>
+
+<details>
+  <summary>Open with multiple applications</summary>
+
+Use middle-click to keep Junction open - allowing you to open the resource in multiple applications.
+
+</details>
+
 <details>
   <summary>Make Junction appear in the center of the screen</summary>
 
@@ -76,32 +84,31 @@ See https://gitlab.gnome.org/GNOME/mutter/-/issues/246
 </details>
 
 <details>
-  <summary>Open a file with Junction in the terminal</summary>
-
-**Using an alias**
+  <summary>Use Junction from the terminal</summary>
 
 Create a permant alias, for example `alias open="flatpak run re.sonny.Junction"`.
 
 Then you can use `open my-file`.
 
-**Using xdg-open**
-
-Set Junction as default application to open files with
-
-```
-xdg-mime default re.sonny.Junction.desktop x-scheme-handler/file
-```
-
-Then you can use `xdg-open my-file`.
+See [How To Create Permanent Aliases In Linux?](https://fossbytes.com/alias-in-linux-how-to-use-create-permanent-aliases/)
 
 </details>
 
 <details>
   <summary>Add custom scripts to Junction</summary>
 
-You can make Junction list your own scripts by creating `desktop` file for them in `~/.local/share/applications`.
+You can add your own script to Junction by creating a `.desktop` file for it in `~/.local/share/applications`.
 
 See https://wiki.archlinux.org/title/desktop_entries (distro agnostic).
+
+</details>
+
+<details>
+  <summary>Open links on a website with Junction</summary>
+
+If you want links on your favorite websites to open Junction, set it as the default browser and use [Tangram](https://github.com/sonnyp/Tangram/).
+
+A browser extension might be coming.
 
 </details>
 
