@@ -25,7 +25,7 @@ msgstr "Junction"
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:10
 msgid "Application chooser"
-msgstr "Selettore per applicazione"
+msgstr "Selettore per applicazioni"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:17
@@ -122,7 +122,7 @@ msgstr "Copia negli appunti"
 
 #: src/welcome.ui:35
 msgid "Junction has been set as default application for Web"
-msgstr "Junction è stata impostata come applicazione predefinita per Web"
+msgstr "Junction è stata impostata come applicazione predefinita per il Web"
 
 #: src/welcome.ui:43
 msgid "Click here to test"
