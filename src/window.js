@@ -6,7 +6,6 @@ import Gdk from "gi://Gdk";
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton from "./AppButton.js";
-import { getFlatpakApplications } from "./flatpak.js";
 
 export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
@@ -102,20 +101,7 @@ const excluded_apps = [
 ];
 
 function getApplications(content_type) {
-  let applications;
-
-  if (GLib.getenv("FLATPAK_ID")) {
-    applications = [
-      ...new Map(
-        [
-          ...Gio.AppInfo.get_recommended_for_type(content_type),
-          ...getFlatpakApplications(content_type),
-        ].map((app) => [app.get_id(), app]),
-      ).values(),
-    ];
-  } else {
-    applications = Gio.AppInfo.get_recommended_for_type(content_type);
-  }
+  const applications = Gio.AppInfo.get_recommended_for_type(content_type);
 
   return applications.filter((appInfo) => {
     return appInfo.should_show() && !excluded_apps.includes(appInfo.get_id());
