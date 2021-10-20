@@ -18,6 +18,23 @@
   ],
   "modules": [
     {
+      "name": "glib",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dtests=false",
+        "-Dselinux=disabled",
+        "-Dinternal_pcre=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/glib/2.70/glib-2.70.0.tar.xz",
+          "sha256": "200d7df811c5ba634afbf109f14bb40ba7fde670e89389885da14e27c0840742"
+        },
+        { "type": "patch", "path": "0001-do-not-test-exec.patch" }
+      ]
+    },
+    {
       "name": "wrapper",
       "buildsystem": "simple",
       "build-commands": [
@@ -28,10 +45,9 @@
           "type": "script",
           "dest-filename": "junction-wrapper",
           "commands": [
-            "export PATH=$PATH:/run/host/usr/bin",
-            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
             "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
             "gio mime x-scheme-handler/http re.sonny.Junction.desktop",
+            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
             "re.sonny.Junction \"$@\""
           ]
         }
