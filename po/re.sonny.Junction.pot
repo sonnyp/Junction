@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-17 15:48+0200\n"
+"POT-Creation-Date: 2021-10-20 20:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "Application chooser"
 msgstr ""
 
 #. TRANSLATORS: Don't translate
-#: data/re.sonny.Junction.desktop:17
+#: data/re.sonny.Junction.desktop:13
 msgid "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
 msgstr ""
 
@@ -96,7 +96,19 @@ msgstr ""
 msgid "Choose the browser to open the link with"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:51
+#: data/re.sonny.Junction.metainfo.xml:52
+msgid "Fix for missing applications"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:53
+msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:54
+msgid "Add Italian translation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:60
 msgid "This is the first release of Junction. We hope you like it."
 msgstr ""
 
@@ -124,6 +136,10 @@ msgstr ""
 msgid "Click here to test"
 msgstr ""
 
-#: src/welcome.ui:58
+#: src/welcome.ui:61
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/welcome.ui:65
 msgid "About Junction"
 msgstr ""
