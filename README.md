@@ -112,6 +112,31 @@ A browser extension might be coming.
 
 </details>
 
+## Troubleshooting
+
+<details>
+  <summary>My app doesn't show up</summary>
+
+If the application was installed via Flatpak, the package manager or an other conventional way, feel free to [open an issue](https://github.com/sonnyp/Junction/issues/new/choose).
+
+Make sure the application `.desktop` file has a `MimeType` key that matches the type of resource you want it to handle.
+
+For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
+
+An other common mistake is to forget to run `update-desktop-database ~/.local/share/applications` after installing a `.desktop` file.
+
+</details>
+
+<details>
+  <summary>Where are desktop files located ?</summary>
+
+- System `/usr/share/applications`
+- User `~/.local/share/applications`
+- Flatpak system `/var/lib/flatpak/exports/share/applications/`
+- Flatpak user `~/.local/share/flatpak/exports/share/applications/`
+
+</details>
+
 ## Development
 
 ```sh

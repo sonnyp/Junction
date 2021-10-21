@@ -11,7 +11,7 @@ GLib.set_prgname("re.sonny.Junction");
 GLib.set_application_name("Junction");
 
 export default function main(argv, { version, datadir }) {
-  log(datadir);
+  log(`datadir: ${datadir}`);
   bindtextdomain(
     "re.sonny.Junction",
     GLib.build_filenamev([datadir, "locale"]),
