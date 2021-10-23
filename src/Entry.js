@@ -5,7 +5,6 @@ export default function Entry({ entry, value, scheme, copyToClipboard }) {
   // const entry = builder.get_object("entry");
 
   entry.set_text(value);
-  entry.set_tooltip_text(value);
 
   // Maybe an elipsis in the middle in "view" mode
   // would be best

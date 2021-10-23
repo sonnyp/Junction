@@ -1,4 +1,4 @@
-import Gtk from "gi://Gtk";
+import Adw from "gi://Adw";
 import Gio from "gi://Gio";
 
 import Window from "./window.js";
@@ -7,7 +7,7 @@ import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
 
 export default function Application({ version }) {
-  const application = new Gtk.Application({
+  const application = new Adw.Application({
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });

@@ -1,9 +1,8 @@
-import "./setup.js";
-
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
 import { bindtextdomain, textdomain } from "gettext";
+import Adw from "gi://Adw";
 
 import Application from "./application.js";
 
@@ -19,6 +18,7 @@ export default function main(argv, { version, datadir }) {
   textdomain("re.sonny.Junction");
 
   const application = Application({ version });
+  Adw.StyleManager.get_default().color_scheme = Adw.ColorScheme.FORCE_DARK;
 
   log("argv " + argv.join(" "));
   log(`programInvocationName: ${programInvocationName}`);

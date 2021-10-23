@@ -9,4 +9,4 @@ Categories=Settings;System;Utility;GNOME;GTK;
 Icon=re.sonny.Junction
 StartupNotify=true
 # TRANSLATORS: Don't translate
-Keywords=Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;
+Keywords=Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;

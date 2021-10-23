@@ -8,7 +8,6 @@ window.main {
 .list {
   background: none;
   margin: 12px;
-  margin-bottom: 0;
 }
 
 .list button {
@@ -38,4 +37,14 @@ entry.uri {
   /* Non dark theme */
   color: white;
   border: solid 1px black;
+}
+
+headerbar {
+  border: none;
+  background: none;
+}
+
+entry {
+  background: none;
+  border: none;
 }
