@@ -72,3 +72,14 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - URL/file preview
 - share intent https://wiki.gnome.org/Design/OS/Sharing
 - allow desktop applications to be primary application of an url origin
+
+# Similar
+
+- [Choosy](https://www.choosyosx.com/)
+- [BrowserChooser](https://www.browserchooser2.com/)
+- [Braus](https://github.com/properlypurple/braus)
+- [Browserosaurus](https://github.com/will-stone/browserosaurus)
+- [Finicky](https://github.com/johnste/finicky)
+- [Buffet](https://apps.apple.com/us/app/buffet-browser-picker/id1048695921?mt=12)
+- [OpenIn](https://loshadki.app/openin/)
+- [BrowserSelect](https://github.com/zumoshi/BrowserSelect)
