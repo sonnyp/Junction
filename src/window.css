@@ -33,9 +33,17 @@ entry.uri {
   border-radius: 18px;
   margin-top: 6px;
   margin-left: 12px;
-  margin-right: 12px;
   margin-bottom: 6px;
   /* Non dark theme */
   color: white;
   border: solid 1px black;
+}
+
+menubutton button {
+  background: none;
+  border: none;
+}
+
+menubutton {
+  margin-right: 6px;
 }

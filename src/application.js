@@ -12,6 +12,8 @@ export default function Application({ version }) {
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
 
+  Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
+
   application.connect("open", (self, [file]) => {
     Window({ application, file });
   });
@@ -32,7 +34,8 @@ export default function Application({ version }) {
   application.add_action(quit);
   application.set_accels_for_action("app.quit", ["<Primary>Q"]);
 
-  application.set_accels_for_action("win.close", ["<Primary>W", "Escape"]);
+  application.set_accels_for_action("window.close", ["<Primary>W", "Escape"]);
+  application.set_accels_for_action("win.copy", ["<Primary>C"]);
 
   const showAboutDialog = new Gio.SimpleAction({
     name: "about",

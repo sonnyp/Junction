@@ -51,7 +51,6 @@ export default function Window({ application, file }) {
     entry: builder.get_object("entry"),
     value,
     scheme,
-    copyToClipboard,
   });
 
   const applications = getApplications(content_type);
@@ -68,23 +67,14 @@ export default function Window({ application, file }) {
     list.append(button);
   });
 
-  const shortcut = new Gtk.Shortcut({
-    trigger: Gtk.ShortcutTrigger.parse_string("<Control>C"),
-    action: Gtk.CallbackAction.new(copyToClipboard),
-  });
-  const shortcutController = new Gtk.ShortcutController();
-  shortcutController.add_shortcut(shortcut);
-  window.add_controller(shortcutController);
-  window.present();
-
-  const close = new Gio.SimpleAction({
-    name: "close",
+  const copy = new Gio.SimpleAction({
+    name: "copy",
     parameter_type: null,
   });
-  close.connect("activate", () => {
-    application.get_active_window()?.close();
-  });
-  window.add_action(close);
+  copy.connect("activate", copyToClipboard);
+  window.add_action(copy);
+
+  window.present();
 
   return { window };
 }

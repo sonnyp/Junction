@@ -16,6 +16,7 @@ https://github.com/flathub/com.github.donadigo.appeditor/issues/18
 - https://github.com/flathub/com.github.donadigo.appeditor/blob/master/com.github.donadigo.appeditor.json
 - https://github.com/flatpak/flatpak/issues/1286
 - https://news.ycombinator.com/item?id=28576147
+- https://edoceo.com/sys/xfce-custom-uri-handler
 
 # portal app chooser
 
@@ -41,7 +42,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for file type
   - Replace home dir path with ~
   - Replace `file:///` with `/`
-  - Open file read only
+  - Open file read only (or copy)
 - For URLs
   - HTTPS Everywhere / hsts support
   - Removes tracking elements from URLs

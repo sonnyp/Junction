@@ -1,11 +1,10 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 
-export default function Entry({ entry, value, scheme, copyToClipboard }) {
+export default function Entry({ entry, value, scheme }) {
   // const entry = builder.get_object("entry");
 
   entry.set_text(value);
-  entry.set_tooltip_text(value);
 
   // Maybe an elipsis in the middle in "view" mode
   // would be best
@@ -26,11 +25,6 @@ export default function Entry({ entry, value, scheme, copyToClipboard }) {
   if (scheme === "file") {
     entry.set_editable(false);
   }
-
-  entry.connect("icon-release", (position) => {
-    if (!position === Gtk.EntryIconPosition.SECONDARY) return;
-    copyToClipboard();
-  });
 
   const eventController = new Gtk.EventControllerFocus();
   entry.add_controller(eventController);

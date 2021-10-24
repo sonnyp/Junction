@@ -1,5 +1,4 @@
-import "./setup.js";
-
+import Gtk from "gi://Gtk?version=4.0";
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
@@ -9,6 +8,7 @@ import Application from "./application.js";
 
 GLib.set_prgname("re.sonny.Junction");
 GLib.set_application_name("Junction");
+Gtk.init();
 
 export default function main(argv, { version, datadir }) {
   log(`datadir: ${datadir}`);
