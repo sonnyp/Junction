@@ -1,95 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
-  <object class="AdwApplicationWindow" id="window">
-    <property name="title">Junction</property>
+  <object class="GtkApplicationWindow" id="window">
     <property name="resizable">False</property>
-    <property name="decorated">True</property>
-    <property name="content">
+    <property name="decorated">False</property>
+    <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="AdwHeaderBar" id="headerbar">
-            <property name="decoration-layout">:close</property>
-            <child type="start">
-              <object class="GtkMenuButton">
-                <property name="menu-model">menu_app</property>
-                <property name="icon-name">open-menu-symbolic</property>
-              </object>
-            </child>
-            <child type="title">
-              <object class="GtkEntry" id="entry">
-                <property name="input-purpose">url</property>
-                <property name="xalign">0.5</property>
-                <property name="hexpand">true</property>
-                <!-- TODO: file a bug - does not seem to be working -->
-                <property name="primary-icon-activatable">false</property>
-                <!-- TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906 -->
-                <property
-                  name="primary-icon-tooltip-text"
-                  translatable="yes"
-                >This site has no security. An attacker could see any information you send, or control the content that you see.</property>
-                <property
-                  name="secondary-icon-name"
-                >edit-copy-symbolic</property>
-                <property
-                  name="secondary-icon-tooltip-text"
-                  translatable="yes"
-                >Copy to Clipboard</property>
-                <style>
-                  <class name="uri" />
-                </style>
-              </object>
-            </child>
+          <object class="GtkBox" id="list">
             <style>
-              <class name="flat" />
+              <class name="list" />
             </style>
+            <property name="orientation">horizontal</property>
+            <property name="homogeneous">True</property>
+            <property name="spacing">18</property>
           </object>
         </child>
         <child>
-          <object class="GtkBox">
-            <property name="orientation">vertical</property>
-            <child>
-              <object class="GtkBox" id="list">
-                <style>
-                  <class name="list" />
-                </style>
-                <property name="orientation">horizontal</property>
-                <property name="homogeneous">True</property>
-                <property name="spacing">18</property>
-              </object>
-            </child>
+          <object class="GtkEntry" id="entry">
+            <property name="input-purpose">url</property>
+            <property name="xalign">0.5</property>
+            <!-- TODO: file a bug - does not seem to be working -->
+            <property name="primary-icon-activatable">False</property>
+            <!-- TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906 -->
+            <property
+              name="primary-icon-tooltip-text"
+              translatable="yes"
+            >This site has no security. An attacker could see any information you send, or control the content that you see.</property>
+            <property name="secondary-icon-name">edit-copy-symbolic</property>
+            <property
+              name="secondary-icon-tooltip-text"
+              translatable="yes"
+            >Copy to Clipboard</property>
+            <style>
+              <class name="uri" />
+            </style>
           </object>
         </child>
       </object>
-    </property>
+    </child>
     <style>
       <class name="main" />
     </style>
   </object>
-
-  <menu id="menu_app">
-    <section>
-      <item>
-        <attribute
-          name="label"
-          translatable="yes"
-        >Keyboard Shortcuts</attribute>
-        <attribute name="action">app.shortcuts</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">About Junction</attribute>
-        <attribute name="action">app.about</attribute>
-      </item>
-    </section>
-  </menu>
-  <menu id="menu_remember">
-    <section>
-      <item>
-        <attribute name="label">github.com</attribute>
-      </item>
-      <item>
-        <attribute name="label">github.com/sonnyp</attribute>
-      </item>
-    </section>
-  </menu>
 </interface>

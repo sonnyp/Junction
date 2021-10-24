@@ -41,7 +41,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for file type
   - Replace home dir path with ~
   - Replace `file:///` with `/`
-  - Open file read only (or copy)
+  - Open file read only
 - For URLs
   - HTTPS Everywhere / hsts support
   - Removes tracking elements from URLs
