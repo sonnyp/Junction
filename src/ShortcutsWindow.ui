@@ -28,6 +28,42 @@
                 >Copy to Clipboard</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">Right</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Select next application</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">Left</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Select previous application</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">Return space</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Open with selected application</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">1...9</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Open with application at position</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

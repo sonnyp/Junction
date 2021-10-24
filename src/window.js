@@ -64,8 +64,32 @@ export default function Window({ application, file }) {
       entry,
       window,
     });
+    appInfo.button = button;
     list.append(button);
   });
+
+  function getAppForKeyval(keyval) {
+    const keyname = Gdk.keyval_name(keyval);
+    // Is not 0...9
+    if (!/^\d$/.test(keyname)) return null;
+    const appInfo = applications[+keyname - 1];
+    return appInfo;
+  }
+
+  const eventController = new Gtk.EventControllerKey();
+  eventController.connect("key-pressed", (self, keyval) => {
+    const appInfo = getAppForKeyval(keyval);
+    if (!appInfo) return false;
+    appInfo.button.grab_focus();
+    return true;
+  });
+  eventController.connect("key-released", (self, keyval) => {
+    const appInfo = getAppForKeyval(keyval);
+    if (!appInfo) return false;
+    appInfo.button.activate();
+    return true;
+  });
+  window.add_controller(eventController);
 
   const copy = new Gio.SimpleAction({
     name: "copy",

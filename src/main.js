@@ -11,7 +11,6 @@ GLib.set_application_name("Junction");
 Gtk.init();
 
 export default function main(argv, { version, datadir }) {
-  log(`datadir: ${datadir}`);
   bindtextdomain(
     "re.sonny.Junction",
     GLib.build_filenamev([datadir, "locale"]),
@@ -20,6 +19,7 @@ export default function main(argv, { version, datadir }) {
 
   const application = Application({ version });
 
+  log(`datadir: ${datadir}`);
   log("argv " + argv.join(" "));
   log(`programInvocationName: ${programInvocationName}`);
   log(`_: ${GLib.getenv("_")}`);

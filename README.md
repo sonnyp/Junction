@@ -144,9 +144,9 @@ cd Junction
 ./re.sonny.Junction https://www.gnome.org/
 ```
 
-Make changes and press `Ctrl+Shift+Q` on the Junction window to restart it.
+Make changes and press `<Primary><Shift>Q` on the Junction window to restart it.
 
-Use `Ctrl+Shift+I` to open the inspector.
+Use `<Primary><Shift>I` to open the inspector.
 
 To setup development version as default application first install the desktop file with
 
