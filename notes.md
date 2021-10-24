@@ -62,6 +62,8 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - History of uris
 - Read from clipboard when opening
 - Open in Terminal
+- mailto to web
+- put http warning behind setting
 
 ## Some crazy/maybe-bad ideas:
 

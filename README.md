@@ -112,6 +112,34 @@ A browser extension might be coming.
 
 </details>
 
+<details>
+  <summary>Multiple Firefox profiles</summary>
+
+See [Profile Manager - Create, remove or switch Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles)
+
+If you want to be able to choose the Firefox profile to open the resource with, you can make desktop files for your Firefox profiles in `~/.local/share/applications`.
+
+Here is an example `~/.local/share/applications/firefox-work.desktop`
+
+```ini
+[Desktop Entry]
+Version=1.0
+Name=Firefox work
+Exec=firefox -P work --class=firefox-work %u
+Icon=firefox
+Terminal=false
+Type=Application
+StartupWMClass=firefox-work
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+```
+
+Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
+
+[Reference](https://github.com/sonnyp/Junction/issues/9)
+
+</details>
+
 ## Troubleshooting
 
 <details>
