@@ -1,7 +1,7 @@
 import Gtk from "gi://Gtk";
-import GLib from "gi://GLib";
-import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
+
+import { openWithApplication } from "./util.js";
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
   const button = new Gtk.Button();
@@ -21,7 +21,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     try {
       openWithApplication({
         appInfo,
-        resource: entry.get_text(),
+        uri: entry.get_text(),
         content_type,
       });
       return true;
@@ -58,46 +58,4 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   });
 
   return { button };
-}
-
-function openWithApplication({ appInfo, resource, content_type }) {
-  if (GLib.getenv("FLATPAK_ID")) {
-    appInfo = flatpakSpawnify(appInfo);
-  }
-
-  const success = appInfo.launch_uris([resource], null);
-  if (!success) {
-    throw new Error(`Could not launch ${resource} with ${appInfo.get_id()}`);
-  }
-
-  if (!GLib.getenv("FLATPAK_ID")) {
-    // On Flatpak fails with
-    // (re.sonny.Junction:3): Gjs-WARNING **: 18:35:39.427: JS ERROR: Gio.IOErrorEnum: Can’t create user desktop file /home/sonny/.var/app/re.sonny.Junction/data/applications/userapp-YOGA Image Optimizer-20X240.desktop
-    appInfo.set_as_last_used_for_type(content_type);
-  }
-}
-
-function flatpakSpawnify(appInfo) {
-  const filename = appInfo.get_filename();
-  if (!filename) {
-    return appInfo;
-  }
-
-  const keyFile = new GLib.KeyFile();
-  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
-    return null;
-  }
-
-  const Exec = keyFile.get_value("Desktop Entry", "Exec");
-  if (Exec.startsWith("flatpak-spawn")) {
-    return null;
-  }
-
-  if (!Exec) {
-    logError(new Error(`No Exec for ${filename}`));
-    return null;
-  }
-  keyFile.set_value("Desktop Entry", "Exec", `flatpak-spawn --host ${Exec}`);
-
-  return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
 }

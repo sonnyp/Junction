@@ -6,6 +6,9 @@ import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
 
+import { getFileInfo } from "./util.js";
+import { passThroughUserScript } from "./user.js";
+
 export default function Application({ version }) {
   const application = new Gtk.Application({
     application_id: "re.sonny.Junction",
@@ -15,7 +18,12 @@ export default function Application({ version }) {
   Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
 
   application.connect("open", (self, [file]) => {
-    Window({ application, file });
+    const { URI, content_type } = getFileInfo(file);
+
+    const handled = passThroughUserScript({ URI, content_type, file });
+    if (handled === true) return;
+
+    Window({ application, URI, content_type, file });
   });
 
   application.connect("activate", () => {

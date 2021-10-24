@@ -39,11 +39,11 @@ entry.uri {
   border: solid 1px black;
 }
 
-menubutton button {
+window.main menubutton button {
   background: none;
   border: none;
 }
 
-menubutton {
+window.main menubutton {
   margin-right: 6px;
 }

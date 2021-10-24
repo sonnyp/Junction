@@ -1,13 +1,12 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
-import GLib from "gi://GLib";
 import Gdk from "gi://Gdk";
 
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton from "./AppButton.js";
 
-export default function Window({ application, file }) {
+export default function Window({ application, file, content_type, URI }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
 
   function copyToClipboard() {
@@ -20,31 +19,12 @@ export default function Window({ application, file }) {
   loadStyleSheet(relativePath("./window.css"));
   window.set_application(application);
 
-  let content_type = "application/octet-stream";
   let value = "";
-
-  // g_file_get_uri_scheme() returns http for https so we need to use g_uri
-  // const scheme = file.get_uri_scheme();
-  const uri = GLib.uri_parse(file.get_uri(), GLib.UriFlags.NONE);
-  const scheme = uri.get_scheme();
-
+  const scheme = URI.get_scheme();
   if (scheme !== "file") {
-    content_type = `x-scheme-handler/${scheme}`;
     value = file.get_uri();
   } else {
     value = file.get_path();
-    try {
-      const info = file.query_info(
-        "standard::content-type,standard::display-name",
-        Gio.FileQueryInfoFlags.NONE,
-        null,
-      );
-      content_type = info.get_content_type();
-      // display_name = info.get_display_name();
-    } catch (err) {
-      // display_name = file.get_basename();
-      logError(err);
-    }
   }
 
   const { entry } = Entry({

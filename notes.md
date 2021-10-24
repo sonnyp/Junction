@@ -50,7 +50,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
   - Remember application for content-type
   - Firefox profiles
   - Protect against [homograph attack](https://en.wikipedia.org/wiki/IDN_homograph_attack)
-  - URL rewrite (e.g. `https://meet.jit.si/example` -> `jitsi-meet://example `)
+  - URL rewrite (e.g. `https://meet.jit.si/example` -> `jitsi-meet://example`)
   - Hide scheme if `https`
   - https://publicsuffix.org/list/ support for rules
 - Customizable (show/hide URI bar and so on)
