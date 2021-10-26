@@ -65,7 +65,15 @@ function openWithApplication({ appInfo, resource, content_type }) {
     appInfo = flatpakSpawnify(appInfo);
   }
 
-  const success = appInfo.launch_uris([resource], null);
+  let success;
+
+  if (appInfo.supports_uris()) {
+    success = appInfo.launch_uris([resource], null);
+  } else {
+    const file = Gio.File.new_for_path(resource);
+    success = appInfo.launch([file], null);
+  }
+
   if (!success) {
     throw new Error(`Could not launch ${resource} with ${appInfo.get_id()}`);
   }
