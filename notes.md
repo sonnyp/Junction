@@ -64,6 +64,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - Open in Terminal
 - mailto to web
 - put http warning behind setting
+- API similar to https://www.choosyosx.com/api
 
 ## Some crazy/maybe-bad ideas:
 
@@ -86,3 +87,26 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - [Buffet](https://apps.apple.com/us/app/buffet-browser-picker/id1048695921?mt=12)
 - [OpenIn](https://loshadki.app/openin/)
 - [BrowserSelect](https://github.com/zumoshi/BrowserSelect)
+
+# custom options cli
+
+```js
+application.add_main_option(
+  "super-long-name",
+  "short-name",
+  GLib.OptionFlags.NONE,
+  GLib.OptionArg.STRING,
+  "description",
+  "arg_description",
+);
+
+application.connect("handle-local-options", (self, options) => {
+  log("handle local options");
+  log(options);
+
+  return -1;
+});
+
+// and then in command-line handler
+// log(applicationCommandLine.get_options_dict().lookup("super-long-name"));
+```

@@ -15,7 +15,10 @@ export default function Application({ version }) {
   Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
 
   application.connect("open", (self, [file]) => {
-    Window({ application, file });
+    Window({
+      application,
+      file,
+    });
   });
 
   application.connect("activate", () => {
@@ -23,6 +26,18 @@ export default function Application({ version }) {
       application,
     });
   });
+
+  application.set_option_context_description(
+    "<https://github.com/sonnyp/Junction>",
+  );
+  // TODO: Implement multiple resources
+  // application.set_option_context_parameter_string("[RESOURCE…]");
+  // Exec=re.sonny.Junction %U
+  application.set_option_context_parameter_string("RESOURCE");
+  application.set_option_context_summary(
+    // TODO: Add examples
+    "resource can be a path or URI",
+  );
 
   const quit = new Gio.SimpleAction({
     name: "quit",
