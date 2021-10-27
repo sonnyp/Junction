@@ -9,43 +9,28 @@ import ShortcutsWindow from "./ShortcutsWindow.js";
 export default function Application({ version }) {
   const application = new Gtk.Application({
     application_id: "re.sonny.Junction",
-    flags:
-      Gio.ApplicationFlags.HANDLES_OPEN |
-      Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
+    flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
 
   Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
 
-  // If both HANDLES_OPEN and HANDLES_COMMAND_LINE flags are set
-  // this is only called for the DBus Open method
-  // see https://gitlab.gnome.org/GNOME/glib/-/issues/1853
+  // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
+  // GFile mess the URI if the scheme separator does not include "//" like about:blank or mailto:foo@bar.com
+  // or plenty of other URI schemes https://en.wikipedia.org/wiki/List_of_URI_schemes
+  // would be neat if there was a HANDLES_URI ApplicationFlags that used the new GLib URI
+  // see https://gitlab.gnome.org/GNOME/glib/-/issues/1886
+  // I tried working around the problem by using ApplicationFlags.COMMAND_LINE only
+  // but the only way never to trigger open is to disable DBus activation altogether
+  // see also https://gitlab.gnome.org/GNOME/glib/-/issues/1853
   application.connect("open", (self, files, hint) => {
     log(["open", files.length, hint]);
-    // FIXME: Cannot deal with mailto:, xmpp:/, ... URIs
-    // GFile mess the URI if the scheme separator does not include "//" like about:blank or mailto:foo@bar.com
-    // or plenty of other URI schemes https://en.wikipedia.org/wiki/List_of_URI_schemes
-    // would be neat if there was a HANDLES_URI ApplicationFlags that used the new GLib URI
-    // see https://gitlab.gnome.org/GNOME/glib/-/issues/1886
 
-    const [file] = files;
-    Window({
-      application,
-      file,
-    });
-  });
-
-  application.connect("command_line", (self, applicationCommandLine) => {
-    const args = applicationCommandLine.get_arguments();
-    const [, resource] = args;
-
-    if (resource) {
+    files.forEach((file) => {
       Window({
         application,
-        file: applicationCommandLine.create_file_for_arg(resource),
+        file,
       });
-    }
-
-    return -1;
+    });
   });
 
   application.connect("activate", () => {
@@ -57,14 +42,9 @@ export default function Application({ version }) {
   application.set_option_context_description(
     "<https://github.com/sonnyp/Junction>",
   );
-  // TODO: Implement multiple resources
-  // application.set_option_context_parameter_string("[RESOURCE…]");
-  // Exec=re.sonny.Junction %U
-  application.set_option_context_parameter_string("RESOURCE");
-  application.set_option_context_summary(
-    // TODO: Add examples
-    "resource can be a path or URI",
-  );
+  application.set_option_context_parameter_string("[URI…]");
+  // TODO: Add examples
+  // application.set_option_context_summary("");
 
   const quit = new Gio.SimpleAction({
     name: "quit",

@@ -33,7 +33,7 @@ import("./src/main.js")
   .then(({ default: main }) => {
     loop.quit();
     main([programInvocationName, ...ARGV], {
-      version: "dev",
+      version: "devel",
       datadir: ".",
     });
   })
