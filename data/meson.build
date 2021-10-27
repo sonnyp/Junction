@@ -22,6 +22,15 @@ appstream_file = i18n.merge_file(
   install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
+service_conf = configuration_data()
+service_conf.set('bindir', bindir)
+configure_file(
+  input: 're.sonny.Junction.service',
+  output: 're.sonny.Junction.service',
+  configuration: service_conf,
+  install_dir: join_paths(get_option('datadir'), 'dbus-1/services')
+)
+
 appstream_util = find_program('appstream-util', required: false)
 if appstream_util.found()
   test('Validate appstream file', appstream_util,

@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=re.sonny.Junction
+Exec=@bindir@/re.sonny.Junction --gapplication-service

@@ -1,8 +1,8 @@
 .PHONY: build run-host flatpak flatpak-local-remote bundle test clean dev
 
 build:
-	# meson --reconfigure --prefix $(shell pwd)/install build
-	meson --prefix $(shell pwd)/install build
+	# meson --reconfigure --prefix ${PWD}/install build
+	meson --prefix ${PWD}/install build
 	ninja -C build install
 
 run-host:
@@ -38,9 +38,15 @@ test:
 clean:
 	rm -rf build install .eslintcache
 	rm -f ~/.local/share/applications/re.sonny.Junction.desktop
+	rm -f ~/.local/share/dbus-1/services/re.sonny.Junction.service
 	update-desktop-database ~/.local/share/applications
 
 dev:
+	# service file
+	mkdir -p ~/.local/share/dbus-1/services
+	cp data/re.sonny.Junction.service ~/.local/share/dbus-1/services/
+	sed -i "/^Exec=/s#=.*#=${PWD}\/re\.sonny\.Junction --gapplication-service#" ~/.local/share/dbus-1/services/re.sonny.Junction.service
+	# desktop file
 	cp data/re.sonny.Junction.desktop ~/.local/share/applications/
 	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
 	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop

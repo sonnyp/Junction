@@ -14,7 +14,16 @@ export default function Application({ version }) {
 
   Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
 
-  application.connect("open", (self, [file]) => {
+  application.connect("open", (self, files, hint) => {
+    // GFile mess the URI if the scheme separator does not include "//" like about:blank or mailto:foo@bar.com
+    // We could circumvent by using Gio.ApplicationFlags.HANDLES_COMMAND_LINE and ::command_line
+    // instead of Gio.ApplicationFlags.HANDLES_OPEN and ::open
+    // but we want to implement the dbus Open method as seen on
+    // https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus
+    // so instead we read from ARGV directly
+    log(ARGV);
+
+    const [file] = files;
     Window({
       application,
       file,
@@ -25,6 +34,19 @@ export default function Application({ version }) {
     Welcome({
       application,
     });
+  });
+
+  application.connect("handle_local_options", (self, options) => {
+    log(["handle_local_options", options]);
+    return -1;
+  });
+
+  application.connect("command_line", (self, command_line) => {
+    log(["command_line", command_line]);
+    // Welcome({
+    //   application,
+    // });
+    return -1;
   });
 
   application.set_option_context_description(
