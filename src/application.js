@@ -9,19 +9,23 @@ import ShortcutsWindow from "./ShortcutsWindow.js";
 export default function Application({ version }) {
   const application = new Gtk.Application({
     application_id: "re.sonny.Junction",
-    flags: Gio.ApplicationFlags.HANDLES_OPEN,
+    flags:
+      Gio.ApplicationFlags.HANDLES_OPEN |
+      Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
   });
 
   Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
 
+  // If both HANDLES_OPEN and HANDLES_COMMAND_LINE flags are set
+  // this is only called for the DBus Open method
+  // see https://gitlab.gnome.org/GNOME/glib/-/issues/1853
   application.connect("open", (self, files, hint) => {
+    log(["open", files.length, hint]);
+    // FIXME: Cannot deal with mailto:, xmpp:/, ... URIs
     // GFile mess the URI if the scheme separator does not include "//" like about:blank or mailto:foo@bar.com
-    // We could circumvent by using Gio.ApplicationFlags.HANDLES_COMMAND_LINE and ::command_line
-    // instead of Gio.ApplicationFlags.HANDLES_OPEN and ::open
-    // but we want to implement the dbus Open method as seen on
-    // https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#dbus
-    // so instead we read from ARGV directly
-    log(ARGV);
+    // or plenty of other URI schemes https://en.wikipedia.org/wiki/List_of_URI_schemes
+    // would be neat if there was a HANDLES_URI ApplicationFlags that used the new GLib URI
+    // see https://gitlab.gnome.org/GNOME/glib/-/issues/1886
 
     const [file] = files;
     Window({
@@ -30,23 +34,24 @@ export default function Application({ version }) {
     });
   });
 
+  application.connect("command_line", (self, applicationCommandLine) => {
+    const args = applicationCommandLine.get_arguments();
+    const [, resource] = args;
+
+    if (resource) {
+      Window({
+        application,
+        file: applicationCommandLine.create_file_for_arg(resource),
+      });
+    }
+
+    return -1;
+  });
+
   application.connect("activate", () => {
     Welcome({
       application,
     });
-  });
-
-  application.connect("handle_local_options", (self, options) => {
-    log(["handle_local_options", options]);
-    return -1;
-  });
-
-  application.connect("command_line", (self, command_line) => {
-    log(["command_line", command_line]);
-    // Welcome({
-    //   application,
-    // });
-    return -1;
   });
 
   application.set_option_context_description(
