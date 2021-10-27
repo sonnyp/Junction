@@ -3,6 +3,8 @@ import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
+import { parse } from "./util.js";
+
 export default function AppButton({ appInfo, content_type, entry, window }) {
   const button = new Gtk.Button();
 
@@ -21,7 +23,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     try {
       openWithApplication({
         appInfo,
-        resource: entry.get_text(),
+        location: entry.get_text(),
         content_type,
       });
       return true;
@@ -60,22 +62,24 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return { button };
 }
 
-function openWithApplication({ appInfo, resource, content_type }) {
+function openWithApplication({ appInfo, location, content_type }) {
   if (GLib.getenv("FLATPAK_ID")) {
     appInfo = flatpakSpawnify(appInfo);
   }
 
-  let success;
+  const uri = parse(location);
+  const uri_str = uri.to_string();
 
+  let success;
   if (appInfo.supports_uris()) {
-    success = appInfo.launch_uris([resource], null);
+    success = appInfo.launch_uris([uri_str], null);
   } else {
-    const file = Gio.File.new_for_path(resource);
+    const file = Gio.File.new_for_uri(uri_str);
     success = appInfo.launch([file], null);
   }
 
   if (!success) {
-    throw new Error(`Could not launch ${resource} with ${appInfo.get_id()}`);
+    throw new Error(`Could not launch ${location} with ${appInfo.get_id()}`);
   }
 
   if (!GLib.getenv("FLATPAK_ID")) {

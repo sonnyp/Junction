@@ -32,3 +32,8 @@ export function spawn(cmd) {
   }
   return GLib.spawn_command_line_async(cmd);
 }
+
+export function parse(str) {
+  if (str.startsWith("/")) str = "file://" + str;
+  return GLib.Uri.parse(str, GLib.UriFlags.NONE);
+}
