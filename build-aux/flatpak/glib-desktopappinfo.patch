@@ -1,7 +1,7 @@
 # This is only required for flatpak
 # In the sandbox - the programs in the Exec and Try_Exec keys do not exist
 # it's not a problem when launching the app since we use flatpak-spawn
-# but when listing the apps - GLIb will filter them out
+# but when listing the apps - GLib will filter them out
 
 # https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/master/elements/components/glib.bst
 # https://gitlab.gnome.org/GNOME/gnome-build-meta/-/blob/master/elements/sdk/glib.bst

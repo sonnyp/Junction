@@ -2,7 +2,7 @@
 .flatpak-builder
 build
 builddir
-flatpak
+/flatpak
 node_modules/
 repo
 install

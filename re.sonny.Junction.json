@@ -31,7 +31,10 @@
           "url": "https://download.gnome.org/sources/glib/2.70/glib-2.70.0.tar.xz",
           "sha256": "200d7df811c5ba634afbf109f14bb40ba7fde670e89389885da14e27c0840742"
         },
-        { "type": "patch", "path": "0001-do-not-test-exec.patch" }
+        {
+          "type": "patch",
+          "path": "data-aux/flatpak/glib-desktopappinfo.patch"
+        }
       ]
     },
     {
