@@ -10,12 +10,6 @@ import AppButton from "./AppButton.js";
 export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
 
-  function copyToClipboard() {
-    const display = Gdk.Display.get_default();
-    const clipboard = display.get_clipboard();
-    clipboard.set(entry.get_text());
-  }
-
   const window = builder.get_object("window");
   loadStyleSheet(relativePath("./window.css"));
   window.set_application(application);
@@ -91,6 +85,11 @@ export default function Window({ application, file }) {
   });
   window.add_controller(eventController);
 
+  function copyToClipboard() {
+    const display = Gdk.Display.get_default();
+    const clipboard = display.get_clipboard();
+    clipboard.set(entry.get_text());
+  }
   const copy = new Gio.SimpleAction({
     name: "copy",
     parameter_type: null,

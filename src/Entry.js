@@ -2,17 +2,15 @@ import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 
 export default function Entry({ entry, value, scheme }) {
-  // const entry = builder.get_object("entry");
-
   entry.set_text(value);
 
-  // Maybe an elipsis in the middle in "view" mode
-  // would be best
   if (scheme === "file") {
-    // "Scroll" to end
-    // for urls we want to see the hostname
+    entry.set_editable(false);
     // for files we want to see the filename
     entry.set_position(-1);
+  } else {
+    // for urls we want to see the hostname
+    entry.set_position(0);
   }
 
   if (scheme === "http") {
@@ -22,16 +20,14 @@ export default function Entry({ entry, value, scheme }) {
     );
   }
 
-  if (scheme === "file") {
-    entry.set_editable(false);
-  }
-
   const eventController = new Gtk.EventControllerFocus();
   entry.add_controller(eventController);
   eventController.connect("enter", () => {
-    // I guess a custom widget would be required for this
-    // urlEntry.grab_focus_without_selecting();
+    // Unselect and "scroll" to end
+    // User will almost always want to endit the end of the URL
+    // it's too late to call entry.grab_focus_without_selecting();
     // For some reason Promise.resolve().then(foo) is not called
+    // A bit hackish
     GLib.timeout_add(GLib.PRIORITY_DEFAULT, 0, () => {
       entry.select_region(-1, 0);
       entry.set_position(-1);
