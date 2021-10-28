@@ -143,6 +143,19 @@ Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
 ## Troubleshooting
 
 <details>
+  <summary>I can't distinguish between 2 options with the same icon</summary>
+
+A quick workaround is to hover the application with the mouse cursor to show a tooltip with the name.
+
+You can edit the desktop files to use distinctive icons, here are a some tools
+
+- [MenuLibre](https://bluesabre.org/menulibre/) GUI
+- [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI - Flatpak
+- [ArchWiki](https://wiki.archlinux.org/title/desktop_entries) advanced
+
+</details>
+
+<details>
   <summary>My app doesn't show up</summary>
 
 If the application was installed via Flatpak, the package manager or an other conventional way, feel free to [open an issue](https://github.com/sonnyp/Junction/issues/new/choose).
