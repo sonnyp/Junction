@@ -46,8 +46,12 @@ dev:
 	mkdir -p ~/.local/share/dbus-1/services
 	cp data/re.sonny.Junction.service ~/.local/share/dbus-1/services/
 	sed -i "/^Exec=/s#=.*#=${PWD}\/re\.sonny\.Junction --gapplication-service#" ~/.local/share/dbus-1/services/re.sonny.Junction.service
+	# icons
+	cp data/icons/re.sonny.Junction.svg ~/.local/share/icons/hicolor/scalable/apps/
+	cp data/icons/re.sonny.Junction.svg ~/.local/share/icons/hicolor/scalable/apps/
 	# desktop file
 	cp data/re.sonny.Junction.desktop ~/.local/share/applications/
 	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
 	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop
 	update-desktop-database ~/.local/share/applications
+

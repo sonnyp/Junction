@@ -22,10 +22,9 @@
         <property name="spacing">14</property>
         <child>
           <object class="GtkImage">
-            <property name="icon-name">emblem-default-symbolic</property>
+            <property name="icon-name">re.sonny.Junction</property>
             <property name="pixel-size">128</property>
           </object>
-
         </child>
         <child>
           <object class="GtkLabel">

@@ -1,3 +1,7 @@
-window.welcome {
+.welcome {
   border-radius: 18px;
+}
+
+.welcome image {
+  filter: grayscale(100%);
 }
