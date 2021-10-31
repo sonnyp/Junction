@@ -1,6 +1,7 @@
 import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 import Gdk from "gi://Gdk";
+import Gio from "gi://Gio";
 
 export function logEnum(obj, value) {
   log(
@@ -34,6 +35,8 @@ export function spawn(cmd) {
 }
 
 export function parse(str) {
-  if (str.startsWith("/")) str = "file://" + str;
+  if (str.startsWith("~/")) {
+    str = Gio.File.parse_name(str).get_uri();
+  } else if (str.startsWith("/") || str.startsWith("~")) str = "file://" + str;
   return GLib.Uri.parse(str, GLib.UriFlags.NONE);
 }

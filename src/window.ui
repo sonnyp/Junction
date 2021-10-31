@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
-  <object class="GtkApplicationWindow" id="window">
+  <object class="AdwApplicationWindow" id="window">
     <property name="resizable">False</property>
     <property name="decorated">False</property>
-    <child>
+    <property name="content">
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
@@ -50,8 +50,11 @@
             </child>
           </object>
         </child>
+        <style>
+          <class name="content" />
+        </style>
       </object>
-    </child>
+    </property>
     <style>
       <class name="main" />
     </style>

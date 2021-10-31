@@ -29,14 +29,12 @@ export default function Window({ application, file }) {
     value = file.get_path();
     try {
       const info = file.query_info(
-        "standard::content-type,standard::display-name",
+        "standard::content-type",
         Gio.FileQueryInfoFlags.NONE,
         null,
       );
       content_type = info.get_content_type();
-      // display_name = info.get_display_name();
     } catch (err) {
-      // display_name = file.get_basename();
       logError(err);
     }
   }
