@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
-  <object class="GtkApplicationWindow" id="welcome">
+  <object class="AdwApplicationWindow" id="welcome">
     <property name="title">Junction</property>
     <property name="default-width">480</property>
     <property name="default-height">480</property>
-    <child type="titlebar">
-      <object class="GtkHeaderBar">
-        <child type="end">
-          <object class="GtkMenuButton" id="button_menu">
-            <property name="menu-model">menu_app</property>
-            <property name="icon-name">open-menu-symbolic</property>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
+    <property name="content">
       <object class="GtkBox">
         <property name="orientation">vertical</property>
-        <property name="valign">center</property>
-        <property name="halign">center</property>
-        <property name="spacing">14</property>
         <child>
-          <object class="GtkImage">
-            <property name="icon-name">re.sonny.Junction</property>
-            <property name="pixel-size">128</property>
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkMenuButton" id="button_menu">
+                <property name="menu-model">menu_app</property>
+                <property name="icon-name">open-menu-symbolic</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
-          <object class="GtkLabel">
-            <property
-              name="label"
-              translatable="yes"
-            >Junction has been set as default application for Web</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLinkButton" id="test_button">
-            <property
-              name="label"
-              translatable="yes"
-            >Click here to test</property>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
             <property name="valign">center</property>
             <property name="halign">center</property>
-            <property name="uri">https://github.com/sonnyp/Junction</property>
+            <property name="vexpand">true</property>
+            <property name="hexpand">true</property>
+            <property name="spacing">14</property>
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">re.sonny.Junction</property>
+                <property name="pixel-size">128</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property
+                  name="label"
+                  translatable="yes"
+                >Junction has been set as default application for Web</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="test_button">
+                <property
+                  name="label"
+                  translatable="yes"
+                >Click here to test</property>
+                <property name="valign">center</property>
+                <property name="halign">center</property>
+                <property name="uri">https://github.com/sonnyp/Junction</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>
-    </child>
+    </property>
     <style>
       <class name="welcome" />
     </style>

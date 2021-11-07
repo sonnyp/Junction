@@ -1,5 +1,5 @@
-import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
+import Adw from "gi://Adw";
 
 import Window from "./window.js";
 import Welcome from "./welcome.js";
@@ -7,12 +7,12 @@ import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
 
 export default function Application({ version }) {
-  const application = new Gtk.Application({
+  const application = new Adw.Application({
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
 
-  Gtk.Settings.get_default()["gtk-application-prefer-dark-theme"] = true;
+  Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
   // GFile mess the URI if the scheme separator does not include "//" like about:blank or mailto:foo@bar.com
