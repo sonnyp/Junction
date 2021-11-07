@@ -55,11 +55,7 @@ Please note that this may not be respected by all applications but the command `
 <details>
   <summary>Keyboard navigation</summary>
 
-Use the arrows to select your choice and press ⏎ to confirm.
-
-Press `<Ctrl>C` to copy the resource location to the clipboard.
-
-Press `<Ctrl>W` or `Esc` to close and cancel.
+Use the menu or `<Ctrl>?` to learn about Keyboard usage.
 
 </details>
 
@@ -149,8 +145,8 @@ A quick workaround is to hover the application with the mouse cursor to show a t
 
 You can edit the desktop files to use distinctive icons, here are a some tools
 
-- [MenuLibre](https://bluesabre.org/menulibre/) GUI
-- [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI - Flatpak
+- [MenuLibre](https://flathub.org/apps/details/org.bluesabre.MenuLibre) GUI
+- [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI
 - [ArchWiki](https://wiki.archlinux.org/title/desktop_entries) advanced
 
 </details>
