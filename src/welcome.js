@@ -7,6 +7,7 @@ export default function Welcome({ application }) {
   loadStyleSheet(relativePath("./welcome.css"));
 
   const window = builder.get_object("welcome");
+  if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
 
   setAsDefaultApplicationForWeb();

@@ -12,6 +12,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   if (icon) {
     const image = Gtk.Image.new_from_gicon(appInfo.get_icon());
     image.pixel_size = 92;
+    image.add_css_class("icon-dropshadow");
     button.set_child(image);
   } else {
     button.label = appInfo.get_name();
