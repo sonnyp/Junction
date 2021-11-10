@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+  <object class="GtkButton" id="button">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkImage" id="image">
+            <property name="pixel-size">92</property>
+            <style>
+              <class name="icon-dropshadow" />
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label">
+            <property name="ellipsize">end</property>
+            <property name="max-width-chars">10</property>
+            <style>
+              <class name="body" />
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

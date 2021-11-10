@@ -6,6 +6,7 @@ import Gdk from "gi://Gdk";
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton from "./AppButton.js";
+import { settings } from "./common.js";
 
 export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
@@ -46,7 +47,6 @@ export default function Window({ application, file }) {
   });
 
   const applications = getApplications(content_type);
-  log(applications.map((appInfo) => appInfo.get_name()));
   const list = builder.get_object("list");
 
   applications.forEach((appInfo) => {
@@ -94,6 +94,9 @@ export default function Window({ application, file }) {
   });
   copy.connect("activate", copyToClipboard);
   window.add_action(copy);
+
+  const toggleAppNames = settings.create_action("show-app-names");
+  window.add_action(toggleAppNames);
 
   window.present();
 

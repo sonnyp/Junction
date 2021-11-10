@@ -3,22 +3,35 @@ import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
-import { parse } from "./util.js";
+import { parse, relativePath } from "./util.js";
+import { settings } from "./common.js";
+
+const { byteArray } = imports;
+
+const [, content] = GLib.file_get_contents(relativePath("./AppButton.ui"));
+const template = byteArray.toString(content);
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
-  const button = new Gtk.Button();
+  const builder = Gtk.Builder.new_from_string(template, template.length);
+
+  const button = builder.get_object("button");
+
+  const name = appInfo.get_name();
+  button.set_tooltip_text(name);
+  const label = builder.get_object("label");
+  label.label = name;
+  label.visible = false;
+  settings.bind(
+    "show-app-names",
+    label,
+    "visible",
+    Gio.SettingsBindFlags.DEFAULT,
+  );
 
   const icon = appInfo.get_icon();
   if (icon) {
-    const image = Gtk.Image.new_from_gicon(appInfo.get_icon());
-    image.pixel_size = 92;
-    image.add_css_class("icon-dropshadow");
-    button.set_child(image);
-  } else {
-    button.label = appInfo.get_name();
+    builder.get_object("image").set_from_gicon(icon);
   }
-
-  button.set_tooltip_text(appInfo.get_name());
 
   function open() {
     try {

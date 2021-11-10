@@ -21,7 +21,7 @@ globals:
 parserOptions:
   sourceType: module
 rules:
-  #
+  # https://eslint.org/docs/rules/no-unused-vars
   no-unused-vars: [error, { args: none }]
   # https://eslint.org/docs/rules/no-restricted-globals
   no-restricted-globals: [error, window, Intl, Debugger]

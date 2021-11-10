@@ -65,6 +65,10 @@
   </object>
   <menu id="menu_model">
     <item>
+      <attribute name="label" translatable="yes">Show names</attribute>
+      <attribute name="action">win.show-app-names</attribute>
+    </item>
+    <item>
       <attribute name="label" translatable="yes">Copy to Clipboard</attribute>
       <attribute name="action">win.copy</attribute>
     </item>

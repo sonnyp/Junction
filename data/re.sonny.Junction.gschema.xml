@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schemalist gettext-domain="re.sonny.Junction">
-  <schema id="re.sonny.Junction" path="/re/sonny/Junction/" />
+  <schema id="re.sonny.Junction" path="/re/sonny/Junction/">
+    <key name="show-app-names" type="b">
+      <default>false</default>
+    </key>
+    </schema>
 </schemalist>
