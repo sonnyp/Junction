@@ -1,0 +1,38 @@
+<!-- -*- mode: xml -*- -->
+<Project
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:gnome="http://api.gnome.org/doap-extensions#"
+  xmlns="http://usefulinc.com/ns/doap#"
+>
+  <name>Junction</name>
+  <shortdesc>Application chooser</shortdesc>
+  <description
+  >Junction lets you choose the application to open files and links.</description>
+
+  <homepage rdf:resource="https://github.com/sonnyp/Junction/" />
+  <bug-database rdf:resource="https://github.com/sonnyp/Junction/issues" />
+  <programming-language>JavaScript</programming-language>
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Sonny Piers</foaf:name>
+      <foaf:mbox rdf:resource="mailto:sonny@fastmail.net" />
+      <foaf:account>
+        <foaf:OnlineAccount>
+            <foaf:accountServiceHomepage rdf:resource="https://github.com/" />
+            <foaf:accountName>sonnyp</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage
+            rdf:resource="https://gitlab.gnome.org"
+          />
+          <foaf:accountName>sonny</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
+    </foaf:Person>
+  </maintainer>
+</Project>
