@@ -3,7 +3,11 @@ import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
-import { parse, relativePath } from "./util.js";
+import {
+  parse,
+  relativePath,
+  // spawn
+} from "./util.js";
 import { settings } from "./common.js";
 
 const { byteArray } = imports;
@@ -27,6 +31,33 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     "visible",
     Gio.SettingsBindFlags.DEFAULT,
   );
+
+  const filename = appInfo.get_filename();
+  const keyFile = new GLib.KeyFile();
+  keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
+  const desktopAppInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+  const actions = desktopAppInfo.list_actions();
+
+  const menu = new Gio.Menu();
+  const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
+
+  actions.forEach((action) => {
+    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+    const name = desktopAppInfo.get_action_name(action);
+    // if (!Exec.includes("%u")) return;
+    log([action, name, Exec]);
+
+    menu.append(name, "foo");
+
+    // spawn(Exec.replace("%u", `"${entry.get_text()}"`));
+    // spawn(
+    //   `gapplication action ${appInfo.get_id()} ${action} '"${entry.get_text()}"'`,
+    // );
+    // exec flatpak-spawn --host ${Exec}
+  });
+  // gapplication action chromium.desktop new-window '"http://foobar.com"'
+
+  builder.get_object("box").append(popoverMenu);
 
   const icon = appInfo.get_icon();
   if (icon) {
@@ -68,9 +99,18 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const eventController = new Gtk.GestureSingle({
     button: Gdk.BUTTON_MIDDLE,
   });
-  button.add_controller(eventController);
   eventController.connect("end", () => {
     open();
+  });
+  button.add_controller(eventController);
+
+  const eventController2 = new Gtk.GestureSingle({
+    button: Gdk.BUTTON_SECONDARY,
+  });
+  button.add_controller(eventController2);
+  eventController2.connect("end", (self) => {
+    log("cool");
+    popoverMenu.popup();
   });
 
   return { button };
