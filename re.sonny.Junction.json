@@ -83,8 +83,6 @@
           "type": "script",
           "dest-filename": "junction-wrapper",
           "commands": [
-            "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
-            "gio mime x-scheme-handler/http re.sonny.Junction.desktop",
             "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
             "re.sonny.Junction \"$@\""
           ]
