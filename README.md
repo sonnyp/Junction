@@ -208,6 +208,44 @@ make test
 
 <!-- Flathub builds https://flathub.org/builds/#/apps/re.sonny.Junction -->
 
+## Maintainer
+
+<details>
+
+  <summary>i18n</summary>
+
+```sh
+# To update the pot file
+# xgettext -f po/POTFILES -o po/re.sonny.Junction.pot --no-wrap -cTRANSLATORS --from-code=UTF-8
+# sed -i "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: re.sonny.Junction/" po/re.sonny.Junction.pot
+meson compile re.sonny.Junction-pot -C build
+
+
+# To create a translation
+# msginit -i po/re.sonny.Junction.pot -o po/fr.po -l fr_FR.UTF-8
+echo -n " fr" >> po/LINGUAS
+meson compile re.sonny.Junction-update-po -C build
+
+# To update translations
+# msgmerge -U po/*.po po/re.sonny.Junction.pot
+meson compile re.sonny.Junction-update-po -C build
+```
+
+See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
+
+</details>
+
+<details>
+
+<summary>Publish new version</summary>
+
+- `meson compile re.sonny.Junction-update-po -C build`
+- Update version in `meson.build`
+- git tag
+- flathub
+
+</details>
+
 ## Building
 
 <details>
