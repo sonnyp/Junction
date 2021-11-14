@@ -1,4 +1,6 @@
 import Gtk from "gi://Gtk";
+import Gio from "gi://Gio";
+// import Gdk from "gi://Gdk";
 
 import { relativePath, loadStyleSheet, spawn } from "./util.js";
 
@@ -10,7 +12,24 @@ export default function Welcome({ application }) {
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
 
-  setAsDefaultApplicationForWeb();
+  const test_button = builder.get_object("demo_button");
+  test_button.connect("activate-link", () => {
+    application.open([Gio.File.new_for_uri(test_button.uri)], "demo");
+    return true;
+  });
+
+  const install_button = builder.get_object("install_button");
+  install_button.connect("clicked", () => {
+    // TODO: Show an Adw.Toast once it hits a release
+    setAsDefaultApplicationForWeb();
+
+    spawn("gnome-control-center default-apps");
+    // Gtk.show_uri(
+    //   window,
+    //   "https://github.com/sonnyp/Junction",
+    //   Gdk.CURRENT_TIME,
+    // );
+  });
 
   window.present();
 
