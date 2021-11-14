@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-14 16:10+0100\n"
-"PO-Revision-Date: 2021-10-19 19:03+0100\n"
+"PO-Revision-Date: 2021-11-14 22:03+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -104,59 +104,59 @@ msgstr "Scegli il browser con cui aprire il collegamento"
 
 #: data/re.sonny.Junction.metainfo.xml:52
 msgid "Fix support for applications that do not support uris"
-msgstr ""
+msgstr "Risolto il problema con le applicazioni che non supportano uri"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Supporta l'apertura di più URI"
 
 #: data/re.sonny.Junction.metainfo.xml:54
 msgid "Add option to display application names"
-msgstr ""
+msgstr "Aggiunto l'opzione per visualizzare i nomi delle applicazioni"
 
 #: data/re.sonny.Junction.metainfo.xml:55
 msgid "Add a menu button"
-msgstr ""
+msgstr "Aggiunto un pulsante menu"
 
 #: data/re.sonny.Junction.metainfo.xml:56
 msgid "Improve design"
-msgstr ""
+msgstr "Migliora il design"
 
 #: data/re.sonny.Junction.metainfo.xml:57
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Migliorato l'utilizzo della tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:58
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Migliora l'utilizzo della CLI"
 
 #: data/re.sonny.Junction.metainfo.xml:60
 msgid "Add Polish translation"
-msgstr ""
+msgstr "Aggiunto traduzione in polacco"
 
 #: data/re.sonny.Junction.metainfo.xml:61
 msgid "Add Occitan translation"
-msgstr ""
+msgstr "Aggiunta traduzione occitana"
 
 #: data/re.sonny.Junction.metainfo.xml:63
 msgid "Support DBus activation"
-msgstr ""
+msgstr "Supporto attivazione di DBus"
 
 #: data/re.sonny.Junction.metainfo.xml:64
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Usa libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:71
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Correzione per le applicazioni mancanti"
 
 #: data/re.sonny.Junction.metainfo.xml:72
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Aggiunto una finestra Collegamenti - accessibile con &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:73
 msgid "Add Italian translation"
-msgstr ""
+msgstr "Aggiunto traduzione italiana"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "This is the first release of Junction. We hope you like it."
@@ -178,7 +178,7 @@ msgstr ""
 
 #: src/window.ui:68
 msgid "Show names"
-msgstr ""
+msgstr "Mostra nomi"
 
 #: src/window.ui:72
 msgid "Copy to Clipboard"
@@ -186,21 +186,20 @@ msgstr "Copia negli appunti"
 
 #: src/window.ui:80 src/welcome.ui:71
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Scorciatoie da tastiera"
 
 #: src/window.ui:84 src/welcome.ui:75
 msgid "About Junction"
 msgstr "Informazioni su Junction"
 
 #: src/welcome.ui:39
-#, fuzzy
 msgid "Test Junction"
-msgstr "Junction"
+msgstr "Test Junction"
 
 #: src/welcome.ui:52
 #, fuzzy
 msgid "Set Junction as default for Web"
-msgstr "Junction è stata impostata come applicazione predefinita per il Web"
+msgstr "Imposta Junction come predefinito per il Web"
 
 #~ msgid "Click here to test"
 #~ msgstr "Clicca qui per testare"
