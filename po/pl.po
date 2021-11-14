@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the re.sonny.Junction package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Rafał Baran <>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: re.sonny.Junction\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-20 20:39+0200\n"
+"PO-Revision-Date: 2021-11-13 20:52+0100\n"
+"Last-Translator: Rafał Baran <>\n"
+"Language-Team: Polish <>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 40.0\n"
+
+#. TRANSLATORS: Don't translate
+#: data/re.sonny.Junction.desktop:4 data/re.sonny.Junction.metainfo.xml:5
+msgid "Junction"
+msgstr "Junction"
+
+#. artists: [],
+#: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
+#: src/about.js:10
+msgid "Application chooser"
+msgstr "Wybór aplikacji"
+
+#. TRANSLATORS: Don't translate
+#: data/re.sonny.Junction.desktop:13
+msgid "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+
+#: data/re.sonny.Junction.metainfo.xml:6
+msgid "Sonny Piers"
+msgstr "Sonny Piers"
+
+#: data/re.sonny.Junction.metainfo.xml:13
+msgid "Junction lets you choose the application to open files and links."
+msgstr "Junction pozwala wybrać aplikację do otwarcia plików i linków."
+
+#: data/re.sonny.Junction.metainfo.xml:14
+msgid "After installing make sure to launch the application."
+msgstr "Po zainstalowaniu uruchom aplikację."
+
+#: data/re.sonny.Junction.metainfo.xml:17
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
+msgstr ""
+"Junction otworzy się automatycznie po otwarciu linku w aplikacji "
+"desktopowej. Użyj myszki lub klawiatury do wybrania aplikacji w której ma "
+"się otworzyć link lub plik."
+
+#: data/re.sonny.Junction.metainfo.xml:22
+msgid "Features:"
+msgstr "Funkcje:"
+
+#: data/re.sonny.Junction.metainfo.xml:24
+msgid "Choose the application to open with"
+msgstr "Wybieranie aplikacji do otwarcia"
+
+#: data/re.sonny.Junction.metainfo.xml:25
+msgid "List options by last used"
+msgstr "Pokazywanie opcji w kolejności od ostatnio użytych"
+
+#: data/re.sonny.Junction.metainfo.xml:26
+msgid "Show the location before opening"
+msgstr "Pokazywanie lokalizacji przed otwarciem"
+
+#: data/re.sonny.Junction.metainfo.xml:27
+msgid "Edit the URL before opening"
+msgstr "Edytowanie URL przed otwarciem"
+
+#: data/re.sonny.Junction.metainfo.xml:28
+msgid "Show a hint for insecure link"
+msgstr "Pokazywanie podpowiedzi przy niezabezpieczonych linkach"
+
+#: data/re.sonny.Junction.metainfo.xml:29
+msgid "Esc to cancel"
+msgstr "Anulowanie przyciskiem Esc"
+
+#: data/re.sonny.Junction.metainfo.xml:30
+msgid "Copy to clipboard"
+msgstr "Kopiowanie do schowka"
+
+#: data/re.sonny.Junction.metainfo.xml:31
+msgid "Keyboard navigation"
+msgstr "Nawigacja klawiaturą"
+
+#: data/re.sonny.Junction.metainfo.xml:32
+msgid "Middle click to open in multiple applications"
+msgstr "Otwieranie środkowym przyciskiem myszy w wielu aplikacjach"
+
+#: data/re.sonny.Junction.metainfo.xml:44
+msgid "Choose the browser to open the link with"
+msgstr "Wybieranie przeglądarki do otwarcia linku"
+
+#: data/re.sonny.Junction.metainfo.xml:52
+msgid "Fix for missing applications"
+msgstr "Naprawiono błąd brakujących aplikacji"
+
+#: data/re.sonny.Junction.metainfo.xml:53
+msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
+msgstr "Dodano okno ze Skrótami - dostępne poprzez &lt;Ctrl&gt;?"
+
+#: data/re.sonny.Junction.metainfo.xml:54
+msgid "Add Italian translation"
+msgstr "Dodano Włoskie tłumaczenie"
+
+#: data/re.sonny.Junction.metainfo.xml:60
+msgid "This is the first release of Junction. We hope you like it."
+msgstr "To jest pierwsze wydanie Junction. Mamy nadzieję, że ci się spodoba."
+
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:19
+msgid "translator-credits"
+msgstr "tłumaczenia"
+
+#. TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906
+#: src/window.ui:29
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""
+"Ta strona może nie jest zabezpieczona. Atakujący mógłby widzieć wszystkie "
+"informacje które wysyłasz lub kontrolować zawartość, którą widzisz."
+
+#: src/window.ui:34
+msgid "Copy to Clipboard"
+msgstr "Kopiuj do Schowka"
+
+#: src/welcome.ui:35
+msgid "Junction has been set as default application for Web"
+msgstr ""
+"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+
+#: src/welcome.ui:43
+msgid "Click here to test"
+msgstr "Naciśnij tutaj, żeby przetestować"
+
+#: src/welcome.ui:61
+msgid "Keyboard Shortcuts"
+msgstr "Skróty Klawiszowe"
+
+#: src/welcome.ui:65
+msgid "About Junction"
+msgstr "O Junction"
