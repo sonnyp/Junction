@@ -22,16 +22,11 @@
     <p>Features:</p>
     <ul>
       <li>Choose the application to open with</li>
-      <li>List options by last used</li>
       <li>Show the location before opening</li>
       <li>Edit the URL before opening</li>
       <li>Show a hint for insecure link</li>
-      <li>Esc to cancel</li>
-      <li>Copy to clipboard</li>
       <li>Keyboard navigation</li>
-      <li>
-        Middle click to open in multiple applications
-      </li>
+      <li>Middle click to open in multiple applications</li>
     </ul>
   </description>
   <url type="homepage">https://github.com/sonnyp/Junction</url>
@@ -43,15 +38,13 @@
       </image>
       <caption>Choose the browser to open the link with</caption>
     </screenshot>
-  </screenshots>
-    <screenshots>
     <screenshot>
       <image>
         https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-file.png
       </image>
       <caption>Choose the application to open the image with</caption>
     </screenshot>
-        <screenshot>
+    <screenshot>
       <image>
         https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-shortcuts.png
       </image>
@@ -63,18 +56,19 @@
     <release version="1.2.0" date="2021-11-14" urgency="high">
       <description>
         <ul>
-          <li>Fix support for applications that do not support uris</li>
-          <li>Support opening multiple URIs</li>
-          <li>Add option to display application names</li>
+          <li>Fix for applications that do not support URIs</li>
+          <li>Add an option to display application names</li>
           <li>Add a menu button</li>
           <li>Improve design</li>
           <li>Improve keyboard usage</li>
           <li>Improve CLI usage</li>
+          <li>Support opening multiple URIs</li>
 
           <li>Add Polish translation</li>
           <li>Add Occitan translation</li>
+          <li>Add Spanish translation</li>
 
-          <li>Support DBus activation</li>
+          <li>Support D-Bus activation</li>
           <li>Use libadwaita</li>
         </ul>
       </description>
