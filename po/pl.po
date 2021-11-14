@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 20:39+0200\n"
+"POT-Creation-Date: 2021-11-14 16:10+0100\n"
 "PO-Revision-Date: 2021-11-13 20:52+0100\n"
 "Last-Translator: Rafał Baran <>\n"
 "Language-Team: Polish <>\n"
@@ -32,8 +32,11 @@ msgid "Application chooser"
 msgstr "Wybór aplikacji"
 
 #. TRANSLATORS: Don't translate
-#: data/re.sonny.Junction.desktop:13
-msgid "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+#: data/re.sonny.Junction.desktop:12
+#, fuzzy
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
 
 #: data/re.sonny.Junction.metainfo.xml:6
@@ -103,18 +106,64 @@ msgid "Choose the browser to open the link with"
 msgstr "Wybieranie przeglądarki do otwarcia linku"
 
 #: data/re.sonny.Junction.metainfo.xml:52
+msgid "Fix support for applications that do not support uris"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:53
+msgid "Support opening multiple URIs"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:54
+msgid "Add option to display application names"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:55
+msgid "Add a menu button"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:56
+msgid "Improve design"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:57
+msgid "Improve keyboard usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:58
+msgid "Improve CLI usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:60
+#, fuzzy
+msgid "Add Polish translation"
+msgstr "Dodano Włoskie tłumaczenie"
+
+#: data/re.sonny.Junction.metainfo.xml:61
+#, fuzzy
+msgid "Add Occitan translation"
+msgstr "Dodano Włoskie tłumaczenie"
+
+#: data/re.sonny.Junction.metainfo.xml:63
+msgid "Support DBus activation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:64
+msgid "Use libadwaita"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:71
 msgid "Fix for missing applications"
 msgstr "Naprawiono błąd brakujących aplikacji"
 
-#: data/re.sonny.Junction.metainfo.xml:53
+#: data/re.sonny.Junction.metainfo.xml:72
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Dodano okno ze Skrótami - dostępne poprzez &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:54
+#: data/re.sonny.Junction.metainfo.xml:73
 msgid "Add Italian translation"
 msgstr "Dodano Włoskie tłumaczenie"
 
-#: data/re.sonny.Junction.metainfo.xml:60
+#: data/re.sonny.Junction.metainfo.xml:79
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "To jest pierwsze wydanie Junction. Mamy nadzieję, że ci się spodoba."
 
@@ -124,7 +173,7 @@ msgid "translator-credits"
 msgstr "tłumaczenia"
 
 #. TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906
-#: src/window.ui:29
+#: src/window.ui:32
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
@@ -132,23 +181,32 @@ msgstr ""
 "Ta strona może nie jest zabezpieczona. Atakujący mógłby widzieć wszystkie "
 "informacje które wysyłasz lub kontrolować zawartość, którą widzisz."
 
-#: src/window.ui:34
+#: src/window.ui:68
+msgid "Show names"
+msgstr ""
+
+#: src/window.ui:72
 msgid "Copy to Clipboard"
 msgstr "Kopiuj do Schowka"
 
-#: src/welcome.ui:35
-msgid "Junction has been set as default application for Web"
-msgstr ""
-"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
-
-#: src/welcome.ui:43
-msgid "Click here to test"
-msgstr "Naciśnij tutaj, żeby przetestować"
-
-#: src/welcome.ui:61
+#: src/window.ui:80 src/welcome.ui:71
 msgid "Keyboard Shortcuts"
 msgstr "Skróty Klawiszowe"
 
-#: src/welcome.ui:65
+#: src/window.ui:84 src/welcome.ui:75
 msgid "About Junction"
 msgstr "O Junction"
+
+#: src/welcome.ui:39
+#, fuzzy
+msgid "Test Junction"
+msgstr "Junction"
+
+#: src/welcome.ui:52
+#, fuzzy
+msgid "Set Junction as default for Web"
+msgstr ""
+"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+
+#~ msgid "Click here to test"
+#~ msgstr "Naciśnij tutaj, żeby przetestować"
