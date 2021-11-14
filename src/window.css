@@ -1,5 +1,5 @@
 .main {
-  border-radius: 20px;
+  border-radius: 30px;
   background: none;
   background-color: rgba(20, 20, 20, 0.95);
   border: none;
@@ -13,7 +13,7 @@
 }
 
 .list button {
-  border-radius: 17px;
+  border-radius: 18px;
   background: none;
   padding: 18px 12px;
   font-size: 0.6rem;
@@ -34,7 +34,7 @@ entry.uri {
   border-radius: 18px;
   margin-top: 12px;
   margin-left: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   /* Non dark theme */
   color: white;
   border: solid 1px black;
