@@ -42,7 +42,7 @@
                 </style>
               </object>
             </child>
-            <child type="start">
+            <child>
               <object class="GtkMenuButton" id="menu_button">
                 <property name="popover">menu_popover</property>
                 <property name="icon-name">open-menu-symbolic</property>
