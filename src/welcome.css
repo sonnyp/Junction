@@ -2,6 +2,10 @@
   border-radius: 18px;
 }
 
+.welcome > contents > box > box {
+  padding: 24px;
+}
+
 .welcome image {
   filter: grayscale(100%);
 }

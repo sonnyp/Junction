@@ -46,6 +46,12 @@
               <object class="GtkMenuButton" id="menu_button">
                 <property name="popover">menu_popover</property>
                 <property name="icon-name">open-menu-symbolic</property>
+                <property name="margin-start">6</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="circular" />
+                  <class name="flat" />
+                </style>
               </object>
             </child>
           </object>

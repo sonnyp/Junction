@@ -16,6 +16,7 @@
           <object class="GtkLabel" id="label">
             <property name="ellipsize">end</property>
             <property name="max-width-chars">10</property>
+            <property name="margin-top">6</property>
             <style>
               <class name="body" />
             </style>

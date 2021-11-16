@@ -2,8 +2,6 @@
 <interface>
   <object class="AdwApplicationWindow" id="welcome">
     <property name="title">Junction</property>
-    <property name="default-width">480</property>
-    <property name="default-height">480</property>
     <property name="content">
       <object class="GtkBox">
         <property name="orientation">vertical</property>
