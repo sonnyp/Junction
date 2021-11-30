@@ -174,6 +174,10 @@ An other common mistake is to forget to run `update-desktop-database ~/.local/sh
 
 </details>
 
+## In the media
+
+[linuxunplugged.com - Episode 433 The Lessons of Jellyfin](https://linuxunplugged.com/433?t=3183) - 11/2021
+
 ## Development
 
 ```sh
