@@ -120,6 +120,6 @@ function getApplications(content_type) {
   const applications = Gio.AppInfo.get_recommended_for_type(content_type);
 
   return applications.filter((appInfo) => {
-    return appInfo.should_show() && !excluded_apps.includes(appInfo.get_id());
+    return !excluded_apps.includes(appInfo.get_id());
   });
 }
