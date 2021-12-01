@@ -2,6 +2,7 @@ import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
+import { gettext as _ } from "gettext";
 
 import { parse, relativePath } from "./util.js";
 import { settings } from "./common.js";
@@ -39,6 +40,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
         appInfo,
         location: entry.get_text(),
         content_type,
+        save: true,
       });
       return true;
     } catch (err) {
@@ -76,7 +78,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return { button };
 }
 
-function openWithApplication({ appInfo, location, content_type }) {
+function openWithApplication({ appInfo, location, content_type, save }) {
   if (GLib.getenv("FLATPAK_ID")) {
     appInfo = flatpakSpawnify(appInfo);
   }
@@ -96,7 +98,7 @@ function openWithApplication({ appInfo, location, content_type }) {
     throw new Error(`Could not launch ${location} with ${appInfo.get_id()}`);
   }
 
-  if (!GLib.getenv("FLATPAK_ID")) {
+  if (save && !GLib.getenv("FLATPAK_ID")) {
     // On Flatpak fails with
     // (re.sonny.Junction:3): Gjs-WARNING **: 18:35:39.427: JS ERROR: Gio.IOErrorEnum: Can’t create user desktop file /home/sonny/.var/app/re.sonny.Junction/data/applications/userapp-YOGA Image Optimizer-20X240.desktop
     appInfo.set_as_last_used_for_type(content_type);
@@ -126,4 +128,79 @@ function flatpakSpawnify(appInfo) {
   keyFile.set_value("Desktop Entry", "Exec", `flatpak-spawn --host ${Exec}`);
 
   return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+}
+
+export function ViewAllButton({ file, content_type, entry, window }) {
+  const builder = Gtk.Builder.new_from_string(template, template.length);
+
+  const button = builder.get_object("button");
+
+  const name = _("View All");
+  button.set_tooltip_text(name);
+  const label = builder.get_object("label");
+  label.label = name;
+  label.visible = false;
+  settings.bind(
+    "show-app-names",
+    label,
+    "visible",
+    Gio.SettingsBindFlags.DEFAULT,
+  );
+
+  const image = builder.get_object("image");
+  image.set_from_icon_name("view-more-horizontal-symbolic");
+  image.set_pixel_size(48);
+
+  function onResponse(appChooserDialog, response_id) {
+    if (response_id !== Gtk.ResponseType.OK) {
+      appChooserDialog.destroy();
+      return;
+    }
+
+    const appInfo = appChooserDialog.get_app_info();
+    try {
+      openWithApplication({
+        appInfo,
+        location: entry.get_text(),
+        content_type,
+        save: false,
+      });
+    } catch (err) {
+      logError(err);
+      return;
+    }
+
+    appChooserDialog.destroy();
+    window.close();
+  }
+
+  function onClicked() {
+    // TODO: Implement an app chooser in the window
+    // Unfortunally AppChooserWidget doesn't have search or "Find new Applications"
+    // so we are using AppChooserDialog for now
+    // we should implement our own inline widget eventually
+    const appChooserDialog = Gtk.AppChooserDialog.new(
+      window,
+      Gtk.DialogFlags.MODAL,
+      file,
+    );
+    const title_widget = appChooserDialog.get_header_bar()?.get_title_widget();
+    if (title_widget) {
+      const [title, subtitle] = [...title_widget];
+      title.label = _("All Applications");
+      title_widget.remove(subtitle);
+    }
+
+    const appChooserWidget = appChooserDialog.get_widget();
+    appChooserWidget.set_show_default(false);
+    appChooserWidget.set_show_recommended(true);
+    appChooserWidget.set_show_fallback(true);
+    appChooserWidget.set_show_other(true);
+    appChooserDialog.connect("response", onResponse);
+    appChooserDialog.show();
+  }
+
+  button.connect("clicked", onClicked);
+
+  return { button };
 }
