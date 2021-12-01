@@ -60,28 +60,34 @@ export default function Window({ application, file }) {
     list.append(button);
   });
 
-  list.append(ViewAllButton({ file, content_type, entry, window }).button);
+  list.append(
+    ViewAllButton({
+      file,
+      content_type,
+      entry,
+      window,
+    }).button,
+  );
+  const buttons = [...list];
 
-  function getAppForKeyval(keyval) {
+  function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
     // Is not 0...9
     if (!/^\d$/.test(keyname)) return null;
-    const appInfo = applications[+keyname - 1];
-    return appInfo;
+    const n = +keyname;
+    return buttons[n - 1];
   }
 
   const eventController = new Gtk.EventControllerKey();
   eventController.connect("key-pressed", (self, keyval) => {
-    const appInfo = getAppForKeyval(keyval);
-    if (!appInfo) return false;
-    appInfo.button.grab_focus();
-    return true;
+    const button = getButtonForKeyval(keyval);
+    button?.grab_focus();
+    return !!button;
   });
   eventController.connect("key-released", (self, keyval) => {
-    const appInfo = getAppForKeyval(keyval);
-    if (!appInfo) return false;
-    appInfo.button.activate();
-    return true;
+    const button = getButtonForKeyval(keyval);
+    button?.activate();
+    return !!button;
   });
   window.add_controller(eventController);
 
