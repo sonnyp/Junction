@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
   <object class="GtkButton" id="button">
+    <property name="halign">center</property>
     <child>
       <object class="GtkBox">
+        <property name="width-request">92</property>
+        <property name="height-request">92</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkImage" id="image">
             <property name="pixel-size">92</property>
+            <property name="vexpand">true</property>
             <style>
               <class name="icon-dropshadow" />
             </style>

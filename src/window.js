@@ -5,7 +5,7 @@ import Gdk from "gi://Gdk";
 
 import { relativePath, loadStyleSheet } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton from "./AppButton.js";
+import AppButton, { ViewAllButton } from "./AppButton.js";
 import { settings } from "./common.js";
 
 export default function Window({ application, file }) {
@@ -59,6 +59,8 @@ export default function Window({ application, file }) {
     appInfo.button = button;
     list.append(button);
   });
+
+  list.append(ViewAllButton({ file, content_type, entry, window }).button);
 
   function getAppForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
