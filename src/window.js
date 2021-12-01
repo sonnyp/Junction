@@ -49,7 +49,7 @@ export default function Window({ application, file }) {
   const applications = getApplications(content_type);
   const list = builder.get_object("list");
 
-  applications.forEach((appInfo) => {
+  applications.slice(0, 4).forEach((appInfo) => {
     const { button } = AppButton({
       appInfo,
       content_type,
