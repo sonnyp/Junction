@@ -156,11 +156,11 @@ You can edit the desktop files to use distinctive icons, here are a some tools
 
 If the application was installed via Flatpak, the package manager or an other conventional way, feel free to [open an issue](https://github.com/sonnyp/Junction/issues/new/choose).
 
-Make sure the application `.desktop` file has a `MimeType` key that matches the type of resource you want it to handle.
+Make sure the application desktop file has a `MimeType` key that matches the type of resource you want it to handle. For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
 
-For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
+The desktop filename should be unique. Junction can't display both `/usr/share/applicatins/firefox.desktop` and `~/.local/share/applications/firefox.desktop`. The second overrides the first.
 
-An other common mistake is to forget to run `update-desktop-database ~/.local/share/applications` after installing a `.desktop` file.
+Finally - make sure to run `update-desktop-database ~/.local/share/applications` after installing a desktop file.
 
 </details>
 
