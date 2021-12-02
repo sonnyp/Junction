@@ -1,6 +1,5 @@
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
-import { programInvocationName } from "system";
 import { bindtextdomain, textdomain } from "gettext";
 
 import Application from "./application.js";
@@ -15,16 +14,7 @@ export default function main(argv, { version, datadir }) {
   );
   textdomain("re.sonny.Junction");
 
-  const application = Application({ version });
-
-  log(`datadir: ${datadir}`);
-  log("argv " + argv.join(" "));
-  log(`programInvocationName: ${programInvocationName}`);
-  log(`_: ${GLib.getenv("_")}`);
-  log(`PWD: ${GLib.get_current_dir()}`);
-  log(`XDG_DATA_DIRS ${GLib.getenv("XDG_DATA_DIRS")}`);
-  log(`PATH ${GLib.getenv("PATH")}`);
-  log(`FLATPAK_ID ${GLib.getenv("FLATPAK_ID")}`);
+  const application = Application({ version, datadir });
 
   if (__DEV__) {
     const restart = new Gio.SimpleAction({

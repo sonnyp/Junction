@@ -6,7 +6,7 @@ import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
 
-export default function Application({ version }) {
+export default function Application({ version, datadir }) {
   const application = new Adw.Application({
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
@@ -23,7 +23,7 @@ export default function Application({ version }) {
   // but the only way never to trigger open is to disable DBus activation altogether
   // see also https://gitlab.gnome.org/GNOME/glib/-/issues/1853
   application.connect("open", (self, files, hint) => {
-    log(["open", files.length, hint]);
+    // log(["open", files.length, hint]);
 
     files.forEach((file) => {
       Window({
@@ -64,7 +64,7 @@ export default function Application({ version }) {
     parameter_type: null,
   });
   showAboutDialog.connect("activate", () => {
-    About({ application, version });
+    About({ application, datadir, version });
   });
   application.add_action(showAboutDialog);
 
