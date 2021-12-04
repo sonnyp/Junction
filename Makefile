@@ -11,7 +11,7 @@ run-host:
 	GSETTINGS_SCHEMA_DIR=./data ./install/bin/re.sonny.Junction
 
 flatpak:
-	flatpak-builder --user --force-clean --install-deps-from=flathub --install flatpak re.sonny.Junction.json
+	flatpak-builder --user --force-clean --sandbox --install-deps-from=flathub --install flatpak re.sonny.Junction.json
 	# flatpak run re.sonny.Junction https://gnome.org
 
 # Useful for previewing in GNOME Software
