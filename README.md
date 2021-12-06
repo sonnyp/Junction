@@ -200,7 +200,7 @@ To pass the tests you have to install a few dependencies
 
 ```sh
 # Install development dependencies
-sudo dnf install --assumeyes npm flatpak make desktop-file-utils gjs gtk4-devel
+sudo dnf install --assumeyes npm flatpak make desktop-file-utils gjs gtk4-devel libadwaita-devel
 cd Junction
 npm install
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
