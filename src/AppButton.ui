@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <interface>
-  <object class="GtkButton" id="button">
-    <property name="halign">center</property>
+  <object class="GtkAspectFrame" id="root">
+    <property name="ratio">1.0</property>
+    <property name="obey_child">false</property>
     <child>
-      <object class="GtkBox">
-        <property name="width-request">92</property>
-        <property name="height-request">92</property>
-        <property name="orientation">vertical</property>
+      <object class="GtkButton" id="button">
+        <property name="halign">fill</property>
+        <property name="valign">fill</property>
         <child>
-          <object class="GtkImage" id="image">
-            <property name="pixel-size">92</property>
-            <property name="vexpand">true</property>
-            <style>
-              <class name="icon-dropshadow" />
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label">
-            <property name="ellipsize">end</property>
-            <property name="max-width-chars">10</property>
-            <property name="margin-top">6</property>
-            <style>
-              <class name="body" />
-            </style>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkImage" id="image">
+                <property name="pixel-size">92</property>
+                <property name="vexpand">true</property>
+                <style>
+                  <class name="icon-dropshadow" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label">
+                <property name="ellipsize">end</property>
+                <property name="max-width-chars">10</property>
+                <property name="margin-top">6</property>
+                <style>
+                  <class name="body" />
+                </style>
+              </object>
+            </child>
           </object>
         </child>
       </object>

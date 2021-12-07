@@ -12,7 +12,7 @@
               <class name="list" />
             </style>
             <property name="orientation">horizontal</property>
-            <property name="homogeneous">True</property>
+            <property name="homogeneous">true</property>
             <property name="spacing">18</property>
           </object>
         </child>

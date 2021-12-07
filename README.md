@@ -139,11 +139,11 @@ Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
 ## Troubleshooting
 
 <details>
-  <summary>I can't distinguish between 2 options with the same icon</summary>
+  <summary>I can't distinguish between options with the same icon</summary>
 
-A quick workaround is to hover the application with the mouse cursor to show a tooltip with the name.
+Within Junction, you can toggle `Show names` in the menu or hover the application with the mouse to display a tooltip.
 
-You can edit the desktop files to use distinctive icons, here are a some tools
+Otherwise, you can edit the desktop files to use distinctive icons, here are a some tools
 
 - [MenuLibre](https://flathub.org/apps/details/org.bluesabre.MenuLibre) GUI
 - [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI

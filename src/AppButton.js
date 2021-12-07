@@ -14,7 +14,6 @@ const template = byteArray.toString(content);
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
   const builder = Gtk.Builder.new_from_string(template, template.length);
-
   const button = builder.get_object("button");
 
   const name = appInfo.get_name();
@@ -75,7 +74,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     open();
   });
 
-  return { button };
+  return builder.get_object("root");
 }
 
 function openWithApplication({ appInfo, location, content_type, save }) {
@@ -132,7 +131,6 @@ function flatpakSpawnify(appInfo) {
 
 export function ViewAllButton({ file, content_type, entry, window }) {
   const builder = Gtk.Builder.new_from_string(template, template.length);
-
   const button = builder.get_object("button");
 
   const name = _("View All");
@@ -196,11 +194,13 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     appChooserWidget.set_show_recommended(true);
     appChooserWidget.set_show_fallback(true);
     appChooserWidget.set_show_other(true);
+    // FIXME: Search is broken unless this
+    // appChooserWidget.set_show_all(true);
     appChooserDialog.connect("response", onResponse);
     appChooserDialog.show();
   }
 
   button.connect("clicked", onClicked);
 
-  return { button };
+  return builder.get_object("root");
 }

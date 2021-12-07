@@ -50,7 +50,7 @@ export default function Window({ application, file }) {
   const list = builder.get_object("list");
 
   applications.slice(0, 4).forEach((appInfo) => {
-    const { button } = AppButton({
+    const button = AppButton({
       appInfo,
       content_type,
       entry,
@@ -66,7 +66,7 @@ export default function Window({ application, file }) {
       content_type,
       entry,
       window,
-    }).button,
+    }),
   );
   const buttons = [...list];
 
