@@ -36,7 +36,7 @@ test:
 	find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
 
 clean:
-	rm -rf build install .eslintcache
+	rm -rf build builddir install .eslintcache
 	rm -f ~/.local/share/applications/re.sonny.Junction.desktop
 	rm -f ~/.local/share/dbus-1/services/re.sonny.Junction.service
 	update-desktop-database ~/.local/share/applications
