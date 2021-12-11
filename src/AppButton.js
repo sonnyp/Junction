@@ -21,11 +21,12 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const label = builder.get_object("label");
   label.label = name;
   label.visible = false;
+  settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
   settings.bind(
     "show-app-names",
-    label,
-    "visible",
-    Gio.SettingsBindFlags.DEFAULT,
+    button,
+    "has-tooltip",
+    Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
   );
 
   const icon = appInfo.get_icon();
@@ -74,7 +75,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     open();
   });
 
-  return builder.get_object("root");
+  return button;
 }
 
 function openWithApplication({ appInfo, location, content_type, save }) {
@@ -138,11 +139,12 @@ export function ViewAllButton({ file, content_type, entry, window }) {
   const label = builder.get_object("label");
   label.label = name;
   label.visible = false;
+  settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
   settings.bind(
     "show-app-names",
-    label,
-    "visible",
-    Gio.SettingsBindFlags.DEFAULT,
+    button,
+    "has-tooltip",
+    Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
   );
 
   const image = builder.get_object("image");
@@ -202,5 +204,5 @@ export function ViewAllButton({ file, content_type, entry, window }) {
 
   button.connect("clicked", onClicked);
 
-  return builder.get_object("root");
+  return button;
 }

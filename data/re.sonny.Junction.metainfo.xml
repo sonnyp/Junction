@@ -54,14 +54,14 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.3.0" date="2022-01-01">
+    <release version="1.3.0" date="2021-12-11" type="development">
       <description>
         <ul>
           <li>Improve design</li>
           <li
           >Do not automatically set Junction as default application for Web</li>
           <li>Fix some options not available</li>
-          <li>Limit to 4 the number of options</li>
+          <li>Limit the number of options to 4</li>
           <li>Add an option to open with any application</li>
           <li>Add a System Information panel in the about dialog</li>
         </ul>

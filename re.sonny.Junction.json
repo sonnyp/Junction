@@ -99,6 +99,5 @@
         "sed -i 's/re.sonny.Junction --gapplication-service/junction-wrapper --gapplication-service/g' /app/share/dbus-1/services/re.sonny.Junction.service"
       ]
     }
-  ],
-  "x-run-args": ["https://www.gnome.org/"]
+  ]
 }

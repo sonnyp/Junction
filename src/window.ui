@@ -13,7 +13,7 @@
             </style>
             <property name="orientation">horizontal</property>
             <property name="homogeneous">true</property>
-            <property name="spacing">18</property>
+            <property name="spacing">12</property>
           </object>
         </child>
         <child>
