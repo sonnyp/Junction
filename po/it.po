@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-07 23:02+0100\n"
-"PO-Revision-Date: 2021-11-14 22:03+0100\n"
+"PO-Revision-Date: 2021-12-11 16:33+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -87,24 +87,20 @@ msgid "Choose the browser to open the link with"
 msgstr "Scegli il browser con cui aprire il collegamento"
 
 #: data/re.sonny.Junction.metainfo.xml:46
-#, fuzzy
 msgid "Choose the application to open the image with"
-msgstr "Scegli l'applicazione con cui aprire"
+msgstr "Scegli l'applicazione con cui aprire l'immagine"
 
 #: data/re.sonny.Junction.metainfo.xml:52
-#, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr "Imposta Junction come predefinito per il Web"
+msgstr "Junction offre un ottimo supporto per la tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:60
-#, fuzzy
 msgid "Fix for applications that do not support URIs"
-msgstr "Risolto il problema con le applicazioni che non supportano uri"
+msgstr "Risolto il problema con le applicazioni che non supportano gli URI"
 
 #: data/re.sonny.Junction.metainfo.xml:61
-#, fuzzy
 msgid "Add an option to display application names"
-msgstr "Aggiunto l'opzione per visualizzare i nomi delle applicazioni"
+msgstr "Aggiunto un'opzione per visualizzare i nomi delle applicazioni"
 
 #: data/re.sonny.Junction.metainfo.xml:62
 msgid "Add a menu button"
@@ -112,11 +108,11 @@ msgstr "Aggiunto un pulsante menu"
 
 #: data/re.sonny.Junction.metainfo.xml:63
 msgid "Improve design"
-msgstr "Migliora il design"
+msgstr "Migliorato il design"
 
 #: data/re.sonny.Junction.metainfo.xml:64
 msgid "Improve keyboard usage"
-msgstr "Migliorato l'utilizzo della tastiera"
+msgstr "Migliora l'utilizzo della tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:65
 msgid "Improve CLI usage"
@@ -135,14 +131,12 @@ msgid "Add Occitan translation"
 msgstr "Aggiunta traduzione occitana"
 
 #: data/re.sonny.Junction.metainfo.xml:70
-#, fuzzy
 msgid "Add Spanish translation"
-msgstr "Aggiunto traduzione in polacco"
+msgstr "Aggiunto traduzione in spagnolo"
 
 #: data/re.sonny.Junction.metainfo.xml:72
-#, fuzzy
 msgid "Support D-Bus activation"
-msgstr "Supporto attivazione di DBus"
+msgstr "Supporta l'attivazione D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:73
 msgid "Use libadwaita"
