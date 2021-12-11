@@ -29,7 +29,7 @@ cwd ${GLib.get_current_dir()}
 datadir ${datadir}
 
 Powered by:
-gjs ${getGjsVersion()}
+GJS ${getGjsVersion()}
 libadwaita ${getGIRepositoryVersion(Adw)}
 GTK ${getGIRepositoryVersion(Gtk)}
 GLib ${getGLibVersion()}
@@ -39,6 +39,7 @@ OS ${os_release["NAME"]} ${os_release["VERSION"] || ""}
 $XDG_DATA_DIRS ${GLib.getenv("XDG_DATA_DIRS")}
 $PATH ${GLib.getenv("PATH")}
 $FLATPAK_ID ${GLib.getenv("FLATPAK_ID")}
+$XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   `.trim();
 
   const dialog = new Gtk.AboutDialog({
