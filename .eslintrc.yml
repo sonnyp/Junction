@@ -10,14 +10,17 @@ globals:
   Intl: readonly
   imports: readonly
   pkg: readonly
-  log: readonly
-  logError: readonly
-  print: readonly
-  printerr: readonly
+  # log: readonly
+  # logError: readonly
+  # print: readonly
+  # printerr: readonly
   ARGV: readonly
   window: readonly
   globalThis: readonly
   __DEV__: readonly
+  console: readonly
+  TextEncoder: readonly
+  TextDecoder: readonly
 parserOptions:
   sourceType: module
 rules:

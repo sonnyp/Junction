@@ -44,7 +44,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       });
       return true;
     } catch (err) {
-      logError(err);
+      console.error(err);
       return false;
     }
   }
@@ -122,7 +122,7 @@ function flatpakSpawnify(appInfo) {
   }
 
   if (!Exec) {
-    logError(new Error(`No Exec for ${filename}`));
+    console.error(`No Exec for ${filename}`);
     return null;
   }
   keyFile.set_value("Desktop Entry", "Exec", `flatpak-spawn --host ${Exec}`);
@@ -166,7 +166,7 @@ export function ViewAllButton({ file, content_type, entry, window }) {
         save: false,
       });
     } catch (err) {
-      logError(err);
+      console.error(err);
       return;
     }
 

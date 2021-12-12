@@ -1,9 +1,8 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
-import GLib from "gi://GLib";
 import Gdk from "gi://Gdk";
 
-import { relativePath, loadStyleSheet } from "./util.js";
+import { relativePath, loadStyleSheet, readResource } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton } from "./AppButton.js";
 import { settings } from "./common.js";
@@ -15,34 +14,11 @@ export default function Window({ application, file }) {
   loadStyleSheet(relativePath("./window.css"));
   window.set_application(application);
 
-  let content_type = "application/octet-stream";
-  let value = "";
-
-  // g_file_get_uri_scheme() returns http for https so we need to use g_uri
-  // const scheme = file.get_uri_scheme();
-  const uri = GLib.uri_parse(file.get_uri(), GLib.UriFlags.NONE);
-  const scheme = uri.get_scheme();
-
-  if (scheme !== "file") {
-    content_type = `x-scheme-handler/${scheme}`;
-    value = file.get_uri();
-  } else {
-    value = file.get_path();
-    try {
-      const info = file.query_info(
-        "standard::content-type",
-        Gio.FileQueryInfoFlags.NONE,
-        null,
-      );
-      content_type = info.get_content_type();
-    } catch (err) {
-      logError(err);
-    }
-  }
+  const { content_type, resource, scheme } = readResource(file);
 
   const { entry } = Entry({
     entry: builder.get_object("entry"),
-    value,
+    resource,
     scheme,
   });
 

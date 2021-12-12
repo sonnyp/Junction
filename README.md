@@ -50,12 +50,24 @@ Please note that this may not be respected by all applications but the command `
   </code>
 </details>
 
-## Tips and tricks
+<details>
+  <summary>API</summary>
+
+Junction has a very simple API that doesn't require any programming. To open any resource with Junction, even if it's not configured as the default application, simply use the following URI format `x-junction://$RESOURCE`. For examples
+
+- `x-junction://https://github.com`
+- `x-junction://~`
+- `x-junction://file:///etc/os-release`
+- `x-junction:///etc/os-release`
+
+You can use this in web pages, the terminal, native applications and anything that is able to open URIs.
+
+If Junction is installed - you can test this in the terminal with `xdg-open "x-junction://file:///etc/os-release"` and in the browser with `<a href="x-junction://file:///etc/os-release">Test Junction URI</a>`.
 
 <details>
   <summary>Keyboard navigation</summary>
 
-Use the menu or `<Ctrl>?` to learn about Keyboard usage.
+Use the menu or `<Ctrl>?` to learn about Keyboard usage. You can navigate the UI with the arrow keys too.
 
 </details>
 
@@ -100,11 +112,17 @@ See https://wiki.archlinux.org/title/desktop_entries (distro agnostic).
 </details>
 
 <details>
-  <summary>Open links on a website with Junction</summary>
+  <summary>Browser integration</summary>
 
-If you want links on your favorite websites to open Junction, set it as the default browser and use [Tangram](https://github.com/sonnyp/Tangram/).
+Drag the following [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) to your browser bookmarks toolbar to create a button to open the current page in Junction.
 
-A browser extension might be coming.
+Bookmarklet: <a herf="javascript:window.location='x-junction://'+window.location">Junction</a>
+
+Or create a bookmark with the following URL
+
+```
+javascript:window.location='x-junction://'+window.location
+```
 
 </details>
 
