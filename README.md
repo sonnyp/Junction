@@ -64,6 +64,10 @@ You can use this in web pages, the terminal, native applications and anything th
 
 If Junction is installed - you can test this in the terminal with `xdg-open "x-junction://file:///etc/os-release"` and in the browser with `<a href="x-junction://file:///etc/os-release">Test Junction URI</a>`.
 
+</details>
+
+## Tips and tricks
+
 <details>
   <summary>Keyboard navigation</summary>
 
