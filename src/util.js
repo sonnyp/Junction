@@ -7,7 +7,7 @@ import system from "system";
 const { byteArray } = imports;
 
 export function logEnum(obj, value) {
-  log(
+  console.log(
     Object.entries(obj).find(([k, v]) => {
       return v === value;
     })[0],
@@ -74,7 +74,7 @@ export function getOSRelease() {
       return byteArray.toString(content);
     } catch (err) {
       if (err.code !== Gio.IOErrorEnum.NOT_FOUND) {
-        logError(err);
+        console.error(err);
       }
     }
   }
@@ -111,9 +111,76 @@ export function getFlatpakInfo() {
     keyFile.load_from_file("/.flatpak-info", GLib.KeyFileFlags.NONE);
   } catch (err) {
     if (err.code !== GLib.FileError.NOENT) {
-      logError(err);
+      console.error(err);
     }
     return null;
   }
   return keyFile;
 }
+
+export function readResource(file) {
+  if (file.has_uri_scheme("x-junction")) {
+    const uri = file
+      .get_uri()
+      .split("x-junction://")[1]
+      .replace("file:0//", "file:///")
+      .replace(":0//", "://");
+    if (uri.startsWith("~/")) {
+      file = Gio.File.parse_name(uri);
+    } else {
+      file = Gio.File.new_for_commandline_arg(uri);
+    }
+  }
+
+  let content_type = "application/octet-stream";
+  const resource = file.get_parse_name();
+
+  // g_file_get_uri_scheme() returns http for https so we need to use g_uri
+  // g_file_get_parse_name() does not so it may be a bug
+  // const scheme = file.get_uri_scheme();
+  // console.log(file.get_uri_scheme())
+  const uri = GLib.uri_parse(file.get_uri(), GLib.UriFlags.NONE);
+  const scheme = uri.get_scheme();
+
+  if (scheme !== "file") {
+    content_type = `x-scheme-handler/${scheme}`;
+  } else {
+    try {
+      const info = file.query_info(
+        "standard::content-type",
+        Gio.FileQueryInfoFlags.NONE,
+        null,
+      );
+      content_type = info.get_content_type();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  return { resource, scheme, content_type };
+}
+
+// https://gitlab.gnome.org/GNOME/gjs/-/merge_requests/696
+export const stdout = (() => {
+  const { DataOutputStream, UnixOutputStream } = imports.gi.Gio;
+  return new DataOutputStream({
+    base_stream: new UnixOutputStream({ fd: 1 }),
+  });
+})();
+export const stderr = (() => {
+  const { DataOutputStream, UnixOutputStream } = imports.gi.Gio;
+  return new DataOutputStream({
+    base_stream: new UnixOutputStream({ fd: 2 }),
+  });
+})();
+export const stdin = (() => {
+  const { DataInputStream, UnixInputStream } = imports.gi.Gio;
+  return new DataInputStream({
+    base_stream: new UnixInputStream({ fd: 0 }),
+  });
+})();
+// const source = stdin.base_stream.create_source(null);
+// source.set_callback(() => {
+//   log("foo");
+// });
+// source.attach(null);

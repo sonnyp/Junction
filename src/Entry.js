@@ -3,8 +3,8 @@ import GLib from "gi://GLib";
 
 import { gettext as _ } from "gettext";
 
-export default function Entry({ entry, value, scheme }) {
-  entry.set_text(value);
+export default function Entry({ entry, resource, scheme }) {
+  entry.set_text(resource);
 
   if (scheme === "file") {
     entry.set_editable(false);

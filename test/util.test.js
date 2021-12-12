@@ -1,35 +1,91 @@
+import "./setup.js";
+
+import { test } from "./uvu.js";
+import * as assert from "./assert.js";
 import GLib from "gi://GLib";
-import "gi://Gtk?version=4.0";
+import Gio from "gi://Gio";
 
-import { parse } from "../src/util.js";
-
-export class AssertionError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "AssertionError";
-  }
-}
-
-export function assert(value, message = "") {
-  if (!value) throw new AssertionError(message);
-}
-
-export function is(actual, expected, message) {
-  if (!Object.is(actual, expected)) {
-    throw new AssertionError(
-      message || `Expected "${actual}" to be "${expected}".`,
-    );
-  }
-}
+import { parse, readResource } from "../src/util.js";
 
 const home_dir = GLib.get_home_dir();
 
-is(parse("~").to_string(), `file://${home_dir}`);
-is(parse("~/").to_string(), `file://${home_dir}`);
-is(parse("~/foo").to_string(), `file://${home_dir}/foo`);
-is(parse("/").to_string(), `file:///`);
-is(parse("/foo/").to_string(), `file:///foo/`);
-is(parse("/foo").to_string(), `file:///foo`);
-is(parse("/foo/bar").to_string(), `file:///foo/bar`);
-is(parse("mailto:foo@bar.com").to_string(), "mailto:foo@bar.com");
-is(parse("http://example.com").to_string(), "http://example.com");
+const loop = GLib.MainLoop.new(null, false);
+test.after(() => {
+  loop.quit();
+});
+
+test("parse", () => {
+  assert.is(parse("~").to_string(), `file://${home_dir}`);
+  assert.is(parse("~/").to_string(), `file://${home_dir}`);
+  assert.is(parse("~/foo").to_string(), `file://${home_dir}/foo`);
+  assert.is(parse("/").to_string(), `file:///`);
+  assert.is(parse("/foo/").to_string(), `file:///foo/`);
+  assert.is(parse("/foo").to_string(), `file:///foo`);
+  assert.is(parse("/foo/bar").to_string(), `file:///foo/bar`);
+  assert.is(parse("mailto:foo@bar.com").to_string(), "mailto:foo@bar.com");
+  assert.is(parse("http://example.com").to_string(), "http://example.com");
+});
+
+test("readResource", () => {
+  function read(str) {
+    return readResource(Gio.File.new_for_commandline_arg(str));
+  }
+
+  assert.equal(read("/"), {
+    resource: "/",
+    scheme: "file",
+    content_type: "inode/directory",
+  });
+  assert.equal(read("x-junction:///"), {
+    resource: "/",
+    scheme: "file",
+    content_type: "inode/directory",
+  });
+
+  assert.equal(read("file:///etc/os-release"), {
+    resource: "/etc/os-release",
+    scheme: "file",
+    content_type: "text/plain",
+  });
+  assert.equal(read("x-junction:///etc/os-release"), {
+    resource: "/etc/os-release",
+    scheme: "file",
+    content_type: "text/plain",
+  });
+  assert.equal(read("x-junction://file:///etc/os-release"), {
+    resource: "/etc/os-release",
+    scheme: "file",
+    content_type: "text/plain",
+  });
+
+  assert.equal(read("x-junction://~"), {
+    resource: GLib.get_home_dir(),
+    scheme: "file",
+    content_type: "inode/directory",
+  });
+  assert.equal(read("x-junction://~/.config"), {
+    resource: `${GLib.get_home_dir()}/.config`,
+    scheme: "file",
+    content_type: "inode/directory",
+  });
+
+  assert.equal(read("https://example.com/"), {
+    resource: "https://example.com/",
+    scheme: "https",
+    content_type: "x-scheme-handler/https",
+  });
+
+  assert.equal(read("http://example.com/foobar?hello=world"), {
+    resource: "http://example.com/foobar?hello=world",
+    scheme: "http",
+    content_type: "x-scheme-handler/http",
+  });
+  assert.equal(read("x-junction://http://example.com/foobar?hello=world"), {
+    resource: "http://example.com/foobar?hello=world",
+    scheme: "http",
+    content_type: "x-scheme-handler/http",
+  });
+});
+
+test.run();
+loop.run();

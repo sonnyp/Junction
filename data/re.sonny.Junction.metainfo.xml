@@ -58,9 +58,10 @@
       <description>
         <ul>
           <li>Improve design</li>
+          <li>Add a x-juncton:// protocol API</li>
           <li
           >Do not automatically set Junction as default application for Web</li>
-          <li>Fix some options not available</li>
+          <li>Fix missing options</li>
           <li>Limit the number of options to 4</li>
           <li>Add an option to open with any application</li>
           <li>Add a System Information panel in the about dialog</li>
