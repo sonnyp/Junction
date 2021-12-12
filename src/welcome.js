@@ -1,6 +1,6 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
-// import Gdk from "gi://Gdk";
+import Gdk from "gi://Gdk";
 
 import { relativePath, spawn } from "./util.js";
 
@@ -19,15 +19,9 @@ export default function Welcome({ application }) {
 
   const install_button = builder.get_object("install_button");
   install_button.connect("clicked", () => {
-    // TODO: Show an Adw.Toast once it hits a release
     setAsDefaultApplicationForWeb();
 
-    spawn("gnome-control-center default-apps");
-    // Gtk.show_uri(
-    //   window,
-    //   "https://github.com/sonnyp/Junction",
-    //   Gdk.CURRENT_TIME,
-    // );
+    Gtk.show_uri(window, "https://junction.sonny.re", Gdk.CURRENT_TIME);
   });
 
   window.present();
