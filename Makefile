@@ -39,6 +39,8 @@ clean:
 	rm -rf build builddir install .eslintcache
 	rm -f ~/.local/share/applications/re.sonny.Junction.desktop
 	rm -f ~/.local/share/dbus-1/services/re.sonny.Junction.service
+	rm -f ~/.local/share/icons/hicolor/symbolic/apps/re.sonny.Junction-symbolic.svg
+	rm -f ~/.local/share/icons/hicolor/scalable/apps/re.sonny.Junction.svg
 	update-desktop-database ~/.local/share/applications
 
 dev:

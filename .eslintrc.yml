@@ -11,7 +11,7 @@ globals:
   imports: readonly
   pkg: readonly
   # log: readonly
-  # logError: readonly
+  logError: readonly
   # print: readonly
   # printerr: readonly
   ARGV: readonly

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 14:05+0100\n"
+"POT-Creation-Date: 2021-12-12 23:28+0100\n"
 "PO-Revision-Date: 2021-11-14 21:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,7 +23,6 @@ msgstr ""
 msgid "Junction"
 msgstr ""
 
-#. artists: [],
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:49
 msgid "Application chooser"
@@ -101,12 +100,16 @@ msgid "Improve design"
 msgstr "Mejora del diseño"
 
 #: data/re.sonny.Junction.metainfo.xml:61
+msgid "New icon"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:62
 msgid "Add a x-juncton:// protocol API"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:63
 #, fuzzy
-msgid "Do not automatically set Junction as default application for Web"
+msgid "Do not automatically set as default application"
 msgstr "Establecer Junction como predeterminado para la Web"
 
 #: data/re.sonny.Junction.metainfo.xml:64
@@ -192,7 +195,7 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "Esta es la primera versión de Junction. Esperamos que le guste."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:58
+#: src/about.js:59
 msgid "translator-credits"
 msgstr "Óscar Fernández Díaz <oscfdezdz@tuta.io>"
 
@@ -204,11 +207,11 @@ msgstr "Mostrar nombres"
 msgid "Copy to Clipboard"
 msgstr "Copiar al portapapeles"
 
-#: src/window.ui:72 src/welcome.ui:69
+#: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
 msgstr "Atajos del teclado"
 
-#: src/window.ui:76 src/welcome.ui:73
+#: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
 msgstr "Acerca de Junction"
 
@@ -216,7 +219,7 @@ msgstr "Acerca de Junction"
 msgid "Test Junction"
 msgstr "Probar Junction"
 
-#: src/welcome.ui:50
+#: src/welcome.ui:48
 msgid "Set Junction as default for Web"
 msgstr "Establecer Junction como predeterminado para la Web"
 

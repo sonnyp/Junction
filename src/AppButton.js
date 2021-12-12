@@ -44,7 +44,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       });
       return true;
     } catch (err) {
-      console.error(err);
+      logError(err);
       return false;
     }
   }
@@ -166,7 +166,7 @@ export function ViewAllButton({ file, content_type, entry, window }) {
         save: false,
       });
     } catch (err) {
-      console.error(err);
+      logError(err);
       return;
     }
 

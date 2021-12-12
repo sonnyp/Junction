@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 14:05+0100\n"
+"POT-Creation-Date: 2021-12-12 23:28+0100\n"
 "PO-Revision-Date: 2021-11-13 20:52+0100\n"
 "Last-Translator: Rafał Baran <>\n"
 "Language-Team: Polish <>\n"
@@ -25,7 +25,6 @@ msgstr ""
 msgid "Junction"
 msgstr "Junction"
 
-#. artists: [],
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:49
 msgid "Application chooser"
@@ -106,12 +105,16 @@ msgid "Improve design"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:61
+msgid "New icon"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:62
 msgid "Add a x-juncton:// protocol API"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:63
 #, fuzzy
-msgid "Do not automatically set Junction as default application for Web"
+msgid "Do not automatically set as default application"
 msgstr ""
 "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
 
@@ -197,7 +200,7 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "To jest pierwsze wydanie Junction. Mamy nadzieję, że ci się spodoba."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:58
+#: src/about.js:59
 msgid "translator-credits"
 msgstr "tłumaczenia"
 
@@ -209,11 +212,11 @@ msgstr ""
 msgid "Copy to Clipboard"
 msgstr "Kopiuj do Schowka"
 
-#: src/window.ui:72 src/welcome.ui:69
+#: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
 msgstr "Skróty Klawiszowe"
 
-#: src/window.ui:76 src/welcome.ui:73
+#: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
 msgstr "O Junction"
 
@@ -222,7 +225,7 @@ msgstr "O Junction"
 msgid "Test Junction"
 msgstr "Junction"
 
-#: src/welcome.ui:50
+#: src/welcome.ui:48
 #, fuzzy
 msgid "Set Junction as default for Web"
 msgstr ""

@@ -18,28 +18,6 @@
   ],
   "modules": [
     {
-      "name": "libsass",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/lazka/libsass.git",
-          "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-        }
-      ]
-    },
-    {
-      "name": "sassc",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/lazka/sassc.git",
-          "commit": "82803377c33247265d779af034eceb5949e78354"
-        }
-      ]
-    },
-    {
       "name": "libadwaita",
       "buildsystem": "meson",
       "config-opts": ["-Dvapi=false", "-Dexamples=false", "-Dtests=false"],
@@ -49,6 +27,34 @@
           "type": "archive",
           "url": "https://download.gnome.org/sources/libadwaita/1.0/libadwaita-1.0.0.alpha.4.tar.xz",
           "sha256": "d3000ff56282947f5c51bbb3f9b7e7edb24d212b107bc009ba163464edbb8d7c"
+        }
+      ],
+      "modules": [
+        {
+          "name": "libsass",
+          "buildsystem": "meson",
+          "cleanup": ["*"],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/lazka/libsass.git",
+              "branch": "meson",
+              "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+            }
+          ]
+        },
+        {
+          "name": "sassc",
+          "buildsystem": "meson",
+          "cleanup": ["*"],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/lazka/sassc.git",
+              "branch": "meson",
+              "commit": "82803377c33247265d779af034eceb5949e78354"
+            }
+          ]
         }
       ]
     },

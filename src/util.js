@@ -30,9 +30,16 @@ export function loadStyleSheet(path) {
   );
 }
 
+export function spawn_sync(cmd) {
+  if (GLib.getenv("FLATPAK_ID")) {
+    cmd = `flatpak-spawn --host "${cmd}"`;
+  }
+  return GLib.spawn_command_line_sync(cmd);
+}
+
 export function spawn(cmd) {
   if (GLib.getenv("FLATPAK_ID")) {
-    cmd = `flatpak-spawn --host ${cmd}`;
+    cmd = `flatpak-spawn --host "${cmd}"`;
   }
   return GLib.spawn_command_line_async(cmd);
 }
@@ -74,7 +81,7 @@ export function getOSRelease() {
       return byteArray.toString(content);
     } catch (err) {
       if (err.code !== Gio.IOErrorEnum.NOT_FOUND) {
-        console.error(err);
+        logError(err);
       }
     }
   }
@@ -111,7 +118,7 @@ export function getFlatpakInfo() {
     keyFile.load_from_file("/.flatpak-info", GLib.KeyFileFlags.NONE);
   } catch (err) {
     if (err.code !== GLib.FileError.NOENT) {
-      console.error(err);
+      logError(err);
     }
     return null;
   }
@@ -153,7 +160,7 @@ export function readResource(file) {
       );
       content_type = info.get_content_type();
     } catch (err) {
-      console.error(err);
+      logError(err);
     }
   }
 

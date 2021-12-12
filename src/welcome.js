@@ -2,7 +2,7 @@ import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
-import { relativePath, spawn } from "./util.js";
+import { relativePath, spawn_sync } from "./util.js";
 
 export default function Welcome({ application }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./welcome.ui"));
@@ -19,9 +19,13 @@ export default function Welcome({ application }) {
 
   const install_button = builder.get_object("install_button");
   install_button.connect("clicked", () => {
-    setAsDefaultApplicationForWeb();
+    const success = setAsDefaultApplicationForWeb();
 
-    Gtk.show_uri(window, "https://junction.sonny.re/success", Gdk.CURRENT_TIME);
+    Gtk.show_uri(
+      window,
+      `https://junction.sonny.re/${success ? "success" : "error"}`,
+      Gdk.CURRENT_TIME,
+    );
   });
 
   window.present();
@@ -30,8 +34,19 @@ export default function Welcome({ application }) {
 }
 
 function setAsDefaultApplicationForWeb() {
-  spawn("gio mime x-scheme-handler/https re.sonny.Junction.desktop");
-  spawn("gio mime x-scheme-handler/http re.sonny.Junction.desktop");
+  try {
+    if (
+      !spawn_sync(
+        "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
+      ) ||
+      !spawn_sync("gio mime x-scheme-handler/http re.sonny.Junction.desktop")
+    )
+      return false;
+  } catch (err) {
+    logError(err);
+    return false;
+  }
+  return true;
 }
 
 // const types = [
