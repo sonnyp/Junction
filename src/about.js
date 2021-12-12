@@ -45,7 +45,7 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   const dialog = new Gtk.AboutDialog({
     application,
     authors: ["Sonny Piers https://sonny.re"],
-    // artists: [],
+    artists: ["Tobias Bernard <tbernard@gnome.org>"],
     comments: _("Application chooser"),
     copyright: "Copyright 2021 Sonny Piers",
     license_type: Gtk.License.GPL_3_0,
