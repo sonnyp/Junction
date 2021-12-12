@@ -52,7 +52,8 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     version,
     website: "https://junction.sonny.re",
     transient_for: application.get_active_window(),
-    modal: true,
+    // Prevents input on Junction when clicking on a link
+    // modal: true,
     logo_icon_name: "re.sonny.Junction",
     // TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
     translator_credits: _("translator-credits"),
