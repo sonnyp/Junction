@@ -50,7 +50,7 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     copyright: "Copyright 2021 Sonny Piers",
     license_type: Gtk.License.GPL_3_0,
     version,
-    website: "https://github.com/sonnyp/Junction",
+    website: "https://junction.sonny.re",
     transient_for: application.get_active_window(),
     modal: true,
     logo_icon_name: "re.sonny.Junction",

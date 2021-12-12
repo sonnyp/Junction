@@ -270,6 +270,7 @@ See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
 
 <summary>Publish new version</summary>
 
+- update screenshot
 - `meson compile re.sonny.Junction-update-po -C build`
 - Update version in `meson.build`
 - git tag

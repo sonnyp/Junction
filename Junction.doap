@@ -11,8 +11,8 @@
   <description
   >Junction lets you choose the application to open files and links.</description>
 
-  <homepage rdf:resource="https://github.com/sonnyp/Junction/" />
-  <bug-database rdf:resource="https://github.com/sonnyp/Junction/issues" />
+  <homepage rdf:resource="https://junction.sonny.re" />
+  <bug-database rdf:resource="https://junction.sonny.re/feedback" />
   <programming-language>JavaScript</programming-language>
 
   <maintainer>

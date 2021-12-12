@@ -44,9 +44,7 @@ export default function Application({ version, datadir }) {
     loadStyleSheet(relativePath("./style.css"));
   });
 
-  application.set_option_context_description(
-    "<https://github.com/sonnyp/Junction>",
-  );
+  application.set_option_context_description("<https://junction.sonny.re>");
   application.set_option_context_parameter_string("[URI…]");
   // TODO: Add examples
   // application.set_option_context_summary("");

@@ -21,7 +21,7 @@ export default function Welcome({ application }) {
   install_button.connect("clicked", () => {
     setAsDefaultApplicationForWeb();
 
-    Gtk.show_uri(window, "https://junction.sonny.re", Gdk.CURRENT_TIME);
+    Gtk.show_uri(window, "https://junction.sonny.re/success", Gdk.CURRENT_TIME);
   });
 
   window.present();

@@ -29,9 +29,9 @@
       <li>Middle click to open in multiple applications</li>
     </ul>
   </description>
-  <url type="homepage">https://github.com/sonnyp/Junction</url>
-  <url type="bugtracker">https://github.com/sonnyp/Junction/issues</url>
-  <url type="donation">https://ko-fi.com/sonnyp</url>
+  <url type="homepage">https://junction.sonny.re</url>
+  <url type="bugtracker">https://junction.sonny.re/feedback</url>
+  <url type="donation">https://junction.sonny.re/donate</url>
   <screenshots>
     <screenshot type="default">
       <image>
@@ -58,6 +58,7 @@
       <description>
         <ul>
           <li>Improve design</li>
+          <li>New icon</li>
           <li>Add a x-juncton:// protocol API</li>
           <li
           >Do not automatically set Junction as default application for Web</li>
