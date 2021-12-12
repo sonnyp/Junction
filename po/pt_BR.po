@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-07 23:02+0100\n"
+"POT-Creation-Date: 2021-12-12 14:05+0100\n"
 "PO-Revision-Date: 2021-11-19 21:15-0300\n"
 "Last-Translator: Tiago Lucas Flach <tiagolucas9830@gmail.com>\n"
 "Language-Team: \n"
@@ -25,12 +25,12 @@ msgstr ""
 
 #. artists: [],
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:48
+#: src/about.js:49
 msgid "Application chooser"
 msgstr "Selecionador de aplicativo"
 
 #. TRANSLATORS: Don't translate
-#: data/re.sonny.Junction.desktop:12
+#: data/re.sonny.Junction.desktop:13
 msgid ""
 "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
 "BrowserSelect;"
@@ -96,75 +96,103 @@ msgid "Junction features great support for keyboard"
 msgstr "O Junction oferece ótimo suporte para teclado"
 
 #: data/re.sonny.Junction.metainfo.xml:60
+#: data/re.sonny.Junction.metainfo.xml:77
+msgid "Improve design"
+msgstr "Melhorar o design"
+
+#: data/re.sonny.Junction.metainfo.xml:61
+msgid "Add a x-juncton:// protocol API"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:63
+#, fuzzy
+msgid "Do not automatically set Junction as default application for Web"
+msgstr "Definir o Junction como padrão para Web"
+
+#: data/re.sonny.Junction.metainfo.xml:64
+#, fuzzy
+msgid "Fix missing options"
+msgstr "Correção para aplicativos ausentes"
+
+#: data/re.sonny.Junction.metainfo.xml:65
+msgid "Limit the number of options to 4"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:66
+#, fuzzy
+msgid "Add an option to open with any application"
+msgstr "Adicionar opção para exibir nomes de aplicativos"
+
+#: data/re.sonny.Junction.metainfo.xml:67
+msgid "Add a System Information panel in the about dialog"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:74
 #, fuzzy
 msgid "Fix for applications that do not support URIs"
 msgstr "Correção de compatibilidade para aplicativos que não suportam URIs"
 
-#: data/re.sonny.Junction.metainfo.xml:61
+#: data/re.sonny.Junction.metainfo.xml:75
 #, fuzzy
 msgid "Add an option to display application names"
 msgstr "Adicionar opção para exibir nomes de aplicativos"
 
-#: data/re.sonny.Junction.metainfo.xml:62
+#: data/re.sonny.Junction.metainfo.xml:76
 msgid "Add a menu button"
 msgstr "Adicionar um botão de menu"
 
-#: data/re.sonny.Junction.metainfo.xml:63
-msgid "Improve design"
-msgstr "Melhorar o design"
-
-#: data/re.sonny.Junction.metainfo.xml:64
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Improve keyboard usage"
 msgstr "Melhorar o uso do teclado"
 
-#: data/re.sonny.Junction.metainfo.xml:65
+#: data/re.sonny.Junction.metainfo.xml:79
 msgid "Improve CLI usage"
 msgstr "Melhorar o uso da CLI"
 
-#: data/re.sonny.Junction.metainfo.xml:66
+#: data/re.sonny.Junction.metainfo.xml:80
 msgid "Support opening multiple URIs"
 msgstr "Suporte para abertura de vários URIs"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add Polish translation"
 msgstr "Adicionar tradução Polonesa"
 
-#: data/re.sonny.Junction.metainfo.xml:69
+#: data/re.sonny.Junction.metainfo.xml:83
 msgid "Add Occitan translation"
 msgstr "Adicionar tradução Occitano"
 
-#: data/re.sonny.Junction.metainfo.xml:70
+#: data/re.sonny.Junction.metainfo.xml:84
 #, fuzzy
 msgid "Add Spanish translation"
 msgstr "Adicionar tradução Polonesa"
 
-#: data/re.sonny.Junction.metainfo.xml:72
+#: data/re.sonny.Junction.metainfo.xml:86
 #, fuzzy
 msgid "Support D-Bus activation"
 msgstr "Suporte com a ativação de DBus"
 
-#: data/re.sonny.Junction.metainfo.xml:73
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Use libadwaita"
 msgstr "Usa libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:94
 msgid "Fix for missing applications"
 msgstr "Correção para aplicativos ausentes"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:95
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Adicionar uma janela de Atalhos - acessível com &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:96
 msgid "Add Italian translation"
 msgstr "Adicionar tradução Italiana"
 
-#: data/re.sonny.Junction.metainfo.xml:88
+#: data/re.sonny.Junction.metainfo.xml:102
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Este é o primeiro lançamento do Junction. Esperamos que você goste."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:57
+#: src/about.js:58
 msgid "translator-credits"
 msgstr "Tiago Lucas Flach <tiagolucas9830@gmail.com>"
 
