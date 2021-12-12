@@ -48,7 +48,7 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     artists: ["Tobias Bernard <tbernard@gnome.org>"],
     comments: _("Application chooser"),
     copyright: "Copyright 2021 Sonny Piers",
-    license_type: Gtk.License.GPL_3_0,
+    license_type: Gtk.License.GPL_3_0_ONLY,
     version,
     website: "https://junction.sonny.re",
     transient_for: application.get_active_window(),

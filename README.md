@@ -351,4 +351,4 @@ ninja -C build uninstall
 
 ## License
 
-GPLv3 or later. Please see [COPYING](COPYING) file.
+GPLv3. Please see [COPYING](COPYING) file.

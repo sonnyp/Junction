@@ -1,6 +1,6 @@
 @define-color accent_color @yellow_4;
 @define-color accent_bg_color @yellow_4;
-@define-color accent_fg_color alpha(black, .8);
+@define-color accent_fg_color alpha(black, 0.8);
 
 .welcome > contents > box > box {
   padding: 68px;
@@ -38,7 +38,7 @@
 }
 
 .main entry.uri {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: alpha(black, 0.8);
   border-radius: 18px;
   border: solid 1px black;
 }
