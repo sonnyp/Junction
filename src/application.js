@@ -5,6 +5,7 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import { relativePath, loadStyleSheet } from "./util.js";
 
 export default function Application({ version, datadir }) {
   const application = new Adw.Application({
@@ -37,6 +38,10 @@ export default function Application({ version, datadir }) {
     Welcome({
       application,
     });
+  });
+
+  application.connect("startup", () => {
+    loadStyleSheet(relativePath("./style.css"));
   });
 
   application.set_option_context_description(

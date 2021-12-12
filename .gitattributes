@@ -1,3 +1,6 @@
 package-lock.json -diff
 test/assert.js -diff
 test/uvu.js -diff
+data/icons/re.sonny.Junction-symbolic.svg -diff
+data/icons/re.sonny.Junction.Devel.svg -diff
+data/icons/re.sonny.Junction.svg -diff
