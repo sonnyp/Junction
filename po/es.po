@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 23:28+0100\n"
+"POT-Creation-Date: 2021-12-14 23:08+0100\n"
 "PO-Revision-Date: 2021-11-14 21:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -84,109 +84,108 @@ msgstr "Navegación por teclado"
 msgid "Middle click to open in multiple applications"
 msgstr "Clic central para abrir en varias aplicaciones"
 
-#: data/re.sonny.Junction.metainfo.xml:40
+#: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
 msgstr "Elija el navegador con el que desea abrir el enlace"
 
-#: data/re.sonny.Junction.metainfo.xml:46
+#: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
 msgstr "Elija la aplicación con la que desea abrir la imagen"
 
-#: data/re.sonny.Junction.metainfo.xml:52
+#: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
 msgstr "Junction cuenta con un gran soporte para el teclado"
 
-#: data/re.sonny.Junction.metainfo.xml:60
-#: data/re.sonny.Junction.metainfo.xml:77
+#: data/re.sonny.Junction.metainfo.xml:61
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Improve design"
 msgstr "Mejora del diseño"
 
-#: data/re.sonny.Junction.metainfo.xml:61
+#: data/re.sonny.Junction.metainfo.xml:62
 msgid "New icon"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:62
+#: data/re.sonny.Junction.metainfo.xml:63
 msgid "Add a x-juncton:// protocol API"
 msgstr "Añade una API de protocolo x-juncton://"
 
-#: data/re.sonny.Junction.metainfo.xml:63
+#: data/re.sonny.Junction.metainfo.xml:64
 msgid "Do not automatically set as default application"
 msgstr "No establece automáticamente como predeterminado para la Web"
 
-#: data/re.sonny.Junction.metainfo.xml:64
+#: data/re.sonny.Junction.metainfo.xml:65
 msgid "Fix missing options"
 msgstr "Corrección de las opciones que faltan"
 
-#: data/re.sonny.Junction.metainfo.xml:65
+#: data/re.sonny.Junction.metainfo.xml:66
 msgid "Limit the number of options to 4"
 msgstr "Limitar el número de opciones a 4"
 
-#: data/re.sonny.Junction.metainfo.xml:66
+#: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option to open with any application"
 msgstr "Añade una opción para abrir con cualquier aplicación"
 
-#: data/re.sonny.Junction.metainfo.xml:67
+#: data/re.sonny.Junction.metainfo.xml:68
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
-"Añade un panel de información del sistema en el diálogo de información"
+msgstr "Añade un panel de información del sistema en el diálogo de información"
 
-#: data/re.sonny.Junction.metainfo.xml:74
+#: data/re.sonny.Junction.metainfo.xml:75
 msgid "Fix for applications that do not support URIs"
 msgstr "Corrección para aplicaciones que no soportan URIs"
 
-#: data/re.sonny.Junction.metainfo.xml:75
+#: data/re.sonny.Junction.metainfo.xml:76
 msgid "Add an option to display application names"
 msgstr "Añade una opción para mostrar los nombres de las aplicaciones"
 
-#: data/re.sonny.Junction.metainfo.xml:76
+#: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a menu button"
 msgstr "Añade un botón de menú"
 
-#: data/re.sonny.Junction.metainfo.xml:78
+#: data/re.sonny.Junction.metainfo.xml:79
 msgid "Improve keyboard usage"
 msgstr "Mejora el uso del teclado"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:80
 msgid "Improve CLI usage"
 msgstr "Mejora el uso de la CLI"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:81
 msgid "Support opening multiple URIs"
 msgstr "Compatibilidad con la apertura de múltiples URIs"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:83
 msgid "Add Polish translation"
 msgstr "Añade la traducción al polaco"
 
-#: data/re.sonny.Junction.metainfo.xml:83
+#: data/re.sonny.Junction.metainfo.xml:84
 msgid "Add Occitan translation"
 msgstr "Añade la traducción al occitano"
 
-#: data/re.sonny.Junction.metainfo.xml:84
+#: data/re.sonny.Junction.metainfo.xml:85
 msgid "Add Spanish translation"
 msgstr "Añade la traducción al español"
 
-#: data/re.sonny.Junction.metainfo.xml:86
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Support D-Bus activation"
 msgstr "Soporte de la activación del D-Bus"
 
-#: data/re.sonny.Junction.metainfo.xml:87
+#: data/re.sonny.Junction.metainfo.xml:88
 msgid "Use libadwaita"
 msgstr "Usa libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:94
+#: data/re.sonny.Junction.metainfo.xml:95
 msgid "Fix for missing applications"
 msgstr "Corrección de las aplicaciones que faltan"
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:96
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Añade una ventana de Atajos - accesible con &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:96
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Add Italian translation"
 msgstr "Añade la traducción al italiano"
 
-#: data/re.sonny.Junction.metainfo.xml:102
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Esta es la primera versión de Junction. Esperamos que le guste."
 
@@ -218,3 +217,18 @@ msgstr "Probar Junction"
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
 msgstr "Establecer Junction como predeterminado para la Web"
+
+#: src/AppButton.js:137
+msgid "View All"
+msgstr ""
+
+#: src/AppButton.js:190
+#, fuzzy
+msgid "All Applications"
+msgstr "Selector de aplicaciones"
+
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""

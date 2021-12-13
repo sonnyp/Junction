@@ -204,6 +204,7 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 
 ```sh
 cd Junction
+npm install
 ./re.sonny.Junction https://www.gnome.org/
 ```
 
@@ -270,7 +271,8 @@ See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
 
 <summary>Publish new version</summary>
 
-- update screenshot
+- update metainfo and screenshot
+- `meson compile re.sonny.Junction-pot -C build`
 - `meson compile re.sonny.Junction-update-po -C build`
 - Update version in `meson.build`
 - git tag

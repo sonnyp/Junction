@@ -2,3 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
+
+# xgettext -f po/POTFILES -o po/re.sonny.Junction.pot --no-wrap -cTRANSLATORS --from-code=UTF-8
+# sed -i "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: re.sonny.Junction/" po/re.sonny.Junction.pot
+# git add po/re.sonny.Junction.pot

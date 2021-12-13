@@ -5,3 +5,5 @@ src/about.js
 src/window.ui
 src/welcome.js
 src/welcome.ui
+src/AppButton.js
+src/Entry.js

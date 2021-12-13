@@ -7,11 +7,11 @@ project('re.sonny.Junction',
 gnome = import('gnome')
 i18n = import('i18n')
 
-app_id = meson.project_name()
+application_id = meson.project_name()
 prefix = get_option('prefix')
 bindir = join_paths(prefix, 'bin')
 datadir = join_paths(prefix, get_option('datadir'))
-pkgdatadir = join_paths(datadir, app_id)
+pkgdatadir = join_paths(datadir, application_id)
 
 subdir('data')
 subdir('src')
