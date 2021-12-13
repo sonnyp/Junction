@@ -37,9 +37,7 @@
                 >Test Junction</property>
                 <property name="valign">center</property>
                 <property name="halign">center</property>
-                <property
-                  name="uri"
-                >https://github.com/sonnyp/Junction</property>
+                <property name="uri">https://junction.sonny.re/demo</property>
               </object>
             </child>
             <child>

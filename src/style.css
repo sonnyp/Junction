@@ -1,3 +1,15 @@
+@define-color accent_color @yellow_4;
+@define-color accent_bg_color @yellow_4;
+@define-color accent_fg_color alpha(black, 0.8);
+
+.welcome > contents > box > box {
+  padding: 68px;
+}
+
+.welcome button.link {
+  color: white;
+}
+
 .main {
   border-radius: 30px;
   background: none;
@@ -7,26 +19,26 @@
   padding: 12px;
 }
 
-.list {
+.main .list {
   background: none;
   margin-bottom: 12px;
 }
 
-.list button {
+.main .list button {
   border-radius: 18px;
   padding: 12px;
   font-size: 0.6rem;
 }
 
-.list button:focus {
+.main .list button:focus {
   outline: none;
   /* This is libadwaita background for active */
   /* https://gitlab.gnome.org/GNOME/libadwaita/-/blob/main/src/stylesheet/widgets/_buttons.scss#L3 */
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: alpha(white, 0.3);
 }
 
-entry.uri {
-  background-color: rgba(0, 0, 0, 0.8);
+.main entry.uri {
+  background-color: alpha(black, 0.8);
   border-radius: 18px;
   border: solid 1px black;
 }

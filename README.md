@@ -270,6 +270,7 @@ See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
 
 <summary>Publish new version</summary>
 
+- update screenshot
 - `meson compile re.sonny.Junction-update-po -C build`
 - Update version in `meson.build`
 - git tag
@@ -350,4 +351,4 @@ ninja -C build uninstall
 
 ## License
 
-GPLv3 or later. Please see [COPYING](COPYING) file.
+GPLv3. Please see [COPYING](COPYING) file.

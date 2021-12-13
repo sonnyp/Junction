@@ -5,6 +5,7 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import { relativePath, loadStyleSheet } from "./util.js";
 
 export default function Application({ version, datadir }) {
   const application = new Adw.Application({
@@ -39,9 +40,11 @@ export default function Application({ version, datadir }) {
     });
   });
 
-  application.set_option_context_description(
-    "<https://github.com/sonnyp/Junction>",
-  );
+  application.connect("startup", () => {
+    loadStyleSheet(relativePath("./style.css"));
+  });
+
+  application.set_option_context_description("<https://junction.sonny.re>");
   application.set_option_context_parameter_string("[URI…]");
   // TODO: Add examples
   // application.set_option_context_summary("");

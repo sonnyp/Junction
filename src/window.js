@@ -2,7 +2,7 @@ import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
-import { relativePath, loadStyleSheet, readResource } from "./util.js";
+import { relativePath, readResource } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton } from "./AppButton.js";
 import { settings } from "./common.js";
@@ -11,7 +11,6 @@ export default function Window({ application, file }) {
   const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
 
   const window = builder.get_object("window");
-  loadStyleSheet(relativePath("./window.css"));
   window.set_application(application);
 
   const { content_type, resource, scheme } = readResource(file);

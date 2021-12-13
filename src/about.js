@@ -45,14 +45,15 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   const dialog = new Gtk.AboutDialog({
     application,
     authors: ["Sonny Piers https://sonny.re"],
-    // artists: [],
+    artists: ["Tobias Bernard <tbernard@gnome.org>"],
     comments: _("Application chooser"),
     copyright: "Copyright 2021 Sonny Piers",
-    license_type: Gtk.License.GPL_3_0,
+    license_type: Gtk.License.GPL_3_0_ONLY,
     version,
-    website: "https://github.com/sonnyp/Junction",
+    website: "https://junction.sonny.re",
     transient_for: application.get_active_window(),
-    modal: true,
+    // Prevents input on Junction when clicking on a link
+    // modal: true,
     logo_icon_name: "re.sonny.Junction",
     // TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
     translator_credits: _("translator-credits"),

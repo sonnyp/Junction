@@ -44,7 +44,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       });
       return true;
     } catch (err) {
-      console.error(err);
+      logError(err);
       return false;
     }
   }
@@ -166,7 +166,7 @@ export function ViewAllButton({ file, content_type, entry, window }) {
         save: false,
       });
     } catch (err) {
-      console.error(err);
+      logError(err);
       return;
     }
 
@@ -196,7 +196,7 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     appChooserWidget.set_show_recommended(true);
     appChooserWidget.set_show_fallback(true);
     appChooserWidget.set_show_other(true);
-    // FIXME: Search is broken unless this
+    // FIXME: Search is kinda broken unless this
     // appChooserWidget.set_show_all(true);
     appChooserDialog.connect("response", onResponse);
     appChooserDialog.show();
