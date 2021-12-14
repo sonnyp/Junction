@@ -200,6 +200,16 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 
 [linuxunplugged.com - Episode 433 The Lessons of Jellyfin](https://linuxunplugged.com/433?t=3183) - 11/2021
 
+## Translation
+
+If you'd like to help translating Junction into your language, please head over to [Weblate](https://hosted.weblate.org/engage/junction/).
+
+<a href="https://hosted.weblate.org/engage/junction/">
+  <img src="https://hosted.weblate.org/widgets/junction/-/junction/multi-auto.svg" alt="Translation status" />
+</a>
+
+Thank you for your help!
+
 ## Development
 
 ```sh

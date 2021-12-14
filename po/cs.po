@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-14 23:08+0100\n"
-"PO-Revision-Date: 2021-10-17 15:15+0200\n"
-"Last-Translator: Vojtěch Perník <translations@pervoj.cz>\n"
-"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"PO-Revision-Date: 2021-12-14 22:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"X-Generator: Gtranslator 41.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -50,10 +50,7 @@ msgid ""
 "Junction will pop up automatically when you open a link in a desktop "
 "application. Use the mouse or keyboard navigation to choose the application "
 "to open the link or file with."
-msgstr ""
-"Junction se automaticky otevře, jakmile v některé desktopové aplikaci "
-"kliknete na odkaz. Chcete-li vybrat aplikaci pro otevření odkazu nebo "
-"souboru, použijte myš nebo šipky na klávesnici."
+msgstr "Junction se automaticky otevře, jakmile v některé desktopové aplikaci kliknete na odkaz. Chcete-li vybrat aplikaci pro otevření odkazu nebo souboru, použijte myš nebo šipky na klávesnici."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -95,9 +92,7 @@ msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
 #: data/re.sonny.Junction.metainfo.xml:53
 #, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr ""
-"Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání "
-"webových odkazů"
+msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
 
 #: data/re.sonny.Junction.metainfo.xml:61
 #: data/re.sonny.Junction.metainfo.xml:78
@@ -115,9 +110,7 @@ msgstr ""
 #: data/re.sonny.Junction.metainfo.xml:64
 #, fuzzy
 msgid "Do not automatically set as default application"
-msgstr ""
-"Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání "
-"webových odkazů"
+msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
 
 #: data/re.sonny.Junction.metainfo.xml:65
 msgid "Fix missing options"
@@ -225,9 +218,7 @@ msgstr "Junction"
 #: src/welcome.ui:48
 #, fuzzy
 msgid "Set Junction as default for Web"
-msgstr ""
-"Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání "
-"webových odkazů"
+msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
 
 #: src/AppButton.js:137
 msgid "View All"
@@ -242,9 +233,7 @@ msgstr "Volba aplikací"
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
-msgstr ""
-"Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny "
-"informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
+msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
 
 #~ msgid "Sonny Piers"
 #~ msgstr "Sonny Piers"
