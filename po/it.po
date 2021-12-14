@@ -8,13 +8,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-14 23:08+0100\n"
-"PO-Revision-Date: 2021-12-13 14:33+0100\n"
-"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <LL@li.org>\n"
+"PO-Revision-Date: 2021-12-14 22:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/junction/junction/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -35,9 +37,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction ti consente di scegliere l'applicazione per aprire file e "
-"collegamenti."
+msgstr "Junction ti consente di scegliere l'applicazione per aprire file e collegamenti."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
@@ -48,10 +48,7 @@ msgid ""
 "Junction will pop up automatically when you open a link in a desktop "
 "application. Use the mouse or keyboard navigation to choose the application "
 "to open the link or file with."
-msgstr ""
-"Junction apparirà automaticamente quando apri un collegamento di un "
-"applicazione desktop. Usa la navigazione del mouse o della tastiera per "
-"scegliere l'applicazione per aprire il collegamento o file"
+msgstr "Junction apparirà automaticamente quando apri un collegamento di un applicazione desktop. Usa la navigazione del mouse o della tastiera per scegliere l'applicazione per aprire il collegamento o file"
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -228,9 +225,7 @@ msgstr "Selettore per applicazioni"
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
-msgstr ""
-"Questo sito non è protetto. Un utente malintenzionato potrebbe vedere tutte "
-"le informazioni che invii o controllare il contenuto che vedi."
+msgstr "Questo sito non è protetto. Un utente malintenzionato potrebbe vedere tutte le informazioni che invii o controllare il contenuto che vedi."
 
 #~ msgid "Sonny Piers"
 #~ msgstr "Sonny Piers"

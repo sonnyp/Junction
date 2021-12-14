@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-14 23:08+0100\n"
-"PO-Revision-Date: 2021-11-14 21:23+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2021-12-14 22:23+0000\n"
+"Last-Translator: Sonny Piers <sonny@sonny.re>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/junction/junction/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -33,14 +33,11 @@ msgstr "Selector de aplicaciones"
 msgid ""
 "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
 "BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction le permite elegir la aplicación para abrir archivos y enlaces."
+msgstr "Junction le permite elegir la aplicación para abrir archivos y enlaces."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
@@ -51,10 +48,7 @@ msgid ""
 "Junction will pop up automatically when you open a link in a desktop "
 "application. Use the mouse or keyboard navigation to choose the application "
 "to open the link or file with."
-msgstr ""
-"Junction aparecerá automáticamente cuando abra un enlace en una aplicación "
-"de escritorio. Use el ratón o la navegación por teclado para elegir la "
-"aplicación con la que abrir el enlace o el archivo."
+msgstr "Junction aparecerá automáticamente cuando abra un enlace en una aplicación de escritorio. Use el ratón o la navegación por teclado para elegir la aplicación con la que abrir el enlace o el archivo."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -103,7 +97,7 @@ msgstr "Mejora del diseño"
 
 #: data/re.sonny.Junction.metainfo.xml:62
 msgid "New icon"
-msgstr ""
+msgstr "Nuevo icono"
 
 #: data/re.sonny.Junction.metainfo.xml:63
 msgid "Add a x-juncton:// protocol API"
