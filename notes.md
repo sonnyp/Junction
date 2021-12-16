@@ -34,6 +34,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - "Remember for"
 - No application to handle this type - search for one?
 - Ctrl+Click / Ctrl+Enter to open in multiple applications
+- Ctrl shows a checkbox to open in multiple apps
 - [Desktop actions](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions) - e.g. open in new window / private window
 - Implement `org.freedesktop.impl.portal.AppChooser`
 - For files
@@ -65,6 +66,7 @@ Help welcome! Feel free to open an issue and I'd be happy to assist.
 - mailto to web
 - put http warning behind setting
 - API similar to https://www.choosyosx.com/api
+- https://github.com/mastodon/mastodon/pull/8127
 
 ## Some crazy/maybe-bad ideas:
 
