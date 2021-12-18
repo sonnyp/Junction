@@ -39,6 +39,7 @@ OS ${os_release["NAME"]} ${os_release["VERSION"] || ""}
 $XDG_DATA_DIRS ${GLib.getenv("XDG_DATA_DIRS")}
 $PATH ${GLib.getenv("PATH")}
 $FLATPAK_ID ${GLib.getenv("FLATPAK_ID")}
+$XDG_CURRENT_DESKTOP ${GLib.getenv("XDG_CURRENT_DESKTOP")}
 $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   `.trim();
 
