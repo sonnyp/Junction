@@ -12,8 +12,8 @@
               <class name="list" />
             </style>
             <property name="orientation">horizontal</property>
-            <property name="homogeneous">True</property>
-            <property name="spacing">18</property>
+            <property name="homogeneous">true</property>
+            <property name="spacing">12</property>
           </object>
         </child>
         <child>
@@ -23,29 +23,21 @@
                 <property name="hexpand">true</property>
                 <property name="input-purpose">url</property>
                 <property name="xalign">0.5</property>
-                <!-- TODO: file a bug - does not seem to be working -->
-                <property name="primary-icon-activatable">False</property>
-                <!-- TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906 -->
-                <property
-                  name="primary-icon-tooltip-text"
-                  translatable="yes"
-                >This site has no security. An attacker could see any information you send, or control the content that you see.</property>
-                <!-- <property
-                  name="secondary-icon-name"
-                >edit-copy-symbolic</property> -->
-                <!-- <property
-                  name="secondary-icon-tooltip-text"
-                  translatable="yes"
-                >Copy to Clipboard</property> -->
                 <style>
                   <class name="uri" />
                 </style>
               </object>
             </child>
-            <child type="start">
+            <child>
               <object class="GtkMenuButton" id="menu_button">
                 <property name="popover">menu_popover</property>
                 <property name="icon-name">open-menu-symbolic</property>
+                <property name="margin-start">6</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="circular" />
+                  <class name="flat" />
+                </style>
               </object>
             </child>
           </object>

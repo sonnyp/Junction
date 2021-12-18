@@ -18,57 +18,70 @@
   ],
   "modules": [
     {
-      "name": "libsass",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/lazka/libsass.git",
-          "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-        }
-      ]
-    },
-    {
-      "name": "sassc",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://github.com/lazka/sassc.git",
-          "commit": "82803377c33247265d779af034eceb5949e78354"
-        }
-      ]
-    },
-    {
       "name": "libadwaita",
       "buildsystem": "meson",
-      "config-opts": ["-Dtests=false", "-Dexamples=false", "-Dvapi=false"],
+      "config-opts": ["-Dvapi=false", "-Dexamples=false", "-Dtests=false"],
       "cleanup": ["/include", "/lib/pkgconfig"],
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-          "tag": "1.0.0.alpha.3"
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libadwaita/1.0/libadwaita-1.0.0.alpha.4.tar.xz",
+          "sha256": "d3000ff56282947f5c51bbb3f9b7e7edb24d212b107bc009ba163464edbb8d7c"
+        }
+      ],
+      "modules": [
+        {
+          "name": "libsass",
+          "buildsystem": "meson",
+          "cleanup": ["*"],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/lazka/libsass.git",
+              "branch": "meson",
+              "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+            }
+          ]
+        },
+        {
+          "name": "sassc",
+          "buildsystem": "meson",
+          "cleanup": ["*"],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/lazka/sassc.git",
+              "branch": "meson",
+              "commit": "82803377c33247265d779af034eceb5949e78354"
+            }
+          ]
         }
       ]
     },
     {
       "name": "glib",
       "buildsystem": "meson",
-      "config-opts": [
-        "-Dtests=false",
-        "-Dselinux=disabled",
-        "-Dinternal_pcre=false"
-      ],
+      "config-opts": ["-Dselinux=disabled", "-Dtests=false"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.70/glib-2.70.0.tar.xz",
-          "sha256": "200d7df811c5ba634afbf109f14bb40ba7fde670e89389885da14e27c0840742"
+          "url": "https://download.gnome.org/sources/glib/2.70/glib-2.70.2.tar.xz",
+          "sha256": "0551459c85cd3da3d58ddc9016fd28be5af503f5e1615a71ba5b512ac945806f"
         },
         {
           "type": "patch",
           "path": "build-aux/flatpak/glib-desktopappinfo.patch"
+        }
+      ]
+    },
+    {
+      "name": "glib-networking",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/glib-networking/2.70/glib-networking-2.70.1.tar.xz",
+          "sha256": "2a16bfc2d271ccd3266e3fb462bc8a4103c02e81bbb339aa92d6fb060592d7bc"
         }
       ]
     },
@@ -83,8 +96,6 @@
           "type": "script",
           "dest-filename": "junction-wrapper",
           "commands": [
-            "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
-            "gio mime x-scheme-handler/http re.sonny.Junction.desktop",
             "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
             "re.sonny.Junction \"$@\""
           ]
@@ -97,9 +108,9 @@
       "builddir": true,
       "sources": [{ "type": "dir", "path": "./" }],
       "post-install": [
-        "desktop-file-edit --set-key=Exec --set-value='/app/bin/junction-wrapper %u' /app/share/applications/re.sonny.Junction.desktop"
+        "desktop-file-edit --set-key=Exec --set-value='/app/bin/junction-wrapper %u' /app/share/applications/re.sonny.Junction.desktop",
+        "sed -i 's/re.sonny.Junction --gapplication-service/junction-wrapper --gapplication-service/g' /app/share/dbus-1/services/re.sonny.Junction.service"
       ]
     }
-  ],
-  "x-run-args": ["https://www.gnome.org/"]
+  ]
 }

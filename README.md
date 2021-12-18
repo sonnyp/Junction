@@ -50,12 +50,28 @@ Please note that this may not be respected by all applications but the command `
   </code>
 </details>
 
+<details>
+  <summary>API</summary>
+
+Junction has a very simple API that doesn't require any programming. To open any resource with Junction, even if it's not configured as the default application, simply use the following URI format `x-junction://$RESOURCE`. For examples
+
+- `x-junction://https://github.com`
+- `x-junction://~`
+- `x-junction://file:///etc/os-release`
+- `x-junction:///etc/os-release`
+
+You can use this in web pages, the terminal, native applications and anything that is able to open URIs.
+
+If Junction is installed - you can test this in the terminal with `xdg-open "x-junction://file:///etc/os-release"` and in the browser with `<a href="x-junction://file:///etc/os-release">Test Junction URI</a>`.
+
+</details>
+
 ## Tips and tricks
 
 <details>
   <summary>Keyboard navigation</summary>
 
-Use the menu or `<Ctrl>?` to learn about Keyboard usage.
+Use the menu or `<Ctrl>?` to learn about Keyboard usage. You can navigate the UI with the arrow keys too.
 
 </details>
 
@@ -100,11 +116,17 @@ See https://wiki.archlinux.org/title/desktop_entries (distro agnostic).
 </details>
 
 <details>
-  <summary>Open links on a website with Junction</summary>
+  <summary>Browser integration</summary>
 
-If you want links on your favorite websites to open Junction, set it as the default browser and use [Tangram](https://github.com/sonnyp/Tangram/).
+Drag the following [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) to your browser bookmarks toolbar to create a button to open the current page in Junction.
 
-A browser extension might be coming.
+Bookmarklet: <a herf="javascript:window.location='x-junction://'+window.location">Junction</a>
+
+Or create a bookmark with the following URL
+
+```
+javascript:window.location='x-junction://'+window.location
+```
 
 </details>
 
@@ -139,11 +161,11 @@ Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
 ## Troubleshooting
 
 <details>
-  <summary>I can't distinguish between 2 options with the same icon</summary>
+  <summary>I can't distinguish between options with the same icon</summary>
 
-A quick workaround is to hover the application with the mouse cursor to show a tooltip with the name.
+Within Junction, you can toggle `Show names` in the menu or hover the application with the mouse to display a tooltip.
 
-You can edit the desktop files to use distinctive icons, here are a some tools
+Otherwise, you can edit the desktop files to use distinctive icons, here are a some tools
 
 - [MenuLibre](https://flathub.org/apps/details/org.bluesabre.MenuLibre) GUI
 - [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI
@@ -156,11 +178,11 @@ You can edit the desktop files to use distinctive icons, here are a some tools
 
 If the application was installed via Flatpak, the package manager or an other conventional way, feel free to [open an issue](https://github.com/sonnyp/Junction/issues/new/choose).
 
-Make sure the application `.desktop` file has a `MimeType` key that matches the type of resource you want it to handle.
+Make sure the application desktop file has a `MimeType` key that matches the type of resource you want it to handle. For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
 
-For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
+The desktop filename should be unique. Junction can't display both `/usr/share/applicatins/firefox.desktop` and `~/.local/share/applications/firefox.desktop`. The second overrides the first.
 
-An other common mistake is to forget to run `update-desktop-database ~/.local/share/applications` after installing a `.desktop` file.
+Finally - make sure to run `update-desktop-database ~/.local/share/applications` after installing a desktop file.
 
 </details>
 
@@ -174,10 +196,25 @@ An other common mistake is to forget to run `update-desktop-database ~/.local/sh
 
 </details>
 
+## In the media
+
+[linuxunplugged.com - Episode 433 The Lessons of Jellyfin](https://linuxunplugged.com/433?t=3183) - 11/2021
+
+## Translation
+
+If you'd like to help translating Junction into your language, please head over to [Weblate](https://hosted.weblate.org/engage/junction/).
+
+<a href="https://hosted.weblate.org/engage/junction/">
+  <img src="https://hosted.weblate.org/widgets/junction/-/junction/multi-auto.svg" alt="Translation status" />
+</a>
+
+Thank you for your help!
+
 ## Development
 
 ```sh
 cd Junction
+npm install
 ./re.sonny.Junction https://www.gnome.org/
 ```
 
@@ -196,7 +233,7 @@ To pass the tests you have to install a few dependencies
 
 ```sh
 # Install development dependencies
-sudo dnf install --assumeyes npm flatpak make desktop-file-utils gjs gtk4-devel
+sudo dnf install --assumeyes npm flatpak make desktop-file-utils gjs gtk4-devel libadwaita-devel
 cd Junction
 npm install
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -206,7 +243,53 @@ flatpak install --user --assumeyes --noninteractive flathub org.freedesktop.apps
 make test
 ```
 
-<!-- Flathub builds https://flathub.org/builds/#/apps/re.sonny.Junction -->
+## Maintainer
+
+Bookmarks
+
+- [Flathub](https://flathub.org/apps/details/re.sonny.Junction)
+- [Flathub repo](https://github.com/flathub/re.sonny.Junction)
+- [Flathub builds](https://flathub.org/builds/#/apps/re.sonny.Junction)
+- [Flathub stats](https://klausenbusk.github.io/flathub-stats/#ref=re.sonny.Junction)
+- [Flathub API](https://flathub.org/api/v1/apps/re.sonny.Junction)
+
+<details>
+
+  <summary>i18n</summary>
+
+```sh
+# To update the pot file
+# xgettext -f po/POTFILES -o po/re.sonny.Junction.pot --no-wrap -cTRANSLATORS --from-code=UTF-8
+# sed -i "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: re.sonny.Junction/" po/re.sonny.Junction.pot
+meson compile re.sonny.Junction-pot -C build
+
+
+# To create a translation
+# msginit -i po/re.sonny.Junction.pot -o po/fr.po -l fr_FR.UTF-8
+echo -n " fr" >> po/LINGUAS
+meson compile re.sonny.Junction-update-po -C build
+
+# To update translations
+# msgmerge -U po/*.po po/re.sonny.Junction.pot
+meson compile re.sonny.Junction-update-po -C build
+```
+
+See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
+
+</details>
+
+<details>
+
+<summary>Publish new version</summary>
+
+- update metainfo and screenshot
+- `meson compile re.sonny.Junction-pot -C build`
+- `meson compile re.sonny.Junction-update-po -C build`
+- Update version in `meson.build`
+- git tag
+- flathub
+
+</details>
 
 ## Building
 
@@ -281,4 +364,4 @@ ninja -C build uninstall
 
 ## License
 
-GPLv3 or later. Please see [COPYING](COPYING) file.
+GPLv3. Please see [COPYING](COPYING) file.

@@ -7,43 +7,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 20:39+0200\n"
-"PO-Revision-Date: 2021-10-24 17:15+0200\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2021-12-14 23:08+0100\n"
+"PO-Revision-Date: 2021-12-14 22:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Occitan <https://hosted.weblate.org/projects/junction/junction/oc/>\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Last-Translator: Quentin PAGÈS\n"
-"Language: oc\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #. TRANSLATORS: Don't translate
-#: data/re.sonny.Junction.desktop:4 data/re.sonny.Junction.metainfo.xml:5
+#: data/re.sonny.Junction.desktop:4
 msgid "Junction"
 msgstr "Junction"
 
-#. artists: [],
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:10
+#: src/about.js:49
 msgid "Application chooser"
 msgstr "Selector d’aplicacion"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
-msgstr ""
-"causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;"
-"browserosaurus;"
-
-#: data/re.sonny.Junction.metainfo.xml:6
-msgid "Sonny Piers"
-msgstr "Sonny Piers"
+#, fuzzy
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr "causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;browserosaurus;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction vos permet de causir l’aplicacion de dobrir per dobrir los "
-"fichièrs e los ligams."
+msgstr "Junction vos permet de causir l’aplicacion de dobrir per dobrir los fichièrs e los ligams."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
@@ -65,87 +60,195 @@ msgid "Choose the application to open with"
 msgstr "Causir l’aplicacion que se dobrirà"
 
 #: data/re.sonny.Junction.metainfo.xml:25
-msgid "List options by last used"
-msgstr "Listar las opcions per usatge recent"
-
-#: data/re.sonny.Junction.metainfo.xml:26
 msgid "Show the location before opening"
 msgstr "Afichar l’emplaçament abans de dobrir"
 
-#: data/re.sonny.Junction.metainfo.xml:27
+#: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
 msgstr "Modificar l’URL abans dubertura"
 
-#: data/re.sonny.Junction.metainfo.xml:28
+#: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
 msgstr "Afichar un quicomet pels ligams pas segurs"
 
-#: data/re.sonny.Junction.metainfo.xml:29
-msgid "Esc to cancel"
-msgstr "Esc per anullar"
-
-#: data/re.sonny.Junction.metainfo.xml:30
-msgid "Copy to clipboard"
-msgstr "Copiar al quichapapièrs"
-
-#: data/re.sonny.Junction.metainfo.xml:31
+#: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
 msgstr "Navigacion al clavièr"
 
-#: data/re.sonny.Junction.metainfo.xml:32
+#: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
 msgstr "Clic de la mitat per dobrir mantuna aplicacion"
 
-#: data/re.sonny.Junction.metainfo.xml:44
+#: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
 msgstr "Causir un navigador que dobrirà lo ligam"
 
-#: data/re.sonny.Junction.metainfo.xml:52
+#: data/re.sonny.Junction.metainfo.xml:47
+#, fuzzy
+msgid "Choose the application to open the image with"
+msgstr "Causir l’aplicacion que se dobrirà"
+
+#: data/re.sonny.Junction.metainfo.xml:53
+#, fuzzy
+msgid "Junction features great support for keyboard"
+msgstr "Junction es definit coma aplicacion per defaut pel Web"
+
+#: data/re.sonny.Junction.metainfo.xml:61
+#: data/re.sonny.Junction.metainfo.xml:78
+msgid "Improve design"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:62
+msgid "New icon"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:63
+msgid "Add a x-juncton:// protocol API"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:64
+#, fuzzy
+msgid "Do not automatically set as default application"
+msgstr "Junction es definit coma aplicacion per defaut pel Web"
+
+#: data/re.sonny.Junction.metainfo.xml:65
+#, fuzzy
+msgid "Fix missing options"
+msgstr "Petaçatge per las aplicacions mancantas"
+
+#: data/re.sonny.Junction.metainfo.xml:66
+msgid "Limit the number of options to 4"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:67
+#, fuzzy
+msgid "Add an option to open with any application"
+msgstr "Clic de la mitat per dobrir mantuna aplicacion"
+
+#: data/re.sonny.Junction.metainfo.xml:68
+msgid "Add a System Information panel in the about dialog"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:75
+msgid "Fix for applications that do not support URIs"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:76
+msgid "Add an option to display application names"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:77
+msgid "Add a menu button"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:79
+msgid "Improve keyboard usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:80
+msgid "Improve CLI usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:81
+msgid "Support opening multiple URIs"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:83
+#, fuzzy
+msgid "Add Polish translation"
+msgstr "Apondon de la traduccion en italian"
+
+#: data/re.sonny.Junction.metainfo.xml:84
+#, fuzzy
+msgid "Add Occitan translation"
+msgstr "Apondon de la traduccion en italian"
+
+#: data/re.sonny.Junction.metainfo.xml:85
+#, fuzzy
+msgid "Add Spanish translation"
+msgstr "Apondon de la traduccion en italian"
+
+#: data/re.sonny.Junction.metainfo.xml:87
+msgid "Support D-Bus activation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:88
+msgid "Use libadwaita"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:95
 msgid "Fix for missing applications"
 msgstr "Petaçatge per las aplicacions mancantas"
 
-#: data/re.sonny.Junction.metainfo.xml:53
+#: data/re.sonny.Junction.metainfo.xml:96
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:54
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Add Italian translation"
 msgstr "Apondon de la traduccion en italian"
 
-#: data/re.sonny.Junction.metainfo.xml:60
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Aquò es la primièra versionde Junction. Esperam que vos agradarà."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:19
+#: src/about.js:59
 msgid "translator-credits"
 msgstr "Quentin PAGÈS https://www.mejans.fr"
 
-#. TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906
-#: src/window.ui:29
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
+#: src/window.ui:60
+msgid "Show names"
 msgstr ""
-"Aqueste site es pas securizat. Un atacant pòt veire totas las informacions "
-"que mandatz, o contrarotlar çò que consultatz."
 
-#: src/window.ui:34
+#: src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr "Copiar al quicha-papièrs"
 
-#: src/welcome.ui:35
-msgid "Junction has been set as default application for Web"
-msgstr "Junction es definit coma aplicacion per defaut pel Web"
-
-#: src/welcome.ui:43
-msgid "Click here to test"
-msgstr "Clicatz aicí per ensajar"
-
-#: src/welcome.ui:61
+#: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
 msgstr "Acorchis de clavièr"
 
-#: src/welcome.ui:65
+#: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
 msgstr "A prepaus de Junction"
+
+#: src/welcome.ui:37
+#, fuzzy
+msgid "Test Junction"
+msgstr "Junction"
+
+#: src/welcome.ui:48
+#, fuzzy
+msgid "Set Junction as default for Web"
+msgstr "Junction es definit coma aplicacion per defaut pel Web"
+
+#: src/AppButton.js:137
+msgid "View All"
+msgstr ""
+
+#: src/AppButton.js:190
+#, fuzzy
+msgid "All Applications"
+msgstr "Selector d’aplicacion"
+
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr "Aqueste site es pas securizat. Un atacant pòt veire totas las informacions que mandatz, o contrarotlar çò que consultatz."
+
+#~ msgid "Sonny Piers"
+#~ msgstr "Sonny Piers"
+
+#~ msgid "List options by last used"
+#~ msgstr "Listar las opcions per usatge recent"
+
+#~ msgid "Esc to cancel"
+#~ msgstr "Esc per anullar"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copiar al quichapapièrs"
+
+#~ msgid "Click here to test"
+#~ msgstr "Clicatz aicí per ensajar"

@@ -2,11 +2,11 @@
 <component type="desktop">
   <id>re.sonny.Junction</id>
   <launchable type="desktop-id">re.sonny.Junction.desktop</launchable>
-  <name>Junction</name>
-  <developer_name>Sonny Piers</developer_name>
+  <name translatable="no">Junction</name>
+  <developer_name translatable="no">Sonny Piers</developer_name>
   <update_contact>sonny@fastmail.net</update_contact>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
+  <project_license>GPL-3.0</project_license>
   <summary>Application chooser</summary>
   <translation type="gettext">re.sonny.Junction</translation>
   <description>
@@ -22,30 +22,67 @@
     <p>Features:</p>
     <ul>
       <li>Choose the application to open with</li>
-      <li>List options by last used</li>
       <li>Show the location before opening</li>
       <li>Edit the URL before opening</li>
       <li>Show a hint for insecure link</li>
-      <li>Esc to cancel</li>
-      <li>Copy to clipboard</li>
       <li>Keyboard navigation</li>
-      <li>
-        Middle click to open in multiple applications
-      </li>
+      <li>Middle click to open in multiple applications</li>
     </ul>
   </description>
-  <url type="homepage">https://github.com/sonnyp/Junction</url>
-  <url type="bugtracker">https://github.com/sonnyp/Junction/issues</url>
+  <url type="homepage">https://junction.sonny.re</url>
+  <url type="bugtracker">https://junction.sonny.re/feedback</url>
+  <url type="donation">https://junction.sonny.re/donate</url>
+  <url type="translate">https://junction.sonny.re/translate</url>
   <screenshots>
     <screenshot type="default">
-      <image>
-        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png
-      </image>
+      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png</image>
       <caption>Choose the browser to open the link with</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-file.png</image>
+      <caption>Choose the application to open the image with</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-shortcuts.png</image>
+      <caption>Junction features great support for keyboard</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.3.0" date="2021-12-12">
+      <description>
+        <ul>
+          <li>Improve design</li>
+          <li>New icon</li>
+          <li>Add a x-juncton:// protocol API</li>
+          <li>Do not automatically set as default application</li>
+          <li>Fix missing options</li>
+          <li>Limit the number of options to 4</li>
+          <li>Add an option to open with any application</li>
+          <li>Add a System Information panel in the about dialog</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.0" date="2021-11-14" urgency="high">
+      <description>
+        <ul>
+          <li>Fix for applications that do not support URIs</li>
+          <li>Add an option to display application names</li>
+          <li>Add a menu button</li>
+          <li>Improve design</li>
+          <li>Improve keyboard usage</li>
+          <li>Improve CLI usage</li>
+          <li>Support opening multiple URIs</li>
+
+          <li>Add Polish translation</li>
+          <li>Add Occitan translation</li>
+          <li>Add Spanish translation</li>
+
+          <li>Support D-Bus activation</li>
+          <li>Use libadwaita</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2021-10-20" urgency="high">
       <description>
         <ul>

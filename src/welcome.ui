@@ -2,8 +2,6 @@
 <interface>
   <object class="AdwApplicationWindow" id="welcome">
     <property name="title">Junction</property>
-    <property name="default-width">480</property>
-    <property name="default-height">480</property>
     <property name="content">
       <object class="GtkBox">
         <property name="orientation">vertical</property>
@@ -32,22 +30,24 @@
               </object>
             </child>
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLinkButton" id="demo_button">
                 <property
                   name="label"
                   translatable="yes"
-                >Junction has been set as default application for Web</property>
+                >Test Junction</property>
+                <property name="valign">center</property>
+                <property name="halign">center</property>
+                <property name="uri">https://junction.sonny.re/demo</property>
               </object>
             </child>
             <child>
-              <object class="GtkLinkButton" id="test_button">
+              <object class="GtkButton" id="install_button">
                 <property
                   name="label"
                   translatable="yes"
-                >Click here to test</property>
+                >Set Junction as default for Web</property>
                 <property name="valign">center</property>
                 <property name="halign">center</property>
-                <property name="uri">https://github.com/sonnyp/Junction</property>
               </object>
             </child>
           </object>

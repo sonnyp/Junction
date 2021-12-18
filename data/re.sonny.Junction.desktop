@@ -3,6 +3,7 @@
 Name=Junction
 Comment=Application chooser
 Exec=re.sonny.Junction %U
+MimeType=x-scheme-handler/x-junction
 Terminal=false
 Type=Application
 Categories=Settings;System;Utility;GNOME;GTK;

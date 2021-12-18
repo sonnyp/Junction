@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-20 20:39+0200\n"
+"POT-Creation-Date: 2021-12-14 23:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Don't translate
-#: data/re.sonny.Junction.desktop:4 data/re.sonny.Junction.metainfo.xml:5
+#: data/re.sonny.Junction.desktop:4
 msgid "Junction"
 msgstr ""
 
-#. artists: [],
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:10
+#: src/about.js:49
 msgid "Application chooser"
 msgstr ""
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:6
-msgid "Sonny Piers"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:13
@@ -46,10 +41,7 @@ msgid "After installing make sure to launch the application."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
@@ -61,85 +53,167 @@ msgid "Choose the application to open with"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:25
-msgid "List options by last used"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:26
 msgid "Show the location before opening"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:27
+#: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:28
+#: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:29
-msgid "Esc to cancel"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:30
-msgid "Copy to clipboard"
-msgstr ""
-
-#: data/re.sonny.Junction.metainfo.xml:31
+#: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:32
+#: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:44
+#: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:52
-msgid "Fix for missing applications"
+#: data/re.sonny.Junction.metainfo.xml:47
+msgid "Choose the application to open the image with"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:53
+msgid "Junction features great support for keyboard"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:61
+#: data/re.sonny.Junction.metainfo.xml:78
+msgid "Improve design"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:62
+msgid "New icon"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:63
+msgid "Add a x-juncton:// protocol API"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:64
+msgid "Do not automatically set as default application"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:65
+msgid "Fix missing options"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:66
+msgid "Limit the number of options to 4"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:67
+msgid "Add an option to open with any application"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:68
+msgid "Add a System Information panel in the about dialog"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:75
+msgid "Fix for applications that do not support URIs"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:76
+msgid "Add an option to display application names"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:77
+msgid "Add a menu button"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:79
+msgid "Improve keyboard usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:80
+msgid "Improve CLI usage"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:81
+msgid "Support opening multiple URIs"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:83
+msgid "Add Polish translation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:84
+msgid "Add Occitan translation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:85
+msgid "Add Spanish translation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:87
+msgid "Support D-Bus activation"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:88
+msgid "Use libadwaita"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:95
+msgid "Fix for missing applications"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:96
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:54
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Add Italian translation"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:60
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "This is the first release of Junction. We hope you like it."
 msgstr ""
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:19
+#: src/about.js:59
 msgid "translator-credits"
 msgstr ""
 
-#. TRANSLATORS: You will find this string in https://gitlab.gnome.org/search?search=This+site+has+no+security&project_id=1906
-#: src/window.ui:29
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
+#: src/window.ui:60
+msgid "Show names"
 msgstr ""
 
-#: src/window.ui:34
+#: src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/welcome.ui:35
-msgid "Junction has been set as default application for Web"
-msgstr ""
-
-#: src/welcome.ui:43
-msgid "Click here to test"
-msgstr ""
-
-#: src/welcome.ui:61
+#: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/welcome.ui:65
+#: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
+msgstr ""
+
+#: src/welcome.ui:37
+msgid "Test Junction"
+msgstr ""
+
+#: src/welcome.ui:48
+msgid "Set Junction as default for Web"
+msgstr ""
+
+#: src/AppButton.js:137
+msgid "View All"
+msgstr ""
+
+#: src/AppButton.js:190
+msgid "All Applications"
+msgstr ""
+
+#: src/Entry.js:23
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
 msgstr ""
