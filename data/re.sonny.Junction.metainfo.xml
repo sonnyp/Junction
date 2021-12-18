@@ -35,16 +35,28 @@
   <url type="translate">https://junction.sonny.re/translate</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png</image>
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png
+      </image>
       <caption>Choose the browser to open the link with</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-file.png</image>
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-file.png
+      </image>
       <caption>Choose the application to open the image with</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-shortcuts.png</image>
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-shortcuts.png
+      </image>
       <caption>Junction features great support for keyboard</caption>
+    </screenshot>
+    <screenshot>
+      <image>
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-desktop-actions.png
+      </image>
+      <caption>Desktop actions are supported too</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
@@ -74,10 +86,6 @@
           <li>Improve CLI usage</li>
           <li>Support opening multiple URIs</li>
 
-          <li>Add Polish translation</li>
-          <li>Add Occitan translation</li>
-          <li>Add Spanish translation</li>
-
           <li>Support D-Bus activation</li>
           <li>Use libadwaita</li>
         </ul>
@@ -88,7 +96,6 @@
         <ul>
           <li>Fix for missing applications</li>
           <li>Add a Shortcuts window - accessible with &lt;Ctrl&gt;?</li>
-          <li>Add Italian translation</li>
         </ul>
       </description>
     </release>

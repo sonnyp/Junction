@@ -30,18 +30,19 @@ export function loadStyleSheet(path) {
   );
 }
 
-export function spawn_sync(cmd) {
-  if (GLib.getenv("FLATPAK_ID")) {
-    cmd = `flatpak-spawn --host "${cmd}"`;
-  }
-  return GLib.spawn_command_line_sync(cmd);
+export function spawn_sync(command_line) {
+  return GLib.spawn_command_line_sync(prefixCommandLineForHost(command_line));
 }
 
-export function spawn(cmd) {
+export function spawn(command_line) {
+  return GLib.spawn_command_line_async(prefixCommandLineForHost(command_line));
+}
+
+export function prefixCommandLineForHost(command_line) {
   if (GLib.getenv("FLATPAK_ID")) {
-    cmd = `flatpak-spawn --host "${cmd}"`;
+    command_line = `flatpak-spawn --host "${command_line}"`;
   }
-  return GLib.spawn_command_line_async(cmd);
+  return command_line;
 }
 
 export function parse(str) {
@@ -191,3 +192,75 @@ export const stdin = (() => {
 //   log("foo");
 // });
 // source.attach(null);
+
+// A bit hackish but GLib doesn't support launching actions with parameters
+export function openWithAction({ desktop_id, action, location }) {
+  const desktopAppInfo = Gio.DesktopAppInfo.new(desktop_id);
+  const keyFile = new GLib.KeyFile();
+  keyFile.load_from_file(desktopAppInfo.get_filename(), GLib.KeyFileFlags.NONE);
+  const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+
+  keyFile.set_value("Desktop Entry", "Exec", Exec);
+
+  const appInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+
+  return openWithApplication({ appInfo, location });
+}
+
+export function openWithApplication({ appInfo, location, content_type, save }) {
+  if (GLib.getenv("FLATPAK_ID")) {
+    appInfo = flatpakSpawnify(appInfo);
+  }
+
+  const uri = parse(location);
+  const uri_str = uri.to_string();
+
+  let success;
+  if (appInfo.supports_uris()) {
+    success = appInfo.launch_uris([uri_str], null);
+  } else {
+    const file = Gio.File.new_for_uri(uri_str);
+    success = appInfo.launch([file], null);
+  }
+
+  if (success) {
+    if (save && !GLib.getenv("FLATPAK_ID")) {
+      // On Flatpak fails with
+      // (re.sonny.Junction:3): Gjs-WARNING **: 18:35:39.427: JS ERROR: Gio.IOErrorEnum: Can’t create user desktop file /home/sonny/.var/app/re.sonny.Junction/data/applications/userapp-YOGA Image Optimizer-20X240.desktop
+      appInfo.set_as_last_used_for_type(content_type);
+    }
+  } else {
+    console.error(
+      `Could not launch ${location} with "${appInfo.get_commandline()}"`,
+    );
+  }
+
+  return success;
+}
+
+function flatpakSpawnify(appInfo) {
+  const filename = appInfo.get_filename();
+  if (!filename) {
+    return appInfo;
+  }
+
+  const keyFile = new GLib.KeyFile();
+  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
+    console.error(`Could not load ${filename}`);
+    return null;
+  }
+
+  const Exec = keyFile.get_value("Desktop Entry", "Exec");
+  if (!Exec) {
+    console.error(`No Exec for ${filename}`);
+    return null;
+  }
+
+  if (Exec.startsWith("flatpak-spawn")) {
+    return appInfo;
+  }
+
+  keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
+
+  return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+}

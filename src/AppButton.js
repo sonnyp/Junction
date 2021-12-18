@@ -4,11 +4,7 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
 
-import {
-  parse,
-  relativePath,
-  // spawn
-} from "./util.js";
+import { relativePath, openWithApplication } from "./util.js";
 import { settings } from "./common.js";
 
 const { byteArray } = imports;
@@ -33,31 +29,8 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
   );
 
-  const filename = appInfo.get_filename();
-  const keyFile = new GLib.KeyFile();
-  keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
-  const desktopAppInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
-  const actions = desktopAppInfo.list_actions();
-
   const menu = new Gio.Menu();
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
-
-  actions.forEach((action) => {
-    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
-    const name = desktopAppInfo.get_action_name(action);
-    // if (!Exec.includes("%u")) return;
-    log([action, name, Exec]);
-
-    menu.append(name, "foo");
-
-    // spawn(Exec.replace("%u", `"${entry.get_text()}"`));
-    // spawn(
-    //   `gapplication action ${appInfo.get_id()} ${action} '"${entry.get_text()}"'`,
-    // );
-    // exec flatpak-spawn --host ${Exec}
-  });
-  // gapplication action chromium.desktop new-window '"http://foobar.com"'
-
   builder.get_object("box").append(popoverMenu);
 
   const icon = appInfo.get_icon();
@@ -66,18 +39,12 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   }
 
   function open() {
-    try {
-      openWithApplication({
-        appInfo,
-        location: entry.get_text(),
-        content_type,
-        save: true,
-      });
-      return true;
-    } catch (err) {
-      logError(err);
-      return false;
-    }
+    return openWithApplication({
+      appInfo,
+      location: entry.get_text(),
+      content_type,
+      save: true,
+    });
   }
 
   // Ctrl+Click should not close Junction
@@ -99,75 +66,29 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   });
 
   const eventController = new Gtk.GestureSingle({
-    button: Gdk.BUTTON_MIDDLE,
-  });
-  eventController.connect("end", () => {
-    open();
+    button: 0,
   });
   button.add_controller(eventController);
+  eventController.connect("end", () => {
+    const event = eventController.get_current_event();
+    if (!event) return;
 
-  const eventController2 = new Gtk.GestureSingle({
-    button: Gdk.BUTTON_SECONDARY,
-  });
-  button.add_controller(eventController2);
-  eventController2.connect("end", (self) => {
-    log("cool");
-    popoverMenu.popup();
+    const button = event.get_button();
+    if (button === Gdk.BUTTON_MIDDLE) {
+      open();
+      return;
+    }
+
+    if (button !== Gdk.BUTTON_SECONDARY) return;
+
+    popupActionsMenu({
+      appInfo,
+      popoverMenu,
+      location: entry.get_text(),
+    });
   });
 
   return button;
-}
-
-function openWithApplication({ appInfo, location, content_type, save }) {
-  if (GLib.getenv("FLATPAK_ID")) {
-    appInfo = flatpakSpawnify(appInfo);
-  }
-
-  const uri = parse(location);
-  const uri_str = uri.to_string();
-
-  let success;
-  if (appInfo.supports_uris()) {
-    success = appInfo.launch_uris([uri_str], null);
-  } else {
-    const file = Gio.File.new_for_uri(uri_str);
-    success = appInfo.launch([file], null);
-  }
-
-  if (!success) {
-    throw new Error(`Could not launch ${location} with ${appInfo.get_id()}`);
-  }
-
-  if (save && !GLib.getenv("FLATPAK_ID")) {
-    // On Flatpak fails with
-    // (re.sonny.Junction:3): Gjs-WARNING **: 18:35:39.427: JS ERROR: Gio.IOErrorEnum: Can’t create user desktop file /home/sonny/.var/app/re.sonny.Junction/data/applications/userapp-YOGA Image Optimizer-20X240.desktop
-    appInfo.set_as_last_used_for_type(content_type);
-  }
-}
-
-function flatpakSpawnify(appInfo) {
-  const filename = appInfo.get_filename();
-  if (!filename) {
-    return appInfo;
-  }
-
-  const keyFile = new GLib.KeyFile();
-  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
-    return null;
-  }
-
-  const Exec = keyFile.get_value("Desktop Entry", "Exec");
-  if (Exec.startsWith("flatpak-spawn")) {
-    return null;
-  }
-
-  if (!Exec) {
-    console.error(`No Exec for ${filename}`);
-    return null;
-  }
-  keyFile.set_value("Desktop Entry", "Exec", `flatpak-spawn --host ${Exec}`);
-
-  return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
 }
 
 export function ViewAllButton({ file, content_type, entry, window }) {
@@ -198,15 +119,14 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     }
 
     const appInfo = appChooserDialog.get_app_info();
-    try {
-      openWithApplication({
-        appInfo,
-        location: entry.get_text(),
-        content_type,
-        save: false,
-      });
-    } catch (err) {
-      logError(err);
+
+    const success = openWithApplication({
+      appInfo,
+      location: entry.get_text(),
+      content_type,
+      save: false,
+    });
+    if (!success) {
       return;
     }
 
@@ -245,4 +165,33 @@ export function ViewAllButton({ file, content_type, entry, window }) {
   button.connect("clicked", onClicked);
 
   return button;
+}
+
+function popupActionsMenu({ popoverMenu, appInfo, location }) {
+  const filename = appInfo.get_filename();
+  const keyFile = new GLib.KeyFile();
+  keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
+  const desktopAppInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+  const actions = desktopAppInfo.list_actions();
+
+  const menu = popoverMenu.menu_model;
+  menu.remove_all();
+
+  for (const action of actions) {
+    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+    if (!["%U", "%u", "%f", "%F"].some((code) => Exec.includes(code))) continue;
+    const action_name = desktopAppInfo.get_action_name(action);
+
+    const value = new GLib.Variant("a{ss}", {
+      desktop_id: appInfo.get_id(),
+      action,
+      location,
+    });
+
+    const item = Gio.MenuItem.new(action_name, null);
+    item.set_action_and_target_value("win.run_action", value);
+    menu.append_item(item);
+  }
+
+  if (menu.get_n_items() > 0) popoverMenu.popup();
 }
