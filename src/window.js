@@ -1,8 +1,9 @@
 import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
+import GLib from "gi://GLib";
 
-import { relativePath, readResource } from "./util.js";
+import { relativePath, readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton } from "./AppButton.js";
 import { settings } from "./common.js";
@@ -80,6 +81,18 @@ export default function Window({ application, file }) {
 
   const toggleAppNames = settings.create_action("show-app-names");
   window.add_action(toggleAppNames);
+
+  const run_action = new Gio.SimpleAction({
+    name: "run_action",
+    parameter_type: new GLib.VariantType("a{ss}"),
+  });
+  run_action.connect("activate", (self, variant) => {
+    const data = variant.deep_unpack();
+
+    const success = openWithAction(data);
+    if (success) window.close();
+  });
+  window.add_action(run_action);
 
   window.present();
 

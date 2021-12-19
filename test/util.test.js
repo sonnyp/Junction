@@ -5,7 +5,7 @@ import * as assert from "./assert.js";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 
-import { parse, readResource } from "../src/util.js";
+import { parse, prefixCommandLineForHost, readResource } from "../src/util.js";
 
 const home_dir = GLib.get_home_dir();
 
@@ -85,6 +85,22 @@ test("readResource", () => {
     scheme: "http",
     content_type: "x-scheme-handler/http",
   });
+});
+
+test("prefixCommandLineForHost", () => {
+  const FLATPAK_ID = GLib.getenv("FLATPAK_ID");
+  const command_line = `foo --bar hello='world' something="wow"`;
+
+  GLib.setenv("FLATPAK_ID", "", true);
+  assert.equal(prefixCommandLineForHost(command_line), command_line);
+
+  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  assert.equal(
+    prefixCommandLineForHost(command_line),
+    `flatpak-spawn --host "foo --bar hello='world' something="wow""`,
+  );
+
+  if (FLATPAK_ID) GLib.setenv("FLATPAK_ID", FLATPAK_ID, true);
 });
 
 test.run();

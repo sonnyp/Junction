@@ -7,7 +7,7 @@
       <class name="flat" />
     </style>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="box">
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkImage" id="image">
