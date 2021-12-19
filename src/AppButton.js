@@ -90,16 +90,26 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
 
   const controller_key = new Gtk.EventControllerKey();
   button.add_controller(controller_key);
-  controller_key.connect("key-released", (self, keyval) => {
-    const keyname = Gdk.keyval_name(keyval);
-    if (keyname === "Menu") {
-      popupActionsMenu({
-        appInfo,
-        popoverMenu,
-        location: entry.get_text(),
-      });
-    }
-  });
+  controller_key.connect(
+    "key-released",
+    (self, keyval, keycode, modifier_state) => {
+      const keyname = Gdk.keyval_name(keyval);
+      if (keyname === "Menu") {
+        popupActionsMenu({
+          appInfo,
+          popoverMenu,
+          location: entry.get_text(),
+        });
+      }
+
+      if (
+        (keyname === "Return" || keyname === "space") &&
+        modifier_state & Gdk.ModifierType.CONTROL_MASK
+      ) {
+        open(false);
+      }
+    },
+  );
 
   return button;
 }

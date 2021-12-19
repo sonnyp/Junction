@@ -78,7 +78,7 @@ Use the menu or `<Ctrl>?` to learn about Keyboard usage. You can navigate the UI
 <details>
   <summary>Open with multiple applications</summary>
 
-Use middle-click to keep Junction open - allowing you to open the resource in multiple applications.
+Use Middle-click, Ctrl+Click, Ctrl+Enter or Ctrl+Space to keep Junction open - allowing you to open the resource in multiple applications.
 
 </details>
 

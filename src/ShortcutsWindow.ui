@@ -30,20 +30,11 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">Right</property>
+                <property name="accelerator">Left Right</property>
                 <property
                   name="title"
                   translatable="yes"
-                >Select next application</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="accelerator">Left</property>
-                <property
-                  name="title"
-                  translatable="yes"
-                >Select previous application</property>
+                >Select next/previous application</property>
               </object>
             </child>
             <child>
@@ -53,6 +44,17 @@
                   name="title"
                   translatable="yes"
                 >Open with selected application</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property
+                  name="accelerator"
+                >&lt;Primary&gt;Return &lt;Primary&gt;space</property>
+                <property
+                  name="title"
+                  translatable="yes"
+                >Open with selected application and stay active</property>
               </object>
             </child>
             <child>
