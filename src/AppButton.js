@@ -38,54 +38,67 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     builder.get_object("image").set_from_gicon(icon);
   }
 
-  function open() {
-    return openWithApplication({
+  function open(close_on_success) {
+    const success = openWithApplication({
       appInfo,
       location: entry.get_text(),
       content_type,
       save: true,
     });
+    if (close_on_success && success) {
+      window.close();
+    }
   }
 
-  // Ctrl+Click should not close Junction
-  // but it's not possible to do that with GtkButton
-  // I was told to implement my own widget and do the following
-  // const eventController = new Gtk.GestureClick();
-  // widget.add_controller(eventController);
-  // eventController.connect("released", () => {
-  //   const evt = eventController.get_current_event();
-  //   const modifier_state = evt.get_modifier_state();
-  //   // Ctrl click
-  //   if (modifier_state & Gdk.ModifierType.CONTROL_MASK) return;
-  //   window.close();
-  // });
-  // but I'm too lazy ATM to implement a custom widget for this
   button.connect("clicked", () => {
-    const success = open();
-    if (success) window.close();
+    open(true);
   });
 
-  const eventController = new Gtk.GestureSingle({
-    button: 0,
-  });
-  button.add_controller(eventController);
-  eventController.connect("end", () => {
-    const event = eventController.get_current_event();
-    if (!event) return;
-
+  const event_controller_click = new Gtk.GestureClick({ button: 0 });
+  button.add_controller(event_controller_click);
+  event_controller_click.connect("pressed", () => {
+    const event = event_controller_click.get_current_event();
     const button = event.get_button();
-    if (button === Gdk.BUTTON_MIDDLE) {
-      open();
+
+    // Right click
+    if (button === Gdk.BUTTON_SECONDARY) {
+      popupActionsMenu({
+        appInfo,
+        popoverMenu,
+        location: entry.get_text(),
+      });
+      event_controller_click.set_state(Gtk.EventSequenceState.CLAIMED);
       return;
     }
 
-    if (button !== Gdk.BUTTON_SECONDARY) return;
+    if (button === Gdk.BUTTON_MIDDLE) {
+      open(false);
+      event_controller_click.set_state(Gtk.EventSequenceState.CLAIMED);
+      return;
+    }
 
-    popupActionsMenu({
-      appInfo,
-      popoverMenu,
-      location: entry.get_text(),
-    });
+    if (button === Gdk.BUTTON_PRIMARY) {
+      const modifier_state = event.get_modifier_state();
+      // Ctrl click
+      open(!(modifier_state & Gdk.ModifierType.CONTROL_MASK));
+      event_controller_click.set_state(Gtk.EventSequenceState.CLAIMED);
+      return;
+    }
+
+    event_controller_click.set_state(Gtk.EventSequenceState.DENIED);
+  });
+
+  const controller_key = new Gtk.EventControllerKey();
+  button.add_controller(controller_key);
+  controller_key.connect("key-released", (self, keyval) => {
+    const keyname = Gdk.keyval_name(keyval);
+    if (keyname === "Menu") {
+      popupActionsMenu({
+        appInfo,
+        popoverMenu,
+        location: entry.get_text(),
+      });
+    }
   });
 
   return button;
