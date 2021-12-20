@@ -1,5 +1,6 @@
 import Gio from "gi://Gio";
 import Adw from "gi://Adw";
+import GLib from "gi://GLib";
 
 import Window from "./window.js";
 import Welcome from "./welcome.js";
@@ -43,6 +44,22 @@ export default function Application({ version, datadir }) {
   application.connect("startup", () => {
     loadStyleSheet(relativePath("./style.css"));
   });
+
+  application.connect("handle-local-options", (self, options) => {
+    return options.contains("terminate_after_init") ? 0 : -1;
+  });
+
+  // This shouldn't be in the main options but rather in a "Development" group
+  // unfortunally - I couldn't use OptionGroup
+  // https://gitlab.gnome.org/GNOME/gjs/-/issues/448
+  application.add_main_option(
+    "terminate_after_init",
+    null,
+    GLib.OptionFlags.NONE,
+    GLib.OptionArg.NONE,
+    "Exit after initialization complete",
+    null,
+  );
 
   application.set_option_context_description("<https://junction.sonny.re>");
   application.set_option_context_parameter_string("[URI…]");
