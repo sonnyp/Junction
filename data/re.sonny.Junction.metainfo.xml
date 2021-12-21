@@ -66,7 +66,7 @@
         <ul>
           <li>Improve design</li>
           <li>New icon</li>
-          <li>Add a x-juncton:// protocol API</li>
+          <li>Add a x-junction:// protocol API</li>
           <li>Do not automatically set as default application</li>
           <li>Fix missing options</li>
           <li>Limit the number of options to 4</li>
