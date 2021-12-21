@@ -22,12 +22,6 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   label.label = name;
   label.visible = false;
   settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
-  settings.bind(
-    "show-app-names",
-    button,
-    "has-tooltip",
-    Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
-  );
 
   const menu = new Gio.Menu();
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
@@ -124,12 +118,6 @@ export function ViewAllButton({ file, content_type, entry, window }) {
   label.label = name;
   label.visible = false;
   settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
-  settings.bind(
-    "show-app-names",
-    button,
-    "has-tooltip",
-    Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
-  );
 
   const image = builder.get_object("image");
   image.set_from_icon_name("view-more-horizontal-symbolic");
