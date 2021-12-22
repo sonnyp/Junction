@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-14 23:08+0100\n"
-"PO-Revision-Date: 2021-12-21 17:40+0000\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"PO-Revision-Date: 2021-12-23 09:07+0000\n"
+"Last-Translator: Gabriel Gian <gabrielgian@live.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/junction/junction/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -56,7 +56,7 @@ msgstr "Funcionalidades:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Escolhar o aplicativo para abrir"
+msgstr "Escolha com qual aplicativo abrir"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
@@ -64,11 +64,11 @@ msgstr "Mostrar a localização antes de abrir"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr "Editar a URL antes de abrir"
+msgstr "Editar o URL antes de abrir"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "Mostrar uma advertência para link inseguro"
+msgstr "Mostrar uma advertência para links inseguros"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
@@ -84,7 +84,7 @@ msgstr "Escolha o navegador para abrir o link"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr "Escolha o aplicativo com o qual deseja abrir a imagem"
+msgstr "Escolha o aplicativo para abrir a imagem"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
@@ -101,7 +101,7 @@ msgstr "Novo ícone"
 
 #: data/re.sonny.Junction.metainfo.xml:63
 msgid "Add a x-juncton:// protocol API"
-msgstr "Adiciona uma API de protocolo x-junction://"
+msgstr "Adicionar uma API de protocolo x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:64
 msgid "Do not automatically set as default application"
@@ -109,19 +109,19 @@ msgstr "Não definir automaticamente como aplicativo padrão"
 
 #: data/re.sonny.Junction.metainfo.xml:65
 msgid "Fix missing options"
-msgstr "Correção de opções ausentes"
+msgstr "Corrigir opções ausentes"
 
 #: data/re.sonny.Junction.metainfo.xml:66
 msgid "Limit the number of options to 4"
-msgstr "Limita o número de opções para 4"
+msgstr "Limitar o número de opções para 4"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option to open with any application"
-msgstr "Adiciona uma opção para abrir com qualquer aplicativo"
+msgstr "Adicionar uma opção para abrir com qualquer aplicativo"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Add a System Information panel in the about dialog"
-msgstr "Adiciona um painel de informações do sistema na caixa de diálogo Sobre"
+msgstr "Adicionar um painel de informações do sistema na caixa de diálogo Sobre"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 msgid "Fix for applications that do not support URIs"
@@ -129,19 +129,19 @@ msgstr "Correção para aplicativos que não oferecem suporte a URIs"
 
 #: data/re.sonny.Junction.metainfo.xml:76
 msgid "Add an option to display application names"
-msgstr "Adiciona uma opção para exibir nomes de aplicativos"
+msgstr "Adicionar uma opção para exibir nomes de aplicativos"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a menu button"
-msgstr "Adiciona um botão de menu"
+msgstr "Adicionar um botão de menu"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "Improve keyboard usage"
-msgstr "Melhora o uso do teclado"
+msgstr "Melhorar o uso do teclado"
 
 #: data/re.sonny.Junction.metainfo.xml:80
 msgid "Improve CLI usage"
-msgstr "Melhora o uso da CLI"
+msgstr "Melhorar o uso da CLI"
 
 #: data/re.sonny.Junction.metainfo.xml:81
 msgid "Support opening multiple URIs"
@@ -149,23 +149,23 @@ msgstr "Suporte para abertura de vários URIs"
 
 #: data/re.sonny.Junction.metainfo.xml:83
 msgid "Add Polish translation"
-msgstr "Adiciona tradução para polonês"
+msgstr "Adicionar tradução para polonês"
 
 #: data/re.sonny.Junction.metainfo.xml:84
 msgid "Add Occitan translation"
-msgstr "Adiciona tradução para occitano"
+msgstr "Adicionar tradução para occitano"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 msgid "Add Spanish translation"
-msgstr "Adiciona tradução para espanhol"
+msgstr "Adicionar tradução para espanhol"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Support D-Bus activation"
-msgstr "Suporte à ativação de DBus"
+msgstr "Suporte à ativação de D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Use libadwaita"
-msgstr "Usa libadwaita"
+msgstr "Usar libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:95
 msgid "Fix for missing applications"
@@ -177,7 +177,7 @@ msgstr "Adiciona uma janela de Atalhos – acessível com &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:97
 msgid "Add Italian translation"
-msgstr "Adiciona tradução para italiano"
+msgstr "Adicionar tradução para italiano"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "This is the first release of Junction. We hope you like it."
@@ -188,7 +188,8 @@ msgstr "Este é o primeiro lançamento do Junction. Esperamos que você goste."
 msgid "translator-credits"
 msgstr ""
 "Tiago Lucas Flach <tiagolucas9830@gmail.com>\n"
-"Rafael Fontenelle <rafaelff@gnome.org>"
+"Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Gabriel Gian <gabrielgian@protonmail.com>"
 
 #: src/window.ui:60
 msgid "Show names"
@@ -196,7 +197,7 @@ msgstr "Mostrar nomes"
 
 #: src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr "Copiar para área de transferência"
+msgstr "Copiar para a área de transferência"
 
 #: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
@@ -208,11 +209,11 @@ msgstr "Sobre o Junction"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr "Testar Junction"
+msgstr "Testar o Junction"
 
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
-msgstr "Definir o Junction como padrão para Web"
+msgstr "Definir o Junction como padrão para a Web"
 
 #: src/AppButton.js:137
 msgid "View All"
