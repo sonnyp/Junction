@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 23:08+0100\n"
+"POT-Creation-Date: 2021-12-23 18:40+0100\n"
 "PO-Revision-Date: 2021-12-20 00:53+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/junction/junction/it/>\n"
@@ -24,15 +24,13 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:49
+#: src/about.js:50
 msgid "Application chooser"
 msgstr "Selettore per applicazioni"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
@@ -44,10 +42,7 @@ msgid "After installing make sure to launch the application."
 msgstr "Dopo l'installazione assicurati di avviare l'applicazione."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
 msgstr "Junction apparirà automaticamente quando apri un collegamento di un applicazione desktop. Usa la navigazione del mouse o della tastiera per scegliere l'applicazione per aprire il collegamento o file."
 
 #: data/re.sonny.Junction.metainfo.xml:22
@@ -90,101 +85,91 @@ msgstr "Scegli l'applicazione con cui aprire l'immagine"
 msgid "Junction features great support for keyboard"
 msgstr "Junction offre un ottimo supporto per la tastiera"
 
-#: data/re.sonny.Junction.metainfo.xml:61
-#: data/re.sonny.Junction.metainfo.xml:78
+#: data/re.sonny.Junction.metainfo.xml:59
+msgid "Desktop actions are supported too"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:67
+#: data/re.sonny.Junction.metainfo.xml:84
 msgid "Improve design"
 msgstr "Migliorato il design"
 
-#: data/re.sonny.Junction.metainfo.xml:62
+#: data/re.sonny.Junction.metainfo.xml:68
 msgid "New icon"
 msgstr "Nuova icona"
 
-#: data/re.sonny.Junction.metainfo.xml:63
-msgid "Add a x-juncton:// protocol API"
+#: data/re.sonny.Junction.metainfo.xml:69
+#, fuzzy
+#| msgid "Add a x-juncton:// protocol API"
+msgid "Add a x-junction:// protocol API"
 msgstr "Aggiunto un'API del protocollo x-juncton://"
 
-#: data/re.sonny.Junction.metainfo.xml:64
+#: data/re.sonny.Junction.metainfo.xml:70
 msgid "Do not automatically set as default application"
 msgstr "Non impostare automaticamente come applicazione predefinita"
 
-#: data/re.sonny.Junction.metainfo.xml:65
+#: data/re.sonny.Junction.metainfo.xml:71
 msgid "Fix missing options"
 msgstr "Corretto le opzioni mancanti"
 
-#: data/re.sonny.Junction.metainfo.xml:66
+#: data/re.sonny.Junction.metainfo.xml:72
 msgid "Limit the number of options to 4"
 msgstr "Limita il numero di opzioni a 4"
 
-#: data/re.sonny.Junction.metainfo.xml:67
+#: data/re.sonny.Junction.metainfo.xml:73
 msgid "Add an option to open with any application"
 msgstr "Aggiungi un'opzione per aprire con qualsiasi applicazione"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:74
 msgid "Add a System Information panel in the about dialog"
 msgstr "Aggiungi un pannello Informazioni di sistema nella finestra di dialogo"
 
-#: data/re.sonny.Junction.metainfo.xml:75
+#: data/re.sonny.Junction.metainfo.xml:81
 msgid "Fix for applications that do not support URIs"
 msgstr "Risolto il problema con le applicazioni che non supportano gli URI"
 
-#: data/re.sonny.Junction.metainfo.xml:76
+#: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add an option to display application names"
 msgstr "Aggiunto un'opzione per visualizzare i nomi delle applicazioni"
 
-#: data/re.sonny.Junction.metainfo.xml:77
+#: data/re.sonny.Junction.metainfo.xml:83
 msgid "Add a menu button"
 msgstr "Aggiunto un pulsante menu"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:85
 msgid "Improve keyboard usage"
 msgstr "Migliora l'utilizzo della tastiera"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:86
 msgid "Improve CLI usage"
 msgstr "Migliora l'utilizzo della CLI"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Support opening multiple URIs"
 msgstr "Supporta l'apertura di più URI"
 
-#: data/re.sonny.Junction.metainfo.xml:83
-msgid "Add Polish translation"
-msgstr "Aggiunto traduzione in polacco"
-
-#: data/re.sonny.Junction.metainfo.xml:84
-msgid "Add Occitan translation"
-msgstr "Aggiunta traduzione occitana"
-
-#: data/re.sonny.Junction.metainfo.xml:85
-msgid "Add Spanish translation"
-msgstr "Aggiunto traduzione in spagnolo"
-
-#: data/re.sonny.Junction.metainfo.xml:87
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Support D-Bus activation"
 msgstr "Supporta l'attivazione D-Bus"
 
-#: data/re.sonny.Junction.metainfo.xml:88
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Use libadwaita"
 msgstr "Usa libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Fix for missing applications"
 msgstr "Correzione per le applicazioni mancanti"
 
-#: data/re.sonny.Junction.metainfo.xml:96
+#: data/re.sonny.Junction.metainfo.xml:98
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Aggiunto una finestra Collegamenti - accessibile con &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:97
-msgid "Add Italian translation"
-msgstr "Aggiunto traduzione italiana"
-
-#: data/re.sonny.Junction.metainfo.xml:103
+#: data/re.sonny.Junction.metainfo.xml:104
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Questa è la prima versione di Junction. Speriamo che vi piaccia."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:59
+#: src/about.js:60
 msgid "translator-credits"
 msgstr "Albano Battistella <albano_battistella@hotmail.com>"
 
@@ -212,19 +197,29 @@ msgstr "Test Junction"
 msgid "Set Junction as default for Web"
 msgstr "Imposta Junction come predefinito per il Web"
 
-#: src/AppButton.js:137
+#: src/AppButton.js:115
 msgid "View All"
 msgstr "Visualizza tutto"
 
-#: src/AppButton.js:190
+#: src/AppButton.js:161
 msgid "All Applications"
 msgstr "Tutte le applicazioni"
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
 msgstr "Questo sito non è protetto. Un utente malintenzionato potrebbe vedere tutte le informazioni che invii o controllare il contenuto che vedi."
+
+#~ msgid "Add Polish translation"
+#~ msgstr "Aggiunto traduzione in polacco"
+
+#~ msgid "Add Occitan translation"
+#~ msgstr "Aggiunta traduzione occitana"
+
+#~ msgid "Add Spanish translation"
+#~ msgstr "Aggiunto traduzione in spagnolo"
+
+#~ msgid "Add Italian translation"
+#~ msgstr "Aggiunto traduzione italiana"
 
 #~ msgid "Sonny Piers"
 #~ msgstr "Sonny Piers"
