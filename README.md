@@ -245,13 +245,15 @@ make test
 
 ## Maintainer
 
-Bookmarks
+<details>
+  <summary>Bookmarks</summary>
 
 - [Flathub](https://flathub.org/apps/details/re.sonny.Junction)
 - [Flathub repo](https://github.com/flathub/re.sonny.Junction)
 - [Flathub builds](https://flathub.org/builds/#/apps/re.sonny.Junction)
 - [Flathub stats](https://klausenbusk.github.io/flathub-stats/#ref=re.sonny.Junction)
 - [Flathub API](https://flathub.org/api/v1/apps/re.sonny.Junction)
+</details>
 
 <details>
 
