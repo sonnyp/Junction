@@ -97,7 +97,7 @@ test("prefixCommandLineForHost", () => {
   GLib.setenv("FLATPAK_ID", "bar.foo", true);
   assert.equal(
     prefixCommandLineForHost(command_line),
-    `flatpak-spawn --host "foo --bar hello='world' something="wow""`,
+    `flatpak-spawn --host foo --bar hello='world' something="wow"`,
   );
 
   if (FLATPAK_ID) GLib.setenv("FLATPAK_ID", FLATPAK_ID, true);

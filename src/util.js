@@ -40,7 +40,7 @@ export function spawn(command_line) {
 
 export function prefixCommandLineForHost(command_line) {
   if (GLib.getenv("FLATPAK_ID")) {
-    command_line = `flatpak-spawn --host "${command_line}"`;
+    command_line = `flatpak-spawn --host ${command_line}`;
   }
   return command_line;
 }
@@ -209,7 +209,7 @@ export function openWithAction({ desktop_id, action, location }) {
 
 export function openWithApplication({ appInfo, location, content_type, save }) {
   if (GLib.getenv("FLATPAK_ID")) {
-    appInfo = flatpakSpawnify(appInfo);
+    appInfo = flatpakify(appInfo);
   }
 
   const uri = parse(location);
@@ -238,7 +238,7 @@ export function openWithApplication({ appInfo, location, content_type, save }) {
   return success;
 }
 
-function flatpakSpawnify(appInfo) {
+function flatpakify(appInfo) {
   const filename = appInfo.get_filename();
   if (!filename) {
     return appInfo;
