@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 23:08+0100\n"
+"POT-Creation-Date: 2021-12-23 18:40+0100\n"
 "PO-Revision-Date: 2021-12-17 08:23+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/junction/junction/nb_NO/>\n"
@@ -24,7 +24,7 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:49
+#: src/about.js:50
 msgid "Application chooser"
 msgstr "Programvelger"
 
@@ -86,101 +86,91 @@ msgstr "Velg programmet å åpne bildet med"
 msgid "Junction features great support for keyboard"
 msgstr "Junction har god tastaturstøtte"
 
-#: data/re.sonny.Junction.metainfo.xml:61
-#: data/re.sonny.Junction.metainfo.xml:78
+#: data/re.sonny.Junction.metainfo.xml:59
+msgid "Desktop actions are supported too"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:67
+#: data/re.sonny.Junction.metainfo.xml:84
 msgid "Improve design"
 msgstr "Forbedret design"
 
-#: data/re.sonny.Junction.metainfo.xml:62
+#: data/re.sonny.Junction.metainfo.xml:68
 msgid "New icon"
 msgstr "Nytt ikon"
 
-#: data/re.sonny.Junction.metainfo.xml:63
-msgid "Add a x-juncton:// protocol API"
+#: data/re.sonny.Junction.metainfo.xml:69
+#, fuzzy
+#| msgid "Add a x-juncton:// protocol API"
+msgid "Add a x-junction:// protocol API"
 msgstr "X-juncton://-protokoll-API lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:64
+#: data/re.sonny.Junction.metainfo.xml:70
 msgid "Do not automatically set as default application"
 msgstr "Ikke satt som automatisk program som forvalg"
 
-#: data/re.sonny.Junction.metainfo.xml:65
+#: data/re.sonny.Junction.metainfo.xml:71
 msgid "Fix missing options"
 msgstr "Manglende alternativer lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:66
+#: data/re.sonny.Junction.metainfo.xml:72
 msgid "Limit the number of options to 4"
 msgstr "Antall alternativer begrenset til fire"
 
-#: data/re.sonny.Junction.metainfo.xml:67
+#: data/re.sonny.Junction.metainfo.xml:73
 msgid "Add an option to open with any application"
 msgstr "Alternativ for åpning med vilkårlig alternativ lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:74
 msgid "Add a System Information panel in the about dialog"
 msgstr "Systeminfo-panel lagt til i «Om»-dialog"
 
-#: data/re.sonny.Junction.metainfo.xml:75
+#: data/re.sonny.Junction.metainfo.xml:81
 msgid "Fix for applications that do not support URIs"
 msgstr "Fiks for programmer som ikke støtter URI-er"
 
-#: data/re.sonny.Junction.metainfo.xml:76
+#: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add an option to display application names"
 msgstr "Alternativ for visning av programnavn"
 
-#: data/re.sonny.Junction.metainfo.xml:77
+#: data/re.sonny.Junction.metainfo.xml:83
 msgid "Add a menu button"
 msgstr "Meny-knapp lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:85
 msgid "Improve keyboard usage"
 msgstr "Forbedret tastaturbruk"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:86
 msgid "Improve CLI usage"
 msgstr "Forbedret CLI-bruk"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Support opening multiple URIs"
 msgstr "Støtte for åpning av flere URI-er"
 
-#: data/re.sonny.Junction.metainfo.xml:83
-msgid "Add Polish translation"
-msgstr "Polsk oversettelse lagt til"
-
-#: data/re.sonny.Junction.metainfo.xml:84
-msgid "Add Occitan translation"
-msgstr "Oksitansk oversettelse lagt til"
-
-#: data/re.sonny.Junction.metainfo.xml:85
-msgid "Add Spanish translation"
-msgstr "Spansk oversettelse lagt til"
-
-#: data/re.sonny.Junction.metainfo.xml:87
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Support D-Bus activation"
 msgstr "Støtte for D-Bus-aktivering"
 
-#: data/re.sonny.Junction.metainfo.xml:88
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Use libadwaita"
 msgstr "Bruk av libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Fix for missing applications"
 msgstr "Fiks for manglende programmer"
 
-#: data/re.sonny.Junction.metainfo.xml:96
+#: data/re.sonny.Junction.metainfo.xml:98
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Snarveisvindu lagt til. Tilgjengelig med &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:97
-msgid "Add Italian translation"
-msgstr "Italiensk oversettelse lagt til"
-
-#: data/re.sonny.Junction.metainfo.xml:103
+#: data/re.sonny.Junction.metainfo.xml:104
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Først utgave av Junction. Håper du liker programmet."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:59
+#: src/about.js:60
 msgid "translator-credits"
 msgstr "Allan Nordhøy <epost@anotheragency.no>"
 
@@ -208,14 +198,26 @@ msgstr "Test Junction"
 msgid "Set Junction as default for Web"
 msgstr "Junction satt som forvalg for surfing"
 
-#: src/AppButton.js:137
+#: src/AppButton.js:115
 msgid "View All"
 msgstr "Vis alle"
 
-#: src/AppButton.js:190
+#: src/AppButton.js:161
 msgid "All Applications"
 msgstr "Alle programmer"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
 msgstr "Denne siden har ingen sikkerhet. En angriper kan se all info du sender, eller kontrollere innholdet du ser."
+
+#~ msgid "Add Polish translation"
+#~ msgstr "Polsk oversettelse lagt til"
+
+#~ msgid "Add Occitan translation"
+#~ msgstr "Oksitansk oversettelse lagt til"
+
+#~ msgid "Add Spanish translation"
+#~ msgstr "Spansk oversettelse lagt til"
+
+#~ msgid "Add Italian translation"
+#~ msgstr "Italiensk oversettelse lagt til"
