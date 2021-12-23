@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 18:40+0100\n"
+"POT-Creation-Date: 2021-12-23 18:56+0100\n"
 "PO-Revision-Date: 2021-12-17 08:23+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/junction/junction/nb_NO/>\n"
@@ -91,81 +91,93 @@ msgid "Desktop actions are supported too"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:67
-#: data/re.sonny.Junction.metainfo.xml:84
+#, fuzzy
+#| msgid "Support D-Bus activation"
+msgid "Support desktop actions"
+msgstr "Støtte for D-Bus-aktivering"
+
+#: data/re.sonny.Junction.metainfo.xml:68
+#, fuzzy
+#| msgid "Support D-Bus activation"
+msgid "Support snap applications"
+msgstr "Støtte for D-Bus-aktivering"
+
+#: data/re.sonny.Junction.metainfo.xml:75
+#: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
 msgstr "Forbedret design"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
 msgstr "Nytt ikon"
 
-#: data/re.sonny.Junction.metainfo.xml:69
+#: data/re.sonny.Junction.metainfo.xml:77
 #, fuzzy
 #| msgid "Add a x-juncton:// protocol API"
 msgid "Add a x-junction:// protocol API"
 msgstr "X-juncton://-protokoll-API lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:70
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
 msgstr "Ikke satt som automatisk program som forvalg"
 
-#: data/re.sonny.Junction.metainfo.xml:71
+#: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
 msgstr "Manglende alternativer lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:72
+#: data/re.sonny.Junction.metainfo.xml:80
 msgid "Limit the number of options to 4"
 msgstr "Antall alternativer begrenset til fire"
 
-#: data/re.sonny.Junction.metainfo.xml:73
+#: data/re.sonny.Junction.metainfo.xml:81
 msgid "Add an option to open with any application"
 msgstr "Alternativ for åpning med vilkårlig alternativ lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:74
+#: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
 msgstr "Systeminfo-panel lagt til i «Om»-dialog"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
 msgstr "Fiks for programmer som ikke støtter URI-er"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
 msgstr "Alternativ for visning av programnavn"
 
-#: data/re.sonny.Junction.metainfo.xml:83
+#: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
 msgstr "Meny-knapp lagt til"
 
-#: data/re.sonny.Junction.metainfo.xml:85
+#: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
 msgstr "Forbedret tastaturbruk"
 
-#: data/re.sonny.Junction.metainfo.xml:86
+#: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
 msgstr "Forbedret CLI-bruk"
 
-#: data/re.sonny.Junction.metainfo.xml:87
+#: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
 msgstr "Støtte for åpning av flere URI-er"
 
-#: data/re.sonny.Junction.metainfo.xml:89
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
 msgstr "Støtte for D-Bus-aktivering"
 
-#: data/re.sonny.Junction.metainfo.xml:90
+#: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
 msgstr "Bruk av libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:97
+#: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
 msgstr "Fiks for manglende programmer"
 
-#: data/re.sonny.Junction.metainfo.xml:98
+#: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Snarveisvindu lagt til. Tilgjengelig med &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:104
+#: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Først utgave av Junction. Håper du liker programmet."
 
