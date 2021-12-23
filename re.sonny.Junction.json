@@ -14,7 +14,8 @@
     "--filesystem=host:ro",
     "--filesystem=xdg-data/applications:ro",
     "--filesystem=xdg-data/flatpak:ro",
-    "--filesystem=/var/lib/flatpak:ro"
+    "--filesystem=/var/lib/flatpak:ro",
+    "--filesystem=/var/lib/snapd/desktop:ro"
   ],
   "modules": [
     {
@@ -96,7 +97,7 @@
           "type": "script",
           "dest-filename": "junction-wrapper",
           "commands": [
-            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
+            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/snapd/desktop:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
             "re.sonny.Junction \"$@\""
           ]
         }
