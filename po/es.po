@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-17 08:23+0000\n"
+"PO-Revision-Date: 2021-12-26 00:51+0000\n"
 "Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/junction/junction/es/>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -87,19 +87,15 @@ msgstr "Junction cuenta con un gran soporte para el teclado"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Las acciones de escritorio también son compatibles"
 
 #: data/re.sonny.Junction.metainfo.xml:67
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support desktop actions"
-msgstr "Soporte de la activación del D-Bus"
+msgstr "Soporte de acciones de escritorio"
 
 #: data/re.sonny.Junction.metainfo.xml:68
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support snap applications"
-msgstr "Soporte de la activación del D-Bus"
+msgstr "Soporte de aplicaciones snap"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
@@ -111,10 +107,8 @@ msgid "New icon"
 msgstr "Icono nuevo"
 
 #: data/re.sonny.Junction.metainfo.xml:77
-#, fuzzy
-#| msgid "Add a x-juncton:// protocol API"
 msgid "Add a x-junction:// protocol API"
-msgstr "Añade una API de protocolo x-juncton://"
+msgstr "Añade una API de protocolo x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
