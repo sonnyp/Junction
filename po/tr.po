@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-18 11:23+0000\n"
+"PO-Revision-Date: 2021-12-26 00:51+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/junction/junction/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -87,19 +87,15 @@ msgstr "Junction, harika bir klavye desteğine sahiptir"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Masaüstü eylemleri de desteklenir"
 
 #: data/re.sonny.Junction.metainfo.xml:67
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support desktop actions"
-msgstr "D-Bus ile etkinleştirmeyi destekle"
+msgstr "Masaüstü eylemlerini destekle"
 
 #: data/re.sonny.Junction.metainfo.xml:68
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support snap applications"
-msgstr "D-Bus ile etkinleştirmeyi destekle"
+msgstr "Snap uygulamalarını destekle"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
@@ -111,10 +107,8 @@ msgid "New icon"
 msgstr "Yeni simge"
 
 #: data/re.sonny.Junction.metainfo.xml:77
-#, fuzzy
-#| msgid "Add a x-juncton:// protocol API"
 msgid "Add a x-junction:// protocol API"
-msgstr "x-juncton:// protokol API'si ekle"
+msgstr "x-junction:// protokol API'si ekle"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
