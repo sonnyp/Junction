@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-17 08:23+0000\n"
+"PO-Revision-Date: 2021-12-26 00:51+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/junction/junction/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -91,16 +91,12 @@ msgid "Desktop actions are supported too"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:67
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support desktop actions"
-msgstr "Støtte for D-Bus-aktivering"
+msgstr "Støtte for skrivebordshandlinger"
 
 #: data/re.sonny.Junction.metainfo.xml:68
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support snap applications"
-msgstr "Støtte for D-Bus-aktivering"
+msgstr "Støtte for Snap-programmer"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
