@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-20 00:53+0000\n"
+"PO-Revision-Date: 2021-12-27 17:51+0000\n"
 "Last-Translator: Kaz Sibuya <sibuyakazokuu@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/junction/junction/ja/>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -35,7 +35,7 @@ msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;Browser
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junctionは、ファイルやリンクを開くアプリケーションを選択することができます。"
+msgstr "Junctionは、ファイルやリンクを開く際に、続行するアプリケーションを選択できるようにします。"
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
@@ -71,7 +71,7 @@ msgstr "キーボードナビゲーション"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "中クリックで複数のアプリケーションを開きます"
+msgstr "中クリックで複数のアプリケーションを開く"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
@@ -93,7 +93,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Support D-Bus activation"
 msgid "Support desktop actions"
-msgstr "D-Busの起動に対応"
+msgstr "デスクトップアクションのサポート"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 #, fuzzy
