@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 18:40+0100\n"
-"PO-Revision-Date: 2021-12-20 00:53+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"POT-Creation-Date: 2021-12-23 18:56+0100\n"
+"PO-Revision-Date: 2021-12-26 00:51+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/junction/junction/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -87,84 +87,90 @@ msgstr "Junction offre un ottimo supporto per la tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Anche le azioni desktop sono supportate"
 
 #: data/re.sonny.Junction.metainfo.xml:67
-#: data/re.sonny.Junction.metainfo.xml:84
+msgid "Support desktop actions"
+msgstr "Supporta le azioni del desktop"
+
+#: data/re.sonny.Junction.metainfo.xml:68
+msgid "Support snap applications"
+msgstr "Supporta applicazioni snap"
+
+#: data/re.sonny.Junction.metainfo.xml:75
+#: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
 msgstr "Migliorato il design"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
 msgstr "Nuova icona"
 
-#: data/re.sonny.Junction.metainfo.xml:69
-#, fuzzy
-#| msgid "Add a x-juncton:// protocol API"
+#: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a x-junction:// protocol API"
-msgstr "Aggiunto un'API del protocollo x-juncton://"
+msgstr "Aggiunto un'API del protocollo x-junction://"
 
-#: data/re.sonny.Junction.metainfo.xml:70
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
 msgstr "Non impostare automaticamente come applicazione predefinita"
 
-#: data/re.sonny.Junction.metainfo.xml:71
+#: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
 msgstr "Corretto le opzioni mancanti"
 
-#: data/re.sonny.Junction.metainfo.xml:72
+#: data/re.sonny.Junction.metainfo.xml:80
 msgid "Limit the number of options to 4"
 msgstr "Limita il numero di opzioni a 4"
 
-#: data/re.sonny.Junction.metainfo.xml:73
+#: data/re.sonny.Junction.metainfo.xml:81
 msgid "Add an option to open with any application"
 msgstr "Aggiungi un'opzione per aprire con qualsiasi applicazione"
 
-#: data/re.sonny.Junction.metainfo.xml:74
+#: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
 msgstr "Aggiungi un pannello Informazioni di sistema nella finestra di dialogo"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
 msgstr "Risolto il problema con le applicazioni che non supportano gli URI"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
 msgstr "Aggiunto un'opzione per visualizzare i nomi delle applicazioni"
 
-#: data/re.sonny.Junction.metainfo.xml:83
+#: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
 msgstr "Aggiunto un pulsante menu"
 
-#: data/re.sonny.Junction.metainfo.xml:85
+#: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
 msgstr "Migliora l'utilizzo della tastiera"
 
-#: data/re.sonny.Junction.metainfo.xml:86
+#: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
 msgstr "Migliora l'utilizzo della CLI"
 
-#: data/re.sonny.Junction.metainfo.xml:87
+#: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
 msgstr "Supporta l'apertura di più URI"
 
-#: data/re.sonny.Junction.metainfo.xml:89
+#: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
 msgstr "Supporta l'attivazione D-Bus"
 
-#: data/re.sonny.Junction.metainfo.xml:90
+#: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
 msgstr "Usa libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:97
+#: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
 msgstr "Correzione per le applicazioni mancanti"
 
-#: data/re.sonny.Junction.metainfo.xml:98
+#: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Aggiunto una finestra Collegamenti - accessibile con &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:104
+#: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Questa è la prima versione di Junction. Speriamo che vi piaccia."
 

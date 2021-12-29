@@ -1,23 +1,22 @@
-# Czech translations for re.sonny.Junction package.
-# Copyright (C) 2021 THE re.sonny.Junction'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the re.sonny.Junction package.
-# Automatically generated, 2021.
-# Vojtěch Perník <translations@pervoj.cz>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-14 22:23+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2021-12-27 17:51+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/junction/junction/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -27,214 +26,191 @@ msgstr "Junction"
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr "Volba aplikací"
+msgstr "Programme wählen"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-#, fuzzy
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junction vám pomůže s výběrem aplikace k otevření souborů a odkazů."
+msgstr "Mit Junction können Programme zum Öffnen von Dateien und Links ausgewählt werden."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr "Po instalaci nezapomeňte aplikaci spustit."
+msgstr "Nach der Installation, Programm starten."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "Junction se automaticky otevře, jakmile v některé desktopové aplikaci kliknete na odkaz. Chcete-li vybrat aplikaci pro otevření odkazu nebo souboru, použijte myš nebo šipky na klávesnici."
+msgstr "Junction wird automatisch angezeigt, wenn ein Link in einem Desktop-Programm geöffnet wird. Zur Steuerung verwende die Maus oder die Tastatur, um das Programm auszuwählen mit dem du ein Link oder Datei öffnen möchtest."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr "Funkce:"
+msgstr "Funktionen:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "Programm zum Öffnen auswählen"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr "Zobrazení cíle před otevřením"
+msgstr "Ort vor dem Öffnen anzeigen"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr "Úprava cílové adresy před otevřením"
+msgstr "URL Adresse vor dem Öffnen bearbeiten"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "Zobrazení informace o nebezpečných odkazích"
+msgstr "Hinweis auf unsicheren Link anzeigen"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr "Navigování pomocí klávesnice"
+msgstr "Steuerung per Tastatur"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
+msgstr "Mittlere Maustaste zum Öffnen in mehreren Anwendungen"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr "Výběr prohlížeče pro otevření odkazu"
+msgstr "Browser wählen, mit dem der Link geöffnet werden soll"
 
 #: data/re.sonny.Junction.metainfo.xml:47
-#, fuzzy
 msgid "Choose the application to open the image with"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "Programm wählen, mit dem das Bild geöffnet werden soll"
 
 #: data/re.sonny.Junction.metainfo.xml:53
-#, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Junction bietet hervorragende Unterstützung für die Tastatur an"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Desktop-Aktionen werden auch unterstützt"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Unterstützung für Desktop-Aktionen"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Support snap applications"
-msgstr ""
+msgstr "Unterstützung für snap Programme"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
-msgstr ""
+msgstr "Verbessertes Design"
 
 #: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
-msgstr ""
+msgstr "Neues Symbol"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "x-junction:// Protokoll-API hinzugefügt"
 
 #: data/re.sonny.Junction.metainfo.xml:78
-#, fuzzy
 msgid "Do not automatically set as default application"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Nicht automatisch als Standardprogramm festlegen"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
-msgstr ""
+msgstr "Fehlende Optionen repariert"
 
 #: data/re.sonny.Junction.metainfo.xml:80
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Anzahl an Optionen auf 4 beschränken"
 
 #: data/re.sonny.Junction.metainfo.xml:81
-#, fuzzy
 msgid "Add an option to open with any application"
-msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
+msgstr "Option zum Öffnen mit einem beliebigen Programm hinzufügt"
 
 #: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "System-Informationsfenster im Info-Dialogfenster hinzugefügt"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "Korrektur für Programme die keine URI-Adressen unterstützen"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Option zur Anzeige von Programmnamen hinzugefügt"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
-msgstr ""
+msgstr "Menü-Schaltfläche hinzufügt"
 
 #: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Verbesserte Nutzung der Tastatur"
 
 #: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Verbesserte CLI-Nutzung"
 
 #: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Unterstützung für das Öffnen mehrerer URI-Adressen"
 
 #: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "Unterstützung für die D-Bus Aktivierung"
 
 #: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Nutzung von libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Korrektur für fehlende Anwendungen"
 
 #: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Hinzufügen eines Fensters mit Tastaturkürzel – zugänglich mit &lt;Strg&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
-msgstr "Toto je první verze aplikace Junction. Doufáme, že se vám líbí."
+msgstr "Dies ist die erste Veröffentlichung von Junction. Wir hoffen, dass sie dir gefällt."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr "Vojtěch Perník <translations@pervoj.cz>"
+msgstr "Milo Ivir <mail@milotype.de>"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "Namen anzeigen"
 
 #: src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr "Kopírovat do schránky"
+msgstr "Kopiere in die Zwischenablage"
 
 #: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Tastaturkürzel"
 
 #: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
-msgstr "O aplikaci Junction"
+msgstr "Über Junction"
 
 #: src/welcome.ui:37
-#, fuzzy
 msgid "Test Junction"
-msgstr "Junction"
+msgstr "Junction testen"
 
 #: src/welcome.ui:48
-#, fuzzy
 msgid "Set Junction as default for Web"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Junction als Standard festlegen"
 
 #: src/AppButton.js:115
 msgid "View All"
-msgstr ""
+msgstr "Alle anzeigen"
 
 #: src/AppButton.js:161
-#, fuzzy
 msgid "All Applications"
-msgstr "Volba aplikací"
+msgstr "Alle Anwendung"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
-
-#~ msgid "Sonny Piers"
-#~ msgstr "Sonny Piers"
-
-#~ msgid "List options by last used"
-#~ msgstr "Možnosti se řadí podle posledního použití"
-
-#~ msgid "Esc to cancel"
-#~ msgstr "Zrušení pomocí klávesy Esc"
-
-#~ msgid "Copy to clipboard"
-#~ msgstr "Kopírování do schránky"
-
-#~ msgid "Click here to test"
-#~ msgstr "Pro otestování klikněte zde"
+msgstr "Diese Website ist nicht sicher. Ein Angreifer könnte alle deine gesendeten Informationen sehen oder den Inhalt kontrollieren, den du siehst."
