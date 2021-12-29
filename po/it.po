@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:40+0100\n"
-"PO-Revision-Date: 2021-12-20 00:53+0000\n"
+"PO-Revision-Date: 2021-12-29 22:00+0100\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/junction/junction/it/>\n"
 "Language: it\n"
@@ -87,7 +87,7 @@ msgstr "Junction offre un ottimo supporto per la tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Sono supportate anche le azioni del desktop"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 #: data/re.sonny.Junction.metainfo.xml:84
