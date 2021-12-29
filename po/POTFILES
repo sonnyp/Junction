@@ -2,8 +2,8 @@ data/re.sonny.Junction.desktop
 data/re.sonny.Junction.gschema.xml
 data/re.sonny.Junction.metainfo.xml
 src/about.js
-src/window.ui
-src/welcome.js
-src/welcome.ui
 src/AppButton.js
 src/Entry.js
+src/ShortcutsWindow.ui
+src/welcome.ui
+src/window.ui
