@@ -198,6 +198,8 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 
 ## In the media
 
+[youtube.com - Junction 1.4 | Choose the application to open files and links](https://www.youtube.com/watch?v=rfVd9bhRWxs) - 12/2021
+
 [linuxunplugged.com - Episode 433 The Lessons of Jellyfin](https://linuxunplugged.com/433?t=3183) - 11/2021
 
 ## Translation
