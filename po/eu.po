@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-29 02:51+0000\n"
+"PO-Revision-Date: 2022-01-08 10:53+0000\n"
 "Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/junction/junction/eu/>\n"
 "Language: eu\n"
@@ -31,186 +31,186 @@ msgstr "Aplikazioen hautagailua"
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junctionek aplikazioa aukeratzeko aukera ematen dizu, fitxategiak eta estekak irekitzeko."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "Instalatu ondoren, ziurtatu aplikazioa hasi dela."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction automatikoki agertuko da mahaigaineko aplikazio batean esteka bat irekitzen duzunean. Sagua edo teklatu bidezko nabigazioa erabili esteka edo fitxategia irekitzeko aplikazioa aukeratzeko."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Ezaugarriak:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Aukeratu aplikazioa"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Ireki aurretik kokapena erakutsi"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Editatu URLa ireki aurretik"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "Erakutsi segurtasunik gabeko lotura-ohartarazpen bat"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Teklatu bidezko nabigazioa"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "Hainbat aplikaziotan irekitzeko, klik zentrala erabili"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "Aukeratu esteka zer nabigatzailerekin ireki nahi duzun"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "Aukeratu irudia zer aplikaziorekin ireki nahi duzun"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junctionek euskarri handia du teklaturako"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Mahaigaineko ekintzak ere bateragarriak dira"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Mahaigaineko ekintzen euskarria"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Support snap applications"
-msgstr ""
+msgstr "Snap aplikazioen euskarria"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
-msgstr ""
+msgstr "Diseinua hobetzea"
 
 #: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
-msgstr ""
+msgstr "Ikono berria"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Gehitu x-junction:// protokolo-API bat"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "Ez ezarri automatikoki webgunerako lehenetsi gisa"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
-msgstr ""
+msgstr "Falta diren aukerak zuzendu"
 
 #: data/re.sonny.Junction.metainfo.xml:80
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Aukera kopurua 4ra mugatu"
 
 #: data/re.sonny.Junction.metainfo.xml:81
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "Gehitu aukera bat edozein aplikaziorekin irekitzeko"
 
 #: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "Gehitu informazio-elkarrizketan sistemaren informazio-panel bat"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "URIs jasaten ez duten aplikazioetarako zuzenketa"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Gehitu aukera bat aplikazioen izenak erakusteko"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
-msgstr ""
+msgstr "Gehitu menu botoi bat"
 
 #: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Teklatuaren erabilera hobetu da"
 
 #: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "CLI hobeto erabiltzen da"
 
 #: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Bateragarritasuna URI ugari irekitzearekin"
 
 #: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "D-Bus aktibatzeko euskarria"
 
 #: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
-msgstr ""
+msgstr "libadwaita erabiltzen du"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Falta diren aplikazioak zuzentzea"
 
 #: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Gehitu Lasterbideak leiho bat - &lt;Ctrl&gt;? bidez eskuragarri"
 
 #: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "Hau da Junctionen lehen bertsioa. Gustatuko zaizula espero dugu."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr ""
+msgstr "Sergio Varela <sergiovg01@outlook.com>"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "Erakutsi izenak"
 
 #: src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiatu paper-zorroan"
 
 #: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Teklatuko lasterbideak"
 
 #: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
-msgstr ""
+msgstr "Junction-i buruz"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr ""
+msgstr "Probatu Junction"
 
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Webgunerako Junction lehenetsia ezarri"
 
 #: src/AppButton.js:115
 msgid "View All"
-msgstr ""
+msgstr "Ikusi dena"
 
 #: src/AppButton.js:161
 msgid "All Applications"
-msgstr ""
+msgstr "Aplikazio guztiak"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "Leku honek ez du segurtasunik. Erasotzaile batek bidaltzen duzun edozein informazio ikus dezake, edo ikusten duzun edukia kontrolatu."
