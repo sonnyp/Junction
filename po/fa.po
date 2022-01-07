@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2022-01-01 14:53+0000\n"
+"PO-Revision-Date: 2022-01-08 10:53+0000\n"
 "Last-Translator: Erfan Khadem <erfankhademerkh@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/junction/junction/fa/>\n"
 "Language: fa\n"
@@ -59,11 +59,11 @@ msgstr "نمایش مکان قبل از باز کردن"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "ادیت لینک قبل از باز کردن"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "مشخص کردن لینک های نا امن"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
@@ -71,23 +71,23 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "با وسط کلیک، چند برنامه را باز کنید"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "مرورگر را برای باز کردن لینک انتخاب کنید"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "برنامه را برای باز کردن تصویر انتخاب کنید"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "تقاطع پشتیبانی خوبی برای استفاده از کیبورد دارد"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "فعالیت های دسکتاپ هم پشتیبانی میشود"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Support desktop actions"
@@ -95,16 +95,16 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Support snap applications"
-msgstr ""
+msgstr "پشتیبانی از برنامه های اسنپ"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
-msgstr ""
+msgstr "بهبود دیزاین"
 
 #: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
-msgstr ""
+msgstr "آیکون جدید"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a x-junction:// protocol API"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "به طور خودکار به عنوان برنامه پیشفرض انتخاب نشو"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
@@ -124,43 +124,43 @@ msgstr "محدود کردن انتخاب ها به ۴ مورد"
 
 #: data/re.sonny.Junction.metainfo.xml:81
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "اضافه کردن گزینه باز کردن با هر برنامه ای"
 
 #: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "اضافه کردن پنل مشخصات سیستمی در دیالوگ درباره برنامه"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "درست کردن برنامه هایی که از لینک پشتیبانی نمیکنند"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "اضافه کردن گزینه برای نمایش دادن نام برنامه ها"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
-msgstr ""
+msgstr "اضافه کردن دکمه منو"
 
 #: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "بهبود استفاده با کیبورد"
 
 #: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "بهبود استفاده در ترمینال"
 
 #: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "پشتیبانی از باز کردن چند لینک"
 
 #: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "پشتیبانی از فعالسازی با D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
-msgstr ""
+msgstr "استفاده از libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
