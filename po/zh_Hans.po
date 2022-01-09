@@ -1,23 +1,22 @@
-# Czech translations for re.sonny.Junction package.
-# Copyright (C) 2021 THE re.sonny.Junction'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the re.sonny.Junction package.
-# Automatically generated, 2021.
-# Vojtěch Perník <translations@pervoj.cz>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-14 22:23+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2022-01-01 14:53+0000\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/junction/junction/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -27,214 +26,191 @@ msgstr "Junction"
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr "Volba aplikací"
+msgstr "应用程序选择器"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-#, fuzzy
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junction vám pomůže s výběrem aplikace k otevření souborů a odkazů."
+msgstr "Junction 让您选择打开文件和链接的应用程序。"
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr "Po instalaci nezapomeňte aplikaci spustit."
+msgstr "安装之后请确保启动该应用程序。"
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "Junction se automaticky otevře, jakmile v některé desktopové aplikaci kliknete na odkaz. Chcete-li vybrat aplikaci pro otevření odkazu nebo souboru, použijte myš nebo šipky na klávesnici."
+msgstr "Junction 将在您用桌面应用程序打开链接时自动弹出。使用鼠标或键盘导航来选择打开链接或文件的应用程序。"
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr "Funkce:"
+msgstr "特性："
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "选择打开使用的应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr "Zobrazení cíle před otevřením"
+msgstr "打开之前显示位置"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr "Úprava cílové adresy před otevřením"
+msgstr "打开之前编辑网址"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "Zobrazení informace o nebezpečných odkazích"
+msgstr "为非安全链接显示提醒"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr "Navigování pomocí klávesnice"
+msgstr "键盘导航"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
+msgstr "中键单击以在多个应用程序中打开"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr "Výběr prohlížeče pro otevření odkazu"
+msgstr "选择打开链接使用的浏览器"
 
 #: data/re.sonny.Junction.metainfo.xml:47
-#, fuzzy
 msgid "Choose the application to open the image with"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "选择打开图像使用的应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:53
-#, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Junction 提供对键盘很好的支持"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "同样支持桌面动作"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Support desktop actions"
-msgstr ""
+msgstr "支持桌面动作"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Support snap applications"
-msgstr ""
+msgstr "支持 snap 应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Improve design"
-msgstr ""
+msgstr "提升了设计"
 
 #: data/re.sonny.Junction.metainfo.xml:76
 msgid "New icon"
-msgstr ""
+msgstr "新的图标"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "添加了 x-junction:// 协议应用接口"
 
 #: data/re.sonny.Junction.metainfo.xml:78
-#, fuzzy
 msgid "Do not automatically set as default application"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "不要自动设置为默认应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:79
 msgid "Fix missing options"
-msgstr ""
+msgstr "修复缺失的选项"
 
 #: data/re.sonny.Junction.metainfo.xml:80
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "限制选项数量为 4"
 
 #: data/re.sonny.Junction.metainfo.xml:81
-#, fuzzy
 msgid "Add an option to open with any application"
-msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
+msgstr "添加了用任何应用程序打开的选项"
 
 #: data/re.sonny.Junction.metainfo.xml:82
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "在关于对话框中添加了系统信息面板"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "修复了不支持网址的应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "添加了显示应用程序名称的选项"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add a menu button"
-msgstr ""
+msgstr "添加了菜单按钮"
 
 #: data/re.sonny.Junction.metainfo.xml:93
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "提升了键盘使用"
 
 #: data/re.sonny.Junction.metainfo.xml:94
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "提升了命令行使用"
 
 #: data/re.sonny.Junction.metainfo.xml:95
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "支持打开多个网址"
 
 #: data/re.sonny.Junction.metainfo.xml:97
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "支持 D-Bus 激活"
 
 #: data/re.sonny.Junction.metainfo.xml:98
 msgid "Use libadwaita"
-msgstr ""
+msgstr "使用 libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "修复了缺失应用程序"
 
 #: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "添加了快捷键窗口 - 使用 &lt;Ctrl&gt;? 访问"
 
 #: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
-msgstr "Toto je první verze aplikace Junction. Doufáme, že se vám líbí."
+msgstr "这是 Junction 的第一次发布。我们希望您喜欢它。"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr "Vojtěch Perník <translations@pervoj.cz>"
+msgstr "lumingzh <lumingzh@qq.com>"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "显示名称"
 
 #: src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr "Kopírovat do schránky"
+msgstr "复制到剪贴板"
 
 #: src/window.ui:72 src/welcome.ui:67
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "键盘快捷键"
 
 #: src/window.ui:76 src/welcome.ui:71
 msgid "About Junction"
-msgstr "O aplikaci Junction"
+msgstr "关于 Junction"
 
 #: src/welcome.ui:37
-#, fuzzy
 msgid "Test Junction"
-msgstr "Junction"
+msgstr "测试 Junction"
 
 #: src/welcome.ui:48
-#, fuzzy
 msgid "Set Junction as default for Web"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "为网络将 Junction 设置为默认"
 
 #: src/AppButton.js:115
 msgid "View All"
-msgstr ""
+msgstr "查看全部"
 
 #: src/AppButton.js:161
-#, fuzzy
 msgid "All Applications"
-msgstr "Volba aplikací"
+msgstr "全部应用程序"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
-
-#~ msgid "Sonny Piers"
-#~ msgstr "Sonny Piers"
-
-#~ msgid "List options by last used"
-#~ msgstr "Možnosti se řadí podle posledního použití"
-
-#~ msgid "Esc to cancel"
-#~ msgstr "Zrušení pomocí klávesy Esc"
-
-#~ msgid "Copy to clipboard"
-#~ msgstr "Kopírování do schránky"
-
-#~ msgid "Click here to test"
-#~ msgstr "Pro otestování klikněte zde"
+msgstr "该网站没有安全证书。攻击者可能会看到您发送的任何信息，或控制您看到的内容。"
