@@ -140,13 +140,11 @@ export function readResource(file) {
     }
   }
 
+  let content_type = "application/octet-stream";
   let resource = file.get_parse_name();
-
   if (isDocumentPortalExportedFile(resource)) {
     resource = getRealPath(resource) || resource;
   }
-
-  let content_type = "application/octet-stream";
 
   // g_file_get_uri_scheme() returns http for https so we need to use g_uri
   // g_file_get_parse_name() does not so it may be a bug

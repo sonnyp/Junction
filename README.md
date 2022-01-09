@@ -118,11 +118,11 @@ See https://wiki.archlinux.org/title/desktop_entries (distro agnostic).
 <details>
   <summary>Browser integration</summary>
 
-Drag the following [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) to your browser bookmarks toolbar to create a button to open the current page in Junction.
+<!-- Drag the following [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) to your browser bookmarks toolbar to create a button to open the current page in Junction.
 
-Bookmarklet: <a herf="javascript:window.location='x-junction://'+window.location">Junction</a>
+Bookmarklet: <a herf="javascript:window.location='x-junction://'+window.location">Junction</a> -->
 
-Or create a bookmark with the following URL
+Create a bookmark with the following URL
 
 ```
 javascript:window.location='x-junction://'+window.location
