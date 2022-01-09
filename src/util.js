@@ -140,8 +140,13 @@ export function readResource(file) {
     }
   }
 
+  let resource = file.get_parse_name();
+
+  if (isDocumentPortalExportedFile(resource)) {
+    resource = getRealPath(resource) || resource;
+  }
+
   let content_type = "application/octet-stream";
-  const resource = file.get_parse_name();
 
   // g_file_get_uri_scheme() returns http for https so we need to use g_uri
   // g_file_get_parse_name() does not so it may be a bug
@@ -263,4 +268,37 @@ function flatpakify(appInfo) {
   keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
 
   return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+}
+
+// GLib dbus launch isn't as smart as flatpak run --file-forwarding
+// we're basically a launcher so we want the real path - not a document portal path
+// OK
+// flatpak run --file-forwarding @@ /home/sonny/Documents/foo.odt @@
+// KO
+// gtk-launch re.sonny.Junction /home/sonny/Documents/foo.odt
+// see https://github.com/sonnyp/Junction/issues/56
+// unfortunally the DBus method isn't available in the sandbox
+// https://flatpak.github.io/xdg-desktop-portal/#gdbus-method-org-freedesktop-portal-Documents.Info
+// let's hope this doesn't break...
+const textDecoder = new TextDecoder();
+export function getRealPath(document_path) {
+  console.time("getRealPath");
+  const [success, stdout, , status] = spawn_sync(
+    `flatpak document-info "${document_path}"`,
+  );
+  if (status !== 0) return null;
+  if (!success) return null;
+
+  const result = textDecoder.decode(stdout);
+  if (!result) return null;
+
+  const [, path] = result.match(new RegExp("origin: " + "(.*)" + "\n"));
+
+  console.timeEnd("getRealPath");
+
+  return path || null;
+}
+
+function isDocumentPortalExportedFile(path) {
+  return /^\/run\/user\/\d+\/doc\/.+\/.+$/.test(path);
 }
