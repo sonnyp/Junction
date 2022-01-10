@@ -85,6 +85,13 @@ test("readResource", () => {
     scheme: "http",
     content_type: "x-scheme-handler/http",
   });
+
+  const not_found_path = `/tmp/I-DO-NOT-EXIST-${Math.random()}`
+  assert.equal(read(not_found_path), {
+    resource: not_found_path,
+    scheme: "file",
+    content_type: "application/octet-stream",
+  });
 });
 
 test("prefixCommandLineForHost", () => {

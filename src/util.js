@@ -14,6 +14,18 @@ export function logEnum(obj, value) {
   );
 }
 
+export function promiseTask(object, method, finish, ...args) {
+  return new Promise((resolve, reject) => {
+    object[method](...args, (self, asyncResult) => {
+      try {
+        resolve(object[finish](asyncResult));
+      } catch (err) {
+        reject(err);
+      }
+    });
+  });
+}
+
 export function relativePath(path) {
   const [filename] = GLib.filename_from_uri(import.meta.url);
   const dirname = GLib.path_get_dirname(filename);

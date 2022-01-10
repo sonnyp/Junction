@@ -3,14 +3,44 @@ import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
+import Xdp from "gi://Xdp";
 
-import { relativePath, openWithApplication } from "./util.js";
+import { relativePath, openWithApplication, promiseTask } from "./util.js";
 import { settings } from "./common.js";
+
+const portal = new Xdp.Portal();
 
 const { byteArray } = imports;
 
 const [, content] = GLib.file_get_contents(relativePath("./AppButton.ui"));
 const template = byteArray.toString(content);
+
+export function TileButton({
+  label,
+  tooltip = label,
+  icon_name,
+  icon_size,
+  onClicked,
+}) {
+  const builder = Gtk.Builder.new_from_string(template, template.length);
+  const button = builder.get_object("button");
+
+  button.set_tooltip_text(tooltip);
+  const glabel = builder.get_object("label");
+  glabel.label = label;
+  glabel.visible = false;
+  settings.bind("show-app-names", glabel, "visible", Gio.SettingsBindFlags.GET);
+
+  const image = builder.get_object("image");
+  image.set_from_icon_name(icon_name);
+  if (icon_size) {
+    image.set_pixel_size(icon_size);
+  }
+
+  button.connect("clicked", onClicked);
+
+  return button;
+}
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
   const builder = Gtk.Builder.new_from_string(template, template.length);
@@ -108,21 +138,32 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return button;
 }
 
+export function RevealInFolderButton({ file, entry, window }) {
+  async function onClicked() {
+    const result = await promiseTask(
+      portal,
+      "open_directory",
+      "open_directory_finish",
+      imports.gi.XdpGtk4.parent_new_gtk(window),
+      file.get_uri(),
+      Xdp.OpenUriFlags.NONE,
+      null,
+    );
+    if (result) {
+      window.close();
+    }
+  }
+
+  return TileButton({
+    label: _("Reveal"),
+    tooltip: _("Reveal in Folder"),
+    icon_name: "folder-symbolic",
+    icon_size: 48,
+    onClicked,
+  });
+}
+
 export function ViewAllButton({ file, content_type, entry, window }) {
-  const builder = Gtk.Builder.new_from_string(template, template.length);
-  const button = builder.get_object("button");
-
-  const name = _("View All");
-  button.set_tooltip_text(name);
-  const label = builder.get_object("label");
-  label.label = name;
-  label.visible = false;
-  settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
-
-  const image = builder.get_object("image");
-  image.set_from_icon_name("view-more-horizontal-symbolic");
-  image.set_pixel_size(48);
-
   function onResponse(appChooserDialog, response_id) {
     if (response_id !== Gtk.ResponseType.OK) {
       appChooserDialog.destroy();
@@ -173,9 +214,12 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     appChooserDialog.show();
   }
 
-  button.connect("clicked", onClicked);
-
-  return button;
+  return TileButton({
+    label: _("View All"),
+    icon_name: "view-more-horizontal-symbolic",
+    icon_size: 48,
+    onClicked,
+  });
 }
 
 function popupActionsMenu({ popoverMenu, appInfo, location }) {

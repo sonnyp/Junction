@@ -5,7 +5,7 @@ import GLib from "gi://GLib";
 
 import { relativePath, readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ViewAllButton } from "./AppButton.js";
+import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 
 export default function Window({ application, file }) {
@@ -44,6 +44,17 @@ export default function Window({ application, file }) {
       window,
     }),
   );
+
+  if (scheme === "file" && !['inode/directory', 'application/octet-stream'].includes(content_type)) {
+    list.append(
+      RevealInFolderButton({
+        file,
+        entry,
+        window,
+      }),
+    );
+  }
+
   const buttons = [...list];
 
   function getButtonForKeyval(keyval) {
