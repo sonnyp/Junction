@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2022-01-10 13:10+0000\n"
+"PO-Revision-Date: 2022-01-10 13:17+0000\n"
 "Last-Translator: Juliano de Souza Camargo <julianosc@protonmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/junction/junction/pt/>\n"
 "Language: pt\n"
@@ -43,7 +43,7 @@ msgstr "Após a instalação, certifique-se de iniciar a aplicação."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "O Junction aparecerá automaticamente quando abrir uma ligação numa aplicação de escritório. Use o rato ou a navegação por teclado para escolher a aplicação com que abrir a ligação ou o ficheiro."
+msgstr "O Junction irá aparecer automaticamente quando abrir uma ligação numa aplicação de escritório. Use o rato ou a navegação por teclado para escolher a aplicação com que abrir a ligação ou o ficheiro."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -51,7 +51,7 @@ msgstr "Funcionalidades:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Escolha a aplicação para abrir com"
+msgstr "Escolha a aplicação com que abrir"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
@@ -168,7 +168,7 @@ msgstr "Correção a aplicações ausentes"
 
 #: data/re.sonny.Junction.metainfo.xml:106
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr "Adiciona uma janela de Atalhos – acessível com &lt;Ctrl&gt;?"
+msgstr "Adiciona uma janela de Atalhos – acedida com &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:112
 msgid "This is the first release of Junction. We hope you like it."
