@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION FOR JUNCTION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the re.sonny.Junction package.
-# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:40+0100\n"
-"PO-Revision-Date: 2021-12-20 00:53+0000\n"
+"PO-Revision-Date: 2022-01-16 00:53+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/junction/junction/it/>\n"
 "Language: it\n"
@@ -87,7 +87,7 @@ msgstr "Junction offre un ottimo supporto per la tastiera"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Sono supportate anche le azioni desktop"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 #: data/re.sonny.Junction.metainfo.xml:84
