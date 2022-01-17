@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-27 17:51+0000\n"
+"PO-Revision-Date: 2022-01-18 09:52+0000\n"
 "Last-Translator: Kaz Sibuya <sibuyakazokuu@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/junction/junction/ja/>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -87,7 +87,7 @@ msgstr "Junctionでは、キーボードのサポートが充実しています"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "デスクトップアプリケーションにもサポート"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 #, fuzzy
@@ -96,10 +96,8 @@ msgid "Support desktop actions"
 msgstr "デスクトップアクションのサポート"
 
 #: data/re.sonny.Junction.metainfo.xml:68
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support snap applications"
-msgstr "D-Busの起動に対応"
+msgstr "snapアプリケーションに対応"
 
 #: data/re.sonny.Junction.metainfo.xml:75
 #: data/re.sonny.Junction.metainfo.xml:92
@@ -111,10 +109,8 @@ msgid "New icon"
 msgstr "新しいアイコン"
 
 #: data/re.sonny.Junction.metainfo.xml:77
-#, fuzzy
-#| msgid "Add a x-juncton:// protocol API"
 msgid "Add a x-junction:// protocol API"
-msgstr "x-juncton:// プロトコル APIを追加"
+msgstr "x-junction:// プロトコル APIを追加"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Do not automatically set as default application"
