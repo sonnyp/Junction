@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2021-12-26 00:51+0000\n"
+"PO-Revision-Date: 2022-01-23 08:52+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/junction/junction/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -88,25 +88,23 @@ msgstr "Junction har god tastaturstøtte"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Skrivebordshandlinger støttes også"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Tillagt alternativ «Avslør i mappe» for filer"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Avslør dokumentprotal-filstier"
 
 #: data/re.sonny.Junction.metainfo.xml:69
-#, fuzzy
-#| msgid "Support desktop actions"
 msgid "Bug fix for desktop actions"
-msgstr "Støtte for skrivebordshandlinger"
+msgstr "Feilfiks av skrivebordshandlinger"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Feilfiks ved åpning av LibreOffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
@@ -202,11 +200,11 @@ msgstr "Allan Nordhøy <epost@anotheragency.no>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Avslør"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Avslør i mappe"
 
 #: src/AppButton.js:202
 msgid "All Applications"
@@ -222,7 +220,7 @@ msgstr "Denne siden har ingen sikkerhet. En angriper kan se all info du sender, 
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "Forkast og lukk"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
@@ -230,21 +228,19 @@ msgstr "Kopier til utklippstavle"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Velg neste/forrige program"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "Åpne med foretrukket program"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Åpne med valgt program og forbli aktiv"
 
 #: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
 msgid "Open with application at position"
-msgstr "Velg programmet å åpne med"
+msgstr "Åpne med program på posisjon"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
@@ -252,7 +248,7 @@ msgstr "Tastatursnarveier"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "Avslutt"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
