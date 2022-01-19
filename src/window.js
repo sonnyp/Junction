@@ -45,7 +45,10 @@ export default function Window({ application, file }) {
     }),
   );
 
-  if (scheme === "file" && !['inode/directory', 'application/octet-stream'].includes(content_type)) {
+  if (
+    scheme === "file" &&
+    !["inode/directory", "application/octet-stream"].includes(content_type)
+  ) {
     list.append(
       RevealInFolderButton({
         file,

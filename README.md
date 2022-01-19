@@ -364,7 +364,7 @@ ninja -C build uninstall
 
 ## Copyright
 
-© 2021 [Sonny Piers](https://github.com/sonnyp)
+© 2021-2022 [Sonny Piers](https://github.com/sonnyp)
 
 ## License
 

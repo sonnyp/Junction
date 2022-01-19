@@ -61,6 +61,16 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.5.0" date="2022-01-19">
+      <description>
+        <ul>
+          <li>Add an option "Reveal in Folder" for files</li>
+          <li>Reveal document portal file paths</li>
+          <li>Bug fix for desktop actions</li>
+          <li>Bug fix when opening with Libreoffice</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2021-12-23">
       <description>
         <ul>
