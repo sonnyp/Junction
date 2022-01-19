@@ -215,7 +215,9 @@ export function openWithAction({ desktop_id, action, location }) {
   keyFile.load_from_file(desktopAppInfo.get_filename(), GLib.KeyFileFlags.NONE);
   const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
 
-  keyFile.set_value("Desktop Entry", "Exec", Exec);
+  if (GLib.getenv("FLATPAK_ID") && !Exec.startsWith("flatpak-spawn")) {
+    keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
+  }
 
   const appInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
 
