@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 18:56+0100\n"
+"POT-Creation-Date: 2022-01-19 23:18+0100\n"
 "PO-Revision-Date: 2021-12-27 17:51+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/junction/junction/hr/>\n"
@@ -90,87 +90,105 @@ msgid "Desktop actions are supported too"
 msgstr "Desktop radnje su također podržane"
 
 #: data/re.sonny.Junction.metainfo.xml:67
+msgid "Add an option \"Reveal in Folder\" for files"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:68
+msgid "Reveal document portal file paths"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:69
+#, fuzzy
+#| msgid "Support desktop actions"
+msgid "Bug fix for desktop actions"
+msgstr "Podrži radnje na radnoj površini"
+
+#: data/re.sonny.Junction.metainfo.xml:70
+msgid "Bug fix when opening with Libreoffice"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
 msgstr "Podrži radnje na radnoj površini"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
 msgstr "Podrži snap programe"
 
-#: data/re.sonny.Junction.metainfo.xml:75
-#: data/re.sonny.Junction.metainfo.xml:92
+#: data/re.sonny.Junction.metainfo.xml:85
+#: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
 msgstr "Poboljšaj dizajn"
 
-#: data/re.sonny.Junction.metainfo.xml:76
+#: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
 msgstr "Nova ikona"
 
-#: data/re.sonny.Junction.metainfo.xml:77
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
 msgstr "Dodaj x-junction:// API protokol"
 
-#: data/re.sonny.Junction.metainfo.xml:78
+#: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
 msgstr "Nemoj automatski postaviti kao zadani program"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
 msgstr "Ispravi nedostajuće opcije"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
 msgstr "Ograniči broj opcija na četiri"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
 msgstr "Dodaj opciju za otvaranje s bilo kojim programom"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
 msgstr "Dodaj ploču s informacijama o sustavu u prozoru o programu"
 
-#: data/re.sonny.Junction.metainfo.xml:89
+#: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
 msgstr "Ispravak za programe koji ne podržavaju URI adrese"
 
-#: data/re.sonny.Junction.metainfo.xml:90
+#: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
 msgstr "Dodaj opciju za prikaz imena programa"
 
-#: data/re.sonny.Junction.metainfo.xml:91
+#: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
 msgstr "Dodaj u gumb za izbornik"
 
-#: data/re.sonny.Junction.metainfo.xml:93
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
 msgstr "Poboljšaj upotrebu tipkovnice"
 
-#: data/re.sonny.Junction.metainfo.xml:94
+#: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
 msgstr "Poboljšaj upotrebu sučelja naredbenog retka"
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
 msgstr "Podrži otvaranje više URI adresa"
 
-#: data/re.sonny.Junction.metainfo.xml:97
+#: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
 msgstr "Podrži aktiviranje D-Busa"
 
-#: data/re.sonny.Junction.metainfo.xml:98
+#: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
 msgstr "Koristi libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:105
+#: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
 msgstr "Ispravak za nedostajuće programe"
 
-#: data/re.sonny.Junction.metainfo.xml:106
+#: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Dodaj prozor s prečacima – dostupan pomoću &lt;Ctrl&gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:112
+#: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Ovo je prvo izdanje programa Junction. Nadamo se da ti se sviđa."
 
@@ -179,21 +197,59 @@ msgstr "Ovo je prvo izdanje programa Junction. Nadamo se da ti se sviđa."
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Pokaži imena"
+#: src/AppButton.js:158
+msgid "Reveal"
+msgstr ""
 
-#: src/window.ui:64
+#: src/AppButton.js:159
+msgid "Reveal in Folder"
+msgstr ""
+
+#: src/AppButton.js:202
+msgid "All Applications"
+msgstr "Svi programi"
+
+#: src/AppButton.js:218
+msgid "View All"
+msgstr "Prikaži sve"
+
+#: src/Entry.js:23
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ova stranica nema sigurnost. Napadač bi mogao vidjeti bilo koju informaciju koju šalješ ili upravljati sadržajem koji vidiš."
+
+#: src/ShortcutsWindow.ui:19
+msgid "Discard and close"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr "Kopiraj u međuspremnik"
 
-#: src/window.ui:72 src/welcome.ui:67
+#: src/ShortcutsWindow.ui:37
+msgid "Select next/previous application"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:46
+msgid "Open with selected application"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:57
+msgid "Open with selected application and stay active"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:66
+#, fuzzy
+#| msgid "Choose the application to open with"
+msgid "Open with application at position"
+msgstr "Odaberi program za otvaranje"
+
+#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovnički prečaci"
 
-#: src/window.ui:76 src/welcome.ui:71
-msgid "About Junction"
-msgstr "O programu Junction"
+#: src/ShortcutsWindow.ui:86
+msgid "Quit"
+msgstr ""
 
 #: src/welcome.ui:37
 msgid "Test Junction"
@@ -203,14 +259,10 @@ msgstr "Isprobaj Junction"
 msgid "Set Junction as default for Web"
 msgstr "Postavi kao zadani program za web"
 
-#: src/AppButton.js:115
-msgid "View All"
-msgstr "Prikaži sve"
+#: src/welcome.ui:71 src/window.ui:76
+msgid "About Junction"
+msgstr "O programu Junction"
 
-#: src/AppButton.js:161
-msgid "All Applications"
-msgstr "Svi programi"
-
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Ova stranica nema sigurnost. Napadač bi mogao vidjeti bilo koju informaciju koju šalješ ili upravljati sadržajem koji vidiš."
+#: src/window.ui:60
+msgid "Show names"
+msgstr "Pokaži imena"

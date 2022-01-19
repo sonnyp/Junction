@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 18:56+0100\n"
+"POT-Creation-Date: 2022-01-19 23:18+0100\n"
 "PO-Revision-Date: 2021-12-14 22:23+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
@@ -94,89 +94,105 @@ msgid "Desktop actions are supported too"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:67
-msgid "Support desktop actions"
+msgid "Add an option \"Reveal in Folder\" for files"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:68
-msgid "Support snap applications"
+msgid "Reveal document portal file paths"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:75
-#: data/re.sonny.Junction.metainfo.xml:92
-msgid "Improve design"
+#: data/re.sonny.Junction.metainfo.xml:69
+msgid "Bug fix for desktop actions"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:76
-msgid "New icon"
+#: data/re.sonny.Junction.metainfo.xml:70
+msgid "Bug fix when opening with Libreoffice"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:77
-msgid "Add a x-junction:// protocol API"
+msgid "Support desktop actions"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:78
+msgid "Support snap applications"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:85
+#: data/re.sonny.Junction.metainfo.xml:102
+msgid "Improve design"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:86
+msgid "New icon"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:87
+msgid "Add a x-junction:// protocol API"
+msgstr ""
+
+#: data/re.sonny.Junction.metainfo.xml:88
 #, fuzzy
 msgid "Do not automatically set as default application"
 msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:91
 #, fuzzy
 msgid "Add an option to open with any application"
 msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:89
+#: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:90
+#: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:91
+#: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:93
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:94
+#: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:97
+#: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:98
+#: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:105
+#: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:106
+#: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr ""
 
-#: data/re.sonny.Junction.metainfo.xml:112
+#: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Toto je první verze aplikace Junction. Doufáme, že se vám líbí."
 
@@ -185,21 +201,60 @@ msgstr "Toto je první verze aplikace Junction. Doufáme, že se vám líbí."
 msgid "translator-credits"
 msgstr "Vojtěch Perník <translations@pervoj.cz>"
 
-#: src/window.ui:60
-msgid "Show names"
+#: src/AppButton.js:158
+msgid "Reveal"
 msgstr ""
 
-#: src/window.ui:64
+#: src/AppButton.js:159
+msgid "Reveal in Folder"
+msgstr ""
+
+#: src/AppButton.js:202
+#, fuzzy
+msgid "All Applications"
+msgstr "Volba aplikací"
+
+#: src/AppButton.js:218
+msgid "View All"
+msgstr ""
+
+#: src/Entry.js:23
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
+
+#: src/ShortcutsWindow.ui:19
+msgid "Discard and close"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr "Kopírovat do schránky"
 
-#: src/window.ui:72 src/welcome.ui:67
+#: src/ShortcutsWindow.ui:37
+msgid "Select next/previous application"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:46
+msgid "Open with selected application"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:57
+msgid "Open with selected application and stay active"
+msgstr ""
+
+#: src/ShortcutsWindow.ui:66
+#, fuzzy
+#| msgid "Choose the application to open with"
+msgid "Open with application at position"
+msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+
+#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/window.ui:76 src/welcome.ui:71
-msgid "About Junction"
-msgstr "O aplikaci Junction"
+#: src/ShortcutsWindow.ui:86
+msgid "Quit"
+msgstr ""
 
 #: src/welcome.ui:37
 #, fuzzy
@@ -211,18 +266,13 @@ msgstr "Junction"
 msgid "Set Junction as default for Web"
 msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
 
-#: src/AppButton.js:115
-msgid "View All"
+#: src/welcome.ui:71 src/window.ui:76
+msgid "About Junction"
+msgstr "O aplikaci Junction"
+
+#: src/window.ui:60
+msgid "Show names"
 msgstr ""
-
-#: src/AppButton.js:161
-#, fuzzy
-msgid "All Applications"
-msgstr "Volba aplikací"
-
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vidět všechny informace, které posíláte, nebo zasahovat do obsahu, který se vám zobrazí."
 
 #~ msgid "Sonny Piers"
 #~ msgstr "Sonny Piers"
