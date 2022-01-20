@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
 "PO-Revision-Date: 2022-01-21 06:09+0000\n"
-"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Last-Translator: poi <erbaotao@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/junction/junction/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
@@ -91,21 +91,19 @@ msgstr "同样支持桌面动作"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "为文件添加“在文件夹中显示”选项"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
 msgstr "显示文档门户文件路径"
 
 #: data/re.sonny.Junction.metainfo.xml:69
-#, fuzzy
-#| msgid "Support desktop actions"
 msgid "Bug fix for desktop actions"
-msgstr "支持桌面动作"
+msgstr "修复桌面动作的程序错误"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "修复打开 LibreOffice 时的软件错误"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
@@ -199,11 +197,11 @@ msgstr "lumingzh <lumingzh@qq.com>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "显示"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "在文件夹中显示"
 
 #: src/AppButton.js:202
 msgid "All Applications"
@@ -219,7 +217,7 @@ msgstr "该网站没有安全证书。攻击者可能会看到您发送的任何
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "取消并关闭"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
@@ -227,21 +225,21 @@ msgstr "复制到剪贴板"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "选择下一个/当前的应用程序"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "用选择的应用程序打开"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "用选择的应用程序打开，保持窗口活动状态"
 
 #: src/ShortcutsWindow.ui:66
 #, fuzzy
 #| msgid "Choose the application to open with"
 msgid "Open with application at position"
-msgstr "选择打开使用的应用程序"
+msgstr "用选定的应用程序打开"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
@@ -249,7 +247,7 @@ msgstr "键盘快捷键"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "退出"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
