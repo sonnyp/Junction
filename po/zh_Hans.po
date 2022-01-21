@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-01-21 06:09+0000\n"
-"Last-Translator: poi <erbaotao@outlook.com>\n"
+"PO-Revision-Date: 2022-01-23 08:52+0000\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/junction/junction/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
@@ -236,10 +236,8 @@ msgid "Open with selected application and stay active"
 msgstr "用选择的应用程序打开，保持窗口活动状态"
 
 #: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
 msgid "Open with application at position"
-msgstr "用选定的应用程序打开"
+msgstr "用指定位置的应用程序打开"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
