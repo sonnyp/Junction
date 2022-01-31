@@ -46,7 +46,7 @@ Please note that this may not be respected by all applications but the command `
 <details>
   <summary>Set Junction as default folder opener</summary>
   <code>
-  xdg-settings default re.sonny.Junction.desktop inode/directory
+  xdg-mime default re.sonny.Junction.desktop inode/directory
   </code>
 </details>
 
