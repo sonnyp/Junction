@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-01-31 13:34+0000\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"PO-Revision-Date: 2022-02-12 00:57+0000\n"
+"Last-Translator: Ronaldo Vieira Lobato <vieira.lobato@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/junction/junction/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -98,10 +98,8 @@ msgid "Reveal document portal file paths"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:69
-#, fuzzy
-#| msgid "Support desktop actions"
 msgid "Bug fix for desktop actions"
-msgstr "Suporte a ações de área de trabalho"
+msgstr "Correção de bug para as ações da área de trabalho"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
