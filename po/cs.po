@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2021-12-14 22:23+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-02-18 10:55+0000\n"
+"Last-Translator: Jan Hájovský <hajovsky.jan@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -31,7 +31,6 @@ msgstr "Volba aplikací"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-#, fuzzy
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
 
@@ -80,14 +79,12 @@ msgid "Choose the browser to open the link with"
 msgstr "Výběr prohlížeče pro otevření odkazu"
 
 #: data/re.sonny.Junction.metainfo.xml:47
-#, fuzzy
 msgid "Choose the application to open the image with"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "Výběr aplikace, pomocí které otevřít obrázek"
 
 #: data/re.sonny.Junction.metainfo.xml:53
-#, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Junction nabízí skvělou podporu pro ovládání klávesnicí"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
@@ -120,24 +117,23 @@ msgstr ""
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "Vylepšit vzhled"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Nová ikona"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Přidat x-junction:// protokol API"
 
 #: data/re.sonny.Junction.metainfo.xml:88
-#, fuzzy
 msgid "Do not automatically set as default application"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Nenastavovat automaticky jako výchozí aplikaci"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "Opravit chybějící možnosti"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
@@ -182,28 +178,28 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Využít libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Opravení chybějících aplikací"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Přidat klávesovou zkratku - dostupné s &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr "Toto je první verze aplikace Junction. Doufáme, že se vám líbí."
+msgstr "Toto je první verze aplikace Junction. Doufáme, že se Vám líbí."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr "Vojtěch Perník <translations@pervoj.cz>"
+msgstr "Vojtěch Perník <translations@pervoj.cz>, Jan Hájovský <hajovsky.jan@gmail.com>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Odhalit"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
@@ -224,7 +220,7 @@ msgstr "Tento web nemá žádné zabezpečení. Případný útočník může vi
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "Zahodit změny a zavřít"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
@@ -232,7 +228,7 @@ msgstr "Kopírovat do schránky"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Vyber další/předchozí aplikaci"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
@@ -254,17 +250,15 @@ msgstr ""
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "Zavřít"
 
 #: src/welcome.ui:37
-#, fuzzy
 msgid "Test Junction"
-msgstr "Junction"
+msgstr "Otestovat Junction"
 
 #: src/welcome.ui:48
-#, fuzzy
 msgid "Set Junction as default for Web"
-msgstr "Aplikace Junction byla nastavena jako výchozí aplikace pro otevírání webových odkazů"
+msgstr "Nastavit Junction jako výchozí aplikaci pro otevírání webových odkazů"
 
 #: src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
@@ -272,7 +266,7 @@ msgstr "O aplikaci Junction"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "Zobrazovat jména"
 
 #~ msgid "Sonny Piers"
 #~ msgstr "Sonny Piers"
