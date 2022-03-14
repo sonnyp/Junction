@@ -191,10 +191,10 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     // Unfortunally AppChooserWidget doesn't have search or "Find new Applications"
     // so we are using AppChooserDialog for now
     // we should implement our own inline widget eventually
-    const appChooserDialog = Gtk.AppChooserDialog.new(
+    const appChooserDialog = Gtk.AppChooserDialog.new_for_content_type(
       window,
       Gtk.DialogFlags.MODAL,
-      file,
+      content_type,
     );
     const title_widget = appChooserDialog.get_header_bar()?.get_title_widget();
     if (title_widget) {
