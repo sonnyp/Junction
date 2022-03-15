@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-03-15 22:59+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 20:49+0000\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/junction/junction/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "יכולות:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "נא לבחור את היישום לפתיחה באמצעותו"
+msgstr "בחירת היישום לפתיחה באמצעותו"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
@@ -71,7 +71,7 @@ msgstr "ניווט עם המקלדת"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "לחיצה אמצעית תפתח במספר יישומים"
+msgstr "לחיצה אמצעית לפתיחה במספר יישומים"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
