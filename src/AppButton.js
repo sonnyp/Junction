@@ -138,9 +138,9 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return button;
 }
 
-export function RevealInFolderButton({ file, entry, window }) {
-  async function onClicked() {
-    const result = await promiseTask(
+export function RevealInFolderButton({ file, window }) {
+  function onClicked() {
+    promiseTask(
       portal,
       "open_directory",
       "open_directory_finish",
@@ -148,10 +148,9 @@ export function RevealInFolderButton({ file, entry, window }) {
       file.get_uri(),
       Xdp.OpenUriFlags.NONE,
       null,
-    );
-    if (result) {
-      window.close();
-    }
+    )
+      .then((result) => result && window.close())
+      .catch(logError);
   }
 
   return TileButton({

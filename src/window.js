@@ -38,7 +38,6 @@ export default function Window({ application, file }) {
 
   list.append(
     ViewAllButton({
-      file,
       content_type,
       entry,
       window,
