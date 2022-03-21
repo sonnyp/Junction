@@ -163,7 +163,7 @@ export function RevealInFolderButton({ file, entry, window }) {
   });
 }
 
-export function ViewAllButton({ file, content_type, entry, window }) {
+export function ViewAllButton({ content_type, entry, window }) {
   function onResponse(appChooserDialog, response_id) {
     if (response_id !== Gtk.ResponseType.OK) {
       appChooserDialog.destroy();
@@ -208,8 +208,6 @@ export function ViewAllButton({ file, content_type, entry, window }) {
     appChooserWidget.set_show_recommended(true);
     appChooserWidget.set_show_fallback(true);
     appChooserWidget.set_show_other(true);
-    // FIXME: Search is kinda broken unless this
-    // appChooserWidget.set_show_all(true);
     appChooserDialog.connect("response", onResponse);
     appChooserDialog.show();
   }
