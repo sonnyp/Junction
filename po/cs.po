@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-02-18 10:55+0000\n"
-"Last-Translator: Jan Hájovský <hajovsky.jan@gmail.com>\n"
+"PO-Revision-Date: 2022-04-03 07:12+0000\n"
+"Last-Translator: buralien <github@lty.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/junction/junction/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -88,31 +88,31 @@ msgstr "Junction nabízí skvělou podporu pro ovládání klávesnicí"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Podporovány jsou i akce na ploše"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Pro soubory přidat možnost \"Zobraz ve složce\""
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Zobraz cesty souborů v portálu dokumentů"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Oprava akcí na ploše"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Oprava otevírání v LibreOffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Umožnit aplikace"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Povolit aplikace Snap"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
@@ -137,44 +137,43 @@ msgstr "Opravit chybějící možnosti"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Omezit počet možností na 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
-#, fuzzy
 msgid "Add an option to open with any application"
-msgstr "Kliknutí kolečkem myši pro otevření ve více aplikacích"
+msgstr "Přidat možnost otevření libovolnou aplikací"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "Přidat panel informací o systému do dialogu O aplikaci"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "Oprava aplikací které nepoužívají URI"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Přidat možnost zobrazení jména aplikace"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "Přidat tlačítko nabídky"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Vylepšit používání klávesnice"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Vylepšit používání CLI"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Umožnit otevření více URI"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "Umožnit aktivaci přes D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
@@ -203,16 +202,15 @@ msgstr "Odhalit"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Zobraz ve složce"
 
 #: src/AppButton.js:202
-#, fuzzy
 msgid "All Applications"
-msgstr "Volba aplikací"
+msgstr "Všechny aplikace"
 
 #: src/AppButton.js:218
 msgid "View All"
-msgstr ""
+msgstr "Zobraz vše"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
@@ -232,21 +230,19 @@ msgstr "Vyber další/předchozí aplikaci"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "Otevřít vybranou aplikací"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Otevřít vybranou aplikací a zůstat aktivní"
 
 #: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
 msgid "Open with application at position"
-msgstr "Výběr aplikace, pomocí které odkaz nebo soubor otevřít"
+msgstr "Otevřít s aplikací na pozici"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
