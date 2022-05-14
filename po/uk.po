@@ -8,23 +8,25 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-05-14 18:03+0000\n"
+"Last-Translator: Maxim Kradozhon <mkradozhon@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/junction/junction/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr ""
+msgstr "Оберіть додаток"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
@@ -33,92 +35,92 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction надає вам можливість обрати додаток для відкриття файлу чи посилання."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "Після встановлення обов'язково запустіть додаток."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction буде з'являтися автоматично коли ви відкриваєте посилання настільного додатку. Використовуйте мишу чи клавіатуру, щоб обрати додаток для відкриття посилання чи файлу."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Функції:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Оберіть додаток, щоб відкрити"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Покажіть місце розташування перед відкриттям"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Редагуйте URL перед відкриттям"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "Показати підказку щодо небезпечного посилання"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Навігація клавіатурою"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "Натисніть середньою клавішею миші, щоб відкрити у кількох програмах"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "Оберіть веб-переглядач, щоб відкриття посилання"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "Оберіть додаток, щоб відкрити зображення"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction має чудову підтримку клавіатури"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Також підтримуються дії на робочому столі"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Додано опцію «Показати в папці» для файлів"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Показати шляхи до файлів порталу документів"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Виправлено помилку дій на робочому столі"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Виправлено помилку під час відкриття за допомогою Libreoffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Підтримка дій на робочому столі"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Підтримка snap-додатків"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "Покращено дизайн"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Нова піктограма"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
