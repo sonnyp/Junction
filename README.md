@@ -157,6 +157,18 @@ Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
 [Reference](https://github.com/sonnyp/Junction/issues/9)
 
 </details>
+  
+<details>
+  <summary>Environment variables in desktop files</summary>
+    
+```
+# Before
+Exec=firefox %u
+# After
+Exec=env MOZ_USE_XINPUT2=1 firefox %u
+```
+
+</details>
 
 ## Troubleshooting
 
