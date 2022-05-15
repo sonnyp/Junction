@@ -8,255 +8,257 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-05-16 09:17+0000\n"
+"Last-Translator: George Dumitrescu <dumitrescugeorge@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/junction/junction/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr ""
+msgstr "Selector de aplicații"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction vă permite să alegeți aplicația pentru a deschide fișiere și link-uri."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "După instalare, asigurați-vă că lansați aplicația."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction va apărea automat când deschideți un link într-o aplicație desktop. Utilizați navigarea cu mouse-ul sau tastatura pentru a alege aplicația cu care să deschideți linkul sau fișierul."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Caracteristici:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Alegeți aplicația cu care să deschideți"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Arată locația înainte de deschidere"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Editați adresa URL înainte de deschidere"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "Afișați un indiciu pentru link nesigur"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Navigare prin tastatură"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "Faceți clic din mijloc pentru a deschide în mai multe aplicații"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "Alegeți browserul cu care deschideți linkul"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "Alegeți aplicația cu care deschideți imaginea"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction oferă un suport excelent pentru tastatură"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Acțiunile desktop sunt și ele acceptate"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Adăugați o opțiune „Afișare în dosar” pentru fișiere"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Dezvăluie căile fișierelor portal de documente"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Remediere erori pentru acțiunile desktop"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Remediere erori la deschiderea cu Libreoffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Sprijină acțiuni desktop"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Suportă aplicații snap"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "Îmbunătățiți designul"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Pictogramă nouă"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Adăugați un API de protocol x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "Nu setați automat ca aplicație implicită"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "Remediați opțiunile lipsă"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Limitați numărul de opțiuni la 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "Adăugați o opțiune pentru a deschide cu orice aplicație"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "Adăugați un panou Informații de sistem în caseta de dialog despre"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "Remediere pentru aplicațiile care nu acceptă URI-uri"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Adăugați o opțiune pentru a afișa numele aplicațiilor"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "Adăugați un buton de meniu"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Îmbunătățiți utilizarea tastaturii"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Îmbunătățiți utilizarea CLI"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Acceptă deschiderea mai multor URI-uri"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "Acceptă activarea D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Folosește libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Remediere pentru aplicațiile lipsă"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Adăugați o fereastră de Comenzi rapide - accesibilă cu &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "Aceasta este prima lansare a lui Junction. Sperăm să vă placă."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr ""
+msgstr "George Dumitrescu <dumitrescugeorge@gmail.com>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Arată"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Arată în dosar"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "Toate aplicațiile"
 
 #: src/AppButton.js:218
 msgid "View All"
-msgstr ""
+msgstr "Vezi tot"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "Acest site nu are securitate. Un atacator poate vedea orice informație pe care o trimiteți sau poate controla conținutul pe care îl vedeți."
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "Aruncați și închideți"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copiați în clipboard"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Selectați aplicația următoare/anterioră"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "Deschideți cu aplicația selectată"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Deschideți cu aplicația selectată și rămâne activ"
 
 #: src/ShortcutsWindow.ui:66
 msgid "Open with application at position"
-msgstr ""
+msgstr "Deschide cu aplicația la poziția"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Comenzi rapide de la tastatură"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "Ieși"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr ""
+msgstr "Testează Junction"
 
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Setați Junction ca implicit pentru Web"
 
 #: src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
-msgstr ""
+msgstr "Despre Junction"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "Afișați numele"
