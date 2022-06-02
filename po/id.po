@@ -8,100 +8,103 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-03 14:20+0000\n"
+"Last-Translator: I. Musthafa <i.musthafa66@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/junction/junction/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr ""
+msgstr "Pemilih aplikasi"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction memungkinkan Anda memilih aplikasi untuk membuka berkas dan tautan."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "Setelah memasang, pastikan untuk memulai aplikasi."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction akan muncul secara otomatis ketika Anda membuka tautan di aplikasi desktop. Gunakan tetikus atau navigasi papan tik untuk memilih aplikasi untuk membuka tautan atau berkas."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Fitur:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Pilih aplikasi untuk membuka sesuatu"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Tampilkan lokasi sebelum membuka"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Sunting URL sebelum membukanya"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "Tampilkan petunjuk tautan tidak aman"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Navigasi papan tik"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "Klik tengah untuk membuka dalam beberapa aplikasi"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "Pilih peramban untuk membuka tautan tersebut"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "Pilih aplikasi untuk membuka gambar tersebut"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction memiliki dukungan bagus untuk papan tik"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Tindakan desktop juga didukung"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Tambahkan opsi \"Ungkap di Folder\" untuk berkas"
 
 #: data/re.sonny.Junction.metainfo.xml:68
+#, fuzzy
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Ungkap jalur berkas dokumen"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Perbaikan kutu untuk tindakan desktop"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Perbaikan kutu ketika membuka LibreOffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
@@ -191,72 +194,73 @@ msgstr ""
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr ""
+msgstr "I. Musthafa <i.musthafa66@gmail.com>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Ungkap"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Ungkap di Folder"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "Semua Aplikasi"
 
 #: src/AppButton.js:218
 msgid "View All"
-msgstr ""
+msgstr "Lihat Semua"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "Situs ini tidak memiliki pengaman. Penyerang bisa melihat informasi apa pun yang Anda kirim atau mengontrol konten yang Anda lihat."
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "Buang dan tutup"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Salin ke Papan Klip"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Pilih aplikasi berikut/sebelumnya"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "Buka dengan aplikasi yang dipilih"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Buka dengan aplikasi yang dipilih dan tetap aktif"
 
 #: src/ShortcutsWindow.ui:66
 msgid "Open with application at position"
-msgstr ""
+msgstr "Buka dengan aplikasi pada posisi"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Pintasan Papan Tik"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "Keluar"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr ""
+msgstr "Tes Junction"
 
 #: src/welcome.ui:48
+#, fuzzy
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Atur Junction sebagai Web baku"
 
 #: src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
-msgstr ""
+msgstr "Tentang Junction"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "Tampilkan nama"
