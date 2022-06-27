@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-06-27 18:21+0000\n"
+"PO-Revision-Date: 2022-06-28 19:20+0000\n"
 "Last-Translator: Javad Miraftabzadeh <javad.miraftabzadeh@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/junction/junction/fa/>\n"
 "Language: fa\n"
@@ -63,19 +63,19 @@ msgstr "ویرایش پیوند پیش از باز کردن"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "مشخص کردن لینک های نا امن"
+msgstr "برای پیوندها نا امن یک تذکر نمایش بده"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "ناوبری با صفحه کلید"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "با وسط کلیک، چند برنامه را باز کنید"
+msgstr "برای باز کردن در چندین برنامه کلیک وسط کنید"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr "مرورگر را برای باز کردن لینک انتخاب کنید"
+msgstr "مرورگر را برای باز کردن پیوند انتخاب کنید"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
@@ -87,7 +87,7 @@ msgstr "تقاطع پشتیبانی خوبی برای استفاده از کیب
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr "فعالیت های دسکتاپ هم پشتیبانی میشود"
+msgstr "عملیات دسکتاپ هم پشتیبانی می‌شود"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
