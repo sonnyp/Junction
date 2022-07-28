@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-06-11 16:19+0000\n"
-"Last-Translator: fawaz006 <fawaz27000@hotmail.com>\n"
+"PO-Revision-Date: 2022-07-29 15:23+0000\n"
+"Last-Translator: Ibrahim Muhammad <ebraheem010@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/junction/junction/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr "تقاطع"
+msgstr "جانكشن"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
@@ -31,11 +31,11 @@ msgstr "منتقي التطبيقات"
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy و BrowserChooser و Braus و Browserosaurus و Finicky و Buffet و OpenIn و BrowserSelect؛"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "يتيح لك منتقي التطبيقات اختيار التطبيق لفتح الملفات والروابط."
+msgstr "يتيح لك جانكشن اختيار التطبيق لفتح الملفات والروابط."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
@@ -51,214 +51,214 @@ msgstr "المميزات:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "يرجى اختيار تطبيق للفتح"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "إظهار المكان قبل الفتح"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "تعديل الرابط قبل الفتح"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "عرض ملاحظة للروابط غير الآمنة"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "التحكم باستخدام لوحة المفاتيح"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "النقر في المنتصف للفتح في تطبيقات عدة"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "يرجى اختيار متصفح لفتح الرابط"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "يرجى اختيار تطبيق لفتح الصورة"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "جانكشن يقدم دعما كبيرا لاستخدام لوحة المفاتيح"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "أوامر سطح المكتب مدعومة أيضا"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "إضافة خيار \"عرض في المجلد\" للملفات"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "إظهار مسارات الملفات لبوابة المستند"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "إصلاح خلل أوامر سطح المكتب"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "إصلاح خلل عند الفتح باستخدام ليبرا أوفيس"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "دعم أوامر سطح المكتب"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "دعم تطبيقات سناب"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "تحسين التصميم"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "أيقونة جديدة"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "إضافة بروتوكول واجهة x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "عدم التحديد كتطبيق افتراضي"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "إصلاح خيارات ناقصة"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "تقييد الخيارات إلى 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "إضافة خيار للفتح باستخدام أي تطبيق"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "إضافة لوحة معلومات النظام إلى معلومات التطبيق"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "إصلاح للتطبيقات التي لا تدعم الروابط"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "إضافة خيار لعرض أسماء التطبيقات"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "إضافة زر للقائمة"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "تحسين استخدام لوحة المفاتيح"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "تحسين استخدام واجهة سطر الأوامر"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "دعم فتح روابط متعددة"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "دعم تنشيط D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "استخدام libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "إصلاح للتطبيقات الناقصة"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "إضافة نافذة للاختصارات – يمكن الوصول إليها باستخدام &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "هذه هي أول نسخة من جانكشن. نأمل أن تنال إعجابك."
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr ""
+msgstr "Ibrahim Muhammad <ibrahim.muhammad.mu@outlook.com>"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "عرض"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "عرض في المجلد"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "جميع التطبيقات"
 
 #: src/AppButton.js:218
 msgid "View All"
-msgstr ""
+msgstr "عرض الكل"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "هذا الموقع ليس آمنا. يمكن للمهاجم رؤية أي معلومات يتم إرسالها أو التحكم بالمحتوى المعروض."
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
-msgstr ""
+msgstr "تجاهل وإغلاق"
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "نسخ إلى الحافظة"
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
-msgstr ""
+msgstr "تحديد التطبيق التالي/السابق"
 
 #: src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
-msgstr ""
+msgstr "فتح باستخدام التطبيق الذي تم تحديده"
 
 #: src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "فتح باستخدام التطبيق الذي تم تحديده والبقاء نشطا"
 
 #: src/ShortcutsWindow.ui:66
 msgid "Open with application at position"
-msgstr ""
+msgstr "فتح باستخدام التطبيق في الوضع"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "اختصارات لوحة المفاتيح"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "خروج"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr ""
+msgstr "اختبار جانكشن"
 
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "تعيين جانكشن تطبيقا افتراضيا للويب"
 
 #: src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
-msgstr ""
+msgstr "عن جانكشن"
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr ""
+msgstr "عرض الأسماء"
