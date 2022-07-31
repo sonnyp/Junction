@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-23 18:56+0100\n"
-"PO-Revision-Date: 2021-12-26 00:51+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"PO-Revision-Date: 2022-05-14 18:03+0000\n"
+"Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/junction/junction/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -90,87 +90,103 @@ msgid "Desktop actions are supported too"
 msgstr "Les actions de bureau sont aussi prises en charge"
 
 #: data/re.sonny.Junction.metainfo.xml:67
+msgid "Add an option \"Reveal in Folder\" for files"
+msgstr "Ajoute une option \"Révéler dans le dossier\" pour les fichiers"
+
+#: data/re.sonny.Junction.metainfo.xml:68
+msgid "Reveal document portal file paths"
+msgstr "Révéler les chemins de fichier du portail de documents"
+
+#: data/re.sonny.Junction.metainfo.xml:69
+msgid "Bug fix for desktop actions"
+msgstr "Correction de bogues pour les actions de bureau"
+
+#: data/re.sonny.Junction.metainfo.xml:70
+msgid "Bug fix when opening with Libreoffice"
+msgstr "Correction de bogues lors de l'ouverture avec Libreoffice"
+
+#: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
 msgstr "Prend en charge les actions de bureau"
 
-#: data/re.sonny.Junction.metainfo.xml:68
+#: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
 msgstr "Prend en charge les applications snap"
 
-#: data/re.sonny.Junction.metainfo.xml:75
-#: data/re.sonny.Junction.metainfo.xml:92
+#: data/re.sonny.Junction.metainfo.xml:85
+#: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
 msgstr "Conception améliorée"
 
-#: data/re.sonny.Junction.metainfo.xml:76
+#: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
 msgstr "Nouvelle icône"
 
-#: data/re.sonny.Junction.metainfo.xml:77
+#: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
 msgstr "Ajouter une API de protocole x-junction://"
 
-#: data/re.sonny.Junction.metainfo.xml:78
+#: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
 msgstr "Ne pas définir automatiquement comme application par défaut"
 
-#: data/re.sonny.Junction.metainfo.xml:79
+#: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
 msgstr "Correction des options manquantes"
 
-#: data/re.sonny.Junction.metainfo.xml:80
+#: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
 msgstr "Limiter le nombre d’options à 4"
 
-#: data/re.sonny.Junction.metainfo.xml:81
+#: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
 msgstr "Ajouter une option permettant d’ouvrir avec n’importe quelle application"
 
-#: data/re.sonny.Junction.metainfo.xml:82
+#: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
 msgstr "Ajouter un panneau d’informations sur le système dans la boîte de dialogue à propos"
 
-#: data/re.sonny.Junction.metainfo.xml:89
+#: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
 msgstr "Correction pour les applications qui ne prend pas en charge les URI"
 
-#: data/re.sonny.Junction.metainfo.xml:90
+#: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
 msgstr "Ajouter une option pour afficher le nom des applications"
 
-#: data/re.sonny.Junction.metainfo.xml:91
+#: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
 msgstr "Ajouter un bouton de menu"
 
-#: data/re.sonny.Junction.metainfo.xml:93
+#: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
 msgstr "Améliorer l’utilisation du clavier"
 
-#: data/re.sonny.Junction.metainfo.xml:94
+#: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
 msgstr "Améliorer l’utilisation du CLI"
 
-#: data/re.sonny.Junction.metainfo.xml:95
+#: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
 msgstr "Prise en charge de l’ouverture de plusieurs URI"
 
-#: data/re.sonny.Junction.metainfo.xml:97
+#: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
 msgstr "Prend en charge l’activation du D-Bus"
 
-#: data/re.sonny.Junction.metainfo.xml:98
+#: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
 msgstr "Utiliser libadwaita"
 
-#: data/re.sonny.Junction.metainfo.xml:105
+#: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
 msgstr "Correction pour les applications manquantes"
 
-#: data/re.sonny.Junction.metainfo.xml:106
+#: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
 msgstr "Ajout d’une fenêtre de raccourcis - accessible avec &amp;lt;Ctrl&amp;gt;?"
 
-#: data/re.sonny.Junction.metainfo.xml:112
+#: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Ceci est la première version de Junction. Nous espérons qu’elle vous plaira."
 
@@ -179,21 +195,57 @@ msgstr "Ceci est la première version de Junction. Nous espérons qu’elle vous
 msgid "translator-credits"
 msgstr "Jeanne Lavoie"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Afficher les noms"
+#: src/AppButton.js:158
+msgid "Reveal"
+msgstr "Révéler"
 
-#: src/window.ui:64
+#: src/AppButton.js:159
+msgid "Reveal in Folder"
+msgstr "Révéler dans le dossier"
+
+#: src/AppButton.js:202
+msgid "All Applications"
+msgstr "Toutes les applications"
+
+#: src/AppButton.js:218
+msgid "View All"
+msgstr "Tout voir"
+
+#: src/Entry.js:23
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les informations que vous envoyez, ou contrôler le contenu que vous voyez."
+
+#: src/ShortcutsWindow.ui:19
+msgid "Discard and close"
+msgstr "Rejeter et fermer"
+
+#: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
-#: src/window.ui:72 src/welcome.ui:67
+#: src/ShortcutsWindow.ui:37
+msgid "Select next/previous application"
+msgstr "Sélectionner l'application suivante / précédente"
+
+#: src/ShortcutsWindow.ui:46
+msgid "Open with selected application"
+msgstr "Ouvrir avec l'application sélectionnée"
+
+#: src/ShortcutsWindow.ui:57
+msgid "Open with selected application and stay active"
+msgstr "Ouvrir avec l'application sélectionnée et rester actif"
+
+#: src/ShortcutsWindow.ui:66
+msgid "Open with application at position"
+msgstr "Ouvrir avec l’application à la position"
+
+#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.ui:76 src/welcome.ui:71
-msgid "About Junction"
-msgstr "À propos de Junction"
+#: src/ShortcutsWindow.ui:86
+msgid "Quit"
+msgstr "Quitter"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
@@ -203,17 +255,13 @@ msgstr "Tester Junction"
 msgid "Set Junction as default for Web"
 msgstr "Définir Junction par défaut pour le Web"
 
-#: src/AppButton.js:115
-msgid "View All"
-msgstr "Tout voir"
+#: src/welcome.ui:71 src/window.ui:76
+msgid "About Junction"
+msgstr "À propos de Junction"
 
-#: src/AppButton.js:161
-msgid "All Applications"
-msgstr "Toutes les applications"
-
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les informations que vous envoyez, ou contrôler le contenu que vous voyez."
+#: src/window.ui:60
+msgid "Show names"
+msgstr "Afficher les noms"
 
 #~ msgid "Add Polish translation"
 #~ msgstr "Ajout de la traduction en polonais"
