@@ -1,9 +1,9 @@
 {
   "app-id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "42beta",
+  "runtime-version": "42",
   "sdk": "org.gnome.Sdk",
-  "command": "junction-wrapper",
+  "command": "re.sonny.Junction",
   "finish-args": [
     "--share=ipc",
     "--socket=fallback-x11",
@@ -46,31 +46,14 @@
       ]
     },
     {
-      "name": "wrapper",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -D junction-wrapper /app/bin/junction-wrapper"
-      ],
-      "sources": [
-        {
-          "type": "script",
-          "dest-filename": "junction-wrapper",
-          "commands": [
-            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/snapd/desktop:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
-            "re.sonny.Junction \"$@\""
-          ]
-        }
-      ]
-    },
-    {
       "name": "libportal",
       "buildsystem": "meson",
       "config-opts": ["-Ddocs=false", "-Dvapi=false", "-Dbackends=gtk4"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/flatpak/libportal/releases/download/0.5/libportal-0.5.tar.xz",
-          "sha256": "d8c8cb18a34e5eeb26a39c94044c955995b01de0e139caac5e18c076cf821b3b"
+          "url": "https://github.com/flatpak/libportal/releases/download/0.6/libportal-0.6.tar.xz",
+          "sha256": "88a12c3ba71bc31acff7238c280de697d609cebc50830c3766776ec35abc6566"
         }
       ]
     },
@@ -78,11 +61,7 @@
       "name": "Junction",
       "buildsystem": "meson",
       "builddir": true,
-      "sources": [{ "type": "dir", "path": "./" }],
-      "post-install": [
-        "desktop-file-edit --set-key=Exec --set-value='/app/bin/junction-wrapper %u' /app/share/applications/re.sonny.Junction.desktop",
-        "sed -i 's/re.sonny.Junction --gapplication-service/junction-wrapper --gapplication-service/g' /app/share/dbus-1/services/re.sonny.Junction.service"
-      ]
+      "sources": [{ "type": "dir", "path": "./" }]
     }
   ]
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env -S gjs -m
+#!/usr/bin/env -S XDG_DATA_DIRS=${XDG_DATA_DIRS}:/run/host/usr/share:/var/lib/snapd/desktop:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share gjs -m
 
 // -*- mode: js; -*-
 
