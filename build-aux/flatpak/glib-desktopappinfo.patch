@@ -7,10 +7,10 @@
 # https://gitlab.gnome.org/GNOME/gnome-build-meta/-/blob/master/elements/sdk/glib.bst
 
 diff --git a/gio/gdesktopappinfo.c b/gio/gdesktopappinfo.c
-index 63ef0c045..fa5ade90a 100644
+index 60d6deb..b6e4e7b 100644
 --- a/gio/gdesktopappinfo.c
 +++ b/gio/gdesktopappinfo.c
-@@ -1787,47 +1787,11 @@ g_desktop_app_info_load_from_keyfile (GDesktopAppInfo *info,
+@@ -1851,51 +1851,11 @@ g_desktop_app_info_load_from_keyfile (GDesktopAppInfo *info,
                                      G_KEY_FILE_DESKTOP_GROUP,
                                      G_KEY_FILE_DESKTOP_KEY_TRY_EXEC,
                                      NULL);
@@ -43,6 +43,10 @@ index 63ef0c045..fa5ade90a 100644
 -      else
 -        {
 -          char *t;
+-
+-          /* Since @exec is not an empty string, there must be at least one
+-           * argument, so dereferencing argv[0] should return non-NULL. */
+-          g_assert (argc > 0);
 -          t = g_find_program_in_path (argv[0]);
 -          g_strfreev (argv);
 -
