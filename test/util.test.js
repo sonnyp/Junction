@@ -1,18 +1,14 @@
-import "./setup.js";
-
-import { test } from "./uvu.js";
-import * as assert from "./assert.js";
+import "gi://Gtk?version=4.0";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 
+import tst, { assert } from "../src/troll/tst/tst.js";
+
 import { parse, prefixCommandLineForHost, readResource } from "../src/util.js";
 
-const home_dir = GLib.get_home_dir();
+const test = tst("utils");
 
-const loop = GLib.MainLoop.new(null, false);
-test.after(() => {
-  loop.quit();
-});
+const home_dir = GLib.get_home_dir();
 
 test("parse", () => {
   assert.is(parse("~").to_string(), `file://${home_dir}`);
@@ -86,7 +82,7 @@ test("readResource", () => {
     content_type: "x-scheme-handler/http",
   });
 
-  const not_found_path = `/tmp/I-DO-NOT-EXIST-${Math.random()}`
+  const not_found_path = `/tmp/I-DO-NOT-EXIST-${Math.random()}`;
   assert.equal(read(not_found_path), {
     resource: not_found_path,
     scheme: "file",
@@ -110,5 +106,4 @@ test("prefixCommandLineForHost", () => {
   if (FLATPAK_ID) GLib.setenv("FLATPAK_ID", FLATPAK_ID, true);
 });
 
-test.run();
-loop.run();
+export default test;

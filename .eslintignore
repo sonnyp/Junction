@@ -3,5 +3,4 @@ install/
 flatpak/
 node_modules/
 repo/
-test/uvu.js
-test/assert.js
+src/troll/
