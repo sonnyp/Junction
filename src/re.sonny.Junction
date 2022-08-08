@@ -4,12 +4,24 @@
 
 globalThis.__DEV__ = false;
 
+import Gio from "gi://Gio";
+import GLib from "gi://GLib";
 import { programInvocationName } from "system";
 
-// eslint-disable-next-line import/no-unresolved
-import main from "file://@pkgdatadir@/main.js";
+const resource = Gio.resource_load(
+  "@datadir@/@PACKAGE_NAME@/re.sonny.Junction.gresource",
+);
+Gio.resources_register(resource);
 
-main([programInvocationName, ...ARGV], {
-  version: "@PACKAGE_VERSION@",
-  datadir: "@datadir@",
-});
+const loop = GLib.MainLoop.new(null, false);
+// eslint-disable-next-line import/no-unresolved
+import("resource:///re/sonny/Junction/main.js")
+  .then(({ default: main }) => {
+    loop.quit();
+    main([programInvocationName, ...ARGV], {
+      version: "@PACKAGE_VERSION@",
+      datadir: "@datadir@",
+    });
+  })
+  .catch(logError);
+loop.run();

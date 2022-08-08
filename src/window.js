@@ -3,15 +3,17 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 import GLib from "gi://GLib";
 
-import { relativePath, readResource, openWithAction } from "./util.js";
+import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
+import Interface from "./window.ui";
 
 export default function Window({ application, file }) {
-  const builder = Gtk.Builder.new_from_file(relativePath("./window.ui"));
+  const builder = Gtk.Builder.new_from_resource(Interface);
 
   const window = builder.get_object("window");
+  if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
 
   const { content_type, resource, scheme } = readResource(file);

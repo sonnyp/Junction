@@ -6,8 +6,16 @@ globalThis.__DEV__ = true;
 
 import { programInvocationName } from "system";
 import GLib from "gi://GLib";
+import Gio from "gi://Gio";
+import { build as gjspack } from "./troll/gjspack/src/gjspack.js";
 
-const byteArray = imports.byteArray;
+const { gresource_path, prefix } = gjspack({
+  app_id: "re.sonny.Junction",
+  entry: Gio.File.new_for_path("./src/main.js"),
+  output: Gio.File.new_for_path("./src"),
+});
+const resource = Gio.resource_load(gresource_path);
+Gio.resources_register(resource);
 
 const [filename] = GLib.filename_from_uri(import.meta.url);
 const dirname = GLib.path_get_dirname(filename);
@@ -19,7 +27,7 @@ const [, , stderr, status] = GLib.spawn_command_line_sync(
   )}`,
 );
 if (status !== 0) {
-  throw new Error(byteArray.toString(stderr));
+  throw new Error(new TextDecoder().decode(stderr));
 }
 
 GLib.setenv(
@@ -29,14 +37,13 @@ GLib.setenv(
 );
 
 const loop = GLib.MainLoop.new(null, false);
-import("./src/main.js")
+import(`resource://${prefix}/main.js`)
   .then(({ default: main }) => {
     loop.quit();
     main([programInvocationName, ...ARGV], {
-      version: "devel",
+      version: "dev",
       datadir: ".",
     });
   })
   .catch(logError);
-
 loop.run();

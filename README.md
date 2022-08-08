@@ -157,10 +157,10 @@ Save, run `update-desktop-database ~/.local/share/applications`, enjoy.
 [Reference](https://github.com/sonnyp/Junction/issues/9)
 
 </details>
-  
+
 <details>
   <summary>Environment variables in desktop files</summary>
-    
+
 ```
 # Before
 Exec=firefox %u
@@ -209,6 +209,8 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 </details>
 
 ## In the media
+
+[itsfoss.com](https://itsfoss.com/junction/) - 03/2022
 
 [youtube.com - Junction 1.4 | Choose the application to open files and links](https://www.youtube.com/watch?v=rfVd9bhRWxs) - 12/2021
 

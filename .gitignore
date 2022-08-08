@@ -10,3 +10,4 @@ install
 *~
 *.compiled
 Junction.flatpak
+*.gresource

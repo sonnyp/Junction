@@ -2,10 +2,11 @@ import Gtk from "gi://Gtk";
 import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
-import { relativePath, spawn_sync } from "./util.js";
+import { spawn_sync } from "./util.js";
+import Interface from "./welcome.ui";
 
 export default function Welcome({ application }) {
-  const builder = Gtk.Builder.new_from_file(relativePath("./welcome.ui"));
+  const builder = Gtk.Builder.new_from_resource(Interface);
 
   const window = builder.get_object("welcome");
   if (__DEV__) window.add_css_class("devel");

@@ -26,15 +26,9 @@ export function promiseTask(object, method, finish, ...args) {
   });
 }
 
-export function relativePath(path) {
-  const [filename] = GLib.filename_from_uri(import.meta.url);
-  const dirname = GLib.path_get_dirname(filename);
-  return GLib.canonicalize_filename(path, dirname);
-}
-
 export function loadStyleSheet(path) {
   const provider = new Gtk.CssProvider();
-  provider.load_from_path(path);
+  provider.load_from_resource(path);
   Gtk.StyleContext.add_provider_for_display(
     Gdk.Display.get_default(),
     provider,

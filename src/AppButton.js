@@ -5,15 +5,11 @@ import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
 
-import { relativePath, openWithApplication, promiseTask } from "./util.js";
+import { openWithApplication, promiseTask } from "./util.js";
 import { settings } from "./common.js";
+import Interface from "./AppButton.ui";
 
 const portal = new Xdp.Portal();
-
-const { byteArray } = imports;
-
-const [, content] = GLib.file_get_contents(relativePath("./AppButton.ui"));
-const template = byteArray.toString(content);
 
 export function TileButton({
   label,
@@ -22,7 +18,7 @@ export function TileButton({
   icon_size,
   onClicked,
 }) {
-  const builder = Gtk.Builder.new_from_string(template, template.length);
+  const builder = Gtk.Builder.new_from_resource(Interface);
   const button = builder.get_object("button");
 
   button.set_tooltip_text(tooltip);
@@ -43,7 +39,7 @@ export function TileButton({
 }
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
-  const builder = Gtk.Builder.new_from_string(template, template.length);
+  const builder = Gtk.Builder.new_from_resource(Interface);
   const button = builder.get_object("button");
 
   const name = appInfo.get_name();

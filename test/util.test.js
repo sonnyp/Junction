@@ -2,7 +2,7 @@ import "gi://Gtk?version=4.0";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 
-import tst, { assert } from "../src/troll/tst/tst.js";
+import tst, { assert } from "../troll/tst/tst.js";
 
 import { parse, prefixCommandLineForHost, readResource } from "../src/util.js";
 
