@@ -5,9 +5,10 @@ import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
 
-import { openWithApplication, promiseTask } from "./util.js";
+import { openWithApplication } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.ui";
+import { promiseTask } from "../troll/src/util.js";
 
 const portal = new Xdp.Portal();
 

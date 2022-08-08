@@ -2,9 +2,6 @@ import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
 import Gdk from "gi://Gdk";
 import Gio from "gi://Gio";
-import system from "system";
-
-const { byteArray } = imports;
 
 export function logEnum(obj, value) {
   console.log(
@@ -12,18 +9,6 @@ export function logEnum(obj, value) {
       return v === value;
     })[0],
   );
-}
-
-export function promiseTask(object, method, finish, ...args) {
-  return new Promise((resolve, reject) => {
-    object[method](...args, (self, asyncResult) => {
-      try {
-        resolve(object[finish](asyncResult));
-      } catch (err) {
-        reject(err);
-      }
-    });
-  });
 }
 
 export function loadStyleSheet(path) {
@@ -60,32 +45,14 @@ export function parse(str) {
   return GLib.Uri.parse(str, GLib.UriFlags.NONE);
 }
 
-export function getGIRepositoryVersion(repo) {
-  const {
-    get_major_version = () => "?",
-    get_minor_version = () => "?",
-    get_micro_version = () => "?",
-  } = repo;
-  return `${get_major_version()}.${get_minor_version()}.${get_micro_version()}`;
-}
-
-export function getGLibVersion() {
-  return `${GLib.MAJOR_VERSION}.${GLib.MINOR_VERSION}.${GLib.MICRO_VERSION}`;
-}
-
-export function getGjsVersion() {
-  const v = system.version.toString();
-  return `${v[0]}.${+(v[1] + v[2])}.${+(v[3] + v[4])}`;
-}
-
 export function getOSRelease() {
   const regexp = /([A-Z][A-Z_0-9]+)=(.*)/;
 
   function load(path) {
     try {
       const file = Gio.File.new_for_path(path);
-      const [, content] = file.load_contents(null);
-      return byteArray.toString(content);
+      const [, contents] = file.load_contents(null);
+      return new TextDecoder().decode(contents);
     } catch (err) {
       if (err.code !== Gio.IOErrorEnum.NOT_FOUND) {
         logError(err);

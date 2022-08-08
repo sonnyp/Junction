@@ -4,13 +4,13 @@ import { gettext as _ } from "gettext";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
 
+import { getOSRelease, getFlatpakInfo } from "./util.js";
+
 import {
   getGIRepositoryVersion,
   getGjsVersion,
   getGLibVersion,
-  getOSRelease,
-  getFlatpakInfo,
-} from "./util.js";
+} from "../troll/src/util.js";
 
 export default function About({ application, datadir, version }) {
   const os_release = getOSRelease();
