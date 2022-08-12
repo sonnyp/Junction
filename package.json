@@ -1,6 +1,8 @@
 {
   "private": true,
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-syntax-import-assertions": "^7.18.6",
     "@prettier/plugin-xml": "^2.2.0",
     "eslint": "^8.20.0",
     "eslint-plugin-import": "^2.26.0",

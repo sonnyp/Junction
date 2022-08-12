@@ -20,8 +20,8 @@ export function TileButton({
   onClicked,
 }) {
   const builder = Gtk.Builder.new_from_resource(Interface);
-  const button = builder.get_object("button");
 
+  const button = builder.get_object("button");
   button.set_tooltip_text(tooltip);
   const glabel = builder.get_object("label");
   glabel.label = label;
@@ -41,8 +41,8 @@ export function TileButton({
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
   const builder = Gtk.Builder.new_from_resource(Interface);
-  const button = builder.get_object("button");
 
+  const button = builder.get_object("button");
   const name = appInfo.get_name();
   button.set_tooltip_text(name);
   const label = builder.get_object("label");

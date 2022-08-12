@@ -7,6 +7,9 @@ globalThis.__DEV__ = false;
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
+import Adw from 'gi://Adw';
+
+Adw.init();
 
 const resource = Gio.resource_load(
   "@datadir@/@PACKAGE_NAME@/re.sonny.Junction.gresource",
@@ -15,7 +18,7 @@ Gio.resources_register(resource);
 
 const loop = GLib.MainLoop.new(null, false);
 // eslint-disable-next-line import/no-unresolved
-import("resource:///re/sonny/Junction/main.js")
+import("resource:///re/sonny/Junction/src/main.js")
   .then(({ default: main }) => {
     loop.quit();
     main([programInvocationName, ...ARGV], {

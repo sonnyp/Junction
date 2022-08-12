@@ -1,7 +1,6 @@
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { bindtextdomain, textdomain } from "gettext";
-
 import Application from "./application.js";
 
 GLib.set_prgname("re.sonny.Junction");

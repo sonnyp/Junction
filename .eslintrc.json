@@ -1,0 +1,58 @@
+{
+  "env": {
+    "es2022": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "plugins": ["@babel/plugin-syntax-import-assertions"]
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "globals": {
+    "Debugger": "readonly",
+    "GIRepositoryGType": "readonly",
+    "Intl": "readonly",
+    "imports": "readonly",
+    "pkg": "readonly",
+    "log": "readonly",
+    "logError": "readonly",
+    "print": "readonly",
+    "printerr": "readonly",
+    "ARGV": "readonly",
+    "window": "readonly",
+    "globalThis": "readonly",
+    "__DEV__": "readonly",
+    "TextDecoder": "readonly",
+    "TextEncoder": "readonly",
+    "console": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "no-restricted-globals": ["error", "window", "Intl", "Debugger"],
+    "strict": ["error"],
+    "eqeqeq": ["error", "always"],
+    "no-implicit-globals": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "import/extensions": ["error", "ignorePackages"],
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": ["gi://*", "cairo", "gettext", "system"]
+      }
+    ]
+  }
+}

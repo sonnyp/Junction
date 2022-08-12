@@ -7,11 +7,9 @@ import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
-import Interface from "./window.ui";
+import builder from "./window.ui" assert { type: "builder" };
 
 export default function Window({ application, file }) {
-  const builder = Gtk.Builder.new_from_resource(Interface);
-
   const window = builder.get_object("window");
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
