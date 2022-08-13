@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-03-18 08:58+0000\n"
+"PO-Revision-Date: 2022-08-04 14:23+0000\n"
 "Last-Translator: Kaz Sibuya <sibuyakazokuu@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/junction/junction/ja/>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -240,10 +240,8 @@ msgid "Open with selected application and stay active"
 msgstr ""
 
 #: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
 msgid "Open with application at position"
-msgstr "アプリケーションを選択して開く"
+msgstr "表示されたアプリケーションの位置の番号を選択して表示"
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
@@ -251,7 +249,7 @@ msgstr "キーボードショートカット"
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr ""
+msgstr "終了"
 
 #: src/welcome.ui:37
 msgid "Test Junction"
