@@ -3,9 +3,11 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
 import { spawn_sync } from "./util.js";
-import builder from "./welcome.blp" assert { type: "builder" };
+import Interface from "./welcome.blp";
 
 export default function Welcome({ application }) {
+  const builder = Gtk.Builder.new_from_resource(Interface);
+
   const window = builder.get_object("welcome");
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
