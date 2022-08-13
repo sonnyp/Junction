@@ -1,0 +1,84 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow window {
+  resizable: false;
+  decorated: false;
+  content:
+  Box {
+    orientation: vertical;
+
+    Box list {
+      styles [
+        "list",
+      ]
+
+      orientation: horizontal;
+      homogeneous: true;
+      spacing: 12;
+    }
+
+    Box {
+      Entry entry {
+        hexpand: true;
+        input-purpose: url;
+        xalign: 0.5;
+
+        styles [
+          "uri",
+        ]
+      }
+
+      MenuButton menu_button {
+        popover: menu_popover;
+        icon-name: "open-menu-symbolic";
+        margin-start: 6;
+        valign: center;
+
+        styles [
+          "circular",
+          "flat",
+        ]
+      }
+    }
+
+    styles [
+      "content",
+    ]
+  }
+
+  ;
+
+  styles [
+    "main",
+  ]
+}
+
+PopoverMenu menu_popover {
+  menu-model: menu_model;
+  halign: end;
+}
+
+menu menu_model {
+  item {
+    label: _("Show names");
+    action: "win.show-app-names";
+  }
+
+  item {
+    label: _("Copy to Clipboard");
+    action: "win.copy";
+  }
+
+  section {
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "app.shortcuts";
+    }
+
+    item {
+      label: _("About Junction");
+      action: "app.about";
+    }
+  }
+}

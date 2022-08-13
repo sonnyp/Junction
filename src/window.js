@@ -7,7 +7,7 @@ import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
-import builder from "./window.ui" assert { type: "builder" };
+import builder from "./window.blp" assert { type: "builder" };
 
 export default function Window({ application, file }) {
   const window = builder.get_object("window");

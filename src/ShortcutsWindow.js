@@ -1,4 +1,4 @@
-import builder from "./ShortcutsWindow.ui" assert { type: "builder" };
+import builder from "./ShortcutsWindow.blp" assert { type: "builder" };
 
 export default function ShortcutsWindow({ application }) {
   const window = builder.get_object("shortcuts_window");

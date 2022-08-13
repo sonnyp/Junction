@@ -7,7 +7,7 @@ import Xdp from "gi://Xdp";
 
 import { openWithApplication } from "./util.js";
 import { settings } from "./common.js";
-import Interface from "./AppButton.ui";
+import Interface from "./AppButton.blp";
 import { promiseTask } from "../troll/src/util.js";
 
 const portal = new Xdp.Portal();

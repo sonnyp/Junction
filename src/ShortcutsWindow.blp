@@ -1,0 +1,51 @@
+using Gtk 4.0;
+
+ShortcutsWindow shortcuts_window {
+  modal: true;
+
+  ShortcutsSection {
+    ShortcutsGroup {
+      ShortcutsShortcut {
+        accelerator: "Escape <Primary>W";
+        title: _("Discard and close");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "<Primary>C";
+        title: _("Copy to Clipboard");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "Left Right";
+        title: _("Select next/previous application");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "Return space";
+        title: _("Open with selected application");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "<Primary>Return <Primary>space";
+        title: _("Open with selected application and stay active");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "1...9";
+        title: _("Open with application at position");
+      }
+    }
+
+    ShortcutsGroup {
+      ShortcutsShortcut {
+        accelerator: "<Primary>question";
+        title: _("Keyboard Shortcuts");
+      }
+
+      ShortcutsShortcut {
+        accelerator: "<Primary>Q";
+        title: _("Quit");
+      }
+    }
+  }
+}

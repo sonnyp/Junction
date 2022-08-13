@@ -1,0 +1,33 @@
+using Gtk 4.0;
+
+Button button {
+  halign: fill;
+  valign: fill;
+
+  styles [
+    "flat",
+  ]
+
+  Box box {
+    orientation: vertical;
+
+    Image image {
+      pixel-size: 92;
+      vexpand: true;
+
+      styles [
+        "icon-dropshadow",
+      ]
+    }
+
+    Label label {
+      ellipsize: end;
+      max-width-chars: 10;
+      margin-top: 6;
+
+      styles [
+        "body",
+      ]
+    }
+  }
+}

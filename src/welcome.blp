@@ -1,0 +1,65 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow welcome {
+  title: "Junction";
+  content:
+  Box {
+    orientation: vertical;
+
+    Adw.HeaderBar {
+      [end]
+      MenuButton button_menu {
+        menu-model: menu_app;
+        icon-name: "open-menu-symbolic";
+      }
+    }
+
+    Box {
+      orientation: vertical;
+      valign: center;
+      halign: center;
+      vexpand: true;
+      hexpand: true;
+      spacing: 14;
+
+      Image {
+        icon-name: "re.sonny.Junction";
+        pixel-size: 128;
+      }
+
+      LinkButton demo_button {
+        label: _("Test Junction");
+        valign: center;
+        halign: center;
+        uri: "https://junction.sonny.re/demo";
+      }
+
+      Button install_button {
+        label: _("Set Junction as default for Web");
+        valign: center;
+        halign: center;
+      }
+    }
+  }
+
+  ;
+
+  styles [
+    "welcome",
+  ]
+}
+
+menu menu_app {
+  section {
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "app.shortcuts";
+    }
+
+    item {
+      label: _("About Junction");
+      action: "app.about";
+    }
+  }
+}

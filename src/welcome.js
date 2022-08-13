@@ -3,7 +3,7 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
 import { spawn_sync } from "./util.js";
-import builder from "./welcome.ui" assert { type: "builder" };
+import builder from "./welcome.blp" assert { type: "builder" };
 
 export default function Welcome({ application }) {
   const window = builder.get_object("welcome");
