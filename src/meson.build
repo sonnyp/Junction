@@ -1,10 +1,20 @@
 pkgdatadir = join_paths(get_option('datadir'), meson.project_name())
 
 gjspack = find_program('../troll/gjspack/bin/gjspack')
-run_command(gjspack, '--appid=' + meson.project_name(), '--no-executable', 'src/main.js', '--potfiles', 'po/POTFILES', 'src', check: true)
-
-install_data(meson.project_name() + '.gresource',
-  install_dir: pkgdatadir
+gresource = custom_target(meson.project_name() + '.gresource',
+  input: ['main.js', '../po/POTFILES'],
+  output: meson.project_name() + '.gresource',
+  command: [
+    gjspack,
+    '--appid=' + meson.project_name(),
+    '--resource-root', meson.project_source_root(),
+    '--no-executable',
+    '@INPUT0@',
+    '--potfiles', '@INPUT1@',
+    '@OUTDIR@',
+  ],
+  install: true,
+  install_dir: pkgdatadir,
 )
 
 bin_conf = configuration_data()

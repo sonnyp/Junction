@@ -8,16 +8,12 @@ import GLib from "gi://GLib";
 import { programInvocationName } from "system";
 import Gio from "gi://Gio";
 import { build as gjspack } from "./troll/gjspack/src/gjspack.js";
-import Adw from "gi://Adw";
 
 const [filename] = GLib.filename_from_uri(import.meta.url);
 const dirname = GLib.path_get_dirname(filename);
 
 const GSETTINGS_SCHEMA_DIR = GLib.canonicalize_filename("./data", dirname);
 GLib.setenv("GSETTINGS_SCHEMA_DIR", GSETTINGS_SCHEMA_DIR, true);
-
-// Must be after setting GSETTINGS_SCHEMA_DIR
-Adw.init();
 
 const { gresource_path, prefix } = gjspack({
   appid: "re.sonny.Junction",

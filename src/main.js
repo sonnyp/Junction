@@ -2,11 +2,14 @@ import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { bindtextdomain, textdomain } from "gettext";
 import Application from "./application.js";
+import Adw from "gi://Adw";
 
 GLib.set_prgname("re.sonny.Junction");
 GLib.set_application_name("Junction");
 
 export default function main(argv, { version, datadir }) {
+  Adw.init();
+
   bindtextdomain(
     "re.sonny.Junction",
     GLib.build_filenamev([datadir, "locale"]),
