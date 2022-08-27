@@ -180,7 +180,7 @@ Within Junction, you can toggle `Show names` in the menu or hover the applicatio
 Otherwise, you can edit the desktop files to use distinctive icons, here are a some tools
 
 - [MenuLibre](https://flathub.org/apps/details/org.bluesabre.MenuLibre) GUI
-- [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appedito) GUI
+- [AppEditor](https://flathub.org/apps/details/com.github.donadigo.appeditor) GUI
 - [ArchWiki](https://wiki.archlinux.org/title/desktop_entries) advanced
 
 </details>
