@@ -8,196 +8,192 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-19 23:18+0100\n"
-"PO-Revision-Date: 2022-08-19 04:24+0000\n"
-"Last-Translator: Kaz Sibuya <sibuyakazokuu@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/junction/junction/ja/>\n"
-"Language: ja\n"
+"PO-Revision-Date: 2022-09-12 06:24+0000\n"
+"Last-Translator: Marek Ľach <graweeld@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/junction/junction/sk/>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr "Junction"
+msgstr ""
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 #: src/about.js:50
 msgid "Application chooser"
-msgstr "続行するアプリケーション選択"
+msgstr ""
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junctionは、ファイルやリンクを開く際に、続行するアプリケーションを選択できるようにします。"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr "インストール後、必ずアプリケーションを起動してください。"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "デスクトップアプリケーションでリンクを開くと、Junctionが自動的にポップアップします。マウスやキーボードのナビゲーションを使って、リンクやファイルを開くアプリケーションを選択します。"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr "特徴:"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "アプリケーションを選択して開く"
+msgstr "Vyberte si aplikáciu s ktorou otvoriť"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr "開く前に場所を表示する"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr "開く前にURLを編集する"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "安全でないリンクのヒントを表示する"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr "キーボードナビゲーション"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "中クリックで複数のアプリケーションを開く"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr "リンク先を開くブラウザを選択します"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr "画像を開くアプリケーションを選択します"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr "Junctionでは、キーボードのサポートが充実しています"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr "デスクトップアプリケーションにもサポート"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr "「フォルダに表示」表示のオプションを追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:69
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Bug fix for desktop actions"
-msgstr "デスクトップアクションのサポート"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:77
-#, fuzzy
-#| msgid "Support D-Bus activation"
 msgid "Support desktop actions"
-msgstr "デスクトップアクションのサポート"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr "snapアプリケーションに対応"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr "デザインの改善"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr "新しいアイコン"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr "x-junction:// プロトコル APIを追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr "自動的にデフォルトのアプリケーションとして設定しない"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr "不足しているオプションの修正"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr "アプリケーション選択肢を４つに制限"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr "任意のアプリケーションで開くことができるオプションを追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr "\"Junctionについて\" のダイアログに\"システム\"の項目が追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr "URIをサポートしていないアプリケーションの修正"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr "アプリケーション名を表示するオプションの追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr "メニューボタンの追加"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr "キーボード操作性の向上"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr "CLIの使用方法の改善"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr "複数のURIのオープンをサポート"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr "D-Busの起動に対応"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr "libadwaitaを使用"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr "不足しているアプリケーションの修正"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr "ショートカットキーウィンドウの追加 - &lt;Ctrl&gt;? でアクセスできます"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr "これがJunctionの最初のリリースです。気に入ってもらえれば幸いです。"
+msgstr ""
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:60
 msgid "translator-credits"
-msgstr "Sibuya Kaz <sibuyakazokuu@gmail.com>"
+msgstr ""
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -209,15 +205,15 @@ msgstr ""
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr "すべてのアプリケーション"
+msgstr ""
 
 #: src/AppButton.js:218
 msgid "View All"
-msgstr "すべて表示"
+msgstr ""
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "このサイトにはセキュリティがありません。攻撃者は、あなたが送信した情報を見たり、あなたが見たコンテンツを制御したりすることができます。"
+msgstr ""
 
 #: src/ShortcutsWindow.ui:19
 msgid "Discard and close"
@@ -225,7 +221,7 @@ msgstr ""
 
 #: src/ShortcutsWindow.ui:28 src/window.ui:64
 msgid "Copy to Clipboard"
-msgstr "クリップボードにコピー"
+msgstr ""
 
 #: src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
@@ -241,41 +237,28 @@ msgstr ""
 
 #: src/ShortcutsWindow.ui:66
 msgid "Open with application at position"
-msgstr "表示されたアプリケーションの位置の番号を選択して表示"
+msgstr ""
 
 #: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
-msgstr "キーボードショートカット"
+msgstr ""
 
 #: src/ShortcutsWindow.ui:86
 msgid "Quit"
-msgstr "終了"
+msgstr ""
 
 #: src/welcome.ui:37
 msgid "Test Junction"
-msgstr "テスト"
+msgstr ""
 
 #: src/welcome.ui:48
 msgid "Set Junction as default for Web"
-msgstr "Junctionをデフォルトのウェブブラウザに設定"
+msgstr ""
 
 #: src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
-msgstr "Junctionについて"
+msgstr ""
 
 #: src/window.ui:60
 msgid "Show names"
-msgstr "名前を表示"
-
-#~ msgid "Add Polish translation"
-#~ msgstr "ポーランド語翻訳の追加"
-
-#~ msgid "Add Occitan translation"
-#~ msgstr "オック語翻訳の追加"
-
-#~ msgid "Add Spanish translation"
-#~ msgstr "スペイン語翻訳の追加"
-
-#, fuzzy
-#~ msgid "Add Italian translation"
-#~ msgstr "イタリア語翻訳の追加"
+msgstr ""
