@@ -20,7 +20,7 @@ export default function About({ application, datadir, version }) {
     ? `flatpak ${flatpak_info?.get_string("Instance", "flatpak-version")}\n`
     : "";
 
-  const debug = `
+  const debug_info = `
 Junction:
 version ${version}
 programInvocationName ${programInvocationName}
@@ -43,22 +43,24 @@ $XDG_CURRENT_DESKTOP ${GLib.getenv("XDG_CURRENT_DESKTOP")}
 $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   `.trim();
 
-  const dialog = new Gtk.AboutDialog({
+  const dialog = new Adw.AboutWindow({
     application,
-    authors: ["Sonny Piers https://sonny.re"],
+    application_name: "Junction",
+    developers: ["Sonny Piers https://sonny.re"],
     artists: ["Tobias Bernard <tbernard@gnome.org>"],
-    comments: _("Application chooser"),
+    // comments: _("Application chooser"),
     copyright: "Copyright 2021-2022 Sonny Piers",
     license_type: Gtk.License.GPL_3_0_ONLY,
     version,
     website: "https://junction.sonny.re",
+    issue_url: "https://github.com/sonnyp/Junction/issues",
     transient_for: application.get_active_window(),
     // Prevents input on Junction when clicking on a link
     // modal: true,
-    logo_icon_name: "re.sonny.Junction",
+    application_icon: "re.sonny.Junction",
     // TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
     translator_credits: _("translator-credits"),
-    system_information: debug,
+    debug_info,
   });
   // dialog.add_credit_section("Contributors", [
   //   // Add yourself as

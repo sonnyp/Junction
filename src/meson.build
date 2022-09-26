@@ -15,6 +15,7 @@ gresource = custom_target(meson.project_name() + '.gresource',
   ],
   install: true,
   install_dir: pkgdatadir,
+  build_always_stale: true,
 )
 
 bin_conf = configuration_data()
