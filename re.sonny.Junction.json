@@ -38,8 +38,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.72/glib-2.72.3.tar.xz",
-          "sha256": "4a39a2f624b8512d500d5840173eda7fa85f51c109052eae806acece85d345f0"
+          "url": "https://download.gnome.org/sources/glib/2.74/glib-2.74.0.tar.xz",
+          "sha256": "3652c7f072d7b031a6b5edd623f77ebc5dcd2ae698598abcc89ff39ca75add30"
         },
         {
           "type": "patch",
@@ -53,8 +53,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib-networking/2.72/glib-networking-2.72.1.tar.xz",
-          "sha256": "6fc1bedc8062484dc8a0204965995ef2367c3db5c934058ff1607e5a24d95a74"
+          "url": "https://download.gnome.org/sources/glib-networking/2.74/glib-networking-2.74.0.tar.xz",
+          "sha256": "1f185aaef094123f8e25d8fa55661b3fd71020163a0174adb35a37685cda613b"
         }
       ]
     },
