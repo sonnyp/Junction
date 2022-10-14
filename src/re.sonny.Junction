@@ -7,12 +7,12 @@ globalThis.__DEV__ = false;
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
 import { programInvocationName } from "system";
-import Adw from 'gi://Adw';
+import Adw from "gi://Adw";
 
 Adw.init();
 
 const resource = Gio.resource_load(
-  "@datadir@/@PACKAGE_NAME@/re.sonny.Junction.gresource",
+  "@datadir@/@PACKAGE_NAME@/re.sonny.Junction.src.gresource",
 );
 Gio.resources_register(resource);
 
