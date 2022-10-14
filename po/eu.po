@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-01-08 10:53+0000\n"
 "Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
-"Language-Team: Basque <https://hosted.weblate.org/projects/junction/junction/eu/>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/junction/junction/"
+"eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,37 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Aplikazioen hautagailua"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junctionek aplikazioa aukeratzeko aukera ematen dizu, fitxategiak eta estekak irekitzeko."
+msgstr ""
+"Junctionek aplikazioa aukeratzeko aukera ematen dizu, fitxategiak eta "
+"estekak irekitzeko."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Instalatu ondoren, ziurtatu aplikazioa hasi dela."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "Junction automatikoki agertuko da mahaigaineko aplikazio batean esteka bat irekitzen duzunean. Sagua edo teklatu bidezko nabigazioa erabili esteka edo fitxategia irekitzeko aplikazioa aukeratzeko."
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
+msgstr ""
+"Junction automatikoki agertuko da mahaigaineko aplikazio batean esteka bat "
+"irekitzen duzunean. Sagua edo teklatu bidezko nabigazioa erabili esteka edo "
+"fitxategia irekitzeko aplikazioa aukeratzeko."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -99,7 +111,6 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:69
 #, fuzzy
-#| msgid "Support desktop actions"
 msgid "Bug fix for desktop actions"
 msgstr "Mahaigaineko ekintzen euskarria"
 
@@ -192,10 +203,13 @@ msgstr "Gehitu Lasterbideak leiho bat - &lt;Ctrl&gt;? bidez eskuragarri"
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Hau da Junctionen lehen bertsioa. Gustatuko zaizula espero dugu."
 
-#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:60
-msgid "translator-credits"
-msgstr "Sergio Varela <sergiovg01@outlook.com>"
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""
+"Leku honek ez du segurtasunik. Erasotzaile batek bidaltzen duzun edozein "
+"informazio ikus dezake, edo ikusten duzun edukia kontrolatu."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -209,60 +223,60 @@ msgstr ""
 msgid "All Applications"
 msgstr "Aplikazio guztiak"
 
-#: src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "Ikusi dena"
 
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Leku honek ez du segurtasunik. Erasotzaile batek bidaltzen duzun edozein informazio ikus dezake, edo ikusten duzun edukia kontrolatu."
+#: src/window.blp:64
+msgid "Show names"
+msgstr "Erakutsi izenak"
 
-#: src/ShortcutsWindow.ui:19
-msgid "Discard and close"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:28 src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Kopiatu paper-zorroan"
 
-#: src/ShortcutsWindow.ui:37
-msgid "Select next/previous application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:46
-msgid "Open with selected application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:57
-msgid "Open with selected application and stay active"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
-msgid "Open with application at position"
-msgstr "Aukeratu aplikazioa"
-
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
+#: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
 msgstr "Teklatuko lasterbideak"
 
-#: src/ShortcutsWindow.ui:86
-msgid "Quit"
-msgstr ""
-
-#: src/welcome.ui:37
-msgid "Test Junction"
-msgstr "Probatu Junction"
-
-#: src/welcome.ui:48
-msgid "Set Junction as default for Web"
-msgstr "Webgunerako Junction lehenetsia ezarri"
-
-#: src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "Junction-i buruz"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Erakutsi izenak"
+#: src/welcome.blp:32
+msgid "Test Junction"
+msgstr "Probatu Junction"
+
+#: src/welcome.blp:39
+msgid "Set Junction as default for Web"
+msgstr "Webgunerako Junction lehenetsia ezarri"
+
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:61
+msgid "translator-credits"
+msgstr "Sergio Varela <sergiovg01@outlook.com>"
+
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:35
+#, fuzzy
+msgid "Open with application at position"
+msgstr "Aukeratu aplikazioa"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
+msgstr ""

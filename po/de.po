@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2021-12-27 17:51+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/junction/junction/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/junction/junction/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,37 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Programme wählen"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Mit Junction können Programme zum Öffnen von Dateien und Links ausgewählt werden."
+msgstr ""
+"Mit Junction können Programme zum Öffnen von Dateien und Links ausgewählt "
+"werden."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Nach der Installation, Programm starten."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "Junction wird automatisch angezeigt, wenn ein Link in einem Desktop-Programm geöffnet wird. Zur Steuerung verwende die Maus oder die Tastatur, um das Programm auszuwählen mit dem du ein Link oder Datei öffnen möchtest."
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
+msgstr ""
+"Junction wird automatisch angezeigt, wenn ein Link in einem Desktop-Programm "
+"geöffnet wird. Zur Steuerung verwende die Maus oder die Tastatur, um das "
+"Programm auszuwählen mit dem du ein Link oder Datei öffnen möchtest."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -99,7 +111,6 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:69
 #, fuzzy
-#| msgid "Support desktop actions"
 msgid "Bug fix for desktop actions"
 msgstr "Unterstützung für Desktop-Aktionen"
 
@@ -186,16 +197,22 @@ msgstr "Korrektur für fehlende Anwendungen"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr "Hinzufügen eines Fensters mit Tastaturkürzel – zugänglich mit &lt;Strg&gt;?"
+msgstr ""
+"Hinzufügen eines Fensters mit Tastaturkürzel – zugänglich mit &lt;Strg&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr "Dies ist die erste Veröffentlichung von Junction. Wir hoffen, dass sie dir gefällt."
+msgstr ""
+"Dies ist die erste Veröffentlichung von Junction. Wir hoffen, dass sie dir "
+"gefällt."
 
-#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:60
-msgid "translator-credits"
-msgstr "Milo Ivir <mail@milotype.de>"
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""
+"Diese Website ist nicht sicher. Ein Angreifer könnte alle deine gesendeten "
+"Informationen sehen oder den Inhalt kontrollieren, den du siehst."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -209,60 +226,60 @@ msgstr ""
 msgid "All Applications"
 msgstr "Alle Anwendung"
 
-#: src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "Alle anzeigen"
 
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Diese Website ist nicht sicher. Ein Angreifer könnte alle deine gesendeten Informationen sehen oder den Inhalt kontrollieren, den du siehst."
+#: src/window.blp:64
+msgid "Show names"
+msgstr "Namen anzeigen"
 
-#: src/ShortcutsWindow.ui:19
-msgid "Discard and close"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:28 src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Kopiere in die Zwischenablage"
 
-#: src/ShortcutsWindow.ui:37
-msgid "Select next/previous application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:46
-msgid "Open with selected application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:57
-msgid "Open with selected application and stay active"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
-msgid "Open with application at position"
-msgstr "Programm zum Öffnen auswählen"
-
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
+#: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
 msgstr "Tastaturkürzel"
 
-#: src/ShortcutsWindow.ui:86
-msgid "Quit"
-msgstr ""
-
-#: src/welcome.ui:37
-msgid "Test Junction"
-msgstr "Junction testen"
-
-#: src/welcome.ui:48
-msgid "Set Junction as default for Web"
-msgstr "Junction als Standard festlegen"
-
-#: src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "Über Junction"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Namen anzeigen"
+#: src/welcome.blp:32
+msgid "Test Junction"
+msgstr "Junction testen"
+
+#: src/welcome.blp:39
+msgid "Set Junction as default for Web"
+msgstr "Junction als Standard festlegen"
+
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:61
+msgid "translator-credits"
+msgstr "Milo Ivir <mail@milotype.de>"
+
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:35
+#, fuzzy
+msgid "Open with application at position"
+msgstr "Programm zum Öffnen auswählen"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
+msgstr ""

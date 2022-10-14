@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2021-12-14 22:23+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Occitan <https://hosted.weblate.org/projects/junction/junction/oc/>\n"
+"Language-Team: Occitan <https://hosted.weblate.org/projects/junction/"
+"junction/oc/>\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,34 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Selector d’aplicacion"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 #, fuzzy
-msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;browserosaurus;"
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr ""
+"causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;"
+"browserosaurus;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junction vos permet de causir l’aplicacion de dobrir per dobrir los fichièrs e los ligams."
+msgstr ""
+"Junction vos permet de causir l’aplicacion de dobrir per dobrir los fichièrs "
+"e los ligams."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Aprèp l’installacion asseguratz-vos de lançar l’aplicacion."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
@@ -114,7 +123,6 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:78
 #, fuzzy
-#| msgid "Fix for missing applications"
 msgid "Support snap applications"
 msgstr "Petaçatge per las aplicacions mancantas"
 
@@ -198,10 +206,13 @@ msgstr ""
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Aquò es la primièra versionde Junction. Esperam que vos agradarà."
 
-#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:60
-msgid "translator-credits"
-msgstr "Quentin PAGÈS https://www.mejans.fr"
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""
+"Aqueste site es pas securizat. Un atacant pòt veire totas las informacions "
+"que mandatz, o contrarotlar çò que consultatz."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -216,64 +227,64 @@ msgstr ""
 msgid "All Applications"
 msgstr "Selector d’aplicacion"
 
-#: src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr ""
 
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Aqueste site es pas securizat. Un atacant pòt veire totas las informacions que mandatz, o contrarotlar çò que consultatz."
-
-#: src/ShortcutsWindow.ui:19
-msgid "Discard and close"
+#: src/window.blp:64
+msgid "Show names"
 msgstr ""
 
-#: src/ShortcutsWindow.ui:28 src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Copiar al quicha-papièrs"
 
-#: src/ShortcutsWindow.ui:37
-msgid "Select next/previous application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:46
-msgid "Open with selected application"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:57
-msgid "Open with selected application and stay active"
-msgstr ""
-
-#: src/ShortcutsWindow.ui:66
-#, fuzzy
-#| msgid "Choose the application to open with"
-msgid "Open with application at position"
-msgstr "Causir l’aplicacion que se dobrirà"
-
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
+#: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
 msgstr "Acorchis de clavièr"
 
-#: src/ShortcutsWindow.ui:86
-msgid "Quit"
-msgstr ""
+#: src/window.blp:80 src/welcome.blp:61
+msgid "About Junction"
+msgstr "A prepaus de Junction"
 
-#: src/welcome.ui:37
+#: src/welcome.blp:32
 #, fuzzy
 msgid "Test Junction"
 msgstr "Junction"
 
-#: src/welcome.ui:48
+#: src/welcome.blp:39
 #, fuzzy
 msgid "Set Junction as default for Web"
 msgstr "Junction es definit coma aplicacion per defaut pel Web"
 
-#: src/welcome.ui:71 src/window.ui:76
-msgid "About Junction"
-msgstr "A prepaus de Junction"
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:61
+msgid "translator-credits"
+msgstr "Quentin PAGÈS https://www.mejans.fr"
 
-#: src/window.ui:60
-msgid "Show names"
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr ""
+
+#: src/ShortcutsWindow.blp:35
+#, fuzzy
+msgid "Open with application at position"
+msgstr "Causir l’aplicacion que se dobrirà"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
 msgstr ""
 
 #, fuzzy

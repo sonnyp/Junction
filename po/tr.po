@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-02-08 18:56+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/junction/junction/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/junction/"
+"junction/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,36 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Uygulama seçici"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "Junction, dosyaları ve bağlantıları açacak uygulamayı seçmenize olanak tanır."
+msgstr ""
+"Junction, dosyaları ve bağlantıları açacak uygulamayı seçmenize olanak tanır."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Kurduktan sonra uygulamayı başlattığınızdan emin olun."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "Bir masaüstü uygulamasında bir bağlantı açtığınızda Junction otomatik olarak açılacaktır. Bağlantının veya dosyanın açılacağı uygulamayı seçmek için fareyi veya klavyeyi kullanın."
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
+msgstr ""
+"Bir masaüstü uygulamasında bir bağlantı açtığınızda Junction otomatik olarak "
+"açılacaktır. Bağlantının veya dosyanın açılacağı uygulamayı seçmek için "
+"fareyi veya klavyeyi kullanın."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -190,10 +201,13 @@ msgstr "&lt;Ctrl&gt;? ile erişilebilen bir Kısayollar penceresi ekle"
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Bu, Junction'ın ilk sürümüdür. Beğeneceğinizi umuyoruz."
 
-#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:60
-msgid "translator-credits"
-msgstr "Oğuz Ersen https://ersen.moe"
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
+msgstr ""
+"Bu sitenin güvenliği yok. Saldırgan, gönderdiğiniz herhangi bir bilgiyi "
+"görebilir veya gördüğünüz içeriği denetleyebilir."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -207,61 +221,62 @@ msgstr "Klasörde Göster"
 msgid "All Applications"
 msgstr "Tüm Uygulamalar"
 
-#: src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "Tümünü Görüntüle"
 
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Bu sitenin güvenliği yok. Saldırgan, gönderdiğiniz herhangi bir bilgiyi görebilir veya gördüğünüz içeriği denetleyebilir."
+#: src/window.blp:64
+msgid "Show names"
+msgstr "Adları göster"
 
-#: src/ShortcutsWindow.ui:19
-msgid "Discard and close"
-msgstr "At ve kapat"
-
-#: src/ShortcutsWindow.ui:28 src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Panoya kopyala"
 
-#: src/ShortcutsWindow.ui:37
-msgid "Select next/previous application"
-msgstr "Sonraki/önceki uygulamayı seç"
-
-#: src/ShortcutsWindow.ui:46
-msgid "Open with selected application"
-msgstr "Seçilen uygulamayla aç"
-
-#: src/ShortcutsWindow.ui:57
-msgid "Open with selected application and stay active"
-msgstr "Seçilen uygulama ile aç ve etkin kal"
-
-#: src/ShortcutsWindow.ui:66
-msgid "Open with application at position"
-msgstr "Sıradaki uygulama ile aç"
-
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
+#: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: src/ShortcutsWindow.ui:86
-msgid "Quit"
-msgstr "Çıkış"
-
-#: src/welcome.ui:37
-msgid "Test Junction"
-msgstr "Junction'ı Deneyin"
-
-#: src/welcome.ui:48
-msgid "Set Junction as default for Web"
-msgstr "Junction'ı Web için öntanımlı olarak ayarla"
-
-#: src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "Junction Hakkında"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Adları göster"
+#: src/welcome.blp:32
+msgid "Test Junction"
+msgstr "Junction'ı Deneyin"
+
+#: src/welcome.blp:39
+msgid "Set Junction as default for Web"
+msgstr "Junction'ı Web için öntanımlı olarak ayarla"
+
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:61
+msgid "translator-credits"
+msgstr "Oğuz Ersen https://ersen.moe"
+
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr "At ve kapat"
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr "Sonraki/önceki uygulamayı seç"
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr "Seçilen uygulamayla aç"
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr "Seçilen uygulama ile aç ve etkin kal"
+
+#: src/ShortcutsWindow.blp:35
+msgid "Open with application at position"
+msgstr "Sıradaki uygulama ile aç"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
+msgstr "Çıkış"
 
 #~ msgid "Add Polish translation"
 #~ msgstr "Lehçe çeviri ekle"

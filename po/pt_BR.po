@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 23:18+0100\n"
+"POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-02-13 21:56+0000\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/junction/junction/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"junction/junction/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,36 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Seletor de aplicativo"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgid ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
+msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr "O Junction permite que você escolha o aplicativo para abrir arquivos e links."
+msgstr ""
+"O Junction permite que você escolha o aplicativo para abrir arquivos e links."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Após a instalação, certifique-se de iniciar o aplicativo."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr "O Junction aparecerá automaticamente quando você abrir um link em um aplicativo de desktop. Use a navegação do mouse ou do teclado para escolher o aplicativo com o qual abrir o link ou arquivo."
+msgid ""
+"Junction will pop up automatically when you open a link in a desktop "
+"application. Use the mouse or keyboard navigation to choose the application "
+"to open the link or file with."
+msgstr ""
+"O Junction aparecerá automaticamente quando você abrir um link em um "
+"aplicativo de desktop. Use a navegação do mouse ou do teclado para escolher "
+"o aplicativo com o qual abrir o link ou arquivo."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -144,7 +155,8 @@ msgstr "Adicionar uma opção para abrir com qualquer aplicativo"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr "Adicionar um painel de informações do sistema na caixa de diálogo Sobre"
+msgstr ""
+"Adicionar um painel de informações do sistema na caixa de diálogo Sobre"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
@@ -190,13 +202,13 @@ msgstr "Adiciona uma janela de Atalhos – acessível com &lt;Ctrl&gt;?"
 msgid "This is the first release of Junction. We hope you like it."
 msgstr "Este é o primeiro lançamento do Junction. Esperamos que você goste."
 
-#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:60
-msgid "translator-credits"
+#: src/Entry.js:23
+msgid ""
+"This site has no security. An attacker could see any information you send, "
+"or control the content that you see."
 msgstr ""
-"Tiago Lucas Flach <tiagolucas9830@gmail.com>\n"
-"Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Gabriel Gian <gabrielgian@protonmail.com>"
+"Este site não possui segurança. Um invasor poderia ver qualquer informação "
+"que você envie ou controlar o conteúdo que você vê."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -210,61 +222,65 @@ msgstr "Revelar na pasta"
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "Ver todos"
 
-#: src/Entry.js:23
-msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr "Este site não possui segurança. Um invasor poderia ver qualquer informação que você envie ou controlar o conteúdo que você vê."
+#: src/window.blp:64
+msgid "Show names"
+msgstr "Mostrar nomes"
 
-#: src/ShortcutsWindow.ui:19
-msgid "Discard and close"
-msgstr "Descarta e fecha"
-
-#: src/ShortcutsWindow.ui:28 src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Copia para a área de transferência"
 
-#: src/ShortcutsWindow.ui:37
-msgid "Select next/previous application"
-msgstr "Seleciona o aplicativo seguinte/anterior"
-
-#: src/ShortcutsWindow.ui:46
-msgid "Open with selected application"
-msgstr "Abre com o aplicativo selecionado"
-
-#: src/ShortcutsWindow.ui:57
-msgid "Open with selected application and stay active"
-msgstr "Abre com o aplicativo selecionado e se mantém ativo"
-
-#: src/ShortcutsWindow.ui:66
-msgid "Open with application at position"
-msgstr "Abre com o aplicativo na posição"
-
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
+#: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
 msgstr "Atalhos de teclado"
 
-#: src/ShortcutsWindow.ui:86
-msgid "Quit"
-msgstr "Sai"
-
-#: src/welcome.ui:37
-msgid "Test Junction"
-msgstr "Testar o Junction"
-
-#: src/welcome.ui:48
-msgid "Set Junction as default for Web"
-msgstr "Definir o Junction como padrão para a Web"
-
-#: src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "Sobre o Junction"
 
-#: src/window.ui:60
-msgid "Show names"
-msgstr "Mostrar nomes"
+#: src/welcome.blp:32
+msgid "Test Junction"
+msgstr "Testar o Junction"
+
+#: src/welcome.blp:39
+msgid "Set Junction as default for Web"
+msgstr "Definir o Junction como padrão para a Web"
+
+#. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
+#: src/about.js:61
+msgid "translator-credits"
+msgstr ""
+"Tiago Lucas Flach <tiagolucas9830@gmail.com>\n"
+"Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Gabriel Gian <gabrielgian@protonmail.com>"
+
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr "Descarta e fecha"
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr "Seleciona o aplicativo seguinte/anterior"
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr "Abre com o aplicativo selecionado"
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr "Abre com o aplicativo selecionado e se mantém ativo"
+
+#: src/ShortcutsWindow.blp:35
+msgid "Open with application at position"
+msgstr "Abre com o aplicativo na posição"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
+msgstr "Sai"
 
 #~ msgid "Add Polish translation"
 #~ msgstr "Adicionar tradução para polonês"
