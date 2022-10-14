@@ -48,7 +48,6 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     application_name: "Junction",
     developers: ["Sonny Piers https://sonny.re"],
     artists: ["Tobias Bernard <tbernard@gnome.org>"],
-    // comments: _("Application chooser"),
     copyright: "Copyright 2021-2022 Sonny Piers",
     license_type: Gtk.License.GPL_3_0_ONLY,
     version,

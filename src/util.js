@@ -275,3 +275,12 @@ export function getRealPath(document_path) {
 function isDocumentPortalExportedFile(path) {
   return /^\/run\/user\/\d+\/doc\/.+\/.+$/.test(path);
 }
+
+// https://github.com/flatpak/flatpak/issues/2538
+// https://github.com/sonnyp/Junction/issues/93
+export function getIconFilename(path) {
+  if (!GLib.getenv("FLATPAK_ID")) return path;
+  if (!["/usr/", "/etc/"].some((parent) => path.startsWith(parent)))
+    return path;
+  return GLib.build_filenamev(["/run/host", path]);
+}

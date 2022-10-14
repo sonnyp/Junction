@@ -4,7 +4,12 @@ import Gio from "gi://Gio";
 
 import tst, { assert } from "../troll/tst/tst.js";
 
-import { parse, prefixCommandLineForHost, readResource } from "../src/util.js";
+import {
+  getIconFilename,
+  parse,
+  prefixCommandLineForHost,
+  readResource,
+} from "../src/util.js";
 
 const test = tst("utils");
 
@@ -104,6 +109,34 @@ test("prefixCommandLineForHost", () => {
   );
 
   if (FLATPAK_ID) GLib.setenv("FLATPAK_ID", FLATPAK_ID, true);
+});
+
+test("getIconFilename", () => {
+  GLib.setenv("FLATPAK_ID", "", true);
+  assert.equal(getIconFilename("/usr/share/hello.png"), "/usr/share/hello.png");
+  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  assert.equal(
+    getIconFilename("/usr/share/hello.png"),
+    "/run/host/usr/share/hello.png",
+  );
+
+  GLib.setenv("FLATPAK_ID", "", true);
+  assert.equal(getIconFilename("/etc/foo/hello.png"), "/etc/foo/hello.png");
+  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  assert.equal(
+    getIconFilename("/etc/foo/hello.png"),
+    "/run/host/etc/foo/hello.png",
+  );
+
+  GLib.setenv("FLATPAK_ID", "", true);
+  assert.equal(getIconFilename("/home/foo/bar.png"), "/home/foo/bar.png");
+  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  assert.equal(getIconFilename("/home/foo/bar.png"), "/home/foo/bar.png");
+
+  GLib.setenv("FLATPAK_ID", "", true);
+  assert.equal(getIconFilename("/opt/foo/bar.png"), "/opt/foo/bar.png");
+  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  assert.equal(getIconFilename("/opt/foo/bar.png"), "/opt/foo/bar.png");
 });
 
 export default test;

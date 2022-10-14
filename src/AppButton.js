@@ -5,7 +5,7 @@ import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
 
-import { openWithApplication } from "./util.js";
+import { openWithApplication, getIconFilename } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.blp";
 import { promiseTask } from "../troll/src/util.js";
@@ -55,8 +55,12 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   builder.get_object("box").append(popoverMenu);
 
   const icon = appInfo.get_icon();
-  if (icon) {
+  if (icon instanceof Gio.ThemedIcon) {
     builder.get_object("image").set_from_gicon(icon);
+  } else if (icon instanceof Gio.FileIcon) {
+    builder
+      .get_object("image")
+      .set_from_file(getIconFilename(icon.get_file().get_path()));
   }
 
   function open(close_on_success) {
