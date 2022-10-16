@@ -12,7 +12,7 @@ import {
   getGLibVersion,
 } from "../troll/src/util.js";
 
-export default function About({ application, datadir, version }) {
+export default function About({ application }) {
   const os_release = getOSRelease();
   const flatpak_info = getFlatpakInfo();
 
@@ -22,11 +22,11 @@ export default function About({ application, datadir, version }) {
 
   const debug_info = `
 Junction:
-version ${version}
+version ${pkg.version}
 programInvocationName ${programInvocationName}
 argv ${ARGV.join(" ")}
 cwd ${GLib.get_current_dir()}
-datadir ${datadir}
+datadir ${pkg.datadir}
 
 Powered by:
 GJS ${getGjsVersion()}
@@ -49,7 +49,7 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     developer_name: "Sonny Piers",
     copyright: "© 2021-2022 Sonny Piers",
     license_type: Gtk.License.GPL_3_0_ONLY,
-    version,
+    version: pkg.version,
     website: "https://junction.sonny.re",
     application_icon: "re.sonny.Junction",
     issue_url: "https://github.com/sonnyp/Junction/issues",

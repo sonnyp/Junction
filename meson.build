@@ -1,4 +1,4 @@
-project('re.sonny.Junction',
+project('Junction',
   version: '1.6',
   meson_version: '>= 0.59.0',
   license: 'GPL-3.0-only'
@@ -7,11 +7,11 @@ project('re.sonny.Junction',
 gnome = import('gnome')
 i18n = import('i18n')
 
-application_id = meson.project_name()
+app_id = 're.sonny.Junction'
 prefix = get_option('prefix')
 bindir = join_paths(prefix, 'bin')
 datadir = join_paths(prefix, get_option('datadir'))
-pkgdatadir = join_paths(datadir, application_id)
+pkgdatadir = join_paths(datadir, app_id)
 
 subdir('data')
 subdir('src')

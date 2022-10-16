@@ -1,4 +1,11 @@
-.PHONY: build run-host flatpak flatpak-local-remote bundle test clean dev
+.PHONY: dev build run-host flatpak flatpak-local-remote bundle test clean
+
+dev:
+	@ mkdir -p ~/.local/share/fonts
+	@ fc-cache ~/.local/share/fonts/
+	@ mkdir -p /tmp/Junction
+	@ glib-compile-schemas --targetdir /tmp/Junction --strict ./data
+	@ GSETTINGS_SCHEMA_DIR=/tmp/Junction ./re.sonny.Junction
 
 build:
 	# meson --reconfigure --prefix ${PWD}/install build
@@ -43,18 +50,18 @@ clean:
 	rm -f ~/.local/share/icons/hicolor/scalable/apps/re.sonny.Junction.svg
 	update-desktop-database ~/.local/share/applications
 
-dev:
-	# service file
-	mkdir -p ~/.local/share/dbus-1/services
-	cp data/re.sonny.Junction.service ~/.local/share/dbus-1/services/
-	sed -i "/^Exec=/s#=.*#=${PWD}\/re\.sonny\.Junction --gapplication-service#" ~/.local/share/dbus-1/services/re.sonny.Junction.service
-	# icons
-	cp data/icons/re.sonny.Junction-symbolic.svg ~/.local/share/icons/hicolor/symbolic/apps/
-	cp data/icons/re.sonny.Junction.svg ~/.local/share/icons/hicolor/scalable/apps/
-	gtk4-update-icon-cache -qtf ~/.local/share/icons/hicolor/
-	# desktop file
-	cp data/re.sonny.Junction.desktop ~/.local/share/applications/
-	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
-	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop
-	update-desktop-database ~/.local/share/applications
+# dev:
+# 	# service file
+# 	mkdir -p ~/.local/share/dbus-1/services
+# 	cp data/re.sonny.Junction.service ~/.local/share/dbus-1/services/
+# 	sed -i "/^Exec=/s#=.*#=${PWD}\/re\.sonny\.Junction --gapplication-service#" ~/.local/share/dbus-1/services/re.sonny.Junction.service
+# 	# icons
+# 	cp data/icons/re.sonny.Junction-symbolic.svg ~/.local/share/icons/hicolor/symbolic/apps/
+# 	cp data/icons/re.sonny.Junction.svg ~/.local/share/icons/hicolor/scalable/apps/
+# 	gtk4-update-icon-cache -qtf ~/.local/share/icons/hicolor/
+# 	# desktop file
+# 	cp data/re.sonny.Junction.desktop ~/.local/share/applications/
+# 	desktop-file-edit --set-key=Exec --set-value="${PWD}/re.sonny.Junction %u" ~/.local/share/applications/re.sonny.Junction.desktop
+# 	desktop-file-edit --set-key=Icon --set-value="${PWD}/data/icons/re.sonny.Junction.svg" ~/.local/share/applications/re.sonny.Junction.desktop
+# 	update-desktop-database ~/.local/share/applications
 

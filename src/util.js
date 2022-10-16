@@ -1,6 +1,4 @@
-import Gtk from "gi://Gtk";
 import GLib from "gi://GLib";
-import Gdk from "gi://Gdk";
 import Gio from "gi://Gio";
 
 export function logEnum(obj, value) {
@@ -8,16 +6,6 @@ export function logEnum(obj, value) {
     Object.entries(obj).find(([k, v]) => {
       return v === value;
     })[0],
-  );
-}
-
-export function loadStyleSheet(path) {
-  const provider = new Gtk.CssProvider();
-  provider.load_from_resource(path);
-  Gtk.StyleContext.add_provider_for_display(
-    Gdk.Display.get_default(),
-    provider,
-    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
   );
 }
 

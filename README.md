@@ -233,19 +233,19 @@ Thank you for your help!
 ```sh
 cd Junction
 npm install
-./re.sonny.Junction https://www.gnome.org/
+make dev
 ```
 
 Make changes and press `<Primary><Shift>Q` on the Junction window to restart it.
 
 Use `<Primary><Shift>I` to open the inspector.
 
-To setup development version as default application first install the desktop file with
+<!-- To setup development version as default application first install the desktop file with
 
 ```sh
 cd Junction
 make dev
-```
+``` -->
 
 To pass the tests you have to install a few dependencies
 

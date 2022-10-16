@@ -64,9 +64,8 @@
     <release version="1.6" date="2022-10-15">
       <description>
         <ul>
+          <li>Use GNOME 43</li>
           <li>Fix the list of recommended applications</li>
-          <li
-          >Fix a bug preventing some Flatpak applications from being listed</li>
           <li>Fix broken icons for some applications</li>
           <li>Improve internals</li>
         </ul>

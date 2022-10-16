@@ -6,10 +6,10 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
-import { loadStyleSheet } from "./util.js";
-import style from "./style.css";
 
-export default function Application({ version, datadir }) {
+import "./style.css";
+
+export default function Application() {
   const application = new Adw.Application({
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
@@ -40,10 +40,6 @@ export default function Application({ version, datadir }) {
     Welcome({
       application,
     });
-  });
-
-  application.connect("startup", () => {
-    loadStyleSheet(style);
   });
 
   application.connect("handle-local-options", (self, options) => {
@@ -85,7 +81,7 @@ export default function Application({ version, datadir }) {
     parameter_type: null,
   });
   showAboutDialog.connect("activate", () => {
-    About({ application, datadir, version });
+    About({ application });
   });
   application.add_action(showAboutDialog);
 
