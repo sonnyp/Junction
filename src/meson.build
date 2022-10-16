@@ -1,6 +1,7 @@
 pkgdatadir = join_paths(get_option('datadir'), meson.project_name())
 
 blueprint_compiler = find_program(
+  'blueprint-compiler',
   # Flatpak
   '/app/bin/blueprint-compiler',
   # host

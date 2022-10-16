@@ -1,5 +1,5 @@
 {
-  "id": "re.sonny.Junction",
+  "app-id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
   "runtime-version": "43",
   "sdk": "org.gnome.Sdk",

@@ -44,22 +44,28 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   `.trim();
 
   const dialog = new Adw.AboutWindow({
-    application,
+    transient_for: application.get_active_window(),
     application_name: "Junction",
-    developers: ["Sonny Piers https://sonny.re"],
-    artists: ["Tobias Bernard <tbernard@gnome.org>"],
-    copyright: "Copyright 2021-2022 Sonny Piers",
+    developer_name: "Sonny Piers",
+    copyright: "© 2021-2022 Sonny Piers",
     license_type: Gtk.License.GPL_3_0_ONLY,
     version,
     website: "https://junction.sonny.re",
-    issue_url: "https://github.com/sonnyp/Junction/issues",
-    transient_for: application.get_active_window(),
-    // Prevents input on Junction when clicking on a link
-    // modal: true,
     application_icon: "re.sonny.Junction",
+    issue_url: "https://github.com/sonnyp/Junction/issues",
     // TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
     translator_credits: _("translator-credits"),
     debug_info,
+    developers: ["Sonny Piers https://sonny.re"],
+    designers: [
+      "Sonny Piers https://sonny.re",
+      "Tobias Bernard <tbernard@gnome.org>",
+    ],
+    artists: ["Tobias Bernard <tbernard@gnome.org>"],
+    // If the window is modal - it's not possibly to open
+    // urls from it as it will open a new Junction window
+    // that doesn't register click events
+    modal: false,
   });
   // dialog.add_credit_section("Contributors", [
   //   // Add yourself as

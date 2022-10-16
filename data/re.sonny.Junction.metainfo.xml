@@ -4,7 +4,7 @@
   <launchable type="desktop-id">re.sonny.Junction.desktop</launchable>
   <name translatable="no">Junction</name>
   <developer_name translatable="no">Sonny Piers</developer_name>
-  <update_contact>sonnyp@gome.org</update_contact>
+  <update_contact>sonnyp@gnome.org</update_contact>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <summary>Application chooser</summary>
@@ -61,6 +61,17 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.6" date="2022-10-15">
+      <description>
+        <ul>
+          <li>Fix the list of recommended applications</li>
+          <li
+          >Fix a bug preventing some Flatpak applications from being listed</li>
+          <li>Fix broken icons for some applications</li>
+          <li>Improve internals</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.0" date="2022-01-19">
       <description>
         <ul>

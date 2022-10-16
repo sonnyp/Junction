@@ -210,6 +210,8 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 
 ## In the media
 
+[softpedia.com - Nifty and useful app switcher called Junction](https://linux.softpedia.com/get/Desktop-Environment/Gnome/Junction-104196.shtml) - 05/2022
+
 [itsfoss.com](https://itsfoss.com/junction/) - 03/2022
 
 [youtube.com - Junction 1.4 | Choose the application to open files and links](https://www.youtube.com/watch?v=rfVd9bhRWxs) - 12/2021

@@ -1,0 +1,5 @@
+root: true
+extends:
+  - ./troll/.eslintrc.yaml
+globals:
+  __DEV__: true
