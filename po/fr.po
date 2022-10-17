@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-05-14 18:03+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/junction/junction/"
-"fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/junction/junction/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,38 +24,25 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "Sélecteur d’application"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction vous permet de choisir l’application pour ouvrir les fichiers et "
-"les liens."
+msgstr "Junction vous permet de choisir l’application pour ouvrir les fichiers et les liens."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Veuillez ouvrir l'application après l'avoir installé."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Jonction s’affiche automatiquement lorsque vous ouvrez un lien dans une "
-"application de bureau. Utilisez la souris ou la navigation au clavier pour "
-"choisir l’application avec laquelle ouvrir le lien ou le fichier."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Jonction s’affiche automatiquement lorsque vous ouvrez un lien dans une application de bureau. Utilisez la souris ou la navigation au clavier pour choisir l’application avec laquelle ouvrir le lien ou le fichier."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -153,14 +139,11 @@ msgstr "Limiter le nombre d’options à 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
-"Ajouter une option permettant d’ouvrir avec n’importe quelle application"
+msgstr "Ajouter une option permettant d’ouvrir avec n’importe quelle application"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
-"Ajouter un panneau d’informations sur le système dans la boîte de dialogue à "
-"propos"
+msgstr "Ajouter un panneau d’informations sur le système dans la boîte de dialogue à propos"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
@@ -204,16 +187,11 @@ msgstr "Ajout d’une fenêtre de raccourcis - accessible avec &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
-"Ceci est la première version de Junction. Nous espérons qu’elle vous plaira."
+msgstr "Ceci est la première version de Junction. Nous espérons qu’elle vous plaira."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les "
-"informations que vous envoyez, ou contrôler le contenu que vous voyez."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les informations que vous envoyez, ou contrôler le contenu que vous voyez."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -227,62 +205,60 @@ msgstr "Révéler dans le dossier"
 msgid "All Applications"
 msgstr "Toutes les applications"
 
-#: src/AppButton.js:216 src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "Tout voir"
 
-#: src/window.blp:64 src/window.ui:60
+#: src/window.blp:64
 msgid "Show names"
 msgstr "Afficher les noms"
 
-#: src/window.blp:69 src/ShortcutsWindow.blp:15 src/ShortcutsWindow.ui:28
-#: src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.blp:80 src/welcome.blp:61 src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "À propos de Junction"
 
-#: src/welcome.blp:32 src/welcome.ui:37
+#: src/welcome.blp:32
 msgid "Test Junction"
 msgstr "Tester Junction"
 
-#: src/welcome.blp:39 src/welcome.ui:48
+#: src/welcome.blp:39
 msgid "Set Junction as default for Web"
 msgstr "Définir Junction par défaut pour le Web"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:61 src/about.js:60
+#: src/about.js:61
 msgid "translator-credits"
 msgstr "Jeanne Lavoie"
 
-#: src/ShortcutsWindow.blp:10 src/ShortcutsWindow.ui:19
+#: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
 msgstr "Rejeter et fermer"
 
-#: src/ShortcutsWindow.blp:20 src/ShortcutsWindow.ui:37
+#: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
 msgstr "Sélectionner l'application suivante / précédente"
 
-#: src/ShortcutsWindow.blp:25 src/ShortcutsWindow.ui:46
+#: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
 msgstr "Ouvrir avec l'application sélectionnée"
 
-#: src/ShortcutsWindow.blp:30 src/ShortcutsWindow.ui:57
+#: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
 msgstr "Ouvrir avec l'application sélectionnée et rester actif"
 
-#: src/ShortcutsWindow.blp:35 src/ShortcutsWindow.ui:66
+#: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
 msgstr "Ouvrir avec l’application à la position"
 
-#: src/ShortcutsWindow.blp:47 src/ShortcutsWindow.ui:86
+#: src/ShortcutsWindow.blp:47
 msgid "Quit"
 msgstr "Quitter"
 

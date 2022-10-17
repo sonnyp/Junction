@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-06-03 14:20+0000\n"
 "Last-Translator: I. Musthafa <i.musthafa66@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/junction/"
-"junction/id/>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/junction/junction/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,31 +29,20 @@ msgstr "Pemilih aplikasi"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction memungkinkan Anda memilih aplikasi untuk membuka berkas dan tautan."
+msgstr "Junction memungkinkan Anda memilih aplikasi untuk membuka berkas dan tautan."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Setelah memasang, pastikan untuk memulai aplikasi."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Junction akan muncul secara otomatis ketika Anda membuka tautan di aplikasi "
-"desktop. Gunakan tetikus atau navigasi papan tik untuk memilih aplikasi "
-"untuk membuka tautan atau berkas."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Junction akan muncul secara otomatis ketika Anda membuka tautan di aplikasi desktop. Gunakan tetikus atau navigasi papan tik untuk memilih aplikasi untuk membuka tautan atau berkas."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -203,12 +191,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr ""
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Situs ini tidak memiliki pengaman. Penyerang bisa melihat informasi apa pun "
-"yang Anda kirim atau mengontrol konten yang Anda lihat."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Situs ini tidak memiliki pengaman. Penyerang bisa melihat informasi apa pun yang Anda kirim atau mengontrol konten yang Anda lihat."
 
 #: src/AppButton.js:158
 msgid "Reveal"

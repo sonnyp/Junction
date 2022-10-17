@@ -10,14 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-08-24 03:22+0000\n"
 "Last-Translator: Ibrahim Muhammad <ebraheem010@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/junction/junction/"
-"ar/>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/junction/junction/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Weblate 4.14-dev\n"
 
 #. TRANSLATORS: Don't translate
@@ -26,18 +24,13 @@ msgid "Junction"
 msgstr "جانكشن"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
-#: src/about.js:50
 msgid "Application chooser"
 msgstr "منتقي التطبيقات"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-";Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr ";Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
@@ -48,13 +41,8 @@ msgid "After installing make sure to launch the application."
 msgstr "بعد التثبيت تأكد من تشغيل التطبيق."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"سينبثق منتقي التطبيقات تلقائيًا عند فتح ارتباط في تطبيق سطح المكتب. استخدم "
-"التنقل بالفأرة أو لوحة المفاتيح لاختيار التطبيق لفتح الرابط أو المِلَفّ به."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "سينبثق منتقي التطبيقات تلقائيًا عند فتح ارتباط في تطبيق سطح المكتب. استخدم التنقل بالفأرة أو لوحة المفاتيح لاختيار التطبيق لفتح الرابط أو المِلَفّ به."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -202,12 +190,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "هذه هي أول نسخة من جانكشن. نأمل أن تنال إعجابك."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"هذا الموقع ليس آمنا. يمكن للمهاجم رؤية أي معلومات يتم إرسالها أو التحكم "
-"بالمحتوى المعروض."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "هذا الموقع ليس آمنا. يمكن للمهاجم رؤية أي معلومات يتم إرسالها أو التحكم بالمحتوى المعروض."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -221,61 +205,59 @@ msgstr "عرض في المجلد"
 msgid "All Applications"
 msgstr "جميع التطبيقات"
 
-#: src/AppButton.js:216 src/AppButton.js:218
+#: src/AppButton.js:216
 msgid "View All"
 msgstr "عرض الكل"
 
-#: src/window.blp:64 src/window.ui:60
+#: src/window.blp:64
 msgid "Show names"
 msgstr "عرض الأسماء"
 
-#: src/window.blp:69 src/ShortcutsWindow.blp:15 src/ShortcutsWindow.ui:28
-#: src/window.ui:64
+#: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
 msgstr "نسخ إلى الحافظة"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
-#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr "اختصارات لوحة المفاتيح"
 
-#: src/window.blp:80 src/welcome.blp:61 src/welcome.ui:71 src/window.ui:76
+#: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
 msgstr "عن جانكشن"
 
-#: src/welcome.blp:32 src/welcome.ui:37
+#: src/welcome.blp:32
 msgid "Test Junction"
 msgstr "اختبار جانكشن"
 
-#: src/welcome.blp:39 src/welcome.ui:48
+#: src/welcome.blp:39
 msgid "Set Junction as default for Web"
 msgstr "تعيين جانكشن تطبيقا افتراضيا للويب"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:61 src/about.js:60
+#: src/about.js:61
 msgid "translator-credits"
 msgstr "Ibrahim Muhammad <ibrahim.muhammad.mu@outlook.com>"
 
-#: src/ShortcutsWindow.blp:10 src/ShortcutsWindow.ui:19
+#: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
 msgstr "تجاهل وإغلاق"
 
-#: src/ShortcutsWindow.blp:20 src/ShortcutsWindow.ui:37
+#: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
 msgstr "تحديد التطبيق التالي/السابق"
 
-#: src/ShortcutsWindow.blp:25 src/ShortcutsWindow.ui:46
+#: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
 msgstr "فتح باستخدام التطبيق الذي تم تحديده"
 
-#: src/ShortcutsWindow.blp:30 src/ShortcutsWindow.ui:57
+#: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
 msgstr "فتح باستخدام التطبيق الذي تم تحديده والبقاء نشطا"
 
-#: src/ShortcutsWindow.blp:35 src/ShortcutsWindow.ui:66
+#: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
 msgstr "فتح باستخدام التطبيق في الوضع"
 
-#: src/ShortcutsWindow.blp:47 src/ShortcutsWindow.ui:86
+#: src/ShortcutsWindow.blp:47
 msgid "Quit"
 msgstr "خروج"
