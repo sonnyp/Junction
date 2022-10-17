@@ -25,6 +25,7 @@ msgid "Junction"
 msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
+#: src/about.js:50
 msgid "Application chooser"
 msgstr "Sélecteur d’application"
 
@@ -199,8 +200,7 @@ msgstr "Correction pour les applications manquantes"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
-"Ajout d’une fenêtre de raccourcis - accessible avec &amp;lt;Ctrl&amp;gt;?"
+msgstr "Ajout d’une fenêtre de raccourcis - accessible avec &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
@@ -227,60 +227,62 @@ msgstr "Révéler dans le dossier"
 msgid "All Applications"
 msgstr "Toutes les applications"
 
-#: src/AppButton.js:216
+#: src/AppButton.js:216 src/AppButton.js:218
 msgid "View All"
 msgstr "Tout voir"
 
-#: src/window.blp:64
+#: src/window.blp:64 src/window.ui:60
 msgid "Show names"
 msgstr "Afficher les noms"
 
-#: src/window.blp:69 src/ShortcutsWindow.blp:15
+#: src/window.blp:69 src/ShortcutsWindow.blp:15 src/ShortcutsWindow.ui:28
+#: src/window.ui:64
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
+#: src/ShortcutsWindow.ui:80 src/welcome.ui:67 src/window.ui:72
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: src/window.blp:80 src/welcome.blp:61
+#: src/window.blp:80 src/welcome.blp:61 src/welcome.ui:71 src/window.ui:76
 msgid "About Junction"
 msgstr "À propos de Junction"
 
-#: src/welcome.blp:32
+#: src/welcome.blp:32 src/welcome.ui:37
 msgid "Test Junction"
 msgstr "Tester Junction"
 
-#: src/welcome.blp:39
+#: src/welcome.blp:39 src/welcome.ui:48
 msgid "Set Junction as default for Web"
 msgstr "Définir Junction par défaut pour le Web"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
-#: src/about.js:61
+#: src/about.js:61 src/about.js:60
 msgid "translator-credits"
 msgstr "Jeanne Lavoie"
 
-#: src/ShortcutsWindow.blp:10
+#: src/ShortcutsWindow.blp:10 src/ShortcutsWindow.ui:19
 msgid "Discard and close"
 msgstr "Rejeter et fermer"
 
-#: src/ShortcutsWindow.blp:20
+#: src/ShortcutsWindow.blp:20 src/ShortcutsWindow.ui:37
 msgid "Select next/previous application"
 msgstr "Sélectionner l'application suivante / précédente"
 
-#: src/ShortcutsWindow.blp:25
+#: src/ShortcutsWindow.blp:25 src/ShortcutsWindow.ui:46
 msgid "Open with selected application"
 msgstr "Ouvrir avec l'application sélectionnée"
 
-#: src/ShortcutsWindow.blp:30
+#: src/ShortcutsWindow.blp:30 src/ShortcutsWindow.ui:57
 msgid "Open with selected application and stay active"
 msgstr "Ouvrir avec l'application sélectionnée et rester actif"
 
-#: src/ShortcutsWindow.blp:35
+#: src/ShortcutsWindow.blp:35 src/ShortcutsWindow.ui:66
 msgid "Open with application at position"
 msgstr "Ouvrir avec l’application à la position"
 
-#: src/ShortcutsWindow.blp:47
+#: src/ShortcutsWindow.blp:47 src/ShortcutsWindow.ui:86
 msgid "Quit"
 msgstr "Quitter"
 
