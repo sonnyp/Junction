@@ -8,35 +8,37 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-10-20 09:03+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/junction/junction/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr ""
+msgstr "Sovellusvalitsin"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;valitsin;avaa;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junctionin avulla voit valita sovelluksen, jolla tiedostoja ja linkkejä avataan."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "Käynnistä sovellus asennuksen jälkeen."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
@@ -44,7 +46,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Ominaisuudet:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
@@ -201,35 +203,35 @@ msgstr ""
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "Kaikki sovellukset"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "Näytä kaikki"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "Näytä nimet"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopioi leikepöydälle"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Pikanäppäimet"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "Tietoja - Junction"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "Testaa Junctionia"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Aseta Junction oletukseksi Verkolle"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
@@ -238,24 +240,24 @@ msgstr ""
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "Hylkää ja sulje"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Valitse seuraava/edellinen sovellus"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "Avaa valitulla sovelluksella"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Avaa valitulla sovelluksella ja pysy aktiivisena"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr ""
+msgstr "Avaa kohdalla olevalla sovelluksella"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "Lopeta"
