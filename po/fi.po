@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-10-20 09:03+0000\n"
+"PO-Revision-Date: 2022-11-20 18:48+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/junction/junction/fi/>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -42,7 +42,7 @@ msgstr "Käynnistä sovellus asennuksen jälkeen."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction ilmestyy näkyviin automaattisesti, kun avaat linkin työpöytäsovelluksessa. Käytä hiirtä tai näppäimistöä valitaksesi sovelluksen, jolla linkki tai tiedosto avataan."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -50,15 +50,15 @@ msgstr "Ominaisuudet:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Valitse avaamiseen käytettävä sovellus"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Näytä osoite ennen avaamista"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Muokkaa osoitetta ennen avaamista"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Liikkuminen näppäimistöllä"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
@@ -106,11 +106,11 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Tuki työpöytätoiminnoille"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Tuki snap-sovelluksille"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
@@ -119,7 +119,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Uusi kuvake"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
@@ -155,15 +155,15 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "Valikkopainike lisätty"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Paranna käyttöä näppäimistöllä"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Paranna käyttöä komentoriviltä"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Käytä libadwaitaa"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
@@ -195,11 +195,11 @@ msgstr ""
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Paljasta"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Paljasta kansiossa"
 
 #: src/AppButton.js:202
 msgid "All Applications"
@@ -236,7 +236,7 @@ msgstr "Aseta Junction oletukseksi Verkolle"
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
 msgid "translator-credits"
-msgstr ""
+msgstr "Jiri Grönroos <jiri.gronroos+l10n@iki.fi>"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
