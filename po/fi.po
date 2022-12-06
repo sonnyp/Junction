@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-11-20 18:48+0000\n"
+"PO-Revision-Date: 2022-12-07 09:48+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/junction/junction/fi/>\n"
 "Language: fi\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junctionissa on erinomainen tuki näppäimistölle"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "Älä aseta automaattisesti oletussovellukseksi"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "Tuki D-Bus-aktivoinnille"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
@@ -191,7 +191,7 @@ msgstr ""
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "Tämä sivusto ei mahdollista salattua yhteyttä. Hyökkääjä voi nähdä kaiken lähettämäsi tiedon, tai hallita näkemääsi sisältöä."
 
 #: src/AppButton.js:158
 msgid "Reveal"
