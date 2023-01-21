@@ -5,7 +5,7 @@ dev:
 	@ fc-cache ~/.local/share/fonts/
 	@ mkdir -p /tmp/Junction
 	@ glib-compile-schemas --targetdir /tmp/Junction --strict ./data
-	@ GSETTINGS_SCHEMA_DIR=/tmp/Junction ./re.sonny.Junction
+	@ GSETTINGS_SCHEMA_DIR=/tmp/Junction ./src/local.js
 
 build:
 	# meson --reconfigure --prefix ${PWD}/install build
@@ -37,7 +37,7 @@ test:
 	./node_modules/.bin/eslint --cache .
 	./troll/tst/bin.js test/*.test.js
 	flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
-	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//41 --no-hints @@ data/re.sonny.Junction.desktop @@
+	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//43 --no-hints @@ data/re.sonny.Junction.desktop @@
 	# gtk4-builder-tool validate src/*.ui
 	flatpak-builder --show-manifest re.sonny.Junction.json > /dev/null
 	find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check

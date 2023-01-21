@@ -201,10 +201,11 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 <details>
   <summary>Where are desktop files located ?</summary>
 
-- System `/usr/share/applications`
-- User `~/.local/share/applications`
+- System `/usr/share/applications/`
+- User `~/.local/share/applications/`
 - Flatpak system `/var/lib/flatpak/exports/share/applications/`
 - Flatpak user `~/.local/share/flatpak/exports/share/applications/`
+- Snap `/var/lib/snapd/desktop/applications/`
 
 </details>
 

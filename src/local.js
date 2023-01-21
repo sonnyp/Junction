@@ -7,7 +7,7 @@ import GLib from "gi://GLib";
 import { setConsoleLogDomain } from "console";
 import Gio from "gi://Gio";
 
-import { build as gjspack } from "./troll/gjspack/src/gjspack.js";
+import { build as gjspack } from "../troll/gjspack/src/gjspack.js";
 
 imports.package.init({
   name: "re.sonny.Junction",

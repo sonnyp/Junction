@@ -1,5 +1,5 @@
 {
-  "app-id": "re.sonny.Junction",
+  "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
   "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
@@ -26,8 +26,7 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "tag": "v0.4.0",
-          "commit": "75a6d95988736ec0471d22ceb07579c0cedac2ad"
+          "commit": "40f493b378cf73d1cc3f128895e842e8665a56c3"
         }
       ]
     },
