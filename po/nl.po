@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-01-23 08:52+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/junction/junction/"
-"nl/>\n"
+"PO-Revision-Date: 2022-12-29 16:52+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/junction/junction/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -26,35 +25,24 @@ msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr "Toepassingskiezer"
+msgstr "App-kiezer"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Kiezen;Browserkeuze;Browser;Browserosaurus;Buffet;OpenenMet;Browserselectie;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Kiezen;Browserkeuze;Browser;Browserosaurus;Buffet;OpenenMet;Browserselectie;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction stelt je in staat een toepassing te kiezen om bestanden en links in "
-"te openen."
+msgstr "Junction stelt u in staat een app te kiezen om bestanden en links in te openen."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Start Junction na het installeren ervan."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Junction wordt automatisch getoond na het aanklikken van een bestand of link "
-"in een bureaubladtoepassing. Gebruik je muis of toetsenbord om een "
-"toepassing te kiezen."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Junction wordt automatisch getoond na het aanklikken van een bestand of link in een app. Gebruik de muis of het toetsenbord om een app te kiezen."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -62,7 +50,7 @@ msgstr "Kenmerken:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Kies de toepassing waarmee een item moet worden geopend"
+msgstr "Kies de app waarmee een item moet worden geopend"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
@@ -82,7 +70,7 @@ msgstr "Toetsenbordnavigatie"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "Middelklik om een item in meerdere toepassingen te openen"
+msgstr "Middelklik om een item in meerdere apps te openen"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
@@ -90,7 +78,7 @@ msgstr "Kies de browser waarin de link moet worden geopend"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr "Kies de toepassing waarin de afbeelding moet worden geopend"
+msgstr "Kies de app waarin de afbeelding moet worden geopend"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
@@ -98,7 +86,7 @@ msgstr "Junction ondersteunt toetsenbordnavigatie"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr "Junction ondersteunt tevens toepassingsacties"
+msgstr "Junction ondersteunt tevens app-acties"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
@@ -110,7 +98,7 @@ msgstr "Documentportaal-bestandslocaties tonen"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr "Bug opgelost omtrent toepassingsacties"
+msgstr "Bug opgelost omtrent app-acties"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
@@ -118,11 +106,11 @@ msgstr "Bug opgelost omtrent het openen van LibreOffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr "Ondersteuning voor toepassingsacties"
+msgstr "Ondersteuning voor app-acties"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr "Ondersteuning voor snap-toepassingen"
+msgstr "Ondersteuning voor snap-apps"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
@@ -139,7 +127,7 @@ msgstr "Ondersteuning voor de x-junction://-protocol-api"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr "Toepassingen worden niet automatisch als standaard ingesteld"
+msgstr "Apps worden niet automatisch als standaard ingesteld"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
@@ -151,7 +139,7 @@ msgstr "Het aantal opties is voortaan beperkt tot 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr "Nieuw: optie om elke toepassing te kiezen"
+msgstr "Nieuw: optie om elke app te kiezen"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
@@ -159,11 +147,11 @@ msgstr "Nieuw: systeeminformatiepagina het venster ‘Over’"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr "Opgelost: toepassingen die geen uri's ondersteunden"
+msgstr "Opgelost: apps die geen URI's ondersteunden"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr "Nieuw: optie om toepassingsnamen te tonen"
+msgstr "Nieuw: optie om app-namen te tonen"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
@@ -191,7 +179,7 @@ msgstr "Libadwaita-ondersteuning"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr "Opgelost: ontbrekende toepassingen"
+msgstr "Opgelost: ontbrekende apps"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
@@ -199,17 +187,11 @@ msgstr "Nieuw: sneltoetsvenster - te openen met &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
-"Dit is de eerste uitgave van Junction. We hopen dat je er veel plezier aan "
-"beleeft."
+msgstr "Dit is de eerste uitgave van Junction. We hopen dat je er veel plezier aan beleeft."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Deze website is onbeveiligd. Een kwaadwillende kan de informatie inzien die "
-"je verstuurt of de inhoud die je bekijkt."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Deze website is onbeveiligd. Een kwaadwillende kan de informatie inzien die je verstuurt of de inhoud die je bekijkt."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -221,7 +203,7 @@ msgstr "Bekijken in map"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr "Alle toepassingen"
+msgstr "Alle apps"
 
 #: src/AppButton.js:216
 msgid "View All"
@@ -229,7 +211,7 @@ msgstr "Alles tonen"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr "Toepassingsnamen tonen"
+msgstr "App-namen tonen"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
@@ -249,7 +231,7 @@ msgstr "Testen"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr "Junction instellen als standaardtoepassing voor weblinks"
+msgstr "Junction instellen als standaard-app voor weblinks"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
@@ -262,19 +244,19 @@ msgstr "Verwerpen en sluiten"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr "Volgende/Vorige toepassing kiezen"
+msgstr "Volgende/vorige app selecteren"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr "Openen met gekozen toepassing"
+msgstr "Openen met gekozen app"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr "Openen met gekozen toepassing en Junction niet afsluiten"
+msgstr "Openen met gekozen app en Junction niet afsluiten"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr "Openen met toepassing op positie"
+msgstr "Openen met app op positie"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
