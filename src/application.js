@@ -1,6 +1,7 @@
 import Gio from "gi://Gio";
 import Adw from "gi://Adw";
 import GLib from "gi://GLib";
+import Xdp from "gi://Xdp";
 
 import Window from "./window.js";
 import Welcome from "./welcome.js";
@@ -14,6 +15,17 @@ export default function Application() {
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
+
+  // https://gitlab.gnome.org/GNOME/glib/-/issues/1960
+  // https://github.com/sonnyp/Junction/commit/5140f410ffd2899a3bb1aba5929f9891741e02fb
+  if (Xdp.Portal.running_under_sandbox()) {
+    GLib.spawn_command_line_async(
+      "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
+    );
+    GLib.spawn_command_line_async(
+      "gio mime x-scheme-handler/http re.sonny.Junction.desktop",
+    );
+  }
 
   Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
 
