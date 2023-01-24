@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2023-01-11 06:49+0000\n"
+"PO-Revision-Date: 2023-01-25 08:51+0000\n"
 "Last-Translator: K.B.Dharun Krishna <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/junction/junction/ta/>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -34,230 +34,230 @@ msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;Browser
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "கோப்புகள் மற்றும் இணைப்புகளைத் திறப்பதற்கான பயன்பாட்டைத் தேர்வுசெய்ய ஜங்ஷன் உங்களை அனுமதிக்கிறது."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "நிறுவிய பிறகு, பயன்பாட்டைத் தொடங்குவதை உறுதிசெய்க."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "டெஸ்க்டாப் பயன்பாட்டில் இணைப்பைத் திறக்கும்போது ஜங்ஷன் தானாகவே பாப் அப் செய்யும். இணைப்பு அல்லது கோப்பைத் திறக்க பயன்பாட்டைத் தேர்வுசெய்ய மவுஸ் அல்லது விசைப்பலகை வழிசெலுத்தலைப் பயன்படுத்தவும்."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "அம்சங்கள்:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "பயன்பாட்டைத் தேர்ந்தெடுக்கவும் அதனுடன் திறப்பதற்கு"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "திறப்பதற்கு முன் இருப்பிடத்தைக் காட்டு"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "URL ஐ திறப்பதற்கு முன் திருத்தவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "பாதுகாப்பற்ற இணைப்புக்கான குறிப்பைக் காட்டு"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "விசைப்பலகை வழிசெலுத்தல்"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "பல பயன்பாடுகளில் திறக்க மிடில் (நடுவில்) கிளிக் செய்யவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "இணைப்பைத் திறக்க உலாவியைத் தேர்ந்தெடுக்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "படத்தைத் திறக்க பயன்பாட்டைத் தேர்ந்தெடுக்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "ஜங்ஷன் விசைப்பலகைக்கு சிறந்த ஆதரவைக் கொண்டுள்ளது"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "டெஸ்க்டாப் செயல்களும் ஆதரிக்கப்படுகின்றன"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "கோப்புகளுக்கு \"கோப்புறையில் வெளிப்படுத்து\" என்ற விருப்பத்தைச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "ஆவண போர்டல் கோப்பு பாதைகளை வெளிப்படுத்தவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "டெஸ்க்டாப் செயல்களுக்கான பிழை திருத்தம்"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "பிழை திருத்தம் Libreoffice உடன் திறக்கும் போது"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "டெஸ்க்டாப் செயல்களை ஆதரிக்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "ஸ்னாப் பயன்பாடுகளுக்கு ஆதரவு"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "வடிவமைப்பை மேம்படுத்தவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "புதிய சின்னம்"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "x-junction:// புரோட்டோகால் API ஐச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "தானாக இயல்புநிலை பயன்பாடாக அமைக்க வேண்டாம்"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "விடுபட்ட விருப்பங்களை சரிசெய்யவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "விருப்பங்களின் எண்ணிக்கையை 4 ஆக வரம்பிடவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "எந்தவொரு பயன்பாட்டிலும் திறக்க விருப்பத்தைச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "அறிமுக உரையாடலில் கணினி தகவல் பேனலைச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "URIகளை ஆதரிக்காத பயன்பாடுகளை சரிசெய்தல்"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "பயன்பாட்டின் பெயர்களைக் காண்பிக்க ஒரு விருப்பத்தைச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "ஒரு மெனு பொத்தானைச் சேர்க்கவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "விசைப்பலகை பயன்பாட்டை மேம்படுத்தவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "மேம்படுத்தப்பட்ட CLI பயன்பாடு"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "பல URIகளைத் திறப்பதற்கு ஆதரவு"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "D-Bus (டி-பஸ்) இயக்கத்திற்கு ஆதரவு"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "libadwaita (லிபத்வைதாவை) பயன்படுத்தவும்"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "விடுபட்ட பயன்பாடுகளுக்குச் சரிசெய்தல்"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "குறுக்குவழிகள் சாளரத்தைச் சேர் - &lt;Ctrl&gt; மூலம் அணுக முடியும்?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "இது ஜங்ஷனின் முதல் வெளியீடு. உங்களுக்கு இது பிடிக்கும் என்று நம்புகிறோம்."
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "இந்த தளத்திற்கு பாதுகாப்பு இல்லை. தாக்குபவர் நீங்கள் அனுப்பும் எந்த தகவலையும் பார்க்க முடியும் அல்லது நீங்கள் பார்க்கும் உள்ளடக்கத்தை கட்டுப்படுத்தலாம்."
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "வெளிப்படுத்து"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "கோப்புறையில் வெளிப்படுத்தவும்"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "அனைத்து பயன்பாடுகள்"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "அனைத்தையும் காட்டு"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "பெயர்களைக் காட்டு"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "கிளிப்போர்டுக்கு நகலெடுக்கவும்"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "ஜங்ஷன் பற்றி"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "சோதனை செய்யவும் ஜங்ஷனை"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "இணையத்திற்கு ஜங்ஷனை இயல்பாக அமைக்கவும்"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
 msgid "translator-credits"
-msgstr ""
+msgstr "'K.B.Dharun Krishna <kbdharunkrishna@gmail.com>`"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "நிராகரித்து மூடவும்"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "அடுத்த/முந்தைய பயன்பாட்டைத் தேர்ந்தெடுக்கவும்"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட பயன்பாட்டுடன் திறக்கவும்"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட பயன்பாட்டுடன் திறந்து செயலில் இருங்கள்"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr ""
+msgstr "நிலையில் பயன்பாடுடன் திறக்கவும்"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "வெளியேறு"
