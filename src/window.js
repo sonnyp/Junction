@@ -6,28 +6,17 @@ import GLib from "gi://GLib";
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
-import {CommonSettings, settings} from "./common.js";
+import { settings } from "./common.js";
 import Interface from "./window.blp";
 
 export default function Window({ application, file }) {
-
-  const { content_type, resource, scheme } = readResource(file);
-  const openWindowLinkOnlyOnce = settings.get_boolean('open-window-link-only-once');
-  if(openWindowLinkOnlyOnce && CommonSettings.openedWindows.has(resource)) {
-    console.log("Exiting window, because already opened: "+ resource);
-    return;
-  } else {
-    console.log("Opened new window: "+ resource);
-    CommonSettings.openedWindows.add(resource);
-  }
-
   const builder = Gtk.Builder.new_from_resource(Interface);
 
   const window = builder.get_object("window");
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
 
-
+  const { content_type, resource, scheme } = readResource(file);
 
   const { entry } = Entry({
     entry: builder.get_object("entry"),
@@ -55,7 +44,6 @@ export default function Window({ application, file }) {
       content_type,
       entry,
       window,
-      resource
     }),
   );
 
