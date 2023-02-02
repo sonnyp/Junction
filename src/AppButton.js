@@ -6,7 +6,7 @@ import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
 
 import { openWithApplication, getIconFilename } from "./util.js";
-import { settings } from "./common.js";
+import {CommonSettings, settings} from "./common.js";
 import Interface from "./AppButton.blp";
 import { promiseTask } from "../troll/src/util.js";
 
@@ -71,6 +71,8 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       save: true,
     });
     if (close_on_success && success) {
+      console.log("Appbutton2 entry.get_text: "+ entry.get_text());
+      CommonSettings.openedWindows.delete(entry.get_text());
       window.close();
     }
   }
@@ -163,7 +165,7 @@ export function RevealInFolderButton({ file, window }) {
   });
 }
 
-export function ViewAllButton({ content_type, entry, window }) {
+export function ViewAllButton({ content_type, entry, window, resource }) {
   function onResponse(appChooserDialog, response_id) {
     if (response_id !== Gtk.ResponseType.OK) {
       appChooserDialog.destroy();
@@ -183,6 +185,8 @@ export function ViewAllButton({ content_type, entry, window }) {
     }
 
     appChooserDialog.destroy();
+    console.log("Appbutton1 resource: "+ resource);
+    CommonSettings.openedWindows.delete(resource);
     window.close();
   }
 

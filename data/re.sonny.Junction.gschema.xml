@@ -4,5 +4,17 @@
     <key name="show-app-names" type="b">
       <default>false</default>
     </key>
-    </schema>
+    <key name="browsers-url-handlers-row-count" type="i">
+      <default>4</default>
+      <summary>Url Handlers count</summary>
+      <description
+      >Number of Browsers visible, when clicking on url</description>
+    </key>
+    <key name="open-window-link-only-once" type="b">
+      <default>false</default>
+      <summary>Open link window only once</summary>
+      <description
+      >Should be the same window with Browsers opened multiple times?</description>
+    </key>
+  </schema>
 </schemalist>
