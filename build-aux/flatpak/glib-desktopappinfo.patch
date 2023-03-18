@@ -7,19 +7,21 @@
 # https://gitlab.gnome.org/GNOME/gnome-build-meta/-/blob/master/elements/sdk/glib.bst
 
 diff --git a/gio/gdesktopappinfo.c b/gio/gdesktopappinfo.c
-index 60d6deb..b6e4e7b 100644
+index 30fcb2937..05b6958d5 100644
 --- a/gio/gdesktopappinfo.c
 +++ b/gio/gdesktopappinfo.c
-@@ -1851,51 +1851,11 @@ g_desktop_app_info_load_from_keyfile (GDesktopAppInfo *info,
+@@ -1910,56 +1910,11 @@ g_desktop_app_info_load_from_keyfile (GDesktopAppInfo *info,
                                      G_KEY_FILE_DESKTOP_GROUP,
                                      G_KEY_FILE_DESKTOP_KEY_TRY_EXEC,
                                      NULL);
 -  if (try_exec && try_exec[0] != '\0')
 -    {
 -      char *t;
--      t = g_find_program_in_path (try_exec);
+-      /* Use the desktop file path (if any) as working dir to search program */
+-      t = GLIB_PRIVATE_CALL (g_find_program_for_path) (try_exec, NULL, path);
 -      if (t == NULL)
 -        {
+-          g_free (path);
 -          g_free (try_exec);
 -          return FALSE;
 -        }
@@ -36,6 +38,7 @@ index 60d6deb..b6e4e7b 100644
 -      char **argv;
 -      if (!g_shell_parse_argv (exec, &argc, &argv, NULL))
 -        {
+-          g_free (path);
 -          g_free (exec);
 -          g_free (try_exec);
 -          return FALSE;
@@ -47,11 +50,13 @@ index 60d6deb..b6e4e7b 100644
 -          /* Since @exec is not an empty string, there must be at least one
 -           * argument, so dereferencing argv[0] should return non-NULL. */
 -          g_assert (argc > 0);
--          t = g_find_program_in_path (argv[0]);
+-          /* Use the desktop file path (if any) as working dir to search program */
+-          t = GLIB_PRIVATE_CALL (g_find_program_for_path) (argv[0], NULL, path);
 -          g_strfreev (argv);
 -
 -          if (t == NULL)
 -            {
+-              g_free (path);
 -              g_free (exec);
 -              g_free (try_exec);
 -              return FALSE;

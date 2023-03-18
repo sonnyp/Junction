@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "43",
+  "runtime-version": "44beta",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Junction",
   "finish-args": [
@@ -26,7 +26,8 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "commit": "40f493b378cf73d1cc3f128895e842e8665a56c3"
+          "tag": "v0.6.0",
+          "commit": "9adcab2d225fd6435edc85c72a0b67e33880e00b"
         }
       ]
     },
@@ -37,8 +38,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.74/glib-2.74.0.tar.xz",
-          "sha256": "3652c7f072d7b031a6b5edd623f77ebc5dcd2ae698598abcc89ff39ca75add30"
+          "url": "https://download.gnome.org/sources/glib/2.76/glib-2.76.0.tar.xz",
+          "sha256": "525bb703b807142e1aee5ccf222c344e8064b21c0c45677ef594e587874c6797"
         },
         {
           "type": "patch",
@@ -52,8 +53,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib-networking/2.74/glib-networking-2.74.0.tar.xz",
-          "sha256": "1f185aaef094123f8e25d8fa55661b3fd71020163a0174adb35a37685cda613b"
+          "url": "https://download.gnome.org/sources/glib-networking/2.76/glib-networking-2.76.0.tar.xz",
+          "sha256": "149a05a179e629a538be25662aa324b499d7c4549c5151db5373e780a1bf1b9a"
         }
       ]
     },
@@ -73,7 +74,12 @@
       "name": "Junction",
       "buildsystem": "meson",
       "builddir": true,
-      "sources": [{ "type": "dir", "path": "." }]
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ]
     }
   ]
 }

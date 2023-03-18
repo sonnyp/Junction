@@ -1,5 +1,6 @@
 import Gio from "gi://Gio";
 import GLib from "gi://GLib";
+
 import Application from "./application.js";
 
 pkg.initGettext();
@@ -20,5 +21,5 @@ export function main(argv) {
     application.set_accels_for_action("app.restart", ["<Primary><Shift>Q"]);
   }
 
-  application.run(argv);
+  return application.runAsync(argv);
 }

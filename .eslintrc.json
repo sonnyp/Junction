@@ -49,9 +49,9 @@
     "prefer-const": "error",
     "import/extensions": ["error", "ignorePackages"],
     "import/no-unresolved": [
-      2,
+      "error",
       {
-        "ignore": ["gi://*", "cairo", "gettext", "system"]
+        "ignore": ["gi://*", "cairo", "gettext", "system", "resource://*"]
       }
     ]
   }
