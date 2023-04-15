@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-09-12 06:24+0000\n"
 "Last-Translator: Marek Ľach <graweeld@googlemail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/junction/junction/"
-"sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/junction/junction/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,9 +29,7 @@ msgstr ""
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:13
@@ -44,10 +41,7 @@ msgid "After installing make sure to launch the application."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
@@ -196,9 +190,7 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr ""
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
 msgstr ""
 
 #: src/AppButton.js:158

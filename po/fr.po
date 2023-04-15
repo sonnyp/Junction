@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-05-14 18:03+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/junction/junction/"
-"fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/junction/junction/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,32 +29,20 @@ msgstr "Sélecteur d’application"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction vous permet de choisir l’application pour ouvrir les fichiers et "
-"les liens."
+msgstr "Junction vous permet de choisir l’application pour ouvrir les fichiers et les liens."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Veuillez ouvrir l'application après l'avoir installé."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Jonction s’affiche automatiquement lorsque vous ouvrez un lien dans une "
-"application de bureau. Utilisez la souris ou la navigation au clavier pour "
-"choisir l’application avec laquelle ouvrir le lien ou le fichier."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Jonction s’affiche automatiquement lorsque vous ouvrez un lien dans une application de bureau. Utilisez la souris ou la navigation au clavier pour choisir l’application avec laquelle ouvrir le lien ou le fichier."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -152,14 +139,11 @@ msgstr "Limiter le nombre d’options à 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
-"Ajouter une option permettant d’ouvrir avec n’importe quelle application"
+msgstr "Ajouter une option permettant d’ouvrir avec n’importe quelle application"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
-"Ajouter un panneau d’informations sur le système dans la boîte de dialogue à "
-"propos"
+msgstr "Ajouter un panneau d’informations sur le système dans la boîte de dialogue à propos"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
@@ -199,21 +183,15 @@ msgstr "Correction pour les applications manquantes"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
-"Ajout d’une fenêtre de raccourcis - accessible avec &amp;lt;Ctrl&amp;gt;?"
+msgstr "Ajout d’une fenêtre de raccourcis - accessible avec &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
-"Ceci est la première version de Junction. Nous espérons qu’elle vous plaira."
+msgstr "Ceci est la première version de Junction. Nous espérons qu’elle vous plaira."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les "
-"informations que vous envoyez, ou contrôler le contenu que vous voyez."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ce site n’est pas sécurisé. Un attaquant pourrait voir toutes les informations que vous envoyez, ou contrôler le contenu que vous voyez."
 
 #: src/AppButton.js:158
 msgid "Reveal"
