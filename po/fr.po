@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-05-14 18:03+0000\n"
+"PO-Revision-Date: 2023-05-02 14:02+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/junction/junction/fr/>\n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -38,7 +38,7 @@ msgstr "Junction vous permet de choisir l’application pour ouvrir les fichiers
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr "Veuillez ouvrir l'application après l'avoir installé."
+msgstr "Veuillez ouvrir l’application après l’avoir installée."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
@@ -50,27 +50,27 @@ msgstr "Caractéristiques :"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr "Choisissez l’application à ouvrir avec"
+msgstr "Choix de l’application avec laquelle ouvrir vos fichiers ou liens"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr "Montrer l’emplacement avant ouverture"
+msgstr "Affiche l’emplacement avant ouverture"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr "Modifier l’URL avant ouverture"
+msgstr "Permet de modifier l’URL avant ouverture"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr "Afficher un indice pour les liens non sécurisés"
+msgstr "Affiche un indice pour les liens non sécurisés"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr "Navigation au clavier"
+msgstr "Permet la navigation au clavier"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr "Cliquez au milieu pour ouvrir dans plusieurs applications"
+msgstr "Utilisez le clic du milieu pour ouvrir dans plusieurs applications"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
@@ -90,11 +90,11 @@ msgstr "Les actions de bureau sont aussi prises en charge"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr "Ajoute une option \"Révéler dans le dossier\" pour les fichiers"
+msgstr "Ajoute une option « Afficher dans le dossier » pour les fichiers"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr "Révéler les chemins de fichier du portail de documents"
+msgstr "Affiche les chemins de fichiers du portail de documents"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
@@ -123,7 +123,7 @@ msgstr "Nouvelle icône"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr "Ajouter une API de protocole x-junction://"
+msgstr "Ajout d’une API de protocole x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
@@ -135,35 +135,35 @@ msgstr "Correction des options manquantes"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr "Limiter le nombre d’options à 4"
+msgstr "Limite le nombre d’options à 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr "Ajouter une option permettant d’ouvrir avec n’importe quelle application"
+msgstr "Ajout d’une option permettant d’ouvrir avec n’importe quelle application"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr "Ajouter un panneau d’informations sur le système dans la boîte de dialogue à propos"
+msgstr "Ajout d’un panneau d’informations sur le système dans la boîte de dialogue À propos"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr "Correction pour les applications qui ne prend pas en charge les URI"
+msgstr "Correction pour les applications ne prenant pas en charge les URI"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr "Ajouter une option pour afficher le nom des applications"
+msgstr "Ajout d’une option pour afficher le nom des applications"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr "Ajouter un bouton de menu"
+msgstr "Ajout d’un bouton de menu"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr "Améliorer l’utilisation du clavier"
+msgstr "Amélioration de l’utilisation du clavier"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr "Améliorer l’utilisation du CLI"
+msgstr "Amélioration de l’utilisation en ligne de commande"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
@@ -175,7 +175,7 @@ msgstr "Prend en charge l’activation du D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr "Utiliser libadwaita"
+msgstr "Utilise libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
@@ -183,7 +183,7 @@ msgstr "Correction pour les applications manquantes"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr "Ajout d’une fenêtre de raccourcis - accessible avec &lt;Ctrl&gt;?"
+msgstr "Ajout d’une fenêtre de raccourcis - accessible avec 'Ctrl+?'"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
@@ -244,15 +244,15 @@ msgstr "Rejeter et fermer"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr "Sélectionner l'application suivante / précédente"
+msgstr "Sélectionner l’application suivante / précédente"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr "Ouvrir avec l'application sélectionnée"
+msgstr "Ouvrir avec l’application sélectionnée"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr "Ouvrir avec l'application sélectionnée et rester actif"
+msgstr "Ouvrir avec l’application sélectionnée et rester actif"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
