@@ -3,7 +3,10 @@ using Adw 1;
 
 Adw.ApplicationWindow welcome {
   title: "Junction";
+  default-height: 400;
+  default-width: 400;
   content:
+  WindowHandle {
   Box {
     orientation: vertical;
 
@@ -41,6 +44,7 @@ Adw.ApplicationWindow welcome {
         valign: center;
         halign: center;
       }
+    }
     }
   }
 
