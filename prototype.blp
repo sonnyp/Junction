@@ -1,0 +1,188 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window {
+  default-width: 400;
+  default-height: 400;
+  Box {
+    orientation: vertical;
+
+    Adw.HeaderBar {
+      show-end-title-buttons: false;
+      show-start-title-buttons: false;
+      styles ["flat"]
+      [start]
+      ToggleButton {
+        icon-name: "loupe-symbolic";
+      }
+
+      [title]
+      Stack {
+        StackPage {
+          name: "search";
+          child: Adw.Clamp {
+            SearchEntry {
+
+            }
+          };
+        }
+        StackPage {
+          name: "title";
+          child: Adw.Clamp {
+          Entry {
+            text: "https://github.com/sonnyp/Junction";
+            hexpand: true;
+            xalign: 0.5;
+          }
+        }
+        }
+        visible-child-name: "title";
+      }
+
+      [end]
+      MenuButton {
+        icon-name: "menu-symbolic";
+        menu-model: menu_app;
+      }
+    }
+    ScrolledWindow {
+      vexpand: true;
+      ListBox {
+        ListBoxRow {
+          selectable: false;
+          height-request: 48;
+          Box {
+            Image {
+              icon-name: "assistive-listening-symbolic";
+              pixel-size: 38;
+            }
+            Label {
+              margin-start: 12;
+              label: "Firefox";
+            }
+          }
+        }
+        ListBoxRow {
+          selectable: false;
+          height-request: 48;
+          Box {
+            Image {
+              icon-name: "assistive-listening-symbolic";
+              pixel-size: 38;
+            }
+            Label {
+              margin-start: 12;
+              label: "Firefox Developer Edition";
+            }
+          }
+        }
+        ListBoxRow {
+          selectable: false;
+          height-request: 48;
+          Box {
+            Image {
+              icon-name: "assistive-listening-symbolic";
+              pixel-size: 38;
+            }
+            Label {
+              margin-start: 12;
+              label: "Web";
+            }
+          }
+        }
+        ListBoxRow {
+          selectable: false;
+          height-request: 48;
+          Box {
+            Image {
+              icon-name: "assistive-listening-symbolic";
+              pixel-size: 38;
+            }
+            Label {
+              margin-start: 12;
+              label: "Web (Nightly)";
+            }
+          }
+        }
+        ListBoxRow {
+          selectable: false;
+          height-request: 48;
+          Box {
+            height-request: 48;
+            Image {
+              icon-name: "assistive-listening-symbolic";
+              pixel-size: 38;
+            }
+            Label {
+              margin-start: 12;
+              label: "Chromium";
+              height-request: 48;
+            }
+          }
+        }
+      }
+    }
+    ListBox {
+      ListBoxRow {
+        selectable: false;
+        height-request: 48;
+        Box {
+          halign: center;
+          Image {
+            icon-name: "view-more-horizontal-symbolic";
+            pixel-size: 24;
+          }
+        }
+      }
+    }
+  }
+}
+
+menu menu_app {
+  submenu {
+    label: "Remember for";
+    item {
+      label: "github.org";
+    }
+    item {
+      label: "github.org/sonnyp";
+    }
+    item {
+      label: "github.org/sonnyp/Junction";
+    }
+  }
+
+
+  section {
+  item {
+    label: _("Show names");
+    action: "win.show-app-names";
+  }
+
+  item {
+    label: _("Copy to Clipboard");
+    action: "win.copy";
+  }
+  }
+
+  section {
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "app.shortcuts";
+    }
+
+    item {
+      label: _("About Junction");
+      action: "app.about";
+    }
+  }
+}
+
+menu menu_resource {
+  item {
+    label: "Remember for “github.org”";
+  }
+  item {
+    label: "Remember for “github.org/sonnyp”";
+  }
+}

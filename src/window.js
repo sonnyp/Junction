@@ -27,7 +27,7 @@ export default function Window({ application, file }) {
   const applications = getApplications(content_type);
   const list = builder.get_object("list");
 
-  applications.slice(0, 4).forEach((appInfo) => {
+  applications.forEach((appInfo) => {
     const button = AppButton({
       appInfo,
       content_type,
@@ -35,14 +35,22 @@ export default function Window({ application, file }) {
       window,
     });
     appInfo.button = button;
-    list.append(button);
+    list.append(
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: button,
+      }),
+    );
   });
 
   list.append(
-    ViewAllButton({
-      content_type,
-      entry,
-      window,
+    new Gtk.FlowBoxChild({
+      focusable: false,
+      child: ViewAllButton({
+        content_type,
+        entry,
+        window,
+      }),
     }),
   );
 
@@ -94,6 +102,25 @@ export default function Window({ application, file }) {
   copy.connect("activate", copyToClipboard);
   window.add_action(copy);
 
+  // const list = builder.get_object("list");
+
+  function adjust() {
+    if (window.default_width > window.default_height) {
+      list.halign = Gtk.Align.CENTER;
+      list.valign = Gtk.Align.CENTER;
+    } else {
+      list.halign = Gtk.Align.FILL;
+      list.valign = Gtk.Align.END;
+    }
+  }
+
+  window.connect("notify::default-width", () => {
+    adjust();
+  });
+  window.connect("notify::default-height", () => {
+    adjust();
+  });
+
   const toggleAppNames = settings.create_action("show-app-names");
   window.add_action(toggleAppNames);
 
@@ -126,7 +153,16 @@ const excluded_apps = [
 ];
 
 function getApplications(content_type) {
+  // console.time("foo");
+  // Gio.AppInfo.get_recommended_for_type(content_type);
+  // console.timeEnd("foo");
+
+  // console.time("bar");
+  // Gio.AppInfo.get_all();
+  // console.timeEnd("bar");
+
   const applications = Gio.AppInfo.get_recommended_for_type(content_type);
+  // const applications = Gio.AppInfo.get_all();
 
   return applications.filter((appInfo) => {
     return !excluded_apps.includes(appInfo.get_id());

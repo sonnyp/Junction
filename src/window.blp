@@ -2,56 +2,77 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  resizable: false;
-  decorated: false;
-  content:
-  Box {
+  default-width: 772;
+  default-height: 270;
+
+  styles ["main"]
+
+  content: Box {
     orientation: vertical;
 
-    Box list {
-      styles [
-        "list",
-      ]
+    // Adw.HeaderBar {
+    //   styles ["flat"]
+    //   show-end-title-buttons: false;
+    //   show-start-title-buttons: false;
 
-      orientation: horizontal;
-      homogeneous: true;
-      spacing: 12;
-    }
+    //   [start]
+    //   ToggleButton {
+    //     margin-start: 6;
+    //     icon-name: "edit-find-symbolic";
+    //     valign: center;
+    //     styles ["circular", "flat"]
+    //   }
+
+    //   [end]
+    //   WindowControls {
+    //     margin-end: 6;
+    //     decoration-layout: "close";
+    //   }
+    // }
 
     Box {
-      Entry entry {
-        hexpand: true;
-        input-purpose: url;
-        xalign: 0.5;
+      orientation: vertical;
 
-        styles [
-          "uri",
-        ]
+      styles ["content"]
+
+      ScrolledWindow {
+        FlowBox list {
+          valign: center;
+          vexpand: true;
+          max-children-per-line: 5;
+          min-children-per-line: 2;
+          // orientation: horizontal;
+          homogeneous: true;
+          // spacing: 12;
+          styles ["list"]
+          column-spacing: 12;
+          row-spacing: 12;
+          selection-mode: browse;
+          activate-on-single-click: true;
+        }
       }
 
-      MenuButton menu_button {
-        popover: menu_popover;
-        icon-name: "open-menu-symbolic";
-        margin-start: 6;
-        valign: center;
+      Box {
+        spacing: 6;
 
-        styles [
-          "circular",
-          "flat",
-        ]
+        Entry entry {
+          hexpand: true;
+          input-purpose: url;
+          xalign: 0.5;
+          styles ["uri"]
+        }
+
+        MenuButton menu_button {
+          primary: true;
+          popover: menu_popover;
+          icon-name: "open-menu-symbolic";
+          valign: center;
+          styles ["circular", "flat"]
+          tooltip-text: "Main Menu";
+        }
       }
     }
-
-    styles [
-      "content",
-    ]
-  }
-
-  ;
-
-  styles [
-    "main",
-  ]
+  };
 }
 
 PopoverMenu menu_popover {
@@ -61,7 +82,7 @@ PopoverMenu menu_popover {
 
 menu menu_model {
   item {
-    label: _("Show names");
+    label: _("Show App Names");
     action: "win.show-app-names";
   }
 

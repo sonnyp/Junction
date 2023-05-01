@@ -17,6 +17,7 @@ configure_file(
 
 blueprint_compiler = find_program(
   '/app/bin/blueprint-compiler',
+  '../blueprint-compiler/blueprint-compiler.py',
   'blueprint-compiler'
 )
 gjspack = find_program('../troll/gjspack/bin/gjspack')
