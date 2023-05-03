@@ -3,6 +3,8 @@ using Adw 1;
 
 Adw.ApplicationWindow welcome {
   title: "Junction";
+  default-height: 400;
+  default-width: 400;
   content:
   Box {
     orientation: vertical;
@@ -20,30 +22,38 @@ Adw.ApplicationWindow welcome {
       ]
     }
 
-    Box {
-      orientation: vertical;
-      valign: center;
-      halign: center;
+    WindowHandle {
       vexpand: true;
-      hexpand: true;
-      spacing: 14;
 
-      Image {
-        icon-name: "re.sonny.Junction";
-        pixel-size: 128;
-      }
+      Box {
+        orientation: vertical;
 
-      LinkButton demo_button {
-        label: _("Test Junction");
-        valign: center;
-        halign: center;
-        uri: "https://junction.sonny.re/demo";
-      }
+        Box {
+          orientation: vertical;
+          valign: center;
+          halign: center;
+          vexpand: true;
+          hexpand: true;
+          spacing: 14;
 
-      Button install_button {
-        label: _("Set Junction as default for Web");
-        valign: center;
-        halign: center;
+          Image {
+            icon-name: "re.sonny.Junction";
+            pixel-size: 128;
+          }
+
+          LinkButton demo_button {
+            label: _("Test Junction");
+            valign: center;
+            halign: center;
+            uri: "https://junction.sonny.re/demo";
+          }
+
+          Button install_button {
+            label: _("Set Junction as default for Web");
+            valign: center;
+            halign: center;
+          }
+        }
       }
     }
   }
