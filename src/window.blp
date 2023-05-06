@@ -2,59 +2,23 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  default-width: 772;
-  default-height: 270;
-
+  resizable: false;
+  decorated: false;
   styles ["main"]
 
-  content: Box {
-    orientation: vertical;
-
-    // Adw.HeaderBar {
-    //   styles ["flat"]
-    //   show-end-title-buttons: false;
-    //   show-start-title-buttons: false;
-
-    //   [start]
-    //   ToggleButton {
-    //     margin-start: 6;
-    //     icon-name: "edit-find-symbolic";
-    //     valign: center;
-    //     styles ["circular", "flat"]
-    //   }
-
-    //   [end]
-    //   WindowControls {
-    //     margin-end: 6;
-    //     decoration-layout: "close";
-    //   }
-    // }
-
+  content: WindowHandle {
     Box {
       orientation: vertical;
-
       styles ["content"]
 
-      ScrolledWindow {
-        FlowBox list {
-          valign: center;
-          vexpand: true;
-          max-children-per-line: 5;
-          min-children-per-line: 2;
-          // orientation: horizontal;
-          homogeneous: true;
-          // spacing: 12;
-          styles ["list"]
-          column-spacing: 12;
-          row-spacing: 12;
-          selection-mode: browse;
-          activate-on-single-click: true;
-        }
+      Box list {
+        orientation: horizontal;
+        homogeneous: true;
+        spacing: 12;
+        styles ["list"]
       }
 
       Box {
-        spacing: 6;
-
         Entry entry {
           hexpand: true;
           input-purpose: url;
@@ -63,12 +27,13 @@ Adw.ApplicationWindow window {
         }
 
         MenuButton menu_button {
-          primary: true;
           popover: menu_popover;
           icon-name: "open-menu-symbolic";
+          margin-start: 6;
           valign: center;
+          primary: true;
+          tooltip-text: _("Main Menu");
           styles ["circular", "flat"]
-          tooltip-text: "Main Menu";
         }
       }
     }
