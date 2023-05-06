@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-08-19 04:24+0000\n"
 "Last-Translator: Kaz Sibuya <sibuyakazokuu@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/junction/"
-"junction/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/junction/junction/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,32 +29,20 @@ msgstr "続行するアプリケーション選択"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junctionは、ファイルやリンクを開く際に、続行するアプリケーションを選択できる"
-"ようにします。"
+msgstr "Junctionは、ファイルやリンクを開く際に、続行するアプリケーションを選択できるようにします。"
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "インストール後、必ずアプリケーションを起動してください。"
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"デスクトップアプリケーションでリンクを開くと、Junctionが自動的にポップアップ"
-"します。マウスやキーボードのナビゲーションを使って、リンクやファイルを開くア"
-"プリケーションを選択します。"
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "デスクトップアプリケーションでリンクを開くと、Junctionが自動的にポップアップします。マウスやキーボードのナビゲーションを使って、リンクやファイルを開くアプリケーションを選択します。"
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -205,12 +192,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "これがJunctionの最初のリリースです。気に入ってもらえれば幸いです。"
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"このサイトにはセキュリティがありません。攻撃者は、あなたが送信した情報を見た"
-"り、あなたが見たコンテンツを制御したりすることができます。"
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "このサイトにはセキュリティがありません。攻撃者は、あなたが送信した情報を見たり、あなたが見たコンテンツを制御したりすることができます。"
 
 #: src/AppButton.js:158
 msgid "Reveal"
