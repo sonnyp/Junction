@@ -3,11 +3,16 @@ using Adw 1;
 
 Adw.ApplicationWindow welcome {
   title: "Junction";
-  content:
-  Box {
+  default-height: 400;
+  default-width: 400;
+  styles ["welcome"]
+
+  content: Box {
     orientation: vertical;
 
     Adw.HeaderBar {
+      styles ["flat"]
+
       [end]
       MenuButton button_menu {
         menu-model: menu_app;
@@ -16,39 +21,37 @@ Adw.ApplicationWindow welcome {
       }
     }
 
-    Box {
-      orientation: vertical;
-      valign: center;
-      halign: center;
+    WindowHandle {
       vexpand: true;
-      hexpand: true;
-      spacing: 14;
 
-      Image {
-        icon-name: "re.sonny.Junction";
-        pixel-size: 128;
-      }
-
-      LinkButton demo_button {
-        label: _("Test Junction");
+      Box {
+        orientation: vertical;
         valign: center;
         halign: center;
-        uri: "https://junction.sonny.re/demo";
-      }
+        vexpand: true;
+        hexpand: true;
+        spacing: 14;
 
-      Button install_button {
-        label: _("Set Junction as default for Web");
-        valign: center;
-        halign: center;
+        Image {
+          icon-name: "re.sonny.Junction";
+          pixel-size: 128;
+        }
+
+        LinkButton demo_button {
+          label: _("Test Junction");
+          valign: center;
+          halign: center;
+          uri: "https://junction.sonny.re/demo";
+        }
+
+        Button install_button {
+          label: _("Set Junction as default for Web");
+          valign: center;
+          halign: center;
+        }
       }
     }
-  }
-
-  ;
-
-  styles [
-    "welcome",
-  ]
+  };
 }
 
 menu menu_app {

@@ -5,47 +5,50 @@ Adw.ApplicationWindow window {
   resizable: false;
   decorated: false;
   content:
-  Box {
-    orientation: vertical;
-
-    Box list {
-      styles [
-        "list",
-      ]
-
-      orientation: horizontal;
-      homogeneous: true;
-      spacing: 12;
-    }
+  WindowHandle {
 
     Box {
-      Entry entry {
-        hexpand: true;
-        input-purpose: url;
-        xalign: 0.5;
+      orientation: vertical;
 
+      Box list {
         styles [
-          "uri",
+          "list",
         ]
+
+        orientation: horizontal;
+        homogeneous: true;
+        spacing: 12;
       }
 
-      MenuButton menu_button {
-        popover: menu_popover;
-        icon-name: "open-menu-symbolic";
-        margin-start: 6;
-        valign: center;
-        tooltip-text: _("Main Menu");
+      Box {
+        Entry entry {
+          hexpand: true;
+          input-purpose: url;
+          xalign: 0.5;
 
-        styles [
-          "circular",
-          "flat",
-        ]
+          styles [
+            "uri",
+          ]
+        }
+
+        MenuButton menu_button {
+          popover: menu_popover;
+          icon-name: "open-menu-symbolic";
+          margin-start: 6;
+          valign: center;
+          tooltip-text: _("Main Menu");
+
+          styles [
+            "circular",
+            "flat",
+          ]
+        }
       }
+
+      styles [
+        "content",
+      ]
     }
-
-    styles [
-      "content",
-    ]
   }
 
   ;
