@@ -2,38 +2,83 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  resizable: false;
   decorated: false;
+  default-width: 772;
+  default-height: 270;
   styles ["main"]
 
-  content: WindowHandle {
-    Box {
-      orientation: vertical;
-      styles ["content"]
+  content: Box {
+    orientation: vertical;
 
-      Box list {
-        orientation: horizontal;
-        homogeneous: true;
-        spacing: 12;
-        styles ["list"]
-      }
+    // Adw.HeaderBar {
+    //   show-start-title-buttons: false;
+    //   show-end-title-buttons: false;
+
+    //   styles ["flat"]
+
+    //   [start]
+    //   Button button_cancel {
+    //     label: _("Cancel");
+    //     action-name: "window.close";
+    //     styles ["flat"]
+    //   }
+
+    //   [end]
+    //   MenuButton button_menu {
+    //     popover: menu_popover;
+    //     icon-name: "open-menu-symbolic";
+    //     tooltip-text: _("Main Menu");
+    //     primary: true;
+    //   }
+    // }
+
+    WindowHandle {
+      vexpand: true;
 
       Box {
-        Entry entry {
-          hexpand: true;
-          input-purpose: url;
-          xalign: 0.5;
-          styles ["uri"]
+        orientation: vertical;
+        styles ["content"]
+
+        ScrolledWindow {
+          FlowBox list {
+            valign: center;
+            vexpand: true;
+            max-children-per-line: 5;
+            min-children-per-line: 2;
+            // orientation: horizontal;
+            homogeneous: true;
+            // spacing: 12;
+            styles ["list"]
+            column-spacing: 12;
+            row-spacing: 12;
+            selection-mode: none;
+            activate-on-single-click: true;
+          }
         }
 
-        MenuButton menu_button {
-          popover: menu_popover;
-          icon-name: "open-menu-symbolic";
-          margin-start: 6;
-          valign: center;
-          primary: true;
-          tooltip-text: _("Main Menu");
-          styles ["circular", "flat"]
+        Box {
+          spacing: 6;
+
+          Entry entry {
+            hexpand: true;
+            input-purpose: url;
+            xalign: 0.5;
+            styles ["uri"]
+          }
+
+          MenuButton button_menu {
+            popover: menu_popover;
+            icon-name: "open-menu-symbolic";
+            tooltip-text: _("Main Menu");
+            primary: true;
+            styles ["flat"]
+          }
+
+          Button {
+            icon-name: "window-close-symbolic";
+            action-name: "window.close";
+            styles ["circular"]
+          }
         }
       }
     }

@@ -4,13 +4,14 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
+import XdpGtk4 from "gi://XdpGtk4";
 
 import { openWithApplication, getIconFilename } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.blp";
-import { promiseTask } from "../troll/src/util.js";
 
 const portal = new Xdp.Portal();
+Gio._promisify(portal, "open_directory", "open_directory_finish");
 
 export function TileButton({
   label,
@@ -118,6 +119,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   controller_key.connect(
     "key-released",
     (self, keyval, keycode, modifier_state) => {
+      console.log("cool");
       const keyname = Gdk.keyval_name(keyval);
       if (keyname === "Menu") {
         popupActionsMenu({
@@ -141,15 +143,13 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
 
 export function RevealInFolderButton({ file, window }) {
   function onClicked() {
-    promiseTask(
-      portal,
-      "open_directory",
-      "open_directory_finish",
-      imports.gi.XdpGtk4.parent_new_gtk(window),
-      file.get_uri(),
-      Xdp.OpenUriFlags.NONE,
-      null,
-    )
+    portal
+      .open_directory(
+        XdpGtk4.parent_new_gtk(window),
+        file.get_uri(),
+        Xdp.OpenUriFlags.NONE,
+        null,
+      )
       .then((result) => result && window.close())
       .catch(logError);
   }

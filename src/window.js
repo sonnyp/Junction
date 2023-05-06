@@ -59,10 +59,13 @@ export default function Window({ application, file }) {
     !["inode/directory", "application/octet-stream"].includes(content_type)
   ) {
     list.append(
-      RevealInFolderButton({
-        file,
-        entry,
-        window,
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: RevealInFolderButton({
+          file,
+          entry,
+          window,
+        }),
       }),
     );
   }

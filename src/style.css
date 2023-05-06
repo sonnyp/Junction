@@ -11,12 +11,12 @@
 }
 
 .main {
-  /* border-radius: 30px; */
-  /* background: none; */
+  border-radius: 30px;
+  background: none;
   background-color: rgba(20, 20, 20, 0.95);
-  /* border: none; */
-  /* box-shadow: none; */
-  /* padding: 12px; */
+  border: none;
+  box-shadow: none;
+  padding: 12px;
 }
 
 .main headerbar {

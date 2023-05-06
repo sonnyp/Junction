@@ -3,8 +3,6 @@ using Adw 1;
 
 Adw.ApplicationWindow welcome {
   title: "Junction";
-  default-height: 400;
-  default-width: 400;
   styles ["welcome"]
 
   content: Box {
@@ -13,11 +11,11 @@ Adw.ApplicationWindow welcome {
     Adw.HeaderBar {
       styles ["flat"]
 
-      [end]
-      MenuButton button_menu {
-        menu-model: menu_app;
-        icon-name: "open-menu-symbolic";
-        tooltip-text: _("Main Menu");
+      [start]
+      Button {
+        action-name: "app.about";
+        icon-name: "info-symbolic";
+        tooltip-text: _("About Junction");
       }
     }
 
@@ -25,6 +23,7 @@ Adw.ApplicationWindow welcome {
       vexpand: true;
 
       Box {
+        name: "content";
         orientation: vertical;
         valign: center;
         halign: center;
@@ -54,16 +53,3 @@ Adw.ApplicationWindow welcome {
   };
 }
 
-menu menu_app {
-  section {
-    item {
-      label: _("Keyboard Shortcuts");
-      action: "app.shortcuts";
-    }
-
-    item {
-      label: _("About Junction");
-      action: "app.about";
-    }
-  }
-}
