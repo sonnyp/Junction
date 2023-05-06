@@ -5,7 +5,7 @@ import GLib from "gi://GLib";
 
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
+import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp";
 
@@ -43,6 +43,22 @@ export default function Window({ application, file }) {
     );
   });
 
+  if (
+    scheme === "file" &&
+    !["inode/directory", "application/octet-stream"].includes(content_type)
+  ) {
+    list.append(
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: ShowInFolderButton({
+          file,
+          entry,
+          window,
+        }),
+      }),
+    );
+  }
+
   list.append(
     new Gtk.FlowBoxChild({
       focusable: false,
@@ -53,22 +69,6 @@ export default function Window({ application, file }) {
       }),
     }),
   );
-
-  if (
-    scheme === "file" &&
-    !["inode/directory", "application/octet-stream"].includes(content_type)
-  ) {
-    list.append(
-      new Gtk.FlowBoxChild({
-        focusable: false,
-        child: RevealInFolderButton({
-          file,
-          entry,
-          window,
-        }),
-      }),
-    );
-  }
 
   const buttons = [...list];
 
@@ -104,8 +104,6 @@ export default function Window({ application, file }) {
   });
   copy.connect("activate", copyToClipboard);
   window.add_action(copy);
-
-  // const list = builder.get_object("list");
 
   function adjust() {
     if (window.default_width > window.default_height) {
@@ -156,17 +154,7 @@ const excluded_apps = [
 ];
 
 function getApplications(content_type) {
-  // console.time("foo");
-  // Gio.AppInfo.get_recommended_for_type(content_type);
-  // console.timeEnd("foo");
-
-  // console.time("bar");
-  // Gio.AppInfo.get_all();
-  // console.timeEnd("bar");
-
   const applications = Gio.AppInfo.get_recommended_for_type(content_type);
-  // const applications = Gio.AppInfo.get_all();
-
   return applications.filter((appInfo) => {
     return !excluded_apps.includes(appInfo.get_id());
   });

@@ -2,7 +2,7 @@
 @define-color accent_bg_color @yellow_4;
 @define-color accent_fg_color alpha(black, 0.8);
 
-.welcome > contents > box > box {
+.welcome #content {
   padding: 68px;
 }
 
@@ -17,17 +17,6 @@
   border: none;
   box-shadow: none;
   padding: 12px;
-}
-
-.main headerbar {
-  background-color: inherit;
-}
-
-.main .content {
-  margin: 12px;
-  /* padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: 12px; */
 }
 
 .main .list {
@@ -52,4 +41,11 @@
   background-color: alpha(black, 0.8);
   border-radius: 18px;
   border: solid 1px black;
+}
+
+button.close {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 4px;
+  border-radius: 50%;
 }

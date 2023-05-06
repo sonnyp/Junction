@@ -4,33 +4,11 @@ using Adw 1;
 Adw.ApplicationWindow window {
   decorated: false;
   default-width: 772;
-  default-height: 270;
+  default-height: 224;
   styles ["main"]
 
   content: Box {
     orientation: vertical;
-
-    // Adw.HeaderBar {
-    //   show-start-title-buttons: false;
-    //   show-end-title-buttons: false;
-
-    //   styles ["flat"]
-
-    //   [start]
-    //   Button button_cancel {
-    //     label: _("Cancel");
-    //     action-name: "window.close";
-    //     styles ["flat"]
-    //   }
-
-    //   [end]
-    //   MenuButton button_menu {
-    //     popover: menu_popover;
-    //     icon-name: "open-menu-symbolic";
-    //     tooltip-text: _("Main Menu");
-    //     primary: true;
-    //   }
-    // }
 
     WindowHandle {
       vexpand: true;
@@ -70,14 +48,17 @@ Adw.ApplicationWindow window {
             popover: menu_popover;
             icon-name: "open-menu-symbolic";
             tooltip-text: _("Main Menu");
+            valign: center;
             primary: true;
-            styles ["flat"]
+            styles ["circular", "flat"]
           }
 
           Button {
             icon-name: "window-close-symbolic";
             action-name: "window.close";
-            styles ["circular"]
+            styles ["circular", "close"]
+            halign: center;
+            valign: center;
           }
         }
       }
@@ -87,7 +68,7 @@ Adw.ApplicationWindow window {
 
 PopoverMenu menu_popover {
   menu-model: menu_model;
-  halign: end;
+  // halign: end;
 }
 
 menu menu_model {

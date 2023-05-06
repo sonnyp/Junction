@@ -6,7 +6,7 @@ Junction lets you choose the application to open files and links.
 
 ![screenshot](data/screenshot.png)
 
-<a href='https://flathub.org/apps/details/re.sonny.Junction'><img width='180' height='60' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+<a href='https://flathub.org/apps/re.sonny.Junction'><img width='240' height='80' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.svg'/></a>
 
 ## Usage
 
@@ -267,7 +267,7 @@ make test
 <details>
   <summary>Bookmarks</summary>
 
-- [Flathub](https://flathub.org/apps/details/re.sonny.Junction)
+- [Flathub](https://flathub.org/apps/re.sonny.Junction)
 - [Flathub repo](https://github.com/flathub/re.sonny.Junction)
 - [Flathub builds](https://flathub.org/builds/#/apps/re.sonny.Junction)
 - [Flathub stats](https://klausenbusk.github.io/flathub-stats/#ref=re.sonny.Junction)

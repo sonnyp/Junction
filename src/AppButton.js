@@ -119,7 +119,6 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   controller_key.connect(
     "key-released",
     (self, keyval, keycode, modifier_state) => {
-      console.log("cool");
       const keyname = Gdk.keyval_name(keyval);
       if (keyname === "Menu") {
         popupActionsMenu({
@@ -141,7 +140,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return button;
 }
 
-export function RevealInFolderButton({ file, window }) {
+export function ShowInFolderButton({ file, window }) {
   function onClicked() {
     portal
       .open_directory(
@@ -155,8 +154,8 @@ export function RevealInFolderButton({ file, window }) {
   }
 
   return TileButton({
-    label: _("Reveal"),
-    tooltip: _("Reveal in Folder"),
+    label: _("Open Folder"),
+    tooltip: _("Open in Folder"),
     icon_name: "folder-symbolic",
     icon_size: 48,
     onClicked,
