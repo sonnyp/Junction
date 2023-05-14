@@ -1,11 +1,11 @@
 .PHONY: dev build run-host flatpak flatpak-local-remote bundle test clean
 
 dev:
-	@ mkdir -p ~/.local/share/fonts
-	@ fc-cache ~/.local/share/fonts/
-	@ mkdir -p /tmp/Junction
-	@ glib-compile-schemas --targetdir /tmp/Junction --strict ./data
-	@ GSETTINGS_SCHEMA_DIR=/tmp/Junction ./src/local.js
+	@ # mkdir -p ~/.local/share/fonts
+	@ # fc-cache ~/.local/share/fonts/
+	@ # mkdir -p /tmp/Junction
+	@ glib-compile-schemas --strict ./data
+	@ ./src/local.js
 
 build:
 	# meson --reconfigure --prefix ${PWD}/install build

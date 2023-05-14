@@ -1,5 +1,5 @@
 [Desktop Entry]
-# TRANSLATORS: Don't translate
+# TRANSLATORS: Do NOT translate
 Name=Junction
 Comment=Application chooser
 Exec=re.sonny.Junction %U
@@ -8,7 +8,9 @@ Terminal=false
 Type=Application
 Categories=Settings;System;Utility;GNOME;GTK;
 Icon=re.sonny.Junction
-# TRANSLATORS: Don't translate
+# TRANSLATORS: Do NOT translate
 Keywords=Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;
 DBusActivatable=true
 StartupNotify=true
+# Translators: Do NOT translate
+X-Purism-FormFactor=Workstation;Mobile;

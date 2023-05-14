@@ -5,7 +5,7 @@ import GLib from "gi://GLib";
 
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ViewAllButton, RevealInFolderButton } from "./AppButton.js";
+import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp";
 
@@ -27,7 +27,9 @@ export default function Window({ application, file }) {
   const applications = getApplications(content_type);
   const list = builder.get_object("list");
 
-  applications.slice(0, 4).forEach((appInfo) => {
+  const options = [];
+
+  applications.forEach((appInfo) => {
     const button = AppButton({
       appInfo,
       content_type,
@@ -35,38 +37,54 @@ export default function Window({ application, file }) {
       window,
     });
     appInfo.button = button;
-    list.append(button);
+    options.push(button);
+    list.append(
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: button,
+      }),
+    );
   });
-
-  list.append(
-    ViewAllButton({
-      content_type,
-      entry,
-      window,
-    }),
-  );
 
   if (
     scheme === "file" &&
     !["inode/directory", "application/octet-stream"].includes(content_type)
   ) {
+    const button = ShowInFolderButton({
+      file,
+      entry,
+      window,
+    });
+    options.push(button);
     list.append(
-      RevealInFolderButton({
-        file,
-        entry,
-        window,
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: button,
       }),
     );
   }
 
-  const buttons = [...list];
+  (() => {
+    const button = ViewAllButton({
+      content_type,
+      entry,
+      window,
+    });
+    options.push(button);
+    list.append(
+      new Gtk.FlowBoxChild({
+        focusable: false,
+        child: button,
+      }),
+    );
+  })();
 
   function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
     // Is not 0...9
     if (!/^\d$/.test(keyname)) return null;
     const n = +keyname;
-    return buttons[n - 1];
+    return options[n - 1];
   }
 
   const eventController = new Gtk.EventControllerKey();
@@ -127,7 +145,6 @@ const excluded_apps = [
 
 function getApplications(content_type) {
   const applications = Gio.AppInfo.get_recommended_for_type(content_type);
-
   return applications.filter((appInfo) => {
     return !excluded_apps.includes(appInfo.get_id());
   });

@@ -2,7 +2,7 @@
 @define-color accent_bg_color @yellow_4;
 @define-color accent_fg_color alpha(black, 0.8);
 
-.welcome > contents > box > box {
+.welcome #content {
   padding: 68px;
 }
 
@@ -13,15 +13,33 @@
 .main {
   border-radius: 30px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.95);
+  background-color: #353433;
   border: none;
   box-shadow: none;
-  padding: 12px;
+}
+
+.main.tiled,
+.main.tiled-top,
+.main.tiled-left,
+.main.tiled-right,
+.main.tiled-bottom,
+.main.maximized,
+.main.fullscreen {
+  border-radius: 0;
 }
 
 .main .list {
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   background: none;
   margin-bottom: 12px;
+}
+
+.main .bar {
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .main .list button {
@@ -38,7 +56,14 @@
 }
 
 .main entry.uri {
-  background-color: alpha(black, 0.8);
+  background-color: #1e1e1e;
   border-radius: 18px;
   border: solid 1px black;
+}
+
+button.close {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 4px;
+  border-radius: 50%;
 }

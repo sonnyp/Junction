@@ -3,31 +3,28 @@ using Gtk 4.0;
 Button button {
   halign: fill;
   valign: fill;
+  width-request: 134;
+  height-request: 134;
 
-  styles [
-    "flat",
-  ]
+  styles ["flat"]
 
   Box box {
     orientation: vertical;
+    valign: center;
+    halign: center;
 
     Image image {
       pixel-size: 92;
-      vexpand: true;
-
-      styles [
-        "icon-dropshadow",
-      ]
+      width-request: 92;
+      height-request: 92;
+      styles ["icon-dropshadow"]
     }
 
     Label label {
       ellipsize: end;
       max-width-chars: 10;
       margin-top: 6;
-
-      styles [
-        "body",
-      ]
+      styles ["body"]
     }
   }
 }

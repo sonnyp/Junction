@@ -61,6 +61,17 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.7" date="2023-05-14">
+      <description>
+        <ul>
+          <li>Support multiple lines of options (scroll)</li>
+          <li>Support mobile form actors</li>
+          <li>Add a close button</li>
+          <li>Make the window temporarily resizable</li>
+          <li>Use GNOME 44</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6" date="2022-10-15">
       <description>
         <ul>
@@ -137,4 +148,8 @@
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>
   </kudos>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
 </component>

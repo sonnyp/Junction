@@ -2,70 +2,96 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  resizable: false;
-  decorated: false;
-  content:
-  WindowHandle {
+  default-width: 772;
+  default-height: 232;
+  styles ["main"]
 
-    Box {
-      orientation: vertical;
-
-      Box list {
-        styles [
-          "list",
-        ]
-
-        orientation: horizontal;
-        homogeneous: true;
-        spacing: 12;
-      }
-
-      Box {
-        Entry entry {
-          hexpand: true;
-          input-purpose: url;
-          xalign: 0.5;
-
-          styles [
-            "uri",
-          ]
-        }
-
-        MenuButton menu_button {
-          popover: menu_popover;
-          icon-name: "open-menu-symbolic";
-          margin-start: 6;
-          valign: center;
-          tooltip-text: _("Main Menu");
-
-          styles [
-            "circular",
-            "flat",
-          ]
-        }
-      }
-
-      styles [
-        "content",
-      ]
+  // portrait
+  Adw.Breakpoint {
+    condition ("max-aspect-ratio: 1")
+    setters {
+      list.halign: fill;
+      list.valign: end;
     }
   }
 
-  ;
+  // landscape
+  Adw.Breakpoint {
+    condition ("min-aspect-ratio: 1")
+    setters {
+      list.halign: center;
+      list.valign: center;
+    }
+  }
 
-  styles [
-    "main",
-  ]
+  content: Box {
+    WindowHandle {
+      hexpand: true;
+
+      Box {
+        orientation: vertical;
+        styles ["content"]
+
+        ScrolledWindow {
+          vexpand: true;
+          styles ["undershoot-bottom"]
+          FlowBox list {
+            max-children-per-line: 5;
+            min-children-per-line: 2;
+            homogeneous: true;
+            styles ["list"]
+            column-spacing: 12;
+            row-spacing: 12;
+            selection-mode: none;
+            activate-on-single-click: true;
+          }
+        }
+
+        Box {
+          margin-top: 12;
+          spacing: 12;
+          styles ["bar"]
+
+          MenuButton button_menu {
+            popover: menu_popover;
+            icon-name: "open-menu-symbolic";
+            tooltip-text: _("Main Menu");
+            valign: center;
+            primary: true;
+            styles ["circular", "flat"]
+          }
+
+          Entry entry {
+            hexpand: true;
+            input-purpose: url;
+            xalign: 0.5;
+            styles ["uri"]
+            primary-icon-sensitive: false;
+          }
+
+          Button {
+            icon-name: "window-close-symbolic";
+            action-name: "window.close";
+            styles ["circular", "close"]
+            halign: center;
+            valign: center;
+            margin-end: 6;
+            margin-start: 3;
+          }
+        }
+      }
+    }
+  };
 }
 
 PopoverMenu menu_popover {
   menu-model: menu_model;
-  halign: end;
+  halign: start;
 }
 
 menu menu_model {
   item {
-    label: _("Show names");
+    label: _("Show App Names");
     action: "win.show-app-names";
   }
 
