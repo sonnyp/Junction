@@ -28,6 +28,24 @@
   border-radius: 0;
 }
 
+.main headerbar windowhandle > box {
+  padding: 12px;
+}
+
+.main.tiled headerbar windowhandle > box,
+.main.tiled-top headerbar windowhandle > box,
+.main.tiled-left headerbar windowhandle > box,
+.main.tiled-right headerbar windowhandle > box,
+.main.tiled-bottom headerbar windowhandle > box,
+.main.maximized headerbar windowhandle > box,
+.main.fullscreen headerbar windowhandle > box {
+  /* these are the default Libadwaita values */
+  padding-bottom: 6px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 6px;
+}
+
 .main .list {
   padding-top: 12px;
   padding-left: 12px;
@@ -37,9 +55,7 @@
 }
 
 .main .bar {
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 12px;
 }
 
 .main .list button {
@@ -59,11 +75,4 @@
   background-color: #1e1e1e;
   border-radius: 18px;
   border: solid 1px black;
-}
-
-button.close {
-  min-width: 12px;
-  min-height: 12px;
-  padding: 4px;
-  border-radius: 50%;
 }

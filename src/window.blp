@@ -3,7 +3,9 @@ using Adw 1;
 
 Adw.ApplicationWindow window {
   default-width: 772;
-  default-height: 232;
+  default-height: 236;
+  width-request: 360;
+  height-request: 236;
   styles ["main"]
 
   // portrait
@@ -12,73 +14,69 @@ Adw.ApplicationWindow window {
     setters {
       list.halign: fill;
       list.valign: end;
+      window_controls_bottom.visible: false;
+      button_menu_bottom.visible: false;
+      toolbar_view.reveal-top-bars: true;
     }
   }
 
-  // landscape
-  Adw.Breakpoint {
-    condition ("min-aspect-ratio: 1")
-    setters {
-      list.halign: center;
-      list.valign: center;
+  content: Adw.ToolbarView toolbar_view {
+    reveal-top-bars: false;
+
+    [top]
+    Adw.HeaderBar header_bar {
+      [start]
+      MenuButton {
+        popover: menu_popover;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        valign: center;
+        primary: true;
+        styles ["circular", "flat"]
+      }
     }
-  }
 
-  content: Box {
-    WindowHandle {
-      hexpand: true;
-
-      Box {
-        orientation: vertical;
-        styles ["content"]
-
-        ScrolledWindow {
-          vexpand: true;
-          styles ["undershoot-bottom"]
-          FlowBox list {
-            max-children-per-line: 5;
-            min-children-per-line: 2;
-            homogeneous: true;
-            styles ["list"]
-            column-spacing: 12;
-            row-spacing: 12;
-            selection-mode: none;
-            activate-on-single-click: true;
-          }
+    content: WindowHandle {
+      ScrolledWindow {
+        vexpand: true;
+        FlowBox list {
+          halign: center;
+          valign: center;
+          max-children-per-line: 5;
+          min-children-per-line: 2;
+          homogeneous: true;
+          styles ["list"]
+          column-spacing: 12;
+          row-spacing: 12;
+          selection-mode: none;
+          activate-on-single-click: true;
         }
+      }
+    };
 
-        Box {
-          margin-top: 12;
-          spacing: 12;
-          styles ["bar"]
+    [bottom]
+    Box {
+      spacing: 12;
+      styles ["bar"]
 
-          MenuButton button_menu {
-            popover: menu_popover;
-            icon-name: "open-menu-symbolic";
-            tooltip-text: _("Main Menu");
-            valign: center;
-            primary: true;
-            styles ["circular", "flat"]
-          }
+      MenuButton button_menu_bottom {
+        popover: menu_popover;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        valign: center;
+        primary: true;
+        styles ["circular", "flat"]
+      }
 
-          Entry entry {
-            hexpand: true;
-            input-purpose: url;
-            xalign: 0.5;
-            styles ["uri"]
-            primary-icon-sensitive: false;
-          }
+      Entry entry {
+        hexpand: true;
+        input-purpose: url;
+        xalign: 0.5;
+        styles ["uri"]
+      }
 
-          Button {
-            icon-name: "window-close-symbolic";
-            action-name: "window.close";
-            styles ["circular", "close"]
-            halign: center;
-            valign: center;
-            margin-end: 6;
-            margin-start: 3;
-          }
-        }
+      WindowControls window_controls_bottom {
+        decoration-layout: "close";
       }
     }
   };

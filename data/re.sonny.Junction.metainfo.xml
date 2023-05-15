@@ -33,6 +33,7 @@
   <url type="bugtracker">https://junction.sonny.re/feedback</url>
   <url type="donation">https://junction.sonny.re/donate</url>
   <url type="translate">https://junction.sonny.re/translate</url>
+  <url type="vcs-browser">https://junction.sonny.re/source</url>
   <screenshots>
     <screenshot type="default">
       <image>
@@ -148,8 +149,26 @@
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>
   </kudos>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+
   <custom>
     <value key="Purism::form_factor">workstation</value>
     <value key="Purism::form_factor">mobile</value>
+  </custom>
+
+  <color type="primary" scheme_preference="light">#F8ED9E</color>
+  <color type="primary" scheme_preference="dark">#AA7B07</color>
+  <custom>
+    <value
+      key="GnomeSoftware::key-colors"
+    >[(248, 237, 158), (170, 123, 7)]</value>
   </custom>
 </component>

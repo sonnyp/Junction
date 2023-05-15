@@ -27,7 +27,7 @@ export default function Entry({ entry, resource, scheme }) {
       Gtk.EntryIconPosition.PRIMARY,
       "channel-insecure-symbolic",
     );
-    // TODO: file a bug - does not seem to be working
+    entry.set_icon_sensitive(Gtk.EntryIconPosition.PRIMARY, false);
     entry.set_icon_activatable(Gtk.EntryIconPosition.PRIMARY, false);
   }
 
