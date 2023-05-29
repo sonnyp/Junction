@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2023-01-21 20:26+0000\n"
+"PO-Revision-Date: 2023-05-30 05:53+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/junction/junction/fi/>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -98,11 +98,11 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Bugikorjaus työpöytätoiminnoille"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Bugikorjaus LibreOfficella avatessa"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
@@ -115,7 +115,7 @@ msgstr "Tuki snap-sovelluksille"
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "Aiempaa parempi design"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
@@ -123,7 +123,7 @@ msgstr "Uusi kuvake"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Lisää x-junction://-yhteyskäytännön rajapinta"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
@@ -131,15 +131,15 @@ msgstr "Älä aseta automaattisesti oletussovellukseksi"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "Korjaa puuttuvat valinnat"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Rajoita valintojen määrä neljään"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "Lisää valinta millä tahansa sovelluksella avaamiseen"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
@@ -147,11 +147,11 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "Korjaus sovelluksille, jotka eivät tue URI-tunnisteita"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Lisää valinta sovellusten nimen näyttämiseksi"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
@@ -179,7 +179,7 @@ msgstr "Käytä libadwaitaa"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Korjaus puuttuville sovelluksille"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
@@ -187,7 +187,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "Tämä on Junctionin ensimmäinen julkaisu. Toivottavasti pidät siitä."
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
