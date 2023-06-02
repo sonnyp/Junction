@@ -103,77 +103,77 @@ msgstr "ඩෙස්ක්ටොප් ක්‍රියා ද සහය ද�
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "ගොනු සඳහා \"ෆෝල්ඩරයේ හෙළි කරන්න\" විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "ලේඛන ද්වාර ගොනු මාර්ග හෙළි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 #, fuzzy
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා සඳහා දෝෂ නිරාකරණය"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Libreoffice සමඟ විවෘත කිරීමේදී දෝෂ නිරාකරණය"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා සඳහා සහය වන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Snap යෙදුම් සඳහා සහය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "නිර්මාණය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "නව නිරූපකය"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Add a x-junction:// protocol API"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "පෙරනිමි යෙදුම ලෙස ස්වයංක්‍රීයව සකසන්න එපා"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "නැතිවූ විකල්ප නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "විකල්ප ගණන 4 ට සීමා කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "ඕනෑම යෙදුමක් සමඟ විවෘත කිරීමට විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr "System-Informationsfenster im Info-Dialogfenster hinzugefügt"
+msgstr "ගැන සංවාදයේ පද්ධති තොරතුරු පැනලයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr "Korrektur für Programme die keine URI-Adressen unterstützen"
+msgstr "URI සඳහා සහය නොදක්වන යෙදුම් සඳහා නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr "Option zur Anzeige von Programmnamen hinzugefügt"
+msgstr "යෙදුම් නම් පෙන්වීමට විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr "Menü-Schaltfläche hinzufügt"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr "Verbesserte Nutzung der Tastatur"
+msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
