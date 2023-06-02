@@ -222,60 +222,60 @@ msgstr "ෆෝල්ඩරය තුළ හෙළි කරන්න"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "සියලුම යෙදුම්"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "සියල්ල බලන්න"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "නම් පෙන්වන්න"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "පසුරු පුවරුවට පිටපත් කරන්න"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "යතුරුපුවරු කෙටිමං"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "Junction ගැන"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "Junction පරීක්ෂා කරන්න"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Web සඳහා Junction පෙරනිමිය ලෙස සකසන්න"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "ඉවතලන්න සහ වසා දමන්න"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "ඊළඟ/පෙර යෙදුම තෝරන්න"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "තෝරාගත් යෙදුම සමඟ විවෘත කරන්න"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "තෝරාගත් යෙදුම සමඟ විවෘත කර ක්‍රියාකාරීව සිටින්න"
 
 #: src/ShortcutsWindow.blp:35
 #, fuzzy
 msgid "Open with application at position"
-msgstr ""
+msgstr "ස්ථානයේ යෙදුම සමඟ විවෘත කරන්න"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "ඉවත්"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
