@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2023-06-02 19:50+0530\n"
 "PO-Revision-Date: 2023-06-02 19:50+0530\n"
 "Last-Translator: PythonPlumber <mario.yellow.bea@proton.me>\n"
-"Language-Team: Sri Lanka <https://hosted.weblate.org/projects/junction/junction/"
+"Language-Team: Sinhala <https://hosted.weblate.org/projects/junction/junction/"
 "si/>\n"
 "Language: si\n"
 "MIME-Version: 1.0\n"
@@ -169,15 +169,15 @@ msgstr "යෙදුම් නම් පෙන්වීමට විකල්ප
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "මෙනු බොත්තමක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "යතුරුපුවරු භාවිතය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "CLI භාවිතය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
