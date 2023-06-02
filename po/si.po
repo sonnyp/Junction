@@ -79,27 +79,27 @@ msgstr "අනාරක්ෂිත සබැඳිය සඳහා ඉඟිය
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "යතුරුපුවරු සංචාලනය"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "යෙදුම් කිහිපයක විවෘත කිරීමට මැද ක්ලික් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "සබැඳිය විවෘත කිරීමට බ්‍රවුසරය තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "රූපය විවෘත කිරීමට යෙදුම තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction යතුරුපුවරුව සඳහා විශිෂ්ට සහාය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා ද සහය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
