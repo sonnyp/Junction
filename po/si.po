@@ -26,7 +26,7 @@ msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr ""
+msgstr "යෙදුම් තේරීම"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
@@ -34,14 +34,16 @@ msgid ""
 "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
 "BrowserSelect;"
 msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction ඔබට ගොනු සහ සබැඳි විවෘත කිරීමට යෙදුම තෝරා ගැනීමට ඉඩ දෙයි."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "ස්ථාපනය කිරීමෙන් පසු යෙදුම දියත් කිරීමට වග බලා ගන්න."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid ""
@@ -49,18 +51,21 @@ msgid ""
 "application. Use the mouse or keyboard navigation to choose the application "
 "to open the link or file with."
 msgstr ""
+"ඔබ ඩෙස්ක්ටොප් එකක සබැඳියක් විවෘත කළ විට හන්දිය ස්වයංක්‍රීයව උත්පතන වනු ඇත"
+"යෙදුම. යෙදුම තෝරා ගැනීමට මූසිකය හෝ යතුරුපුවරු සංචාලනය භාවිතා කරන්න"
+"සබැඳිය හෝ ගොනුව විවෘත කිරීමට."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "විශේෂාංග:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "විවෘත කිරීමට යෙදුම තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "විවෘත කිරීමට පෙර ස්ථානය පෙන්වන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
