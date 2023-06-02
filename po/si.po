@@ -181,42 +181,44 @@ msgstr "CLI භාවිතය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "බහු URI විවෘත කිරීමට සහාය වීම"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "D-Bus සක්‍රිය කිරීමට සහාය වීම"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Libadwaita භාවිතා කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "නැතිවූ යෙදුම් සඳහා නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "කෙටිමං කවුළුවක් එක් කරන්න - &lt;Ctrl&gt; සමඟින් ප්‍රවේශ විය හැකිද?"
 ""
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "මෙය Junction පළමු නිකුතුවයි. ඔබ එයට කැමති යැයි අපි බලාපොරොත්තු වෙමු."
 
 #: src/Entry.js:23
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
 msgstr ""
+"මෙම අඩවියට ආරක්ෂාවක් නැත. ඔබ යවන ඕනෑම තොරතුරක් ප්‍රහාරකයෙකුට දැකිය හැක, "
+"නැතහොත් ඔබ දකින අන්තර්ගතය පාලනය කරන්න."
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "හෙළි කරන්න"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "ෆෝල්ඩරය තුළ හෙළි කරන්න"
 
 #: src/AppButton.js:202
 msgid "All Applications"
