@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-02-08 18:56+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/junction/"
-"junction/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/junction/junction/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,31 +29,20 @@ msgstr "Uygulama seçici"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction, dosyaları ve bağlantıları açacak uygulamayı seçmenize olanak tanır."
+msgstr "Junction, dosyaları ve bağlantıları açacak uygulamayı seçmenize olanak tanır."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Kurduktan sonra uygulamayı başlattığınızdan emin olun."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Bir masaüstü uygulamasında bir bağlantı açtığınızda Junction otomatik olarak "
-"açılacaktır. Bağlantının veya dosyanın açılacağı uygulamayı seçmek için "
-"fareyi veya klavyeyi kullanın."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Bir masaüstü uygulamasında bir bağlantı açtığınızda Junction otomatik olarak açılacaktır. Bağlantının veya dosyanın açılacağı uygulamayı seçmek için fareyi veya klavyeyi kullanın."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -202,12 +190,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "Bu, Junction'ın ilk sürümüdür. Beğeneceğinizi umuyoruz."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Bu sitenin güvenliği yok. Saldırgan, gönderdiğiniz herhangi bir bilgiyi "
-"görebilir veya gördüğünüz içeriği denetleyebilir."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Bu sitenin güvenliği yok. Saldırgan, gönderdiğiniz herhangi bir bilgiyi görebilir veya gördüğünüz içeriği denetleyebilir."
 
 #: src/AppButton.js:158
 msgid "Reveal"

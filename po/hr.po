@@ -10,14 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-01-23 08:52+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/junction/"
-"junction/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/junction/junction/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.11-dev\n"
 
 #. TRANSLATORS: Don't translate
@@ -31,12 +29,8 @@ msgstr "Birač programa"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
@@ -47,14 +41,8 @@ msgid "After installing make sure to launch the application."
 msgstr "Nakon instaliranja pokreni program."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Junction će se automatski pojaviti kad otvoriš poveznicu u desktop programu. "
-"Koristi navigaciju mišem ili tipkovnicom za biranje programa za otvaranje "
-"poveznice ili datoteke."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Junction će se automatski pojaviti kad otvoriš poveznicu u desktop programu. Koristi navigaciju mišem ili tipkovnicom za biranje programa za otvaranje poveznice ili datoteke."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -202,12 +190,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "Ovo je prvo izdanje programa Junction. Nadamo se da ti se sviđa."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Ova stranica nema sigurnost. Napadač bi mogao vidjeti bilo koju informaciju "
-"koju šalješ ili upravljati sadržajem koji vidiš."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ova stranica nema sigurnost. Napadač bi mogao vidjeti bilo koju informaciju koju šalješ ili upravljati sadržajem koji vidiš."
 
 #: src/AppButton.js:158
 msgid "Reveal"
