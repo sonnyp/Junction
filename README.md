@@ -192,6 +192,8 @@ If the application was installed via Flatpak, the package manager or an other co
 
 Make sure the application desktop file has a `MimeType` key that matches the type of resource you want it to handle. For example if you want the application `~/.local/share/applications/my-custom-browser.desktop` to handle web content; add the following `MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;`.
 
+The `[Desktop Entry]` of the `.desktop` file must be the first section as mandated by the specification.
+
 The desktop filename should be unique. Junction can't display both `/usr/share/applicatins/firefox.desktop` and `~/.local/share/applications/firefox.desktop`. The second overrides the first.
 
 Finally - make sure to run `update-desktop-database ~/.local/share/applications` after installing a desktop file.
@@ -313,6 +315,8 @@ See https://github.com/sonnyp/Commit/pull/14#issuecomment-894070878
 
 </details>
 
+<!--
+
 ## Building
 
 <details>
@@ -380,9 +384,11 @@ ninja -C build uninstall
 
 </details>
 
+-->
+
 ## Copyright
 
-© 2021-2022 [Sonny Piers](https://github.com/sonnyp)
+© 2021 [Sonny Piers](https://github.com/sonnyp)
 
 ## License
 

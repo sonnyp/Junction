@@ -39,7 +39,7 @@
           "type": "git",
           "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
           "tag": "v0.8.0",
-          "commit": "36546e48463d52a252acacd462917e16992f3ac9"
+          "commit": "8f3682135b6015f38fcf09c8714e4a89daa91987"
         }
       ]
     },
