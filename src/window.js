@@ -3,29 +3,29 @@ import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 import GLib from "gi://GLib";
 
+import { build } from "../troll/src/main.js";
+
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
-import Interface from "./window.blp";
+import Interface from "./window.blp" assert { type: "uri" };
 
 export default function Window({ application, file }) {
-  const builder = Gtk.Builder.new_from_resource(Interface);
+  const { window, list, entry } = build(Interface);
 
-  const window = builder.get_object("window");
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
 
   const { content_type, resource, scheme } = readResource(file);
 
-  const { entry } = Entry({
-    entry: builder.get_object("entry"),
+  Entry({
+    entry,
     resource,
     scheme,
   });
 
   const applications = getApplications(content_type);
-  const list = builder.get_object("list");
 
   const options = [];
 

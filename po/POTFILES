@@ -17,3 +17,7 @@ src/ShortcutsWindow.blp
 src/ShortcutsWindow.js
 src/application.js
 src/main.js
+troll/src/gsx.js
+troll/src/builder.js
+troll/src/async.js
+troll/src/main.js

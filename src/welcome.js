@@ -1,33 +1,26 @@
 import Gtk from "gi://Gtk";
-import Gio from "gi://Gio";
 import Gdk from "gi://Gdk";
 
+import { build } from "../troll/src/main.js";
+
 import { spawn_sync } from "./util.js";
-import Interface from "./welcome.blp";
+import Interface from "./welcome.blp" assert { type: "uri" };
 
 export default function Welcome({ application }) {
-  const builder = Gtk.Builder.new_from_resource(Interface);
+  const { window } = build(Interface, {
+    onInstall() {
+      const success = setAsDefaultApplicationForWeb();
 
-  const window = builder.get_object("welcome");
+      Gtk.show_uri(
+        window,
+        `https://junction.sonny.re/${success ? "success" : "error"}`,
+        Gdk.CURRENT_TIME,
+      );
+    },
+  });
+
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
-
-  const test_button = builder.get_object("demo_button");
-  test_button.connect("activate-link", () => {
-    application.open([Gio.File.new_for_uri(test_button.uri)], "demo");
-    return true;
-  });
-
-  const install_button = builder.get_object("install_button");
-  install_button.connect("clicked", () => {
-    const success = setAsDefaultApplicationForWeb();
-
-    Gtk.show_uri(
-      window,
-      `https://junction.sonny.re/${success ? "success" : "error"}`,
-      Gdk.CURRENT_TIME,
-    );
-  });
 
   window.present();
 

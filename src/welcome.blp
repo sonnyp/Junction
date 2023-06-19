@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-Adw.ApplicationWindow welcome {
+Adw.ApplicationWindow window {
   title: "Junction";
   styles ["welcome"]
 
@@ -36,17 +36,18 @@ Adw.ApplicationWindow welcome {
           pixel-size: 128;
         }
 
-        LinkButton demo_button {
+        LinkButton {
           label: _("Test Junction");
           valign: center;
           halign: center;
           uri: "https://junction.sonny.re/demo";
         }
 
-        Button install_button {
+        Button {
           label: _("Set Junction as default for Web");
           valign: center;
           halign: center;
+          clicked => $onInstall();
         }
       }
     }

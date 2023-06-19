@@ -6,9 +6,11 @@ import { gettext as _ } from "gettext";
 import Xdp from "gi://Xdp";
 import XdpGtk4 from "gi://XdpGtk4";
 
+import { build } from "../troll/src/main.js";
+
 import { openWithApplication, getIconFilename } from "./util.js";
 import { settings } from "./common.js";
-import Interface from "./AppButton.blp";
+import Interface from "./AppButton.blp" assert { type: "uri" };
 
 const portal = new Xdp.Portal();
 Gio._promisify(portal, "open_directory", "open_directory_finish");
@@ -20,48 +22,49 @@ export function TileButton({
   icon_size,
   onClicked,
 }) {
-  const builder = Gtk.Builder.new_from_resource(Interface);
+  const {
+    button,
+    label: glabel,
+    image,
+  } = build(Interface, {
+    onClicked,
+  });
 
-  const button = builder.get_object("button");
   button.set_tooltip_text(tooltip);
-  const glabel = builder.get_object("label");
   glabel.label = label;
   glabel.visible = false;
   settings.bind("show-app-names", glabel, "visible", Gio.SettingsBindFlags.GET);
 
-  const image = builder.get_object("image");
   image.set_from_icon_name(icon_name);
   if (icon_size) {
     image.set_pixel_size(icon_size);
   }
 
-  button.connect("clicked", onClicked);
-
   return button;
 }
 
 export default function AppButton({ appInfo, content_type, entry, window }) {
-  const builder = Gtk.Builder.new_from_resource(Interface);
+  const { button, label, image, box } = build(Interface, {
+    onClicked() {
+      open(true);
+    },
+  });
 
-  const button = builder.get_object("button");
   const name = appInfo.get_name();
   button.set_tooltip_text(name);
-  const label = builder.get_object("label");
   label.label = name;
   label.visible = false;
   settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
 
   const menu = new Gio.Menu();
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
-  builder.get_object("box").append(popoverMenu);
+  box.append(popoverMenu);
 
   const icon = appInfo.get_icon();
   if (icon instanceof Gio.ThemedIcon) {
-    builder.get_object("image").set_from_gicon(icon);
+    image.set_from_gicon(icon);
   } else if (icon instanceof Gio.FileIcon) {
-    builder
-      .get_object("image")
-      .set_from_file(getIconFilename(icon.get_file().get_path()));
+    image.set_from_file(getIconFilename(icon.get_file().get_path()));
   }
 
   function open(close_on_success) {
@@ -75,10 +78,6 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       window.close();
     }
   }
-
-  button.connect("clicked", () => {
-    open(true);
-  });
 
   const event_controller_click = new Gtk.GestureClick({ button: 0 });
   button.add_controller(event_controller_click);
