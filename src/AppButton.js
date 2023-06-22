@@ -119,7 +119,10 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     "key-released",
     (self, keyval, keycode, modifier_state) => {
       const keyname = Gdk.keyval_name(keyval);
-      if (keyname === "Menu") {
+      if (keyname === "Menu" || (
+        (keyname === "Return" || keyname === "space") &&
+        modifier_state & Gdk.ModifierType.ALT_MASK
+      )) {
         popupActionsMenu({
           appInfo,
           popoverMenu,
