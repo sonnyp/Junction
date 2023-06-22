@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-01-01 14:53+0000\n"
-"Last-Translator: Fran Diéguez <fran.dieguez@mabishu.com>\n"
+"Last-Translator: PythonPlumber <mario.yellow.bea@proton.me>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/junction/"
 "junction/gl/>\n"
 "Language: gl\n"
@@ -212,7 +212,7 @@ msgstr ""
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Revelar"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
@@ -257,19 +257,19 @@ msgstr "Fran Diéguez <fran.dieguez@gnome.org>, 2021"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "Descartar e pechar"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Seleccione a seguinte/anterior aplicación"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "Abrir coa aplicación seleccionada"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Abre coa aplicación seleccionada e mantéñase activo"
 
 #: src/ShortcutsWindow.blp:35
 #, fuzzy
@@ -278,4 +278,4 @@ msgstr "Elixa a aplicación para abrir con"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "Saír"

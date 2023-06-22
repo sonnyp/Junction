@@ -2,21 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the re.sonny.Junction package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-01-02 22:23+0000\n"
-"Last-Translator: Anuja Nimesh <anujanimesh@gmail.com>\n"
-"Language-Team: Sinhala <https://hosted.weblate.org/projects/junction/"
-"junction/si/>\n"
+"POT-Creation-Date: 2023-06-02 19:50+0530\n"
+"PO-Revision-Date: 2023-06-02 19:50+0530\n"
+"Last-Translator: PythonPlumber <mario.yellow.bea@proton.me>\n"
+"Language-Team: Sinhala <https://hosted.weblate.org/projects/junction/junction/"
+"si/>\n"
 "Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: Don't translate
@@ -26,7 +26,7 @@ msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr ""
+msgstr "යෙදුම් තේරීම"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
@@ -34,14 +34,18 @@ msgid ""
 "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
 "BrowserSelect;"
 msgstr ""
+"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
+"BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
 msgstr ""
+"Junction ඔබට ගොනු සහ සබැඳි විවෘත කිරීමට යෙදුම තෝරා ගැනීමට ඉඩ දෙයි."
+"බවට පත් වේ."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "ස්ථාපනය කිරීමෙන් පසු යෙදුම දියත් කිරීමට වග බලා ගන්න."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid ""
@@ -49,223 +53,231 @@ msgid ""
 "application. Use the mouse or keyboard navigation to choose the application "
 "to open the link or file with."
 msgstr ""
+"ඩෙස්ක්ටොප් වැඩසටහනක සබැඳියක් විවෘත කළ විට හන්දිය ස්වයංක්‍රීයව දර්ශනය වේ"
+"විවෘත වනු ඇත. පාලනය කිරීමට මූසිකය හෝ යතුරුපුවරුව ගෙනයන්න"
+"ඔබට සබැඳියක් හෝ ගොනුවක් විවෘත කිරීමට භාවිතා කිරීමට අවශ්‍ය වැඩසටහන තෝරන්න."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "විශේෂාංග:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "විවෘත කිරීමට යෙදුම තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "විවෘත කිරීමට පෙර ස්ථානය පෙන්වන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "විවෘත කිරීමට පෙර URL එක සංස්කරණය කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "අනාරක්ෂිත සබැඳිය සඳහා ඉඟියක් පෙන්වන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "යතුරුපුවරු සංචාලනය"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "යෙදුම් කිහිපයක විවෘත කිරීමට මැද ක්ලික් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "සබැඳිය විවෘත කිරීමට බ්‍රවුසරය තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "රූපය විවෘත කිරීමට යෙදුම තෝරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction යතුරුපුවරුව සඳහා විශිෂ්ට සහාය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා ද සහය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "ගොනු සඳහා \"ෆෝල්ඩරයේ හෙළි කරන්න\" විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "ලේඛන ද්වාර ගොනු මාර්ග හෙළි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:69
+#, fuzzy
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා සඳහා දෝෂ නිරාකරණය"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Libreoffice සමඟ විවෘත කිරීමේදී දෝෂ නිරාකරණය"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "ඩෙස්ක්ටොප් ක්‍රියා සඳහා සහය වන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Snap යෙදුම් සඳහා සහය දක්වයි"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "නිර්මාණය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "නව නිරූපකය"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Add a x-junction:// protocol API"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "පෙරනිමි යෙදුම ලෙස ස්වයංක්‍රීයව සකසන්න එපා"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "නැතිවූ විකල්ප නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "විකල්ප ගණන 4 ට සීමා කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "ඕනෑම යෙදුමක් සමඟ විවෘත කිරීමට විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "ගැන සංවාදයේ පද්ධති තොරතුරු පැනලයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "URI සඳහා සහය නොදක්වන යෙදුම් සඳහා නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "යෙදුම් නම් පෙන්වීමට විකල්පයක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "මෙනු බොත්තමක් එක් කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "යතුරුපුවරු භාවිතය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "CLI භාවිතය වැඩි දියුණු කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "බහු URI විවෘත කිරීමට සහාය වීම"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "D-Bus සක්‍රිය කිරීමට සහාය වීම"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Libadwaita භාවිතා කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "නැතිවූ යෙදුම් සඳහා නිවැරදි කරන්න"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "කෙටිමං කවුළුවක් එක් කරන්න - &lt;Ctrl&gt; සමඟින් ප්‍රවේශ විය හැකිද?"
+""
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "මෙය Junction පළමු නිකුතුවයි. ඔබ එයට කැමති යැයි අපි බලාපොරොත්තු වෙමු."
 
 #: src/Entry.js:23
 msgid ""
 "This site has no security. An attacker could see any information you send, "
 "or control the content that you see."
 msgstr ""
+"මෙම අඩවියට ආරක්ෂාවක් නැත. ඔබ යවන ඕනෑම තොරතුරක් ප්‍රහාරකයෙකුට දැකිය හැක, "
+"නැතහොත් ඔබ දකින අන්තර්ගතය පාලනය කරන්න."
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "හෙළි කරන්න"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "ෆෝල්ඩරය තුළ හෙළි කරන්න"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "සියලුම යෙදුම්"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "සියල්ල බලන්න"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "නම් පෙන්වන්න"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "පසුරු පුවරුවට පිටපත් කරන්න"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "යතුරුපුවරු කෙටිමං"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "Junction ගැන"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "Junction පරීක්ෂා කරන්න"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Web සඳහා Junction පෙරනිමිය ලෙස සකසන්න"
+
+#: src/ShortcutsWindow.blp:10
+msgid "Discard and close"
+msgstr "ඉවතලන්න සහ වසා දමන්න"
+
+#: src/ShortcutsWindow.blp:20
+msgid "Select next/previous application"
+msgstr "ඊළඟ/පෙර යෙදුම තෝරන්න"
+
+#: src/ShortcutsWindow.blp:25
+msgid "Open with selected application"
+msgstr "තෝරාගත් යෙදුම සමඟ විවෘත කරන්න"
+
+#: src/ShortcutsWindow.blp:30
+msgid "Open with selected application and stay active"
+msgstr "තෝරාගත් යෙදුම සමඟ විවෘත කර ක්‍රියාකාරීව සිටින්න"
+
+#: src/ShortcutsWindow.blp:35
+#, fuzzy
+msgid "Open with application at position"
+msgstr "ස්ථානයේ යෙදුම සමඟ විවෘත කරන්න"
+
+#: src/ShortcutsWindow.blp:47
+msgid "Quit"
+msgstr "ඉවත්"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
 msgid "translator-credits"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:10
-msgid "Discard and close"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:20
-msgid "Select next/previous application"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:25
-msgid "Open with selected application"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:30
-msgid "Open with selected application and stay active"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:35
-msgid "Open with application at position"
-msgstr ""
-
-#: src/ShortcutsWindow.blp:47
-msgid "Quit"
-msgstr ""
+msgstr "PythonPlumber <mario.yellow.bea@proton.me>"
