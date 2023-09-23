@@ -1,5 +1,5 @@
 project('Junction',
-  version: '1.7',
+  version: '1.8',
   meson_version: '>= 0.59.0',
   license: 'GPL-3.0-only'
 )

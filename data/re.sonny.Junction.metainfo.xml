@@ -62,6 +62,14 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.8" date="2023-09-23">
+      <description>
+        <ul>
+          <li>Improve portrait layout</li>
+          <li>Use GNOME 45</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7" date="2023-05-14">
       <description>
         <ul>

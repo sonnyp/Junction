@@ -5,12 +5,9 @@ Adw.ApplicationWindow window {
   title: "Junction";
   styles ["welcome"]
 
-  content: Box {
-    orientation: vertical;
-
+  content: Adw.ToolbarView {
+    [top]
     Adw.HeaderBar {
-      styles ["flat"]
-
       [start]
       Button {
         action-name: "app.about";
@@ -19,36 +16,32 @@ Adw.ApplicationWindow window {
       }
     }
 
-    WindowHandle {
+    Box {
+      name: "content";
+      orientation: vertical;
+      valign: center;
+      halign: center;
       vexpand: true;
+      hexpand: true;
+      spacing: 14;
 
-      Box {
-        name: "content";
-        orientation: vertical;
+      Image {
+        icon-name: "re.sonny.Junction";
+        pixel-size: 128;
+      }
+
+      LinkButton {
+        label: _("Test Junction");
         valign: center;
         halign: center;
-        vexpand: true;
-        hexpand: true;
-        spacing: 14;
+        uri: "https://junction.sonny.re/demo";
+      }
 
-        Image {
-          icon-name: "re.sonny.Junction";
-          pixel-size: 128;
-        }
-
-        LinkButton {
-          label: _("Test Junction");
-          valign: center;
-          halign: center;
-          uri: "https://junction.sonny.re/demo";
-        }
-
-        Button {
-          label: _("Set Junction as default for Web");
-          valign: center;
-          halign: center;
-          clicked => $onInstall();
-        }
+      Button {
+        label: _("Set Junction as default for Web");
+        valign: center;
+        halign: center;
+        clicked => $onInstall();
       }
     }
   };

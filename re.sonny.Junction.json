@@ -1,14 +1,13 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
+  "runtime-version": "45",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Junction",
   "finish-args": [
     "--share=ipc",
     "--socket=fallback-x11",
     "--socket=wayland",
-    "--require-version=1.1.2",
     "--device=dri",
     "--talk-name=org.freedesktop.Flatpak",
     "--filesystem=host:ro",
@@ -31,15 +30,14 @@
   ],
   "modules": [
     {
-      "name": "blueprint",
+      "name": "blueprint-compiler",
       "buildsystem": "meson",
-      "builddir": true,
+      "cleanup": ["*"],
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "tag": "v0.8.0",
-          "commit": "8f3682135b6015f38fcf09c8714e4a89daa91987"
+          "type": "archive",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.10.0/blueprint-compiler-v0.10.0.tar.gz",
+          "sha512": "1f2a9097e3d6a030385c371a01e32caefab6f7ede1979b43492255b504250ac7f44ae22a97656a7c33c0e518236b95d6074baf8f87c53df1fbb1e42eceb39a87"
         }
       ]
     },
@@ -73,124 +71,23 @@
     {
       "name": "libportal",
       "buildsystem": "meson",
-      "config-opts": ["-Ddocs=false", "-Dvapi=false", "-Dbackends=gtk4"],
+      "config-opts": [
+        "-Dtests=false",
+        "-Dbackend-gtk3=disabled",
+        "-Dbackend-gtk4=enabled",
+        "-Dbackend-qt5=disabled"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/flatpak/libportal/releases/download/0.6/libportal-0.6.tar.xz",
-          "sha256": "88a12c3ba71bc31acff7238c280de697d609cebc50830c3766776ec35abc6566"
-        }
-      ]
-    },
-    {
-      "name": "libadwaita",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dintrospection=enabled",
-        "-Dvapi=false",
-        "-Dtests=false",
-        "-Dexamples=false"
-      ],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-          "commit": "421c3cc35bb50fe4ea40b7fb3bce894f7cae7cff"
-        }
-      ],
-      "modules": [
-        {
-          "name": "appstream",
-          "buildsystem": "meson",
-          "config-opts": ["-Dstemming=false", "-Dgir=false", "-Ddocs=false"],
-          "cleanup": ["/bin/*", "/etc/*", "/share/metainfo"],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/ximion/appstream.git",
-              "commit": "e4a7daefca9dcd600eea895332b8ba598cacd694"
-            }
-          ],
-          "modules": [
-            {
-              "name": "libyaml",
-              "sources": [
-                {
-                  "type": "git",
-                  "url": "https://github.com/yaml/libyaml.git",
-                  "commit": "2c891fc7a770e8ba2fec34fc6b545c672beb37e6"
-                }
-              ]
-            },
-            {
-              "name": "libxmlb",
-              "buildsystem": "meson",
-              "config-opts": [
-                "-Dintrospection=false",
-                "-Dgtkdoc=false",
-                "-Dstemmer=false",
-                "-Dcli=false",
-                "-Dtests=false"
-              ],
-              "sources": [
-                {
-                  "type": "git",
-                  "url": "https://github.com/hughsie/libxmlb.git",
-                  "commit": "a6cac6a715d57c393bbddee4d0381ad943341af9"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "libsass",
-          "buildsystem": "meson",
-          "cleanup": ["*"],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/lazka/libsass.git",
-              "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-            }
-          ]
-        },
-        {
-          "name": "sassc",
-          "buildsystem": "meson",
-          "cleanup": ["*"],
-          "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/lazka/sassc.git",
-              "commit": "82803377c33247265d779af034eceb5949e78354"
-            }
-          ]
-        },
-        {
-          "name": "gtk",
-          "buildsystem": "meson",
-          "config-opts": [
-            "-Dintrospection=disabled",
-            "-Ddemos=false",
-            "-Dbuild-testsuite=false",
-            "-Dbuild-examples=false",
-            "-Dbuild-tests=false"
-          ],
-          "cleanup": ["/bin/*"],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://download.gnome.org/sources/gtk/4.11/gtk-4.11.2.tar.xz",
-              "sha256": "4a481da6b65b6add3f59966b0bb27e8139c381d0699402df662df2ce1c9e6913"
-            }
-          ]
+          "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+          "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
         }
       ]
     },
     {
       "name": "Junction",
       "buildsystem": "meson",
-      "builddir": true,
       "sources": [
         {
           "type": "dir",
