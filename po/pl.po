@@ -9,17 +9,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2021-12-14 22:23+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/junction/junction/"
-"pl/>\n"
+"PO-Revision-Date: 2023-05-15 21:52+0000\n"
+"Last-Translator: Łukasz Horodecki <dakilla@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/junction/junction/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -33,9 +31,7 @@ msgstr "Wybór aplikacji"
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 #, fuzzy
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
@@ -47,14 +43,8 @@ msgid "After installing make sure to launch the application."
 msgstr "Po zainstalowaniu uruchom aplikację."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Junction otworzy się automatycznie po otwarciu linku w aplikacji "
-"desktopowej. Użyj myszki lub klawiatury do wybrania aplikacji w której ma "
-"się otworzyć link lub plik."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Junction otworzy się automatycznie po otwarciu linku w aplikacji desktopowej. Użyj myszki lub klawiatury do wybrania aplikacji, w której ma się otworzyć link lub plik."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -96,8 +86,7 @@ msgstr "Wybieranie aplikacji do otwarcia"
 #: data/re.sonny.Junction.metainfo.xml:53
 #, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr ""
-"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+msgstr "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
@@ -144,8 +133,7 @@ msgstr ""
 #: data/re.sonny.Junction.metainfo.xml:88
 #, fuzzy
 msgid "Do not automatically set as default application"
-msgstr ""
-"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+msgstr "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 #, fuzzy
@@ -210,12 +198,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "To jest pierwsze wydanie Junction. Mamy nadzieję, że ci się spodoba."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Ta strona może nie jest zabezpieczona. Atakujący mógłby widzieć wszystkie "
-"informacje które wysyłasz lub kontrolować zawartość, którą widzisz."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Ta strona może nie jest zabezpieczona. Atakujący mógłby widzieć wszystkie informacje które wysyłasz lub kontrolować zawartość, którą widzisz."
 
 #: src/AppButton.js:158
 msgid "Reveal"
@@ -258,8 +242,7 @@ msgstr "Junction"
 #: src/welcome.blp:39
 #, fuzzy
 msgid "Set Junction as default for Web"
-msgstr ""
-"Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+msgstr "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61

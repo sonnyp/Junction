@@ -10,14 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-03-16 20:49+0000\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
-"Language-Team: Hebrew <https://hosted.weblate.org/projects/junction/junction/"
-"he/>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/junction/junction/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Weblate 4.12-dev\n"
 
 #. TRANSLATORS: Don't translate
@@ -31,12 +29,8 @@ msgstr "בורר יישומים"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
@@ -47,13 +41,8 @@ msgid "After installing make sure to launch the application."
 msgstr "לאחר ההתקנה יש לנסות להפעיל את היישום."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"צומת יקפוץ אוטומטית בעת פתיחת קישור ביישום לשולן העבודה. אפשר להשתמש בעכבר "
-"או בניווט עם המקלדת כדי לבחור את היישום שאתו ייפתח הקישור או הקובץ."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "צומת יקפוץ אוטומטית בעת פתיחת קישור ביישום לשולן העבודה. אפשר להשתמש בעכבר או בניווט עם המקלדת כדי לבחור את היישום שאתו ייפתח הקישור או הקובץ."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -201,12 +190,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "זאת מהדורת הבכורה של צומת. מקווים שאהבת."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"אתר זה לוקה מבחינת אבטחה. לתוקפים יש אפשרות לצפות בפרטים ששלחת או לשלוט "
-"בתוכן המוצג."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "אתר זה לוקה מבחינת אבטחה. לתוקפים יש אפשרות לצפות בפרטים ששלחת או לשלוט בתוכן המוצג."
 
 #: src/AppButton.js:158
 msgid "Reveal"
