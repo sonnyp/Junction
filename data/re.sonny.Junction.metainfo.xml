@@ -32,7 +32,7 @@
   <url type="homepage">https://junction.sonny.re</url>
   <url type="bugtracker">https://junction.sonny.re/feedback</url>
   <url type="donation">https://junction.sonny.re/donate</url>
-  <url type="translate">https://junction.sonny.re/translate</url>
+  <url type="translate">https://hosted.weblate.org/engage/junction/</url>
   <url type="vcs-browser">https://junction.sonny.re/source</url>
   <screenshots>
     <screenshot type="default">
@@ -63,7 +63,7 @@
   <content_rating type="oars-1.1" />
   <releases>
     <release version="1.8" date="2023-09-23">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improve portrait layout</li>
           <li>Use GNOME 45</li>
@@ -71,7 +71,7 @@
       </description>
     </release>
     <release version="1.7" date="2023-05-14">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Support multiple lines of options (scroll)</li>
           <li>Support mobile form factors</li>
@@ -82,7 +82,7 @@
       </description>
     </release>
     <release version="1.6" date="2022-10-15">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Use GNOME 43</li>
           <li>Fix the list of recommended applications</li>
@@ -92,7 +92,7 @@
       </description>
     </release>
     <release version="1.5.0" date="2022-01-19">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Add an option "Reveal in Folder" for files</li>
           <li>Reveal document portal file paths</li>
@@ -102,7 +102,7 @@
       </description>
     </release>
     <release version="1.4.0" date="2021-12-23">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Support desktop actions</li>
           <li>Support snap applications</li>
@@ -110,7 +110,7 @@
       </description>
     </release>
     <release version="1.3.0" date="2021-12-12">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improve design</li>
           <li>New icon</li>
@@ -124,7 +124,7 @@
       </description>
     </release>
     <release version="1.2.0" date="2021-11-14" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix for applications that do not support URIs</li>
           <li>Add an option to display application names</li>
@@ -140,7 +140,7 @@
       </description>
     </release>
     <release version="1.1.0" date="2021-10-20" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix for missing applications</li>
           <li>Add a Shortcuts window - accessible with &lt;Ctrl&gt;?</li>
