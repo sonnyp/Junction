@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2022-02-08 18:56+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2023-10-15 23:21+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/junction/junction/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -240,7 +240,7 @@ msgstr "Oğuz Ersen https://ersen.moe"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr "At ve kapat"
+msgstr "Gözden çıkar ve kapat"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
@@ -252,15 +252,15 @@ msgstr "Seçilen uygulamayla aç"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr "Seçilen uygulama ile aç ve etkin kal"
+msgstr "Seçilen uygulamayla aç ve etkin kal"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr "Sıradaki uygulama ile aç"
+msgstr "Sıradaki uygulamayla aç"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr "Çıkış"
+msgstr "Çık"
 
 #~ msgid "Add Polish translation"
 #~ msgstr "Lehçe çeviri ekle"
