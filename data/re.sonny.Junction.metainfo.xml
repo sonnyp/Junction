@@ -167,11 +167,6 @@
     <control>touch</control>
   </recommends>
 
-  <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
-
   <color type="primary" scheme_preference="light">#F8ED9E</color>
   <color type="primary" scheme_preference="dark">#AA7B07</color>
   <custom>
