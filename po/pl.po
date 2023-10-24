@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: 2023-05-15 21:52+0000\n"
-"Last-Translator: Łukasz Horodecki <dakilla@gmail.com>\n"
+"PO-Revision-Date: 2023-10-24 22:04+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/junction/junction/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.1.1-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
@@ -79,14 +79,12 @@ msgid "Choose the browser to open the link with"
 msgstr "Wybieranie przeglądarki do otwarcia linku"
 
 #: data/re.sonny.Junction.metainfo.xml:47
-#, fuzzy
 msgid "Choose the application to open the image with"
-msgstr "Wybieranie aplikacji do otwarcia"
+msgstr "Wybierz aplikację do otwarcia obrazu"
 
 #: data/re.sonny.Junction.metainfo.xml:53
-#, fuzzy
 msgid "Junction features great support for keyboard"
-msgstr "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
+msgstr "Aplikacja Junction oferuje świetną obsługę klawiatury"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
@@ -124,7 +122,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Nowa ikona"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
@@ -136,9 +134,8 @@ msgid "Do not automatically set as default application"
 msgstr "Aplikacja Junction została ustawiona jako domyślna dla linków internetowych"
 
 #: data/re.sonny.Junction.metainfo.xml:89
-#, fuzzy
 msgid "Fix missing options"
-msgstr "Naprawiono błąd brakujących aplikacji"
+msgstr "Naprawiono błąd brakujących opcji"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
@@ -183,7 +180,7 @@ msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Użyj libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
@@ -203,24 +200,23 @@ msgstr "Ta strona może nie jest zabezpieczona. Atakujący mógłby widzieć wsz
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Ujawnij"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
 msgstr ""
 
 #: src/AppButton.js:202
-#, fuzzy
 msgid "All Applications"
-msgstr "Wybór aplikacji"
+msgstr "Wszystkie aplikacje"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "Zobacz wszystkie"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "Pokaż nazwy"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
@@ -235,9 +231,8 @@ msgid "About Junction"
 msgstr "O Junction"
 
 #: src/welcome.blp:32
-#, fuzzy
 msgid "Test Junction"
-msgstr "Junction"
+msgstr "Testuj Junction"
 
 #: src/welcome.blp:39
 #, fuzzy
@@ -272,7 +267,7 @@ msgstr "Wybieranie aplikacji do otwarcia"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "Wyjdź"
 
 #, fuzzy
 #~ msgid "Add Polish translation"
