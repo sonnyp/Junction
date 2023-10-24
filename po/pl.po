@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2023-10-24 22:04+0000\n"
-"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"Last-Translator: Deleted User <noreply+58184@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/junction/junction/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -30,9 +30,8 @@ msgstr "Wybór aplikacji"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-#, fuzzy
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr "Choosey;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
@@ -88,11 +87,11 @@ msgstr "Aplikacja Junction oferuje świetną obsługę klawiatury"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Akcje na pulpicie są również obsługiwane"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Dodaj opcję ,,Ujawnij w folderze\" dla plików"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
