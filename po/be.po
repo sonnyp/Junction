@@ -8,254 +8,256 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-11-18 19:01+0000\n"
+"Last-Translator: Yahor <k1llo2810@protonmail.com>\n"
+"Language-Team: Belarusian <https://hosted.weblate.org/projects/junction/junction/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.2\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr ""
+msgstr "Сродак выбару праграм"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;Выбар;Выбраць;Праграма;Адкрыць;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction дазваляе выбраць праграму для адкрыцця файлаў і спасылак."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "Пасля ўстаноўкі абавязкова запусціце праграму."
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "Junction з'явіцца аўтаматычна, калі вы адкрыеце спасылку ў праграме. Выкарыстоўвайце навігацыю мышкай або клавіятурай, каб выбраць праграму для адкрыцця спасылкі або файла."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "Функцыі:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "Выберыце праграму для адкрыцця"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "Паказвае размяшчэнне перад адкрыццём"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "Змяніце URL-адрас перад адкрыццём"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "Паказвае падказку для небяспечных спасылак"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "Навігацыя з клавіятуры"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "Націсніце СКМ для адкрыцця ў некалькіх праграмах"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "Абярыце браўзер для адкрыцця спасылкі"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "Выберыце праграму для адкрыцця відарыса"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction мае выдатную падтрымку клавіятуры"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "Дзеянні на працоўным стале таксама падтрымліваюцца"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "Дадаць опцыю \"Паказаць у Папкі\" для файлаў"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "Паказаць шляхі да файлаў партала дакументаў"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "Выпраўленне памылак дзеянняў на працоўным стале"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Выпраўлена памылка пры адкрыцці ў Libreoffice"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "Падтрымка дзеянняў на працоўным стале"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Падтрымка snap праграм"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "Паляпшэнне дызайну"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "Новы значок"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "Дададзены API пратакола x-junction://"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "Не задаваць аўтаматычна як праграму па змаўчанні"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "Выпраўлены адсутныя параметры"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "Колькасць варыянтаў абмежавана да 4"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "Дададзена магчымасць адкрыцця з дапамогай любой праграмы"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "Дададзена панэль сістэмнай інфармацыі ў дыялогавым акне \"Аб праграме\""
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "Выпраўленне для праграм, якія не падтрымліваюць URI"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "Дададзена магчымасць адлюстравання назваў праграм"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "Дададзена кнопка меню"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "Паляпшэнне выкарыстання клавіятуры"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "Палепшанае выкарыстанне CLI"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "Падтрымліваецца адкрыццё некалькіх URI"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "Падтрымка актывацыі D-Bus"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "Выкарыстоўвае libadwaita"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "Выпраўленне адсутных праграм"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "Дададзена акно спалучэнняў хуткага доступу - даступнае з дапамогай &lt;Ctrl&gt;?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "Гэта першы выпуск Junction. Спадзяемся, вам спадабаецца."
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "Гэты небяспечны. Зламыснік можа бачыць любую інфармацыю, якую вы адпраўляеце, або кантраляваць змесціва, якое вы бачыце."
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "Паказаць"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "Паказаць у папке"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "Усе праграмы"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "Паказаць усе"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "Паказаць назвы"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Скапіявана ў буфер абмену"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Спалучэнні клавіш"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "Аб праграме"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "Пратэставаць Junction"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "Задаць Junction па змаўчанні для вэбу"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
 msgid "translator-credits"
-msgstr ""
+msgstr "Yahor Haurylenka <k1llo2810@gmail.com>"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "Скасаваць і закрыць"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "Выбраць наступную/папярэднюю праграму"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "Адкрыць абранай праграмай"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "Адкрыць выбранай праграмай і не закрываць"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr ""
+msgstr "Адкрыць праграмай у пазіцыі"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "Выйсці"
