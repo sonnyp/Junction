@@ -25,12 +25,15 @@ export function prefixCommandLineForHost(command_line) {
 }
 
 export function parse(str) {
+  let flags = GLib.UriFlags.NONE;
   if (str === "~" || str.startsWith("~/")) {
     str = Gio.File.parse_name(str).get_uri();
   } else if (str.startsWith("/")) {
     str = "file://" + str;
+  } else {
+    flags = GLib.UriFlags.ENCODED;
   }
-  return GLib.Uri.parse(str, GLib.UriFlags.NONE);
+  return GLib.Uri.parse(str, flags);
 }
 
 export function getOSRelease() {

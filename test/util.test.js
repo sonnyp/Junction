@@ -25,6 +25,7 @@ test("parse", () => {
   assert.is(parse("/foo/bar").to_string(), `file:///foo/bar`);
   assert.is(parse("mailto:foo@bar.com").to_string(), "mailto:foo@bar.com");
   assert.is(parse("http://example.com").to_string(), "http://example.com");
+  assert.is(parse("http://example.com/query?q=random%2Fword").to_string(), "http://example.com/query?q=random%2Fword");
 });
 
 test("readResource", () => {
