@@ -86,6 +86,11 @@ test("readResource", () => {
     scheme: "http",
     content_type: "x-scheme-handler/http",
   });
+  assert.equal(read("x-junction://http://example.com/query?q=random%20word"), {
+    resource: "http://example.com/query?q=random%20word",
+    scheme: "http",
+    content_type: "x-scheme-handler/http",
+  });
 
   const not_found_path = `/tmp/I-DO-NOT-EXIST-${Math.random()}`;
   assert.equal(read(not_found_path), {
