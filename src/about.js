@@ -67,14 +67,9 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
     // that doesn't register click events
     modal: false,
   });
-  // dialog.add_credit_section("Contributors", [
-  //   // Add yourself as
-  //   // "John Doe",
-  //   // or
-  //   // "John Doe <john@example.com>",
-  //   // or
-  //   // "John Doe https://john.com",
-  // ]);
+  dialog.add_credit_section("Contributors", [
+    "Patrick Decat https://github.com/pdecat",
+  ]);
   dialog.present();
 
   return { dialog };
