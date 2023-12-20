@@ -67,6 +67,7 @@
         <ul>
           <li>Improve portrait layout</li>
           <li>Use GNOME 45</li>
+          <li>Fix an issue with encoded characters in URLs</li>
         </ul>
       </description>
     </release>
