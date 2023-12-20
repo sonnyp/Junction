@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2021-12-14 22:23+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Occitan <https://hosted.weblate.org/projects/junction/"
-"junction/oc/>\n"
+"Language-Team: Occitan <https://hosted.weblate.org/projects/junction/junction/oc/>\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,28 +30,19 @@ msgstr "Selector d’aplicacion"
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 #, fuzzy
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;"
-"browserosaurus;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "causir;percórrer;navegador;navigador;navigator;braus;finicky;buffet;browserosaurus;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction vos permet de causir l’aplicacion de dobrir per dobrir los fichièrs "
-"e los ligams."
+msgstr "Junction vos permet de causir l’aplicacion de dobrir per dobrir los fichièrs e los ligams."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Aprèp l’installacion asseguratz-vos de lançar l’aplicacion."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
 msgstr ""
 
 #: data/re.sonny.Junction.metainfo.xml:22
@@ -207,12 +197,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "Aquò es la primièra versionde Junction. Esperam que vos agradarà."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Aqueste site es pas securizat. Un atacant pòt veire totas las informacions "
-"que mandatz, o contrarotlar çò que consultatz."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Aqueste site es pas securizat. Un atacant pòt veire totas las informacions que mandatz, o contrarotlar çò que consultatz."
 
 #: src/AppButton.js:158
 msgid "Reveal"

@@ -10,8 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
 "PO-Revision-Date: 2022-02-02 00:56+0000\n"
 "Last-Translator: Germe the fur star <FOSSgerme.deb@tuta.io>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/junction/"
-"junction/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/junction/junction/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,31 +29,20 @@ msgstr "Selector de aplicaciones"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
-msgid ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
-msgstr ""
-"Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;"
-"BrowserSelect;"
+msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
-"Junction le permite elegir la aplicación para abrir archivos y enlaces."
+msgstr "Junction le permite elegir la aplicación para abrir archivos y enlaces."
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
 msgstr "Después de la instalación, asegúrese de iniciar la aplicación."
 
 #: data/re.sonny.Junction.metainfo.xml:17
-msgid ""
-"Junction will pop up automatically when you open a link in a desktop "
-"application. Use the mouse or keyboard navigation to choose the application "
-"to open the link or file with."
-msgstr ""
-"Junction aparecerá automáticamente cuando abra un enlace en una aplicación "
-"de escritorio. Use el ratón o la navegación por teclado para elegir la "
-"aplicación con la que abrir el enlace o el archivo."
+msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
+msgstr "Junction aparecerá automáticamente cuando abra un enlace en una aplicación de escritorio. Use el ratón o la navegación por teclado para elegir la aplicación con la que abrir el enlace o el archivo."
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
@@ -202,12 +190,8 @@ msgid "This is the first release of Junction. We hope you like it."
 msgstr "Esta es la primera versión de Junction. Esperamos que le guste."
 
 #: src/Entry.js:23
-msgid ""
-"This site has no security. An attacker could see any information you send, "
-"or control the content that you see."
-msgstr ""
-"Este sitio no tiene seguridad. Un atacante podría ver cualquier información "
-"que envíe, o controlar el contenido que ve."
+msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
+msgstr "Este sitio no tiene seguridad. Un atacante podría ver cualquier información que envíe, o controlar el contenido que ve."
 
 #: src/AppButton.js:158
 msgid "Reveal"
