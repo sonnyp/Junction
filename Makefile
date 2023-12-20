@@ -37,7 +37,7 @@ test:
 	./node_modules/.bin/eslint --cache .
 	./troll/tst/bin.js test/*.test.js
 	flatpak run org.freedesktop.appstream-glib validate data/re.sonny.Junction.metainfo.xml
-	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//43 --no-hints @@ data/re.sonny.Junction.desktop @@
+	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//45 --no-hints @@ data/re.sonny.Junction.desktop @@
 	# gtk4-builder-tool validate src/*.ui
 	flatpak-builder --show-manifest re.sonny.Junction.json > /dev/null
 	find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
