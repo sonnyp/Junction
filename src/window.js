@@ -93,11 +93,6 @@ export default function Window({ application, file }) {
     button?.grab_focus();
     return !!button;
   });
-  eventController.connect("key-released", (self, keyval) => {
-    const button = getButtonForKeyval(keyval);
-    button?.activate();
-    return !!button;
-  });
   window.add_controller(eventController);
 
   function copyToClipboard() {

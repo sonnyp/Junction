@@ -127,11 +127,17 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
         });
       }
 
-      if (
-        (keyname === "Return" || keyname === "space") &&
-        modifier_state & Gdk.ModifierType.CONTROL_MASK
-      ) {
-        open(false);
+      if (keyname === "Return" || keyname === "space" || /^\d$/.test(keyname)) {
+        if (modifier_state & Gdk.ModifierType.ALT_MASK) {
+          popupActionsMenu({
+            appInfo,
+            popoverMenu,
+            location: entry.get_text(),
+          });
+        } else {
+          open(!(modifier_state & Gdk.ModifierType.CONTROL_MASK));
+        }
+        controller_key.set_state(Gtk.EventSequenceState.CLAIMED);
       }
     },
   );
