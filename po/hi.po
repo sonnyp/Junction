@@ -8,254 +8,256 @@ msgstr ""
 "Project-Id-Version: re.sonny.Junction\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 00:57+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-02-29 16:02+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/junction/junction/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:4
 msgid "Junction"
-msgstr ""
+msgstr "Junction"
 
 #: data/re.sonny.Junction.desktop:5 data/re.sonny.Junction.metainfo.xml:10
 msgid "Application chooser"
-msgstr ""
+msgstr "एप्लिकेशन चयनकर्ता"
 
 #. TRANSLATORS: Don't translate
 #: data/re.sonny.Junction.desktop:13
 msgid "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
-msgstr ""
+msgstr "Choosy;BrowserChooser;Braus;Browserosaurus;Finicky;Buffet;OpenIn;BrowserSelect;"
 
 #: data/re.sonny.Junction.metainfo.xml:13
 msgid "Junction lets you choose the application to open files and links."
-msgstr ""
+msgstr "Junction आपको फ़ाइलें और लिंक खोलने के लिए एप्लिकेशन चुनने की सुविधा देता है।"
 
 #: data/re.sonny.Junction.metainfo.xml:14
 msgid "After installing make sure to launch the application."
-msgstr ""
+msgstr "इंस्टॉल करने के बाद एप्लिकेशन लॉन्च करना सुनिश्चित करें।"
 
 #: data/re.sonny.Junction.metainfo.xml:17
 msgid "Junction will pop up automatically when you open a link in a desktop application. Use the mouse or keyboard navigation to choose the application to open the link or file with."
-msgstr ""
+msgstr "जब आप डेस्कटॉप एप्लिकेशन में कोई लिंक खोलेंगे तो Junction स्वचालित रूप से पॉप अप हो जाएगा। लिंक या फ़ाइल खोलने के लिए एप्लिकेशन चुनने के लिए माउस या कीबोर्ड नेविगेशन का उपयोग करें।"
 
 #: data/re.sonny.Junction.metainfo.xml:22
 msgid "Features:"
-msgstr ""
+msgstr "विशेषताएँ:"
 
 #: data/re.sonny.Junction.metainfo.xml:24
 msgid "Choose the application to open with"
-msgstr ""
+msgstr "खोलने के लिए एप्लिकेशन चुनें"
 
 #: data/re.sonny.Junction.metainfo.xml:25
 msgid "Show the location before opening"
-msgstr ""
+msgstr "खोलने से पहले स्थान दिखाएँ"
 
 #: data/re.sonny.Junction.metainfo.xml:26
 msgid "Edit the URL before opening"
-msgstr ""
+msgstr "खोलने से पहले URL संपादित करें"
 
 #: data/re.sonny.Junction.metainfo.xml:27
 msgid "Show a hint for insecure link"
-msgstr ""
+msgstr "असुरक्षित लिंक के लिए संकेत दिखाएँ"
 
 #: data/re.sonny.Junction.metainfo.xml:28
 msgid "Keyboard navigation"
-msgstr ""
+msgstr "कीबोर्ड नेविगेशन"
 
 #: data/re.sonny.Junction.metainfo.xml:29
 msgid "Middle click to open in multiple applications"
-msgstr ""
+msgstr "एकाधिक एप्लिकेशन में खोलने के लिए मध्य क्लिक करें"
 
 #: data/re.sonny.Junction.metainfo.xml:41
 msgid "Choose the browser to open the link with"
-msgstr ""
+msgstr "लिंक खोलने के लिए ब्राउज़र चुनें"
 
 #: data/re.sonny.Junction.metainfo.xml:47
 msgid "Choose the application to open the image with"
-msgstr ""
+msgstr "छवि को खोलने के लिए एप्लिकेशन चुनें"
 
 #: data/re.sonny.Junction.metainfo.xml:53
 msgid "Junction features great support for keyboard"
-msgstr ""
+msgstr "Junction में कीबोर्ड के लिए बेहतरीन समर्थन है"
 
 #: data/re.sonny.Junction.metainfo.xml:59
 msgid "Desktop actions are supported too"
-msgstr ""
+msgstr "डेस्कटॉप क्रियाएँ भी समर्थित हैं"
 
 #: data/re.sonny.Junction.metainfo.xml:67
 msgid "Add an option \"Reveal in Folder\" for files"
-msgstr ""
+msgstr "फ़ाइलों के लिए \"फ़ोल्डर में प्रकट करें\" विकल्प जोड़ा गया"
 
 #: data/re.sonny.Junction.metainfo.xml:68
 msgid "Reveal document portal file paths"
-msgstr ""
+msgstr "दस्तावेज़ पोर्टल फ़ाइल पथ प्रकट करें"
 
 #: data/re.sonny.Junction.metainfo.xml:69
 msgid "Bug fix for desktop actions"
-msgstr ""
+msgstr "डेस्कटॉप क्रियाओं के लिए बग समाधान"
 
 #: data/re.sonny.Junction.metainfo.xml:70
 msgid "Bug fix when opening with Libreoffice"
-msgstr ""
+msgstr "Libreoffice के साथ खोलते समय बग फिक्स"
 
 #: data/re.sonny.Junction.metainfo.xml:77
 msgid "Support desktop actions"
-msgstr ""
+msgstr "डेस्कटॉप क्रियाओं का समर्थन करें"
 
 #: data/re.sonny.Junction.metainfo.xml:78
 msgid "Support snap applications"
-msgstr ""
+msgstr "Snap एप्लिकेशन का समर्थन करें"
 
 #: data/re.sonny.Junction.metainfo.xml:85
 #: data/re.sonny.Junction.metainfo.xml:102
 msgid "Improve design"
-msgstr ""
+msgstr "बेहतर डिज़ाइन"
 
 #: data/re.sonny.Junction.metainfo.xml:86
 msgid "New icon"
-msgstr ""
+msgstr "नया आइकन"
 
 #: data/re.sonny.Junction.metainfo.xml:87
 msgid "Add a x-junction:// protocol API"
-msgstr ""
+msgstr "एक x-जंक्शन:// प्रोटोकॉल API जोड़ा गया"
 
 #: data/re.sonny.Junction.metainfo.xml:88
 msgid "Do not automatically set as default application"
-msgstr ""
+msgstr "डिफ़ॉल्ट एप्लिकेशन के रूप में स्वचालित रूप से सेट न करें"
 
 #: data/re.sonny.Junction.metainfo.xml:89
 msgid "Fix missing options"
-msgstr ""
+msgstr "गायब विकल्पों को ठीक किया गया"
 
 #: data/re.sonny.Junction.metainfo.xml:90
 msgid "Limit the number of options to 4"
-msgstr ""
+msgstr "विकल्पों की संख्या 4 तक सीमित रखें"
 
 #: data/re.sonny.Junction.metainfo.xml:91
 msgid "Add an option to open with any application"
-msgstr ""
+msgstr "किसी भी एप्लिकेशन के साथ खोलने का विकल्प जोड़ें"
 
 #: data/re.sonny.Junction.metainfo.xml:92
 msgid "Add a System Information panel in the about dialog"
-msgstr ""
+msgstr "इसके बारे में संवाद में एक सिस्टम सूचना पैनल जोड़ें"
 
 #: data/re.sonny.Junction.metainfo.xml:99
 msgid "Fix for applications that do not support URIs"
-msgstr ""
+msgstr "उन अनुप्रयोगों के लिए समाधान जो URI का समर्थन नहीं करते हैं"
 
 #: data/re.sonny.Junction.metainfo.xml:100
 msgid "Add an option to display application names"
-msgstr ""
+msgstr "एप्लिकेशन नाम प्रदर्शित करने के लिए एक विकल्प जोड़ें"
 
 #: data/re.sonny.Junction.metainfo.xml:101
 msgid "Add a menu button"
-msgstr ""
+msgstr "एक मेनू बटन जोड़ें"
 
 #: data/re.sonny.Junction.metainfo.xml:103
 msgid "Improve keyboard usage"
-msgstr ""
+msgstr "बेहतर कीबोर्ड उपयोग"
 
 #: data/re.sonny.Junction.metainfo.xml:104
 msgid "Improve CLI usage"
-msgstr ""
+msgstr "बेहतर CLI उपयोग"
 
 #: data/re.sonny.Junction.metainfo.xml:105
 msgid "Support opening multiple URIs"
-msgstr ""
+msgstr "एकाधिक URI खोलने का समर्थन करता है"
 
 #: data/re.sonny.Junction.metainfo.xml:107
 msgid "Support D-Bus activation"
-msgstr ""
+msgstr "D-Bus सक्रियण का समर्थन करता है"
 
 #: data/re.sonny.Junction.metainfo.xml:108
 msgid "Use libadwaita"
-msgstr ""
+msgstr "libadwaita का प्रयोग करें"
 
 #: data/re.sonny.Junction.metainfo.xml:115
 msgid "Fix for missing applications"
-msgstr ""
+msgstr "गुम अनुप्रयोगों के लिए समाधान"
 
 #: data/re.sonny.Junction.metainfo.xml:116
 msgid "Add a Shortcuts window - accessible with &lt;Ctrl&gt;?"
-msgstr ""
+msgstr "एक शॉर्टकट विंडो जोड़ी गई - &lt;Ctrl&gt; से पहुंच योग्य?"
 
 #: data/re.sonny.Junction.metainfo.xml:122
 msgid "This is the first release of Junction. We hope you like it."
-msgstr ""
+msgstr "यह जंक्शन की पहली रिलीज़ है। उम्मीद है आपको पसंद आएगा।"
 
 #: src/Entry.js:23
 msgid "This site has no security. An attacker could see any information you send, or control the content that you see."
-msgstr ""
+msgstr "इस साइट पर कोई सुरक्षा नहीं है. कोई हमलावर आपके द्वारा भेजी गई किसी भी जानकारी को देख सकता है, या आपके द्वारा देखी जाने वाली सामग्री को नियंत्रित कर सकता है।"
 
 #: src/AppButton.js:158
 msgid "Reveal"
-msgstr ""
+msgstr "प्रकट करें"
 
 #: src/AppButton.js:159
 msgid "Reveal in Folder"
-msgstr ""
+msgstr "फ़ोल्डर में प्रकट करें"
 
 #: src/AppButton.js:202
 msgid "All Applications"
-msgstr ""
+msgstr "सभी एप्लीकेशन"
 
 #: src/AppButton.js:216
 msgid "View All"
-msgstr ""
+msgstr "सब देखें"
 
 #: src/window.blp:64
 msgid "Show names"
-msgstr ""
+msgstr "नाम दिखाएँ"
 
 #: src/window.blp:69 src/ShortcutsWindow.blp:15
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "क्लिपबोर्ड पर कॉपी करें"
 
 #: src/window.blp:75 src/welcome.blp:56 src/ShortcutsWindow.blp:42
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "कीबोर्ड शॉर्टकट"
 
 #: src/window.blp:80 src/welcome.blp:61
 msgid "About Junction"
-msgstr ""
+msgstr "Junction के बारे में"
 
 #: src/welcome.blp:32
 msgid "Test Junction"
-msgstr ""
+msgstr "टेस्ट Junction"
 
 #: src/welcome.blp:39
 msgid "Set Junction as default for Web"
-msgstr ""
+msgstr "वेब के लिए Junction को डिफ़ॉल्ट के रूप में सेट करें"
 
 #. TRANSLATORS: eg. 'Translator Name <your.email@domain.com>' or 'Translator Name https://website.example'
 #: src/about.js:61
 msgid "translator-credits"
-msgstr ""
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: src/ShortcutsWindow.blp:10
 msgid "Discard and close"
-msgstr ""
+msgstr "त्यागें और बंद करें"
 
 #: src/ShortcutsWindow.blp:20
 msgid "Select next/previous application"
-msgstr ""
+msgstr "अगला/पिछला एप्लिकेशन चुनें"
 
 #: src/ShortcutsWindow.blp:25
 msgid "Open with selected application"
-msgstr ""
+msgstr "चयनित एप्लिकेशन के साथ खोलें"
 
 #: src/ShortcutsWindow.blp:30
 msgid "Open with selected application and stay active"
-msgstr ""
+msgstr "चयनित एप्लिकेशन के साथ खोलें और सक्रिय रहें"
 
 #: src/ShortcutsWindow.blp:35
 msgid "Open with application at position"
-msgstr ""
+msgstr "स्थान पर आवेदन के साथ खोलें"
 
 #: src/ShortcutsWindow.blp:47
 msgid "Quit"
-msgstr ""
+msgstr "छोड़ें"
