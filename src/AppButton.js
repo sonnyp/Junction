@@ -74,6 +74,9 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       content_type,
       save: true,
     });
+    if (success) {
+      appInfo.set_as_last_used_for_type(content_type);
+    }
     if (close_on_success && success) {
       window.close();
     }
