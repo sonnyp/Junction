@@ -144,8 +144,26 @@ const excluded_apps = [
 ];
 
 function getApplications(content_type) {
-  const applications = Gio.AppInfo.get_recommended_for_type(content_type);
+  const seen = new Set();
+
+  let applications = Gio.AppInfo.get_recommended_for_type(content_type);
+  if (!applications || applications.length === 0) {
+    applications = Gio.AppInfo.get_all().filter((appInfo) => {
+      return (
+        appInfo.should_show() &&
+        appInfo.supports_content_type("x-scheme-handler/http")
+      );
+    });
+  }
+
   return applications.filter((appInfo) => {
-    return !excluded_apps.includes(appInfo.get_id());
+    const id = appInfo.get_id();
+    const exec = appInfo.get_executable();
+
+    if (excluded_apps.includes(id)) return false;
+    if (!exec || seen.has(exec)) return false;
+
+    seen.add(exec);
+    return true;
   });
 }
