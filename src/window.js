@@ -5,7 +5,7 @@ import GLib from "gi://GLib";
 
 import { build } from "../troll/src/main.js";
 
-import { readResource, openWithAction } from "./util.js";
+import { readResource, openWithAction, findMatchingApp, openWithApplication } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
@@ -24,6 +24,22 @@ export default function Window({ application, file }) {
     resource,
     scheme,
   });
+
+  // Check for URL matcher first
+  const matchingApp = findMatchingApp(resource);
+  if (matchingApp && (scheme === "http" || scheme === "https")) {
+    // Auto-launch the matching app and close window
+    const success = openWithApplication({
+      appInfo: matchingApp,
+      location: resource,
+      content_type,
+      save: true
+    });
+    if (success) {
+      window.close();
+      return { window };
+    }
+  }
 
   const applications = getApplications(content_type);
 

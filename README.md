@@ -66,6 +66,22 @@ If Junction is installed - you can test this in the terminal with `xdg-open "x-j
 
 </details>
 
+<details>
+  <summary>Automatic URL routing with URL matchers</summary>
+
+Junction can automatically route URLs to specific applications based on regex patterns. Access the URL matcher settings through the **Preferences** button in the welcome screen or via the **≡** menu in the application chooser.
+
+Common URL matcher patterns:
+
+- Route GitHub URLs to GitHub Desktop: `https://github\.com/.*`
+- Open YouTube in media player: `https://youtube\.com/.*`
+- Direct work tools to work browser: `.*\.company\.com/.*`
+- Route documentation sites: `https://docs\..*`
+
+URL matchers use JavaScript regex syntax and match against the full URL. When a URL matches a pattern, it will automatically open in the configured application instead of showing the application chooser.
+
+</details>
+
 ## Tips and tricks
 
 <details>

@@ -4,5 +4,11 @@
     <key name="show-app-names" type="b">
       <default>false</default>
     </key>
+    <key name="url-matchers" type="as">
+      <default>[]</default>
+      <summary>URL matchers for application selection</summary>
+      <description
+      >JSON-encoded array of URL matchers, each containing URL regex pattern and target application ID</description>
+    </key>
     </schema>
 </schemalist>

@@ -17,6 +17,9 @@ export default function Welcome({ application }) {
         Gdk.CURRENT_TIME,
       );
     },
+    onPreferences() {
+      application.activate_action("preferences", null);
+    },
   });
 
   if (__DEV__) window.add_css_class("devel");

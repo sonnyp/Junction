@@ -1,0 +1,94 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.PreferencesDialog preferences_window {
+  title: _("Preferences");
+
+  Adw.PreferencesPage {
+    title: _("General");
+    icon-name: "preferences-system-symbolic";
+
+    Adw.PreferencesGroup {
+      title: _("URL Matchers");
+      description: _("Configure automatic application selection based on URL patterns");
+
+      Adw.ActionRow {
+        title: _("Add URL Matcher");
+        subtitle: _("Create a new rule to automatically open matching URLs");
+        
+        [suffix]
+        Button add_button {
+          icon-name: "list-add-symbolic";
+          tooltip-text: _("Add new URL matcher");
+          valign: center;
+          styles ["flat"]
+        }
+      }
+
+      ListBox matchers_list {
+        styles ["boxed-list"]
+        selection-mode: none;
+        
+        Label empty_label {
+          label: _("No URL matchers configured.\nClick the + button to add one.");
+          styles ["dim-label"]
+          margin-top: 24;
+          margin-bottom: 24;
+        }
+      }
+    }
+  }
+}
+
+Adw.AlertDialog add_matcher_dialog {
+  heading: _("Add URL Matcher");
+  body: _("Enter a regular expression pattern to match URLs and select the application to open them with.");
+  
+  [extra-child]
+  Box {
+    orientation: vertical;
+    spacing: 12;
+    margin-top: 12;
+    
+    Box {
+      orientation: vertical;
+      spacing: 6;
+      
+      Label {
+        label: _("URL Pattern (Regular Expression):");
+        xalign: 0;
+        styles ["heading"]
+      }
+      
+      Entry pattern_entry {
+        placeholder-text: _("e.g., https://github\\.com/.*");
+        text: "";
+      }
+      
+      Label {
+        label: _("Examples: https://github\\.com/.*, .*\\.atlassian\\.net/.*, https://.*\\.example\\.com/.*");
+        xalign: 0;
+        styles ["caption", "dim-label"]
+        wrap: true;
+      }
+    }
+    
+    Box {
+      orientation: vertical;
+      spacing: 6;
+      
+      Label {
+        label: _("Application:");
+        xalign: 0;
+        styles ["heading"]
+      }
+      
+      DropDown app_dropdown {
+        model: app_list_model;
+      }
+    }
+  }
+}
+
+StringList app_list_model {
+}

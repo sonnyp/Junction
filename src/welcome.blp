@@ -38,12 +38,21 @@ Adw.ApplicationWindow window {
       }
 
       Button {
+        label: _("Preferences");
+        valign: center;
+        halign: center;
+        clicked => $onPreferences();
+      }
+
+      Button {
         label: _("Set Junction as default for Web");
         valign: center;
         halign: center;
         clicked => $onInstall();
       }
+
     }
   };
 }
+
 

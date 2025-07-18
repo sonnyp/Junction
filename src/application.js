@@ -7,6 +7,7 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import PreferencesDialog from "./PreferencesDialog.js";
 
 import "./style.css";
 
@@ -108,6 +109,15 @@ export default function Application() {
   });
   application.add_action(showShortCutsWindow);
   application.set_accels_for_action("app.shortcuts", ["<Primary>question"]);
+
+  const showPreferences = new Gio.SimpleAction({
+    name: "preferences",
+    parameter_type: null,
+  });
+  showPreferences.connect("activate", () => {
+    PreferencesDialog({ application });
+  });
+  application.add_action(showPreferences);
 
   return application;
 }
