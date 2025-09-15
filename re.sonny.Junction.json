@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "47",
+  "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Junction",
   "finish-args": [
@@ -30,27 +30,14 @@
   ],
   "modules": [
     {
-      "name": "blueprint-compiler",
-      "buildsystem": "meson",
-      "cleanup": ["*"],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0",
-          "tag": "v0.16.0"
-        }
-      ]
-    },
-    {
       "name": "glib",
       "buildsystem": "meson",
       "config-opts": ["-Dselinux=disabled", "-Dtests=false"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.84/glib-2.84.1.tar.xz",
-          "sha256": "2b4bc2ec49611a5fc35f86aca855f2ed0196e69e53092bab6bb73396bf30789a"
+          "url": "https://download.gnome.org/sources/glib/2.86/glib-2.86.0.tar.xz",
+          "sha256": "b5739972d737cfb0d6fd1e7f163dfe650e2e03740bb3b8d408e4d1faea580d6d"
         },
         {
           "type": "patch",

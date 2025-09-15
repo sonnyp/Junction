@@ -29,7 +29,7 @@ const { gresource_path, prefix } = gjspack({
   resource_root: project_root.resolve_relative_path("./src"),
   entry: project_root.resolve_relative_path("./src/main.js"),
   output: project_root.resolve_relative_path("./src"),
-  potfiles: project_root.resolve_relative_path("./po/POTFILES"),
+  // potfiles: project_root.resolve_relative_path("./po/POTFILES"),
 });
 const resource = Gio.resource_load(gresource_path);
 Gio.resources_register(resource);
