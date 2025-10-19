@@ -10,6 +10,7 @@ import Entry from "./Entry.js";
 import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" assert { type: "uri" };
+import { getApplications } from "./desktop.js";
 
 export default function Window({ application, file }) {
   const { window, list, entry } = build(Interface);
@@ -130,22 +131,4 @@ export default function Window({ application, file }) {
   window.present();
 
   return { window };
-}
-
-const excluded_apps = [
-  // Exclude self for obvious reason
-  "re.sonny.Junction.desktop",
-  // Braus is similar to Junction
-  "com.properlypurple.braus.desktop",
-  // SpaceFM handles urls for some reason
-  // https://github.com/properlypurple/braus/issues/26
-  // https://github.com/IgnorantGuru/spacefm/blob/e6f291858067e73db44fb57c90e4efb97b088ac8/data/spacefm.desktop.in
-  "spacefm.desktop",
-];
-
-function getApplications(content_type) {
-  const applications = Gio.AppInfo.get_recommended_for_type(content_type);
-  return applications.filter((appInfo) => {
-    return !excluded_apps.includes(appInfo.get_id()) && appInfo.should_show();
-  });
 }
