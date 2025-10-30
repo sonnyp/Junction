@@ -74,8 +74,6 @@ async function getApplicationsForDir(path) {
     if (!loaded) {
       console.warn(`Could not load KeyFile from ${file.get_path()}`);
       continue;
-    } else {
-      console.warn(`Could load KeyFile from ${file.get_path()}`);
     }
 
     // const dup = new GLib.KeyFile();
@@ -102,10 +100,15 @@ async function getApplicationsForDir(path) {
     }
 
     if (app.get_nodisplay()) continue;
-    if (excluded_apps.includes(app.get_id())) continue;
+    if (excluded_apps.includes(app.junction_id)) continue;
 
     const mime = app.get_string_list(GLib.KEY_FILE_DESKTOP_KEY_MIME_TYPE);
     if (mime.length === 0) continue;
+
+    // FIXME
+    app.junction_id = file_info.get_name(); // no get_id() withn desktopappinfo built from keyfile
+    app.junction_keyfile = keyfile; // no way to load keyfile from desktopappinfo without reading the file again
+    app.junction_filename = file.get_path(); // no get_filename() with desktopappinfo built from keyfile
 
     apps.push(app);
   }
@@ -142,7 +145,7 @@ export async function init() {
   // applications.forEach((app) => {
   //   if (!app) return;
   //   console.log(app.get_name());
-  //   console.log(app.get_id());
+  //   console.log(app.junction_id);
   // });
 }
 
@@ -158,7 +161,7 @@ export function getApplications(content_type) {
 
   // apps.forEach((app) => {
   //   console.log(app.get_name());
-  //   console.log(app.get_id());
+  //   console.log(app.junction_id);
   // });
 
   return apps;
@@ -179,13 +182,14 @@ console.log(
 
 export function loadDesktopAppInfo(keyFile) {
   if (!Xdp.Portal.running_under_sandbox()) {
-    return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+    return GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
   }
 
   const Exec = keyFile.get_value(
     GLib.KEY_FILE_DESKTOP_GROUP,
     GLib.KEY_FILE_DESKTOP_KEY_EXEC,
   );
+  if (!Exec) return null;
 
   if (Exec && !Exec.startsWith("flatpak-spawn")) {
     keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
@@ -197,4 +201,6 @@ export function loadDesktopAppInfo(keyFile) {
       GLib.KEY_FILE_DESKTOP_KEY_TRY_EXEC,
     );
   } catch {}
+
+  return GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 }

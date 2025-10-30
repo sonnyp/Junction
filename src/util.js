@@ -1,5 +1,7 @@
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
+import GioUnix from "gi://GioUnix";
+import Xdp from "gi://Xdp";
 
 export function logEnum(obj, value) {
   console.log(
@@ -135,27 +137,28 @@ export function readResource(file) {
   return { resource, scheme, content_type };
 }
 
+function duplicateKeyFile(keyFile) {
+  const dup = new GLib.KeyFile();
+  const [str, length] = keyFile.to_data();
+  dup.load_from_data(str, length, GLib.KeyFileFlags.NONE);
+  return dup;
+}
+
 // A bit hackish but GLib doesn't support launching actions with parameters
-export function openWithAction({ desktop_id, action, location }) {
-  const desktopAppInfo = Gio.DesktopAppInfo.new(desktop_id);
-  const keyFile = new GLib.KeyFile();
-  keyFile.load_from_file(desktopAppInfo.get_filename(), GLib.KeyFileFlags.NONE);
+export function openWithAction({ appInfo, action, location }) {
+  const keyFile = duplicateKeyFile(appInfo.junction_keyfile);
   const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
 
-  if (GLib.getenv("FLATPAK_ID") && !Exec.startsWith("flatpak-spawn")) {
+  if (Xdp.Portal.running_under_sandbox() && !Exec.startsWith("flatpak-spawn")) {
     keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
   }
 
-  const appInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+  const dup = GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 
-  return openWithApplication({ appInfo, location });
+  return openWithApplication({ appInfo: dup, location });
 }
 
-export function openWithApplication({ appInfo, location, content_type, save }) {
-  if (GLib.getenv("FLATPAK_ID")) {
-    appInfo = flatpakify(appInfo);
-  }
-
+export function openWithApplication({ appInfo, location, content_type }) {
   const uri = parse(location);
   const uri_str = uri.to_string();
 
@@ -167,46 +170,19 @@ export function openWithApplication({ appInfo, location, content_type, save }) {
     success = appInfo.launch([file], null);
   }
 
-  if (success) {
-    if (save && !GLib.getenv("FLATPAK_ID")) {
-      // On Flatpak fails with
-      // (re.sonny.Junction:3): Gjs-WARNING **: 18:35:39.427: JS ERROR: Gio.IOErrorEnum: Can’t create user desktop file /home/sonny/.var/app/re.sonny.Junction/data/applications/userapp-YOGA Image Optimizer-20X240.desktop
+  if (success && content_type) {
+    try {
       appInfo.set_as_last_used_for_type(content_type);
-    }
-  } else {
+    } catch {}
+  }
+
+  if (!success) {
     console.error(
       `Could not launch ${location} with "${appInfo.get_commandline()}"`,
     );
   }
 
   return success;
-}
-
-function flatpakify(appInfo) {
-  const filename = appInfo.get_filename();
-  if (!filename) {
-    return appInfo;
-  }
-
-  const keyFile = new GLib.KeyFile();
-  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
-    console.error(`Could not load ${filename}`);
-    return null;
-  }
-
-  const Exec = keyFile.get_value("Desktop Entry", "Exec");
-  if (!Exec) {
-    console.error(`No Exec for ${filename}`);
-    return null;
-  }
-
-  if (Exec.startsWith("flatpak-spawn")) {
-    return appInfo;
-  }
-
-  keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
-
-  return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
 }
 
 // GLib dbus launch isn't as smart as flatpak run --file-forwarding

@@ -72,11 +72,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       appInfo,
       location: entry.get_text(),
       content_type,
-      save: true,
     });
-    if (success) {
-      appInfo.set_as_last_used_for_type(content_type);
-    }
     if (close_on_success && success) {
       window.close();
     }
@@ -177,22 +173,21 @@ export function ShowInFolderButton({ file, window }) {
 }
 
 function popupActionsMenu({ popoverMenu, appInfo, location }) {
-  const filename = appInfo.get_filename();
-  const keyFile = new GLib.KeyFile();
-  keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
-  const desktopAppInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
-  const actions = desktopAppInfo.list_actions();
+  const actions = appInfo.list_actions();
 
   const menu = popoverMenu.menu_model;
   menu.remove_all();
 
   for (const action of actions) {
-    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+    const Exec = appInfo.junction_keyfile.get_string(
+      `Desktop Action ${action}`,
+      "Exec",
+    );
     if (!["%U", "%u", "%f", "%F"].some((code) => Exec.includes(code))) continue;
-    const action_name = desktopAppInfo.get_action_name(action);
+    const action_name = appInfo.get_action_name(action);
 
     const value = new GLib.Variant("a{ss}", {
-      desktop_id: appInfo.get_id(),
+      desktop_id: appInfo.junction_id,
       action,
       location,
     });

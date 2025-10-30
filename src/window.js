@@ -107,8 +107,11 @@ export default function Window({ application, file }) {
   });
   run_action.connect("activate", (self, variant) => {
     const data = variant.deep_unpack();
+    const { desktop_id, action, location } = data;
 
-    const success = openWithAction(data);
+    const appInfo = applications.find((app) => app.junction_id === desktop_id);
+
+    const success = openWithAction({ appInfo, action, location });
     if (success) window.close();
   });
   window.add_action(run_action);
