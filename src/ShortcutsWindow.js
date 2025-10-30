@@ -1,6 +1,6 @@
 import { build } from "../troll/src/main.js";
 
-import Interface from "./ShortcutsWindow.blp" assert { type: "uri" };
+import Interface from "./ShortcutsWindow.blp" with { type: "uri" };
 
 export default function ShortcutsWindow({ application }) {
   const { window } = build(Interface);

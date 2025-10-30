@@ -34,7 +34,7 @@ let applications = [];
 async function getApplicationsForDir(path) {
   const parent = Gio.File.new_for_path(path);
 
-  let apps = [];
+  const apps = [];
 
   let enumerator;
   try {
@@ -48,7 +48,7 @@ async function getApplicationsForDir(path) {
     if (err.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND)) return apps;
     if (err.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_DIRECTORY))
       return apps;
-    throw e;
+    throw err;
   }
 
   for await (const file_info of enumerator) {
@@ -200,6 +200,7 @@ export function loadDesktopAppInfo(keyFile) {
       GLib.KEY_FILE_DESKTOP_GROUP,
       GLib.KEY_FILE_DESKTOP_KEY_TRY_EXEC,
     );
+    // eslint-disable-next-line no-empty
   } catch {}
 
   return GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);

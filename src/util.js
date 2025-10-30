@@ -173,6 +173,7 @@ export function openWithApplication({ appInfo, location, content_type }) {
   if (success && content_type) {
     try {
       appInfo.set_as_last_used_for_type(content_type);
+      // eslint-disable-next-line no-empty
     } catch {}
   }
 

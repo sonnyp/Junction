@@ -9,7 +9,7 @@ import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
-import Interface from "./window.blp" assert { type: "uri" };
+import Interface from "./window.blp" with { type: "uri" };
 import { getApplications } from "./desktop.js";
 
 export default function Window({ application, file }) {

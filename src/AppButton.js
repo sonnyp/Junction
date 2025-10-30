@@ -10,7 +10,7 @@ import { build } from "../troll/src/main.js";
 
 import { openWithApplication, getIconFilename } from "./util.js";
 import { settings } from "./common.js";
-import Interface from "./AppButton.blp" assert { type: "uri" };
+import Interface from "./AppButton.blp" with { type: "uri" };
 
 const portal = new Xdp.Portal();
 Gio._promisify(portal, "open_directory", "open_directory_finish");
