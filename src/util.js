@@ -172,6 +172,7 @@ export function openWithApplication({ appInfo, location, content_type }) {
 
   if (success && content_type) {
     try {
+      // FIXME: This is broken see https://github.com/sonnyp/Junction/pull/192
       appInfo.set_as_last_used_for_type(content_type);
       // eslint-disable-next-line no-empty
     } catch {}
