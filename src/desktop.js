@@ -178,27 +178,23 @@ console.log(
 );
 
 export function loadDesktopAppInfo(keyFile) {
-  if (Xdp.Portal.running_under_sandbox()) {
-    const Exec = keyFile.get_value(
-      GLib.KEY_FILE_DESKTOP_GROUP,
-      GLib.KEY_FILE_DESKTOP_KEY_EXEC,
-    );
-
-    if (Exec && !Exec.startsWith("flatpak-spawn")) {
-      keyFile.set_value(
-        "Desktop Entry",
-        "Exec",
-        prefixCommandLineForHost(Exec),
-      );
-    }
-
-    try {
-      keyFile.remove_key(
-        GLib.KEY_FILE_DESKTOP_GROUP,
-        GLib.KEY_FILE_DESKTOP_KEY_TRY_EXEC,
-      );
-    } catch {}
+  if (!Xdp.Portal.running_under_sandbox()) {
+    return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
   }
 
-  return Gio.DesktopAppInfo.new_from_keyfile(keyFile);
+  const Exec = keyFile.get_value(
+    GLib.KEY_FILE_DESKTOP_GROUP,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+  );
+
+  if (Exec && !Exec.startsWith("flatpak-spawn")) {
+    keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
+  }
+
+  try {
+    keyFile.remove_key(
+      GLib.KEY_FILE_DESKTOP_GROUP,
+      GLib.KEY_FILE_DESKTOP_KEY_TRY_EXEC,
+    );
+  } catch {}
 }

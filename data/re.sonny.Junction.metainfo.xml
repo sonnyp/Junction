@@ -59,6 +59,7 @@
     <description translatable="no">
       <ul>
         <li>Avoid duplicate entries</li>
+        <li>Remove "View All" button</li>
         <li>Use GNOME 49</li>
       </ul>
     </description>
