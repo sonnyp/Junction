@@ -7,7 +7,7 @@ import { build } from "../troll/src/main.js";
 
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
+import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" assert { type: "uri" };
 import { getApplications } from "./desktop.js";
@@ -64,21 +64,6 @@ export default function Window({ application, file }) {
       }),
     );
   }
-
-  (() => {
-    const button = ViewAllButton({
-      content_type,
-      entry,
-      window,
-    });
-    options.push(button);
-    list.append(
-      new Gtk.FlowBoxChild({
-        focusable: false,
-        child: button,
-      }),
-    );
-  })();
 
   function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);

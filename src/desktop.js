@@ -99,15 +99,13 @@ async function getApplicationsForDir(path) {
     if (!app) {
       console.warn(`Could not load DesktopAppInfo from ${file.get_path()}`);
       continue;
-    } else {
-      console.warn(`Could load DesktopAppInfo from ${file.get_path()}`);
     }
 
     if (app.get_nodisplay()) continue;
     if (excluded_apps.includes(app.get_id())) continue;
 
-    // const mime = app.get_string_list(GLib.KEY_FILE_DESKTOP_KEY_MIME_TYPE);
-    // if (mime.length === 0) continue;
+    const mime = app.get_string_list(GLib.KEY_FILE_DESKTOP_KEY_MIME_TYPE);
+    if (mime.length === 0) continue;
 
     apps.push(app);
   }
@@ -141,11 +139,11 @@ export async function init() {
     await Promise.all(paths.map((path) => getApplicationsForDir(path)))
   ).flat();
 
-  applications.forEach((app) => {
-    if (!app) return;
-    console.log(app.get_name());
-    console.log(app.get_id());
-  });
+  // applications.forEach((app) => {
+  //   if (!app) return;
+  //   console.log(app.get_name());
+  //   console.log(app.get_id());
+  // });
 }
 
 init().catch(console.error);
