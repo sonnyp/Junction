@@ -100,25 +100,33 @@ async function getApplicationsForDir(path) {
 }
 
 export async function loadApplications() {
-  let paths;
+  const home = GLib.get_home_dir();
+
+  const paths = [
+    // --filesystem=host:ro mounts home transparently in the sandbox
+    GLib.build_filenamev([home, ".local/share/applications/"]),
+    GLib.build_filenamev([
+      home,
+      ".local/share/flatpak/exports/share/applications/",
+    ]),
+  ];
 
   if (Xdp.Portal.running_under_sandbox()) {
-    paths = [
-      "/run/host/usr/share/applications/",
-      // --filesystem=host:ro mounts home transparently in the sandbox
-      "/home/sonny/.local/share/applications/",
-      "/home/sonny/.local/share/flatpak/exports/share/applications/",
-      "/run/host/var/lib/flatpak/exports/share/applications/",
-      "/run/host/var/lib/snapd/desktop/applications/",
-    ];
+    paths.push(
+      ...[
+        "/run/host/usr/share/applications/",
+        "/run/host/var/lib/flatpak/exports/share/applications/",
+        "/run/host/var/lib/snapd/desktop/applications/",
+      ],
+    );
   } else {
-    paths = [
-      "/usr/share/applications",
-      "/home/sonny/.local/share/applications/",
-      "/home/sonny/.local/share/flatpak/exports/share/applications/",
-      "/var/lib/flatpak/exports/share/applications/",
-      "/var/lib/snapd/desktop/applications/",
-    ];
+    paths.push(
+      ...[
+        "/usr/share/applications",
+        "/var/lib/flatpak/exports/share/applications/",
+        "/var/lib/snapd/desktop/applications/",
+      ],
+    );
   }
 
   applications = (
