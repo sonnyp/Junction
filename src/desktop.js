@@ -83,35 +83,21 @@ export async function loadApplications() {
       home,
       ".local/share/flatpak/exports/share/applications/",
     ]),
+    // --filesystem=/var/lib/flatpak:ro mounts it transparently in the sandbox
+    "/var/lib/flatpak/exports/share/applications/",
+    // --filesystem=/var/lib/snapd/desktop:ro mounts it transparently in the sandbox
+    "/var/lib/snapd/desktop/applications/",
   ];
 
   if (Xdp.Portal.running_under_sandbox()) {
-    paths.push(
-      ...[
-        "/run/host/usr/share/applications/",
-        "/run/host/var/lib/flatpak/exports/share/applications/",
-        "/run/host/var/lib/snapd/desktop/applications/",
-      ],
-    );
+    paths.push(...["/run/host/usr/share/applications/"]);
   } else {
-    paths.push(
-      ...[
-        "/usr/share/applications",
-        "/var/lib/flatpak/exports/share/applications/",
-        "/var/lib/snapd/desktop/applications/",
-      ],
-    );
+    paths.push(...["/usr/share/applications"]);
   }
 
   applications = (
     await Promise.all(paths.map((path) => getApplicationsForDir(path)))
   ).flat();
-
-  // applications.forEach((app) => {
-  //   if (!app) return;
-  //   console.log(app.get_name());
-  //   console.log(app.junction_id);
-  // });
 }
 
 export async function init() {
@@ -133,11 +119,6 @@ export function getApplications(content_type) {
     const mime = app.get_string_list(GLib.KEY_FILE_DESKTOP_KEY_MIME_TYPE);
     return mime.includes(content_type);
   });
-
-  // apps.forEach((app) => {
-  //   console.log(app.get_name());
-  //   console.log(app.junction_id);
-  // });
 
   return apps;
 }
