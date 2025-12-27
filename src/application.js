@@ -11,13 +11,26 @@ import { init } from "./desktop.js";
 
 import "./style.css";
 
+const portal = new Xdp.Portal();
+
+Gio._promisify(
+  Xdp.Portal.prototype,
+  "request_background",
+  "request_background_finish",
+);
+Gio._promisify(
+  Xdp.Portal.prototype,
+  "set_background_status",
+  "set_background_status_finish",
+);
+
 export default function Application() {
   const application = new Adw.Application({
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
-
-  let welcome;
+  // Prevent application from quitting if no windows are open
+  application.hold();
 
   // https://gitlab.gnome.org/GNOME/glib/-/issues/1960
   // https://github.com/sonnyp/Junction/commit/5140f410ffd2899a3bb1aba5929f9891741e02fb
@@ -30,8 +43,11 @@ export default function Application() {
     );
   }
 
+  const initialize = Promise.withResolvers();
+
   application.connect("startup", () => {
     Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
+    init().then(initialize.resolve).catch(initialize.reject);
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
@@ -45,7 +61,7 @@ export default function Application() {
   application.connect("open", (self, files, hint) => {
     // log(["open", files.length, hint]);
 
-    init().then(() => {
+    initialize.promise.then(() => {
       files.forEach((file) => {
         Window({
           application,
@@ -55,6 +71,7 @@ export default function Application() {
     });
   });
 
+  let welcome;
   application.connect("activate", () => {
     if (!welcome) {
       welcome = Welcome({
@@ -63,6 +80,20 @@ export default function Application() {
     }
 
     welcome.window.present();
+
+    (async () => {
+      // See https://github.com/sonnyp/Eloquent/issues/46
+      // const parent = XdpGtk.parent_new_gtk(window);
+      const parent = null;
+      const success = await portal.request_background(
+        parent,
+        "Run Junction in the background to make it faster.",
+        ["re.sonny.Junction", "--gapplication-service"],
+        Xdp.BackgroundFlags.AUTOSTART,
+        null,
+      );
+      console.debug("request background succeeded", success);
+    })().catch(console.error);
   });
 
   application.connect("handle-local-options", (self, options) => {

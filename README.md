@@ -213,6 +213,8 @@ Finally - make sure to run `update-desktop-database ~/.local/share/applications`
 
 ## In the media
 
+[linuxlinks.com - Junction – application/browser chooser](https://www.linuxlinks.com/junction-application-browser-chooser/) - 04/2024
+
 [softpedia.com - Nifty and useful app switcher called Junction](https://linux.softpedia.com/get/Desktop-Environment/Gnome/Junction-104196.shtml) - 05/2022
 
 [itsfoss.com](https://itsfoss.com/junction/) - 03/2022

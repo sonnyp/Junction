@@ -78,7 +78,14 @@ export default defineConfig([
       "import/no-unresolved": [
         "error",
         {
-          ignore: ["gi://*", "cairo", "gettext", "system", "resource://*"],
+          ignore: [
+            "gi://*",
+            "cairo",
+            "gettext",
+            "system",
+            "resource://*",
+            "troll",
+          ],
         },
       ],
     },
