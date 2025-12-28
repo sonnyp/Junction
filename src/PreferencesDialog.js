@@ -4,6 +4,7 @@ import Gio from "gi://Gio";
 
 import { build } from "../troll/src/main.js";
 import { getUrlMatchers, addUrlMatcher, removeUrlMatcher } from "./util.js";
+import { getApplications } from "./desktop.js";
 
 import Interface from "./PreferencesDialog.blp" with { type: "uri" };
 
@@ -56,7 +57,7 @@ export default function PreferencesDialog({ application }) {
           addUrlMatcher(pattern, appId);
           loadMatchers();
           dialog.close();
-        } catch (err) {
+        } catch {
           showErrorDialog(
             "Invalid regular expression pattern. Please check your syntax.",
           );
@@ -72,18 +73,15 @@ export default function PreferencesDialog({ application }) {
   });
 
   function populateAppDropdown() {
-    // Get all applications that can handle HTTP/HTTPS
-    const apps = Gio.AppInfo.get_recommended_for_type("x-scheme-handler/http");
-    const httpsApps = Gio.AppInfo.get_recommended_for_type(
-      "x-scheme-handler/https",
-    );
+    const apps = getApplications("x-scheme-handler/http");
+    const httpsApps = getApplications("x-scheme-handler/https");
 
     // Combine and deduplicate
     const allApps = [...apps, ...httpsApps];
     const uniqueApps = new Map();
 
     allApps.forEach((app) => {
-      const id = app.get_id();
+      const id = app.junction_id;
       if (!uniqueApps.has(id)) {
         uniqueApps.set(id, app);
       }
@@ -97,7 +95,7 @@ export default function PreferencesDialog({ application }) {
     // Populate dropdown
     app_list_model.splice(0, app_list_model.get_n_items(), []);
     sortedApps.forEach((app) => {
-      const displayText = `${app.get_id()} - ${app.get_display_name()}`;
+      const displayText = app.get_display_name();
       app_list_model.append(displayText);
     });
   }
