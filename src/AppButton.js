@@ -10,7 +10,7 @@ import { build } from "../troll/src/main.js";
 
 import { openWithApplication, getIconFilename } from "./util.js";
 import { settings } from "./common.js";
-import Interface from "./AppButton.blp" assert { type: "uri" };
+import Interface from "./AppButton.blp" with { type: "uri" };
 
 const portal = new Xdp.Portal();
 Gio._promisify(portal, "open_directory", "open_directory_finish");
@@ -72,11 +72,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
       appInfo,
       location: entry.get_text(),
       content_type,
-      save: true,
     });
-    if (success) {
-      appInfo.set_as_last_used_for_type(content_type);
-    }
     if (close_on_success && success) {
       window.close();
     }
@@ -176,80 +172,22 @@ export function ShowInFolderButton({ file, window }) {
   });
 }
 
-export function ViewAllButton({ content_type, entry, window }) {
-  function onResponse(appChooserDialog, response_id) {
-    if (response_id !== Gtk.ResponseType.OK) {
-      appChooserDialog.destroy();
-      return;
-    }
-
-    const appInfo = appChooserDialog.get_app_info();
-
-    const success = openWithApplication({
-      appInfo,
-      location: entry.get_text(),
-      content_type,
-      save: false,
-    });
-    if (!success) {
-      return;
-    }
-
-    appChooserDialog.destroy();
-    window.close();
-  }
-
-  function onClicked() {
-    // TODO: Implement an app chooser in the window
-    // Unfortunally AppChooserWidget doesn't have search or "Find new Applications"
-    // so we are using AppChooserDialog for now
-    // we should implement our own inline widget eventually
-    const appChooserDialog = Gtk.AppChooserDialog.new_for_content_type(
-      window,
-      Gtk.DialogFlags.MODAL,
-      content_type,
-    );
-    const title_widget = appChooserDialog.get_header_bar()?.get_title_widget();
-    if (title_widget) {
-      const [title, subtitle] = [...title_widget];
-      title.label = _("All Applications");
-      title_widget.remove(subtitle);
-    }
-
-    const appChooserWidget = appChooserDialog.get_widget();
-    appChooserWidget.set_show_default(false);
-    appChooserWidget.set_show_recommended(true);
-    appChooserWidget.set_show_fallback(true);
-    appChooserWidget.set_show_other(true);
-    appChooserDialog.connect("response", onResponse);
-    appChooserDialog.show();
-  }
-
-  return TileButton({
-    label: _("View All"),
-    icon_name: "view-more-horizontal-symbolic",
-    icon_size: 48,
-    onClicked,
-  });
-}
-
 function popupActionsMenu({ popoverMenu, appInfo, location }) {
-  const filename = appInfo.get_filename();
-  const keyFile = new GLib.KeyFile();
-  keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
-  const desktopAppInfo = Gio.DesktopAppInfo.new_from_keyfile(keyFile);
-  const actions = desktopAppInfo.list_actions();
+  const actions = appInfo.list_actions();
 
   const menu = popoverMenu.menu_model;
   menu.remove_all();
 
   for (const action of actions) {
-    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+    const Exec = appInfo.junction_keyfile.get_string(
+      `Desktop Action ${action}`,
+      "Exec",
+    );
     if (!["%U", "%u", "%f", "%F"].some((code) => Exec.includes(code))) continue;
-    const action_name = desktopAppInfo.get_action_name(action);
+    const action_name = appInfo.get_action_name(action);
 
     const value = new GLib.Variant("a{ss}", {
-      desktop_id: appInfo.get_id(),
+      desktop_id: appInfo.junction_id,
       action,
       location,
     });

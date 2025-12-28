@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 npx lint-staged
 
 # xgettext -f po/POTFILES -o po/re.sonny.Junction.pot --no-wrap -cTRANSLATORS --from-code=UTF-8

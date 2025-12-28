@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "gi://Gtk": "gi://Gtk?version=4.0",
+    "troll": "../troll/src/main.js",
+    "gi://Xdp": "gi://Xdp?version=1.0"
+  }
+}

@@ -12,3 +12,4 @@ install
 Junction.flatpak
 *.gresource
 .fenv
+.foundry

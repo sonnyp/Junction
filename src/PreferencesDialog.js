@@ -5,7 +5,7 @@ import Gio from "gi://Gio";
 import { build } from "../troll/src/main.js";
 import { getUrlMatchers, addUrlMatcher, removeUrlMatcher } from "./util.js";
 
-import Interface from "./PreferencesDialog.blp" assert { type: "uri" };
+import Interface from "./PreferencesDialog.blp" with { type: "uri" };
 
 export default function PreferencesDialog({ application }) {
   const {
@@ -16,13 +16,16 @@ export default function PreferencesDialog({ application }) {
     pattern_entry,
     preferences_window,
     app_dropdown,
-    app_list_model
+    app_list_model,
   } = build(Interface);
 
   // Add dialog responses
   add_matcher_dialog.add_response("cancel", "Cancel");
   add_matcher_dialog.add_response("add", "Add");
-  add_matcher_dialog.set_response_appearance("add", Adw.ResponseAppearance.SUGGESTED);
+  add_matcher_dialog.set_response_appearance(
+    "add",
+    Adw.ResponseAppearance.SUGGESTED,
+  );
 
   // Populate browser applications
   populateAppDropdown();
@@ -54,10 +57,14 @@ export default function PreferencesDialog({ application }) {
           loadMatchers();
           dialog.close();
         } catch (err) {
-          showErrorDialog("Invalid regular expression pattern. Please check your syntax.");
+          showErrorDialog(
+            "Invalid regular expression pattern. Please check your syntax.",
+          );
         }
       } else {
-        showErrorDialog("Please fill in both the pattern and select an application.");
+        showErrorDialog(
+          "Please fill in both the pattern and select an application.",
+        );
       }
     } else {
       dialog.close();
@@ -67,13 +74,15 @@ export default function PreferencesDialog({ application }) {
   function populateAppDropdown() {
     // Get all applications that can handle HTTP/HTTPS
     const apps = Gio.AppInfo.get_recommended_for_type("x-scheme-handler/http");
-    const httpsApps = Gio.AppInfo.get_recommended_for_type("x-scheme-handler/https");
+    const httpsApps = Gio.AppInfo.get_recommended_for_type(
+      "x-scheme-handler/https",
+    );
 
     // Combine and deduplicate
     const allApps = [...apps, ...httpsApps];
     const uniqueApps = new Map();
 
-    allApps.forEach(app => {
+    allApps.forEach((app) => {
       const id = app.get_id();
       if (!uniqueApps.has(id)) {
         uniqueApps.set(id, app);
@@ -87,7 +96,7 @@ export default function PreferencesDialog({ application }) {
 
     // Populate dropdown
     app_list_model.splice(0, app_list_model.get_n_items(), []);
-    sortedApps.forEach(app => {
+    sortedApps.forEach((app) => {
       const displayText = `${app.get_id()} - ${app.get_display_name()}`;
       app_list_model.append(displayText);
     });
@@ -127,7 +136,7 @@ export default function PreferencesDialog({ application }) {
       icon_name: "user-trash-symbolic",
       tooltip_text: "Remove URL matcher",
       valign: Gtk.Align.CENTER,
-      css_classes: ["flat"]
+      css_classes: ["flat"],
     });
 
     deleteButton.connect("clicked", () => {
@@ -151,5 +160,5 @@ export default function PreferencesDialog({ application }) {
   }
 
   preferences_window.present(null);
-  return {preferences_window};
+  return { preferences_window };
 }

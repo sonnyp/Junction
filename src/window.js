@@ -7,9 +7,10 @@ import { build } from "../troll/src/main.js";
 
 import { readResource, openWithAction, findMatchingApp, openWithApplication } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ViewAllButton, ShowInFolderButton } from "./AppButton.js";
+import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
-import Interface from "./window.blp" assert { type: "uri" };
+import Interface from "./window.blp" with { type: "uri" };
+import { getApplications } from "./desktop.js";
 
 export default function Window({ application, file }) {
   const { window, list, entry } = build(Interface);
@@ -80,21 +81,6 @@ export default function Window({ application, file }) {
     );
   }
 
-  (() => {
-    const button = ViewAllButton({
-      content_type,
-      entry,
-      window,
-    });
-    options.push(button);
-    list.append(
-      new Gtk.FlowBoxChild({
-        focusable: false,
-        child: button,
-      }),
-    );
-  })();
-
   function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
     // Is not 0...9
@@ -137,8 +123,11 @@ export default function Window({ application, file }) {
   });
   run_action.connect("activate", (self, variant) => {
     const data = variant.deep_unpack();
+    const { desktop_id, action, location } = data;
 
-    const success = openWithAction(data);
+    const appInfo = applications.find((app) => app.junction_id === desktop_id);
+
+    const success = openWithAction({ appInfo, action, location });
     if (success) window.close();
   });
   window.add_action(run_action);
@@ -146,22 +135,4 @@ export default function Window({ application, file }) {
   window.present();
 
   return { window };
-}
-
-const excluded_apps = [
-  // Exclude self for obvious reason
-  "re.sonny.Junction.desktop",
-  // Braus is similar to Junction
-  "com.properlypurple.braus.desktop",
-  // SpaceFM handles urls for some reason
-  // https://github.com/properlypurple/braus/issues/26
-  // https://github.com/IgnorantGuru/spacefm/blob/e6f291858067e73db44fb57c90e4efb97b088ac8/data/spacefm.desktop.in
-  "spacefm.desktop",
-];
-
-function getApplications(content_type) {
-  const applications = Gio.AppInfo.get_recommended_for_type(content_type);
-  return applications.filter((appInfo) => {
-    return !excluded_apps.includes(appInfo.get_id());
-  });
 }

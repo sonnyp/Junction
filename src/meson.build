@@ -8,6 +8,14 @@ bin_conf.set('datadir', datadir)
 bin_conf.set('pkgdatadir', pkgdatadir)
 
 configure_file(
+  input: 'junction',
+  output: 'junction',
+  configuration: bin_conf,
+  install: true,
+  install_dir: get_option('bindir')
+)
+
+configure_file(
   input: 'bin.js',
   output: 're.sonny.Junction',
   configuration: bin_conf,
@@ -15,11 +23,6 @@ configure_file(
   install_dir: get_option('bindir')
 )
 
-blueprint_compiler = find_program(
-  '/app/bin/blueprint-compiler',
-  '../blueprint-compiler/blueprint-compiler.py',
-  'blueprint-compiler'
-)
 gjspack = find_program('../troll/gjspack/bin/gjspack')
 custom_target('gjspack',
   input: ['main.js'],
@@ -28,9 +31,9 @@ custom_target('gjspack',
     gjspack,
     '--appid=' + app_id,
     '--prefix', '/re/sonny/Junction',
-    '--project-root', meson.source_root(),
+    '--import-map',  meson.project_source_root() / 'src/importmap.json',
+    '--project-root', meson.project_source_root(),
     '--resource-root', meson.project_source_root() / 'src',
-    '--blueprint-compiler', blueprint_compiler,
     '--no-executable',
     '@INPUT0@',
     '@OUTDIR@',

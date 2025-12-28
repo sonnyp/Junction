@@ -4,7 +4,7 @@ import Gdk from "gi://Gdk";
 import { build } from "../troll/src/main.js";
 
 import { spawn_sync } from "./util.js";
-import Interface from "./welcome.blp" assert { type: "uri" };
+import Interface from "./welcome.blp" with { type: "uri" };
 
 export default function Welcome({ application }) {
   const { window } = build(Interface, {
