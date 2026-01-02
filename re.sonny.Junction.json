@@ -14,7 +14,9 @@
     "--filesystem=xdg-data/applications:ro",
     "--filesystem=xdg-data/flatpak:ro",
     "--filesystem=/var/lib/flatpak:ro",
-    "--filesystem=/var/lib/snapd:ro"
+    "--filesystem=/var/lib/snapd:ro",
+    "--talk-name=org.gtk.vfs.*",
+    "--filesystem=xdg-run/gvfsd"
   ],
   "cleanup": [
     "/include",
