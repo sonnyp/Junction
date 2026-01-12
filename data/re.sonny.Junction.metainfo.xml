@@ -61,6 +61,7 @@
           <li>Made faster by running in the background</li>
           <li>Implement startup notification</li>
           <li>Fix launch on some exotic platforms</li>
+          <li>Fix app name text size/style</li>
         </ul>
       </description>
     </release>
