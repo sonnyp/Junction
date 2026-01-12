@@ -50,7 +50,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     },
   });
 
-  const name = appInfo.get_name();
+  const name = appInfo.get_display_name();
   button.set_tooltip_text(name);
   label.label = name;
   label.visible = false;

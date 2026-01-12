@@ -55,10 +55,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.12" date="2026-01-08">
+    <release version="1.12" date="2026-01-xx">
       <description translatable="no">
         <ul>
           <li>Made faster by running in the background</li>
+          <li>Re-introduce the "View All" button</li>
           <li>Fix startup on some exotic platforms</li>
         </ul>
       </description>

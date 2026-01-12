@@ -34,21 +34,28 @@ export function getApplications(content_type) {
     const filename = appInfo.get_filename();
     const keyFile = new GLib.KeyFile();
     keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
-    appInfo.keyFile = keyFile;
+    appInfo.keyfile = keyFile;
 
     apps.push(appInfo);
   }
 
   return apps;
-  // return applications.filter((appInfo) => {
-  //   return !excluded_apps.includes(appInfo.get_id()) && appInfo.should_show();
-  // });
 }
 
-console.debug(
-  Object.fromEntries(
-    ["XDG_DATA_HOME", "XDG_DATA_DIRS"].map((key) => {
-      return [key, GLib.getenv(key)];
-    }),
-  ),
-);
+// console.debug(
+//   Object.fromEntries(
+//     [
+//       "HOST_XDG_DATA_HOME",
+//       "HOST_XDG_CONFIG_HOME",
+//       "HOST_XDG_CACHE_HOME",
+//       "HOST_XDG_STATE_HOME",
+//       "XDG_DATA_HOME",
+//       "XDG_CONFIG_HOME",
+//       "XDG_CACHE_HOME",
+//       "XDG_STATE_HOME",
+//       "XDG_DATA_DIRS",
+//     ].map((key) => {
+//       return [key, GLib.getenv(key)];
+//     }),
+//   ),
+// );
