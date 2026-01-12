@@ -70,6 +70,11 @@
   background-color: alpha(white, 0.3);
 }
 
+.main .list button label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .main entry.uri {
   background-color: #1e1e1e;
   border-radius: 18px;

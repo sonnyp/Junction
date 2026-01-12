@@ -150,62 +150,6 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return button;
 }
 
-export function ViewAllButton({ content_type, entry, window }) {
-  function onResponse(appChooserDialog, response_id) {
-    if (response_id !== Gtk.ResponseType.OK) {
-      appChooserDialog.destroy();
-      return;
-    }
-
-    const appInfo = appChooserDialog.get_app_info();
-
-    const success = openWithApplication({
-      appInfo,
-      location: entry.get_text(),
-      content_type,
-    });
-    if (!success) {
-      return;
-    }
-
-    appChooserDialog.destroy();
-    window.close();
-  }
-
-  function onClicked() {
-    // TODO: Implement an app chooser in the window
-    // Unfortunally AppChooserWidget doesn't have search or "Find new Applications"
-    // so we are using AppChooserDialog for now
-    // we should implement our own inline widget eventually
-    const appChooserDialog = Gtk.AppChooserDialog.new_for_content_type(
-      window,
-      Gtk.DialogFlags.MODAL,
-      content_type,
-    );
-    const title_widget = appChooserDialog.get_header_bar()?.get_title_widget();
-    if (title_widget) {
-      const [title, subtitle] = [...title_widget];
-      title.label = _("All Applications");
-      title_widget.remove(subtitle);
-    }
-
-    const appChooserWidget = appChooserDialog.get_widget();
-    appChooserWidget.set_show_default(false);
-    appChooserWidget.set_show_recommended(true);
-    appChooserWidget.set_show_fallback(true);
-    appChooserWidget.set_show_other(true);
-    appChooserDialog.connect("response", onResponse);
-    appChooserDialog.show();
-  }
-
-  return TileButton({
-    label: _("View All"),
-    icon_name: "view-more-horizontal-symbolic",
-    icon_size: 48,
-    onClicked,
-  });
-}
-
 export function ShowInFolderButton({ file, window }) {
   function onClicked() {
     portal

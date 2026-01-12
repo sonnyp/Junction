@@ -1,3 +1,4 @@
+import Gdk from "gi://Gdk";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import GioUnix from "gi://GioUnix";
@@ -167,19 +168,20 @@ export function openWithApplication({ appInfo, location, content_type }) {
   const uri = parse(location);
   const uri_str = uri.to_string();
 
+  const context = Gdk.Display.get_default().get_app_launch_context();
   let success;
   if (appInfo.supports_uris()) {
-    success = appInfo.launch_uris([uri_str], null);
+    success = appInfo.launch_uris([uri_str], context);
   } else {
     const file = Gio.File.new_for_uri(uri_str);
-    success = appInfo.launch([file], null);
+    success = appInfo.launch([file], context);
   }
 
-  if (success && content_type) {
+  // FIXME: This is broken on Flatpak
+  // https://gitlab.gnome.org/GNOME/glib/-/blob/fdac7118ceab456c0d7e3674b99ee52672d42bd6/gio/gdesktopappinfo.c#L4078
+  // because appInfo does not have filename
+  if (!Xdp.Portal.running_under_sandbox() && success && content_type) {
     try {
-      // FIXME: This is broken on Flatpak
-      // https://gitlab.gnome.org/GNOME/glib/-/blob/fdac7118ceab456c0d7e3674b99ee52672d42bd6/gio/gdesktopappinfo.c#L4078
-      // because appInfo does not have filename
       const result = appInfo.set_as_last_used_for_type(content_type);
       console.debug("set_as_last_used_for_type", result);
     } catch (err) {

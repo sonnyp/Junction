@@ -59,8 +59,8 @@
       <description translatable="no">
         <ul>
           <li>Made faster by running in the background</li>
-          <li>Re-introduce the "View All" button</li>
-          <li>Fix startup on some exotic platforms</li>
+          <li>Implement startup notification</li>
+          <li>Fix launch on some exotic platforms</li>
         </ul>
       </description>
     </release>
