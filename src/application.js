@@ -34,7 +34,7 @@ export default function Application() {
 
   // https://gitlab.gnome.org/GNOME/glib/-/issues/1960
   // https://github.com/sonnyp/Junction/commit/5140f410ffd2899a3bb1aba5929f9891741e02fb
-  if (Xdp.Portal.running_under_sandbox()) {
+  if (Xdp.Portal.running_under_flatpak()) {
     GLib.spawn_command_line_async(
       "gio mime x-scheme-handler/https re.sonny.Junction.desktop",
     );

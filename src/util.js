@@ -13,7 +13,10 @@ export function spawn(command_line) {
 }
 
 export function prefixCommandLineForHost(command_line) {
-  if (GLib.getenv("FLATPAK_ID")) {
+  if (
+    Xdp.Portal.running_under_flatpak() &&
+    !command_line.startsWith("flatpak-spawn ")
+  ) {
     command_line = `flatpak-spawn --host ${command_line}`;
   }
   return command_line;
@@ -46,7 +49,7 @@ export function getOSRelease() {
     }
   }
 
-  const prefix = GLib.getenv("FLATPAK_ID") ? "/run/host" : "";
+  const prefix = Xdp.Portal.running_under_flatpak() ? "/run/host" : "";
 
   const value =
     load(`${prefix}/etc/os-release`) ||
@@ -130,30 +133,38 @@ export function readResource(file) {
   return { resource, scheme, content_type };
 }
 
-function duplicateKeyFile(keyFile) {
-  const dup = new GLib.KeyFile();
-  const [str, length] = keyFile.to_data();
-  dup.load_from_data(str, length, GLib.KeyFileFlags.NONE);
-  return dup;
+export function getKeyFile(appInfo) {
+  if (!appInfo.__keyFile) {
+    const { filename } = appInfo;
+    if (!filename) return null;
+    const keyFile = new GLib.KeyFile();
+    const success = keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
+    if (!success) {
+      console.error(`Could not load KeyFile from "${filename}"`);
+      return null;
+    }
+    appInfo.__keyFile = keyFile;
+  }
+  return appInfo.__keyFile;
 }
 
 // A bit hackish but GLib doesn't support launching actions with parameters
 // https://gitlab.gnome.org/GNOME/glib/-/issues/2568
 // let's file an MR in GLib upstream and get this over with
 export function openWithAction({ appInfo, action, location }) {
-  const keyFile = duplicateKeyFile(appInfo.keyfile);
+  const keyFile = getKeyFile(appInfo);
+  if (!keyFile) return false;
+
   const Exec = keyFile.get_string(
     `Desktop Action ${action}`,
     GLib.KEY_FILE_DESKTOP_KEY_EXEC,
   );
 
-  if (Xdp.Portal.running_under_flatpak() && !Exec.startsWith("flatpak-spawn")) {
-    keyFile.set_value(
-      GLib.KEY_FILE_DESKTOP_GROUP,
-      GLib.KEY_FILE_DESKTOP_KEY_EXEC,
-      prefixCommandLineForHost(Exec),
-    );
-  }
+  keyFile.set_value(
+    GLib.KEY_FILE_DESKTOP_GROUP,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    prefixCommandLineForHost(Exec),
+  );
 
   const dup = GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 
@@ -180,7 +191,7 @@ export function openWithApplication({ appInfo, location, content_type }) {
   // FIXME: This is broken on Flatpak
   // https://gitlab.gnome.org/GNOME/glib/-/blob/fdac7118ceab456c0d7e3674b99ee52672d42bd6/gio/gdesktopappinfo.c#L4078
   // because appInfo does not have filename
-  if (!Xdp.Portal.running_under_sandbox() && success && content_type) {
+  if (!Xdp.Portal.running_under_flatpak() && success && content_type) {
     try {
       const result = appInfo.set_as_last_used_for_type(content_type);
       console.debug("set_as_last_used_for_type", result);
@@ -199,16 +210,8 @@ export function openWithApplication({ appInfo, location, content_type }) {
 }
 
 function flatpakify(appInfo) {
-  const filename = appInfo.get_filename();
-  if (!filename) {
-    return appInfo;
-  }
-
-  const keyFile = new GLib.KeyFile();
-  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
-    console.error(`Could not load ${filename}`);
-    return null;
-  }
+  const keyFile = getKeyFile(appInfo);
+  if (!keyFile) return appInfo;
 
   let Exec;
   // https://github.com/sonnyp/Junction/issues/193#issuecomment-3469064246
@@ -220,12 +223,8 @@ function flatpakify(appInfo) {
     // eslint-disable-next-line no-empty
   } catch {}
   if (!Exec) {
-    console.error(`No Exec for ${filename}`);
+    console.error(`No Exec for "${appInfo.filename}"`);
     return null;
-  }
-
-  if (Exec.startsWith("flatpak-spawn")) {
-    return appInfo;
   }
 
   keyFile.set_value(
@@ -270,7 +269,7 @@ function isDocumentPortalExportedFile(path) {
 // https://github.com/flatpak/flatpak/issues/2538
 // https://github.com/sonnyp/Junction/issues/93
 export function getIconFilename(path) {
-  if (!GLib.getenv("FLATPAK_ID")) return path;
+  if (!Xdp.Portal.running_under_flatpak()) return path;
   if (!["/usr/", "/etc/"].some((parent) => path.startsWith(parent)))
     return path;
   return GLib.build_filenamev(["/run/host", path]);
