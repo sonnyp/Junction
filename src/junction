@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export G_MESSAGES_DEBUG="re.sonny.Junction"
+# export G_MESSAGES_DEBUG="re.sonny.Junction"
 DATA_HOME="${HOST_XDG_DATA_HOME:-${HOME}/.local/share}"
 export XDG_DATA_DIRS="${XDG_DATA_DIRS:-/usr/local/share:/usr/share}:/run/host/usr/share:/var/lib/snapd/desktop:/var/lib/flatpak/exports/share:${DATA_HOME}/flatpak/exports/share"
 export GI_TYPELIB_PATH="$GI_TYPELIB_PATH:/usr/lib/x86_64-linux-gnu/girepository-1.0/"
