@@ -2,12 +2,12 @@ import Gio from "gi://Gio";
 import Adw from "gi://Adw";
 import GLib from "gi://GLib";
 import Xdp from "gi://Xdp";
+import { gettext as _ } from "gettext";
 
 import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
-import { init } from "./desktop.js";
 
 import "./style.css";
 
@@ -43,11 +43,8 @@ export default function Application() {
     );
   }
 
-  const initialize = Promise.withResolvers();
-
   application.connect("startup", () => {
     Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
-    init().then(initialize.resolve).catch(initialize.reject);
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
@@ -61,12 +58,10 @@ export default function Application() {
   application.connect("open", (self, files, hint) => {
     // log(["open", files.length, hint]);
 
-    initialize.promise.then(() => {
-      files.forEach((file) => {
-        Window({
-          application,
-          file,
-        });
+    files.forEach((file) => {
+      Window({
+        application,
+        file,
       });
     });
   });
@@ -87,8 +82,8 @@ export default function Application() {
       const parent = null;
       const success = await portal.request_background(
         parent,
-        "Run Junction in the background to make it faster.",
-        ["re.sonny.Junction", "--gapplication-service"],
+        _("Run Junction in the background."),
+        ["junction", "--gapplication-service"],
         Xdp.BackgroundFlags.AUTOSTART,
         null,
       );

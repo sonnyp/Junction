@@ -7,7 +7,7 @@ import { build } from "../troll/src/main.js";
 
 import { readResource, openWithAction } from "./util.js";
 import Entry from "./Entry.js";
-import AppButton, { ShowInFolderButton } from "./AppButton.js";
+import AppButton, { ShowInFolderButton, ViewAllButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" with { type: "uri" };
 import { getApplications } from "./desktop.js";
@@ -65,6 +65,24 @@ export default function Window({ application, file }) {
     );
   }
 
+  (() => {
+    const button = ViewAllButton({
+      content_type,
+      entry,
+      window,
+    });
+
+    options.push(button);
+
+    list.append(
+      new Gtk.FlowBoxChild({
+        focusable: false,
+
+        child: button,
+      }),
+    );
+  })();
+
   function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
     // Is not 0...9
@@ -109,7 +127,7 @@ export default function Window({ application, file }) {
     const data = variant.deep_unpack();
     const { desktop_id, action, location } = data;
 
-    const appInfo = applications.find((app) => app.junction_id === desktop_id);
+    const appInfo = applications.find((app) => app.get_id() === desktop_id);
 
     const success = openWithAction({ appInfo, action, location });
     if (success) window.close();

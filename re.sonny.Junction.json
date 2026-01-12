@@ -30,6 +30,22 @@
   ],
   "modules": [
     {
+      "name": "glib",
+      "buildsystem": "meson",
+      "config-opts": ["-Dtests=false"],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/glib/2.86/glib-2.86.3.tar.xz",
+          "sha256": "b3211d8d34b9df5dca05787ef0ad5d7ca75dec998b970e1aab0001d229977c65"
+        },
+        {
+          "type": "patch",
+          "path": "build-aux/flatpak/glib-appinfo.patch"
+        }
+      ]
+    },
+    {
       "name": "libportal",
       "buildsystem": "meson",
       "config-opts": [

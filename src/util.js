@@ -137,12 +137,21 @@ function duplicateKeyFile(keyFile) {
 }
 
 // A bit hackish but GLib doesn't support launching actions with parameters
+// https://gitlab.gnome.org/GNOME/glib/-/issues/2568
+// let's file an MR in GLib upstream and get this over with
 export function openWithAction({ appInfo, action, location }) {
-  const keyFile = duplicateKeyFile(appInfo.junction_keyfile);
-  const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+  const keyFile = duplicateKeyFile(appInfo.keyfile);
+  const Exec = keyFile.get_string(
+    `Desktop Action ${action}`,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+  );
 
-  if (Xdp.Portal.running_under_sandbox() && !Exec.startsWith("flatpak-spawn")) {
-    keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
+  if (Xdp.Portal.running_under_flatpak() && !Exec.startsWith("flatpak-spawn")) {
+    keyFile.set_value(
+      GLib.KEY_FILE_DESKTOP_GROUP,
+      GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+      prefixCommandLineForHost(Exec),
+    );
   }
 
   const dup = GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
@@ -151,6 +160,10 @@ export function openWithAction({ appInfo, action, location }) {
 }
 
 export function openWithApplication({ appInfo, location, content_type }) {
+  if (Xdp.Portal.running_under_flatpak()) {
+    appInfo = flatpakify(appInfo);
+  }
+
   const uri = parse(location);
   const uri_str = uri.to_string();
 
@@ -164,10 +177,14 @@ export function openWithApplication({ appInfo, location, content_type }) {
 
   if (success && content_type) {
     try {
-      // FIXME: This is broken see https://github.com/sonnyp/Junction/pull/192
-      appInfo.set_as_last_used_for_type(content_type);
-      // eslint-disable-next-line no-empty
-    } catch {}
+      // FIXME: This is broken on Flatpak
+      // https://gitlab.gnome.org/GNOME/glib/-/blob/fdac7118ceab456c0d7e3674b99ee52672d42bd6/gio/gdesktopappinfo.c#L4078
+      // because appInfo does not have filename
+      const result = appInfo.set_as_last_used_for_type(content_type);
+      console.debug("set_as_last_used_for_type", result);
+    } catch (err) {
+      console.debug("set_as_last_used_for_type", err);
+    }
   }
 
   if (!success) {
@@ -177,6 +194,45 @@ export function openWithApplication({ appInfo, location, content_type }) {
   }
 
   return success;
+}
+
+function flatpakify(appInfo) {
+  const filename = appInfo.get_filename();
+  if (!filename) {
+    return appInfo;
+  }
+
+  const keyFile = new GLib.KeyFile();
+  if (!keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE)) {
+    console.error(`Could not load ${filename}`);
+    return null;
+  }
+
+  let Exec;
+  // https://github.com/sonnyp/Junction/issues/193#issuecomment-3469064246
+  try {
+    Exec = keyFile.get_value(
+      GLib.KEY_FILE_DESKTOP_GROUP,
+      GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    );
+    // eslint-disable-next-line no-empty
+  } catch {}
+  if (!Exec) {
+    console.error(`No Exec for ${filename}`);
+    return null;
+  }
+
+  if (Exec.startsWith("flatpak-spawn")) {
+    return appInfo;
+  }
+
+  keyFile.set_value(
+    GLib.KEY_FILE_DESKTOP_GROUP,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    prefixCommandLineForHost(Exec),
+  );
+
+  return GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 }
 
 // GLib dbus launch isn't as smart as flatpak run --file-forwarding
