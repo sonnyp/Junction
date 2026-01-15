@@ -4,7 +4,7 @@ import Gio from "gi://Gio";
 
 import { build } from "../troll/src/main.js";
 import { getUrlMatchers, addUrlMatcher, removeUrlMatcher } from "./util.js";
-import { getApplications } from "./desktop.js";
+import { getApplications } from "./window.js";
 
 import Interface from "./PreferencesDialog.blp" with { type: "uri" };
 

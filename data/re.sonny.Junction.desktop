@@ -2,7 +2,7 @@
 # TRANSLATORS: Do NOT translate
 Name=Junction
 Comment=Application chooser
-Exec=re.sonny.Junction %U
+Exec=junction %U
 MimeType=x-scheme-handler/x-junction;x-scheme-handler/https;x-scheme-handler/http
 Terminal=false
 Type=Application

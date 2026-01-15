@@ -8,7 +8,7 @@ import XdpGtk4 from "gi://XdpGtk4";
 
 import { build } from "../troll/src/main.js";
 
-import { openWithApplication, getIconFilename } from "./util.js";
+import { openWithApplication, getIconFilename, getKeyFile } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.blp" with { type: "uri" };
 
@@ -174,20 +174,19 @@ export function ShowInFolderButton({ file, window }) {
 
 function popupActionsMenu({ popoverMenu, appInfo, location }) {
   const actions = appInfo.list_actions();
+  const keyFile = getKeyFile(appInfo);
+  if (!keyFile) return;
 
   const menu = popoverMenu.menu_model;
   menu.remove_all();
 
   for (const action of actions) {
-    const Exec = appInfo.junction_keyfile.get_string(
-      `Desktop Action ${action}`,
-      "Exec",
-    );
+    const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
     if (!["%U", "%u", "%f", "%F"].some((code) => Exec.includes(code))) continue;
     const action_name = appInfo.get_action_name(action);
 
     const value = new GLib.Variant("a{ss}", {
-      desktop_id: appInfo.junction_id,
+      desktop_id: appInfo.get_id(),
       action,
       location,
     });

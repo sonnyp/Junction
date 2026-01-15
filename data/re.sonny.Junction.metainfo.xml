@@ -55,10 +55,13 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.12" date="2025-12-xx">
+    <release version="1.12" date="2026-01-13">
       <description translatable="no">
         <ul>
-          <li>Make Junction faster by running in the background</li>
+          <li>Made faster by running in the background</li>
+          <li>Implement startup notification</li>
+          <li>Fix launch on some exotic platforms</li>
+          <li>Fix app name text size/style</li>
         </ul>
       </description>
     </release>

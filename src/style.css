@@ -1,7 +1,3 @@
-@define-color accent_color @yellow_4;
-@define-color accent_bg_color @yellow_4;
-@define-color accent_fg_color alpha(black, 0.8);
-
 .welcome #content {
   padding: 68px;
 }
@@ -68,6 +64,11 @@
   /* This is libadwaita background for active */
   /* https://gitlab.gnome.org/GNOME/libadwaita/-/blob/main/src/stylesheet/widgets/_buttons.scss#L3 */
   background-color: alpha(white, 0.3);
+}
+
+.main .list button label {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .main entry.uri {

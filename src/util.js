@@ -1,16 +1,9 @@
+import Gdk from "gi://Gdk";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
 import { settings } from "./common.js";
 import GioUnix from "gi://GioUnix";
 import Xdp from "gi://Xdp";
-
-export function logEnum(obj, value) {
-  console.log(
-    Object.entries(obj).find(([k, v]) => {
-      return v === value;
-    })[0],
-  );
-}
 
 export function spawn_sync(command_line) {
   return GLib.spawn_command_line_sync(prefixCommandLineForHost(command_line));
@@ -21,7 +14,10 @@ export function spawn(command_line) {
 }
 
 export function prefixCommandLineForHost(command_line) {
-  if (GLib.getenv("FLATPAK_ID")) {
+  if (
+    Xdp.Portal.running_under_flatpak() &&
+    !command_line.startsWith("flatpak-spawn ")
+  ) {
     command_line = `flatpak-spawn --host ${command_line}`;
   }
   return command_line;
@@ -54,7 +50,7 @@ export function getOSRelease() {
     }
   }
 
-  const prefix = GLib.getenv("FLATPAK_ID") ? "/run/host" : "";
+  const prefix = Xdp.Portal.running_under_flatpak() ? "/run/host" : "";
 
   const value =
     load(`${prefix}/etc/os-release`) ||
@@ -138,21 +134,38 @@ export function readResource(file) {
   return { resource, scheme, content_type };
 }
 
-function duplicateKeyFile(keyFile) {
-  const dup = new GLib.KeyFile();
-  const [str, length] = keyFile.to_data();
-  dup.load_from_data(str, length, GLib.KeyFileFlags.NONE);
-  return dup;
+export function getKeyFile(appInfo) {
+  if (!appInfo.__keyFile) {
+    const { filename } = appInfo;
+    if (!filename) return null;
+    const keyFile = new GLib.KeyFile();
+    const success = keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
+    if (!success) {
+      console.error(`Could not load KeyFile from "${filename}"`);
+      return null;
+    }
+    appInfo.__keyFile = keyFile;
+  }
+  return appInfo.__keyFile;
 }
 
 // A bit hackish but GLib doesn't support launching actions with parameters
+// https://gitlab.gnome.org/GNOME/glib/-/issues/2568
+// let's file an MR in GLib upstream and get this over with
 export function openWithAction({ appInfo, action, location }) {
-  const keyFile = duplicateKeyFile(appInfo.junction_keyfile);
-  const Exec = keyFile.get_string(`Desktop Action ${action}`, "Exec");
+  const keyFile = getKeyFile(appInfo);
+  if (!keyFile) return false;
 
-  if (Xdp.Portal.running_under_sandbox() && !Exec.startsWith("flatpak-spawn")) {
-    keyFile.set_value("Desktop Entry", "Exec", prefixCommandLineForHost(Exec));
-  }
+  const Exec = keyFile.get_string(
+    `Desktop Action ${action}`,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+  );
+
+  keyFile.set_value(
+    GLib.KEY_FILE_DESKTOP_GROUP,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    prefixCommandLineForHost(Exec),
+  );
 
   const dup = GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 
@@ -160,23 +173,32 @@ export function openWithAction({ appInfo, action, location }) {
 }
 
 export function openWithApplication({ appInfo, location, content_type }) {
+  if (Xdp.Portal.running_under_flatpak()) {
+    appInfo = flatpakify(appInfo);
+  }
+
   const uri = parse(location);
   const uri_str = uri.to_string();
 
+  const context = Gdk.Display.get_default().get_app_launch_context();
   let success;
   if (appInfo.supports_uris()) {
-    success = appInfo.launch_uris([uri_str], null);
+    success = appInfo.launch_uris([uri_str], context);
   } else {
     const file = Gio.File.new_for_uri(uri_str);
-    success = appInfo.launch([file], null);
+    success = appInfo.launch([file], context);
   }
 
-  if (success && content_type) {
+  // FIXME: This is broken on Flatpak
+  // https://gitlab.gnome.org/GNOME/glib/-/blob/fdac7118ceab456c0d7e3674b99ee52672d42bd6/gio/gdesktopappinfo.c#L4078
+  // because appInfo does not have filename
+  if (!Xdp.Portal.running_under_flatpak() && success && content_type) {
     try {
-      // FIXME: This is broken see https://github.com/sonnyp/Junction/pull/192
-      appInfo.set_as_last_used_for_type(content_type);
-      // eslint-disable-next-line no-empty
-    } catch {}
+      const result = appInfo.set_as_last_used_for_type(content_type);
+      console.debug("set_as_last_used_for_type", result);
+    } catch (err) {
+      console.debug("set_as_last_used_for_type", err);
+    }
   }
 
   if (!success) {
@@ -186,6 +208,33 @@ export function openWithApplication({ appInfo, location, content_type }) {
   }
 
   return success;
+}
+
+function flatpakify(appInfo) {
+  const keyFile = getKeyFile(appInfo);
+  if (!keyFile) return appInfo;
+
+  let Exec;
+  // https://github.com/sonnyp/Junction/issues/193#issuecomment-3469064246
+  try {
+    Exec = keyFile.get_value(
+      GLib.KEY_FILE_DESKTOP_GROUP,
+      GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    );
+    // eslint-disable-next-line no-empty
+  } catch {}
+  if (!Exec) {
+    console.error(`No Exec for "${appInfo.filename}"`);
+    return null;
+  }
+
+  keyFile.set_value(
+    GLib.KEY_FILE_DESKTOP_GROUP,
+    GLib.KEY_FILE_DESKTOP_KEY_EXEC,
+    prefixCommandLineForHost(Exec),
+  );
+
+  return GioUnix.DesktopAppInfo.new_from_keyfile(keyFile);
 }
 
 // GLib dbus launch isn't as smart as flatpak run --file-forwarding
@@ -200,7 +249,6 @@ export function openWithApplication({ appInfo, location, content_type }) {
 // let's hope this doesn't break...
 const textDecoder = new TextDecoder();
 export function getRealPath(document_path) {
-  console.time("getRealPath");
   const [success, stdout, , status] = spawn_sync(
     `flatpak document-info "${document_path}"`,
   );
@@ -211,8 +259,6 @@ export function getRealPath(document_path) {
   if (!result) return null;
 
   const [, path] = result.match(new RegExp("origin: " + "(.*)" + "\n"));
-
-  console.timeEnd("getRealPath");
 
   return path || null;
 }
@@ -276,7 +322,7 @@ export function findMatchingApp(url) {
 // https://github.com/flatpak/flatpak/issues/2538
 // https://github.com/sonnyp/Junction/issues/93
 export function getIconFilename(path) {
-  if (!GLib.getenv("FLATPAK_ID")) return path;
+  if (!Xdp.Portal.running_under_flatpak()) return path;
   if (!["/usr/", "/etc/"].some((parent) => path.startsWith(parent)))
     return path;
   return GLib.build_filenamev(["/run/host", path]);

@@ -1,6 +1,7 @@
 import "gi://Gtk?version=4.0";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
+import Xdp from "gi://Xdp";
 
 import tst, { assert } from "../troll/tst/tst.js";
 
@@ -100,47 +101,60 @@ test("readResource", () => {
 });
 
 test("prefixCommandLineForHost", () => {
-  const FLATPAK_ID = GLib.getenv("FLATPAK_ID");
   const command_line = `foo --bar hello='world' something="wow"`;
 
-  GLib.setenv("FLATPAK_ID", "", true);
-  assert.equal(prefixCommandLineForHost(command_line), command_line);
+  const running_under_flatpak = Xdp.Portal.running_under_flatpak;
 
-  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  Xdp.Portal.running_under_flatpak = () => false;
+  assert.equal(prefixCommandLineForHost(command_line), command_line);
+  assert.equal(
+    prefixCommandLineForHost("flatpak-spawn foo"),
+    "flatpak-spawn foo",
+  );
+
+  Xdp.Portal.running_under_flatpak = () => true;
   assert.equal(
     prefixCommandLineForHost(command_line),
     `flatpak-spawn --host foo --bar hello='world' something="wow"`,
   );
+  assert.equal(
+    prefixCommandLineForHost("flatpak-spawn foo"),
+    "flatpak-spawn foo",
+  );
 
-  if (FLATPAK_ID) GLib.setenv("FLATPAK_ID", FLATPAK_ID, true);
+  Xdp.Portal.running_under_flatpak = running_under_flatpak;
 });
 
 test("getIconFilename", () => {
-  GLib.setenv("FLATPAK_ID", "", true);
+  const running_under_flatpak = Xdp.Portal.running_under_flatpak;
+
+  Xdp.Portal.running_under_flatpak = () => false;
   assert.equal(getIconFilename("/usr/share/hello.png"), "/usr/share/hello.png");
-  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  Xdp.Portal.running_under_flatpak = () => true;
   assert.equal(
     getIconFilename("/usr/share/hello.png"),
     "/run/host/usr/share/hello.png",
   );
 
-  GLib.setenv("FLATPAK_ID", "", true);
+  Xdp.Portal.running_under_flatpak = () => false;
   assert.equal(getIconFilename("/etc/foo/hello.png"), "/etc/foo/hello.png");
-  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  Xdp.Portal.running_under_flatpak = () => true;
   assert.equal(
     getIconFilename("/etc/foo/hello.png"),
     "/run/host/etc/foo/hello.png",
   );
 
-  GLib.setenv("FLATPAK_ID", "", true);
+  Xdp.Portal.running_under_flatpak = () => false;
   assert.equal(getIconFilename("/home/foo/bar.png"), "/home/foo/bar.png");
-  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  Xdp.Portal.running_under_flatpak = () => true;
   assert.equal(getIconFilename("/home/foo/bar.png"), "/home/foo/bar.png");
 
-  GLib.setenv("FLATPAK_ID", "", true);
+  Xdp.Portal.running_under_flatpak = () => false;
   assert.equal(getIconFilename("/opt/foo/bar.png"), "/opt/foo/bar.png");
-  GLib.setenv("FLATPAK_ID", "bar.foo", true);
+  Xdp.Portal.running_under_flatpak = () => true;
   assert.equal(getIconFilename("/opt/foo/bar.png"), "/opt/foo/bar.png");
+
+  Xdp.Portal.running_under_flatpak = running_under_flatpak;
 });
 
 export default test;

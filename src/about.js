@@ -65,7 +65,7 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   dialog.add_credit_section("Contributors", [
     "Patrick Decat https://github.com/pdecat",
   ]);
-  dialog.present(application.active_window);
+  dialog.present(null);
 
   return { dialog };
 }
