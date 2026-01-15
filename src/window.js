@@ -5,7 +5,12 @@ import GLib from "gi://GLib";
 
 import { build } from "../troll/src/main.js";
 
-import { readResource, openWithAction, findMatchingApp, openWithApplication } from "./util.js";
+import {
+  readResource,
+  openWithAction,
+  findMatchingApp,
+  openWithApplication,
+} from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
@@ -33,7 +38,7 @@ export default function Window({ application, file }) {
       appInfo: matchingApp,
       location: resource,
       content_type,
-      save: true
+      save: true,
     });
     if (success) {
       window.close();
