@@ -31,8 +31,6 @@ export default function Application() {
     application_id: "re.sonny.Junction",
     flags: Gio.ApplicationFlags.HANDLES_OPEN,
   });
-  // Prevent application from quitting if no windows are open
-  application.hold();
 
   // https://gitlab.gnome.org/GNOME/glib/-/issues/1960
   // https://github.com/sonnyp/Junction/commit/5140f410ffd2899a3bb1aba5929f9891741e02fb
@@ -46,6 +44,11 @@ export default function Application() {
   }
 
   application.connect("startup", () => {
+    if (!application.get_is_remote()) {
+      // Prevent application from quitting if no windows are open
+      application.hold();
+    }
+
     Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
   });
 
