@@ -10,22 +10,34 @@ Button button {
 
   styles ["flat"]
 
-  Box box {
-    orientation: vertical;
-    valign: center;
-    halign: center;
+  Overlay {
+    Box box {
+      orientation: vertical;
+      valign: center;
+      halign: center;
 
-    Image image {
-      pixel-size: 92;
-      width-request: 92;
-      height-request: 92;
-      styles ["icon-dropshadow"]
+      Image image {
+        pixel-size: 92;
+        width-request: 92;
+        height-request: 92;
+        styles ["icon-dropshadow"]
+      }
+
+      Label label {
+        ellipsize: end;
+        max-width-chars: 10;
+        margin-top: 6;
+      }
     }
 
-    Label label {
-      ellipsize: end;
-      max-width-chars: 10;
-      margin-top: 6;
+    // the 1...9 key that opens this app, set in AppButton.js
+    [overlay]
+    Label position {
+      halign: start;
+      valign: start;
+      visible: false;
+      can-target: false;
+      styles ["position"]
     }
   }
 }

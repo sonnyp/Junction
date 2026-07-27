@@ -2,10 +2,7 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  default-width: 772;
-  default-height: 218;
-  width-request: 360;
-  height-request: 218;
+  // the size is set in window.js, it depends on the "compact" setting
   styles ["main"]
 
   // portrait
@@ -27,7 +24,7 @@ Adw.ApplicationWindow window {
     Adw.HeaderBar header_bar {
       [start]
       MenuButton {
-        popover: menu_popover;
+        menu-model: menu_model;
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main Menu");
         valign: center;
@@ -60,7 +57,7 @@ Adw.ApplicationWindow window {
       styles ["bar"]
 
       MenuButton button_menu_bottom {
-        popover: menu_popover;
+        menu-model: menu_model;
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main Menu");
         valign: center;
@@ -82,11 +79,6 @@ Adw.ApplicationWindow window {
   };
 }
 
-PopoverMenu menu_popover {
-  menu-model: menu_model;
-  halign: start;
-}
-
 menu menu_model {
   item {
     label: _("Show App Names");
@@ -94,8 +86,35 @@ menu menu_model {
   }
 
   item {
+    label: _("Compact Mode");
+    action: "win.compact";
+  }
+
+  item {
     label: _("Copy to Clipboard");
     action: "win.copy";
+  }
+
+  section {
+    label: _("Style");
+
+    item {
+      label: _("Follow System");
+      action: "app.color-scheme";
+      target: "default";
+    }
+
+    item {
+      label: _("Light");
+      action: "app.color-scheme";
+      target: "force-light";
+    }
+
+    item {
+      label: _("Dark");
+      action: "app.color-scheme";
+      target: "force-dark";
+    }
   }
 
   section {
