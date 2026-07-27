@@ -102,6 +102,13 @@
 
 /* Compact mode - smaller icons, tiles and padding so the window takes up
    much less room. */
+
+/* 30px is a big bite out of a 140px tall window - the corner curves into
+   the first tile and pushes it inwards. */
+.main.compact {
+  border-radius: 18px;
+}
+
 .main.compact .list {
   padding-top: 6px;
   padding-left: 6px;
