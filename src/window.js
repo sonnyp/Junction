@@ -11,11 +11,42 @@ import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" with { type: "uri" };
 
+const WINDOW_WIDTH = 772;
+const WINDOW_HEIGHT = 218;
+const WINDOW_WIDTH_COMPACT = 560;
+// tile 80 + .list padding 2x6 + the bottom bar, the way 218 is
+// tile 134 + .list padding 2x12 + the bottom bar
+const WINDOW_HEIGHT_COMPACT = 140;
+const WINDOW_WIDTH_MIN = 360;
+
 export default function Window({ application, file }) {
   const { window, list, entry } = build(Interface);
 
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
+
+  // The tiles shrink in compact mode, but the window keeps whatever size it
+  // already has, so it is resized explicitly on top of the .compact styles.
+  function applyCompact() {
+    const compact = settings.get_boolean("compact");
+
+    if (compact) window.add_css_class("compact");
+    else window.remove_css_class("compact");
+
+    window.set_size_request(
+      WINDOW_WIDTH_MIN,
+      compact ? WINDOW_HEIGHT_COMPACT : WINDOW_HEIGHT,
+    );
+    window.set_default_size(
+      compact ? WINDOW_WIDTH_COMPACT : WINDOW_WIDTH,
+      compact ? WINDOW_HEIGHT_COMPACT : WINDOW_HEIGHT,
+    );
+  }
+  const compact_handler = settings.connect("changed::compact", applyCompact);
+  window.connect("destroy", () => {
+    settings.disconnect(compact_handler);
+  });
+  applyCompact();
 
   const { content_type, resource, scheme } = readResource(file);
 
@@ -29,12 +60,13 @@ export default function Window({ application, file }) {
 
   const options = [];
 
-  applications.forEach((appInfo) => {
+  applications.forEach((appInfo, index) => {
     const button = AppButton({
       appInfo,
       content_type,
       entry,
       window,
+      position: index + 1,
     });
     appInfo.button = button;
     options.push(button);
@@ -54,6 +86,7 @@ export default function Window({ application, file }) {
       file,
       entry,
       window,
+      position: options.length + 1,
     });
     options.push(button);
     list.append(
@@ -66,9 +99,10 @@ export default function Window({ application, file }) {
 
   function getButtonForKeyval(keyval) {
     const keyname = Gdk.keyval_name(keyval);
-    // Is not 0...9
-    if (!/^\d$/.test(keyname)) return null;
-    const n = +keyname;
+    // Is not 0...9, on the number row or on the numeric keypad
+    const digit = /^(?:KP_)?(\d)$/.exec(keyname);
+    if (!digit) return null;
+    const n = +digit[1];
     return options[n - 1];
   }
 
@@ -99,6 +133,9 @@ export default function Window({ application, file }) {
 
   const toggleAppNames = settings.create_action("show-app-names");
   window.add_action(toggleAppNames);
+
+  const toggleCompact = settings.create_action("compact");
+  window.add_action(toggleCompact);
 
   const run_action = new Gio.SimpleAction({
     name: "run_action",
