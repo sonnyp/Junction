@@ -70,8 +70,59 @@
   font-weight: 400;
 }
 
+/* The 1...9 key that opens each app */
+.main .list button .position {
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0 4px;
+  margin: 4px;
+  border-radius: 9px;
+  background-color: alpha(currentColor, 0.12);
+}
+
+.main .list button:focus .position {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
 .main entry.uri {
   background-color: @view_bg_color;
   border-radius: 18px;
   border: solid 1px @borders;
+}
+
+/* Compact mode - smaller icons, tiles and padding so the window takes up
+   much less room. */
+.main.compact .list {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.main.compact .bar {
+  padding: 6px;
+}
+
+.main.compact .list button {
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.main.compact .list button label {
+  font-size: 12px;
+}
+
+.main.compact .list button .position {
+  font-size: 9px;
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0 3px;
+  margin: 1px;
+  border-radius: 7px;
+}
+
+.main.compact entry.uri {
+  border-radius: 12px;
 }

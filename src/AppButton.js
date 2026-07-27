@@ -15,36 +15,104 @@ import Interface from "./AppButton.blp" with { type: "uri" };
 const portal = new Xdp.Portal();
 Gio._promisify(portal, "open_directory", "open_directory_finish");
 
+const ICON_SIZE = 92;
+const ICON_SIZE_COMPACT = 48;
+const TILE_SIZE = 134;
+const TILE_SIZE_COMPACT = 80;
+// only 1...9 can be typed, see getButtonForKeyval in window.js
+const MAX_POSITION = 9;
+
+// Show which of the 1...9 keys opens this app. Without it the shortcut is
+// only discoverable from the Keyboard Shortcuts window.
+function setPosition(label, position) {
+  if (!position || position > MAX_POSITION) return;
+  label.label = String(position);
+  label.visible = true;
+}
+
+// GtkImage:pixel-size and size requests cannot be set from CSS, so the
+// compact sizes are applied here rather than in style.css.
+function bindCompact({
+  button,
+  image,
+  label,
+  icon_size = ICON_SIZE,
+  icon_size_compact = ICON_SIZE_COMPACT,
+}) {
+  function update() {
+    const compact = settings.get_boolean("compact");
+
+    const size = compact ? icon_size_compact : icon_size;
+    image.set_pixel_size(size);
+    image.set_size_request(size, size);
+
+    const tile = compact ? TILE_SIZE_COMPACT : TILE_SIZE;
+    button.set_size_request(tile, tile);
+
+    // A name doesn't fit under a compact tile - it ends up ellipsized to
+    // uselessness - so compact mode is icons only, whatever "Show App Names"
+    // is set to. The name is still in the tooltip.
+    label.visible = !compact && settings.get_boolean("show-app-names");
+  }
+
+  const handlers = [
+    settings.connect("changed::compact", update),
+    settings.connect("changed::show-app-names", update),
+  ];
+  button.connect("destroy", () => {
+    for (const handler of handlers) settings.disconnect(handler);
+  });
+  update();
+}
+
 export function TileButton({
   label,
   tooltip = label,
   icon_name,
   icon_size,
+  icon_size_compact,
+  position,
   onClicked,
 }) {
   const {
     button,
     label: glabel,
     image,
+    position: position_label,
   } = build(Interface, {
     onClicked,
   });
 
   button.set_tooltip_text(tooltip);
   glabel.label = label;
-  glabel.visible = false;
-  settings.bind("show-app-names", glabel, "visible", Gio.SettingsBindFlags.GET);
+  setPosition(position_label, position);
 
   image.set_from_icon_name(icon_name);
-  if (icon_size) {
-    image.set_pixel_size(icon_size);
-  }
+  bindCompact({
+    button,
+    image,
+    label: glabel,
+    icon_size,
+    icon_size_compact,
+  });
 
   return button;
 }
 
-export default function AppButton({ appInfo, content_type, entry, window }) {
-  const { button, label, image, box } = build(Interface, {
+export default function AppButton({
+  appInfo,
+  content_type,
+  entry,
+  window,
+  position,
+}) {
+  const {
+    button,
+    label,
+    image,
+    box,
+    position: position_label,
+  } = build(Interface, {
     onClicked() {
       open(true);
     },
@@ -53,8 +121,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const name = appInfo.get_display_name();
   button.set_tooltip_text(name);
   label.label = name;
-  label.visible = false;
-  settings.bind("show-app-names", label, "visible", Gio.SettingsBindFlags.GET);
+  setPosition(position_label, position);
 
   const menu = new Gio.Menu();
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
@@ -66,6 +133,8 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   } else if (icon instanceof Gio.FileIcon) {
     image.set_from_file(getIconFilename(icon.get_file().get_path()));
   }
+
+  bindCompact({ button, image, label });
 
   function open(close_on_success) {
     const success = openWithApplication({
@@ -150,7 +219,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   return button;
 }
 
-export function ShowInFolderButton({ file, window }) {
+export function ShowInFolderButton({ file, window, position }) {
   function onClicked() {
     portal
       .open_directory(
@@ -168,6 +237,8 @@ export function ShowInFolderButton({ file, window }) {
     tooltip: _("View File in File Manager"),
     icon_name: "folder-symbolic",
     icon_size: 48,
+    icon_size_compact: 24,
+    position,
     onClicked,
   });
 }

@@ -2,10 +2,7 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-  default-width: 772;
-  default-height: 218;
-  width-request: 360;
-  height-request: 218;
+  // the size is set in window.js, it depends on the "compact" setting
   styles ["main"]
 
   // portrait
@@ -93,6 +90,11 @@ menu menu_model {
     item {
       label: _("Show App Names");
       action: "win.show-app-names";
+    }
+
+    item {
+      label: _("Compact Mode");
+      action: "win.compact";
     }
 
     item {
