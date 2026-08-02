@@ -1,6 +1,7 @@
 import Gdk from "gi://Gdk";
 import GLib from "gi://GLib";
 import Gio from "gi://Gio";
+import { settings } from "./common.js";
 import GioUnix from "gi://GioUnix";
 import Xdp from "gi://Xdp";
 
@@ -266,6 +267,58 @@ function isDocumentPortalExportedFile(path) {
   return /^\/run\/user\/\d+\/doc\/.+\/.+$/.test(path);
 }
 
+// URL matcher functionality
+export function getUrlMatchers() {
+  const matchers = settings.get_strv("url-matchers");
+  return matchers
+    .map((matcherStr) => {
+      try {
+        return JSON.parse(matcherStr);
+      } catch (err) {
+        console.error("Failed to parse URL matcher:", matcherStr, err);
+        return null;
+      }
+    })
+    .filter((matcher) => matcher !== null);
+}
+
+export function addUrlMatcher(pattern, appId) {
+  const matchers = getUrlMatchers();
+  const newMatcher = { pattern, appId };
+  matchers.push(newMatcher);
+  const matcherStrings = matchers.map((matcher) => JSON.stringify(matcher));
+  settings.set_strv("url-matchers", matcherStrings);
+}
+
+export function removeUrlMatcher(index) {
+  const matchers = getUrlMatchers();
+  if (index >= 0 && index < matchers.length) {
+    matchers.splice(index, 1);
+    const matcherStrings = matchers.map((matcher) => JSON.stringify(matcher));
+    settings.set_strv("url-matchers", matcherStrings);
+  }
+}
+
+export function findMatchingApp(url) {
+  const matchers = getUrlMatchers();
+
+  for (const matcher of matchers) {
+    try {
+      const regex = new RegExp(matcher.pattern);
+      if (regex.test(url)) {
+        const appInfo = Gio.DesktopAppInfo.new(matcher.appId);
+        if (appInfo) {
+          return appInfo;
+        }
+      }
+    } catch (err) {
+      console.error("Invalid regex pattern:", matcher.pattern, err);
+    }
+  }
+
+  return null;
+}
+
 // https://github.com/flatpak/flatpak/issues/2538
 // https://github.com/sonnyp/Junction/issues/93
 export function getIconFilename(path) {
@@ -273,4 +326,29 @@ export function getIconFilename(path) {
   if (!["/usr/", "/etc/"].some((parent) => path.startsWith(parent)))
     return path;
   return GLib.build_filenamev(["/run/host", path]);
+}
+
+const excluded_apps = [
+  // Exclude self for obvious reason
+  "re.sonny.Junction.desktop",
+  // Braus is similar to Junction
+  "com.properlypurple.braus.desktop",
+  // SpaceFM handles urls for some reason
+  // https://github.com/properlypurple/braus/issues/26
+  // https://github.com/IgnorantGuru/spacefm/blob/e6f291858067e73db44fb57c90e4efb97b088ac8/data/spacefm.desktop.in
+  "spacefm.desktop",
+];
+
+export function getApplications(content_type) {
+  const applications = Gio.AppInfo.get_recommended_for_type(content_type);
+
+  const apps = [];
+
+  for (const appInfo of applications) {
+    if (excluded_apps.includes(appInfo.get_id())) continue;
+    if (!appInfo.should_show()) continue;
+    apps.push(appInfo);
+  }
+
+  return apps;
 }
