@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schemalist gettext-domain="re.sonny.Junction">
+  <!-- Values match AdwColorScheme so they can be passed straight to
+       Adw.StyleManager.set_color_scheme -->
+  <enum id="re.sonny.Junction.ColorScheme">
+    <value nick="default" value="0" />
+    <value nick="force-light" value="1" />
+    <value nick="force-dark" value="4" />
+  </enum>
   <schema id="re.sonny.Junction" path="/re/sonny/Junction/">
     <key name="show-app-names" type="b">
       <default>false</default>
+    </key>
+    <key name="color-scheme" enum="re.sonny.Junction.ColorScheme">
+      <default>'default'</default>
     </key>
     </schema>
 </schemalist>

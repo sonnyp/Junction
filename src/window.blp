@@ -99,6 +99,28 @@ menu menu_model {
   }
 
   section {
+    label: _("Style");
+
+    item {
+      label: _("Follow System");
+      action: "app.color-scheme";
+      target: "default";
+    }
+
+    item {
+      label: _("Light");
+      action: "app.color-scheme";
+      target: "force-light";
+    }
+
+    item {
+      label: _("Dark");
+      action: "app.color-scheme";
+      target: "force-dark";
+    }
+  }
+
+  section {
     item {
       label: _("Keyboard Shortcuts");
       action: "app.shortcuts";

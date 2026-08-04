@@ -8,6 +8,7 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import { settings } from "./common.js";
 
 import "./style.css";
 
@@ -49,7 +50,15 @@ export default function Application() {
       application.hold();
     }
 
-    Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
+    // "default" lets the desktop decide - the color scheme, accent color and
+    // contrast preference are read from the org.freedesktop.appearance portal,
+    // which GNOME, KDE Plasma and others implement.
+    const style_manager = Adw.StyleManager.get_default();
+    function updateColorScheme() {
+      style_manager.set_color_scheme(settings.get_enum("color-scheme"));
+    }
+    settings.connect("changed::color-scheme", updateColorScheme);
+    updateColorScheme();
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
@@ -126,6 +135,8 @@ export default function Application() {
   });
   application.add_action(quit);
   application.set_accels_for_action("app.quit", ["<Primary>Q"]);
+
+  application.add_action(settings.create_action("color-scheme"));
 
   application.set_accels_for_action("window.close", ["<Primary>W", "Escape"]);
   application.set_accels_for_action("win.copy", ["<Primary>C"]);
