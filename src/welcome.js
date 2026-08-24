@@ -43,13 +43,13 @@ function setAsDefaultApplicationForWeb() {
   return true;
 }
 
-// const types = [
-//   "x-scheme-handler/http",
-//   "x-scheme-handler/https",
-//   "text/html",
-//   "text/xml",
-//   "application/xhtml+xml",
-// ];
-// for (const type of types) {
-//   spawn(`gio mime ${type} re.sonny.Junction.desktop`);
-// }
+const types = [
+  "x-scheme-handler/http",
+  "x-scheme-handler/https",
+  "text/html",
+  "text/xml",
+  "application/xhtml+xml",
+];
+for (const type of types) {
+  spawn_sync(`gio mime ${type} re.sonny.Junction.desktop`);
+}
