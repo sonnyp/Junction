@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "49",
+  "runtime-version": "51beta",
   "sdk": "org.gnome.Sdk",
   "command": "junction",
   "finish-args": [
@@ -36,30 +36,12 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.86/glib-2.86.3.tar.xz",
-          "sha256": "b3211d8d34b9df5dca05787ef0ad5d7ca75dec998b970e1aab0001d229977c65"
+          "url": "https://download.gnome.org/sources/glib/2.89/glib-2.89.4.tar.xz",
+          "sha256": "1cdbb799f558832e6f14b8337b5fd599c6918ab144977b55e05e00a5e2e84a2c"
         },
         {
           "type": "patch",
           "path": "build-aux/flatpak/glib-appinfo.patch"
-        }
-      ]
-    },
-    {
-      "name": "libportal",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dtests=false",
-        "-Ddocs=false",
-        "-Dbackend-gtk3=disabled",
-        "-Dbackend-gtk4=enabled",
-        "-Dbackend-qt5=disabled"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
-          "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f"
         }
       ]
     },
