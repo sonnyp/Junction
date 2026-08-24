@@ -27,7 +27,7 @@ Adw.ApplicationWindow window {
     Adw.HeaderBar header_bar {
       [start]
       MenuButton {
-        popover: menu_popover;
+        menu-model: menu_model;
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main Menu");
         valign: center;
@@ -60,7 +60,7 @@ Adw.ApplicationWindow window {
       styles ["bar"]
 
       MenuButton button_menu_bottom {
-        popover: menu_popover;
+        menu-model: menu_model;
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main Menu");
         valign: center;
@@ -80,11 +80,6 @@ Adw.ApplicationWindow window {
       }
     }
   };
-}
-
-PopoverMenu menu_popover {
-  menu-model: menu_model;
-  halign: start;
 }
 
 menu menu_model {

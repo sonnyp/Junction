@@ -52,6 +52,11 @@
   padding: 12px;
 }
 
+/* https://github.com/sonnyp/Junction/issues/217 */
+.main .list flowboxchild:hover {
+  background: none;
+}
+
 .main .list button {
   border-radius: 18px;
   padding: 12px;
