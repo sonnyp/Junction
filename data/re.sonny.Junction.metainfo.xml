@@ -59,7 +59,8 @@
       <description translatable="no">
         <ul>
           <li>Use GNOME 51</li>
-          <li>Remove duplicate hover background<li>
+          <li>Follow system color scheme and accent color</li>
+          <li>Remove duplicate hover background</li>
           <li>Fix "Test Junction" in welcome window</li>
         </ul>
       </description>

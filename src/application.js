@@ -44,21 +44,21 @@ export default function Application() {
     );
   }
 
+  function updateColorScheme() {
+    const style_manager = Adw.StyleManager.get_default();
+    const color_scheme = settings.get_int("color-scheme");
+    style_manager.set_color_scheme(color_scheme);
+  }
+  settings.connect("changed::color-scheme", updateColorScheme);
+
+
   application.connect("startup", () => {
     if (!application.get_is_remote()) {
       // Prevent application from quitting if no windows are open
       application.hold();
     }
 
-    // "default" lets the desktop decide - the color scheme, accent color and
-    // contrast preference are read from the org.freedesktop.appearance portal,
-    // which GNOME, KDE Plasma and others implement.
-    const style_manager = Adw.StyleManager.get_default();
-    function updateColorScheme() {
-      style_manager.set_color_scheme(settings.get_enum("color-scheme"));
-    }
-    settings.connect("changed::color-scheme", updateColorScheme);
-    updateColorScheme();
+    updateColorScheme()
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
