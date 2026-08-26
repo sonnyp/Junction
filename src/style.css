@@ -60,10 +60,6 @@
   font-size: 0.6rem;
 }
 
-.main .list button:hover {
-  background-color: alpha(currentColor, 0.08);
-}
-
 .main .list button:focus {
   outline: none;
   background-color: alpha(@accent_bg_color, 0.25);
