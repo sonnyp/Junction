@@ -8,6 +8,7 @@ import Window from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import { settings } from "./common.js";
 
 import "./style.css";
 
@@ -43,13 +44,21 @@ export default function Application() {
     );
   }
 
+  function updateColorScheme() {
+    const style_manager = Adw.StyleManager.get_default();
+    const color_scheme = settings.get_int("color-scheme");
+    style_manager.set_color_scheme(color_scheme);
+  }
+  settings.connect("changed::color-scheme", updateColorScheme);
+
+
   application.connect("startup", () => {
     if (!application.get_is_remote()) {
       // Prevent application from quitting if no windows are open
       application.hold();
     }
 
-    Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK);
+    updateColorScheme()
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
@@ -126,6 +135,8 @@ export default function Application() {
   });
   application.add_action(quit);
   application.set_accels_for_action("app.quit", ["<Primary>Q"]);
+
+  application.add_action(settings.create_action("color-scheme"));
 
   application.set_accels_for_action("window.close", ["<Primary>W", "Escape"]);
   application.set_accels_for_action("win.copy", ["<Primary>C"]);

@@ -26,7 +26,7 @@ Adw.ApplicationWindow window {
     [top]
     Adw.HeaderBar header_bar {
       [start]
-      MenuButton {
+      MenuButton button_menu_top {
         menu-model: menu_model;
         icon-name: "open-menu-symbolic";
         tooltip-text: _("Main Menu");
@@ -83,14 +83,22 @@ Adw.ApplicationWindow window {
 }
 
 menu menu_model {
-  item {
-    label: _("Show App Names");
-    action: "win.show-app-names";
+  section {
+    item {
+      custom: "themeswitcher";
+    }
   }
 
-  item {
-    label: _("Copy to Clipboard");
-    action: "win.copy";
+  section {
+    item {
+      label: _("Show App Names");
+      action: "win.show-app-names";
+    }
+
+    item {
+      label: _("Copy to Clipboard");
+      action: "win.copy";
+    }
   }
 
   section {

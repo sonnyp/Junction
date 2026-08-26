@@ -10,9 +10,12 @@ import Entry from "./Entry.js";
 import AppButton, { ShowInFolderButton } from "./AppButton.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" with { type: "uri" };
+import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
 
 export default function Window({ application, file }) {
-  const { window, list, entry } = build(Interface);
+  const { window, list, entry, button_menu_top, button_menu_bottom } = build(Interface);
+  button_menu_top.get_popover().add_child(new ThemeSelector(), "themeswitcher");
+  button_menu_bottom.get_popover().add_child(new ThemeSelector(), "themeswitcher");
 
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);
