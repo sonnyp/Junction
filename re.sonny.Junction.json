@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "51beta",
+  "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
   "command": "junction",
   "finish-args": [
