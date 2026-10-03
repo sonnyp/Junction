@@ -15,7 +15,7 @@ import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
 const WINDOW_WIDTH = 772;
 const WINDOW_HEIGHT = 218;
 const WINDOW_WIDTH_COMPACT = 560;
-// tile 80 + .list padding 2x6 + the bottom bar, the way 218 is
+// tile 80 + .list padding 2x6 + the 48px bottom bar, the way 218 is
 // tile 134 + .list padding 2x12 + the bottom bar
 const WINDOW_HEIGHT_COMPACT = 140;
 const WINDOW_WIDTH_MIN = 360;

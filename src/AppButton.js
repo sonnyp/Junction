@@ -16,8 +16,9 @@ const portal = new Xdp.Portal();
 Gio._promisify(portal, "open_directory", "open_directory_finish");
 
 const ICON_SIZE = 92;
-const ICON_SIZE_COMPACT = 48;
+const ICON_SIZE_COMPACT = 64;
 const TILE_SIZE = 134;
+// icon + 8px of breathing room on each side, so the tile hugs the icon
 const TILE_SIZE_COMPACT = 80;
 // only 1...9 can be typed, see getButtonForKeyval in window.js
 const MAX_POSITION = 9;
@@ -237,7 +238,7 @@ export function ShowInFolderButton({ file, window, position }) {
     tooltip: _("View File in File Manager"),
     icon_name: "folder-symbolic",
     icon_size: 48,
-    icon_size_compact: 24,
+    icon_size_compact: 32,
     position,
     onClicked,
   });
