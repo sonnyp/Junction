@@ -3,7 +3,6 @@ using Adw 1;
 
 Adw.ApplicationWindow window {
   default-width: 772;
-  default-height: 218;
   width-request: 360;
   height-request: 218;
   styles ["main"]
@@ -37,8 +36,11 @@ Adw.ApplicationWindow window {
     }
 
     content: WindowHandle {
-      ScrolledWindow {
+      ScrolledWindow scrolled_window {
         vexpand: true;
+        hscrollbar-policy: never;
+        propagate-natural-width: true;
+        propagate-natural-height: true;
         FlowBox list {
           halign: center;
           valign: center;

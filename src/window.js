@@ -13,7 +13,14 @@ import Interface from "./window.blp" with { type: "uri" };
 import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
 
 export default function Window({ application, file }) {
-  const { window, list, entry, button_menu_top, button_menu_bottom } = build(Interface);
+  const {
+    window,
+    scrolled_window,
+    list,
+    entry,
+    button_menu_top,
+    button_menu_bottom,
+  } = build(Interface);
   button_menu_top.get_popover().add_child(new ThemeSelector(), "themeswitcher");
   button_menu_bottom.get_popover().add_child(new ThemeSelector(), "themeswitcher");
 
@@ -64,6 +71,21 @@ export default function Window({ application, file }) {
         focusable: false,
         child: button,
       }),
+    );
+  }
+
+  // The window grows to show every option, up to most of the smallest screen
+  // GTK computes the default height for the natural width, so be at least that wide
+  const [, natural_width] = window.measure(Gtk.Orientation.HORIZONTAL, -1);
+  window.default_width = Math.max(window.default_width, natural_width);
+  const monitors = Gdk.Display.get_default().get_monitors();
+  const monitor_heights = [];
+  for (let i = 0; i < monitors.get_n_items(); i++) {
+    monitor_heights.push(monitors.get_item(i).get_geometry().height);
+  }
+  if (monitor_heights.length > 0) {
+    scrolled_window.max_content_height = Math.round(
+      Math.min(...monitor_heights) * 0.7,
     );
   }
 
