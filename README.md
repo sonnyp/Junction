@@ -83,6 +83,13 @@ Use Middle-click, Ctrl+Click, Ctrl+Enter or Ctrl+Space to keep Junction open - a
 </details>
 
 <details>
+  <summary>Reorder applications</summary>
+
+Use `Reorder Applications…` in the menu to choose the order in which applications are shown. The order is remembered.
+
+</details>
+
+<details>
   <summary>Make Junction appear in the center of the screen</summary>
 
 On GNOME you can make all new windows open in the center using

@@ -10,6 +10,7 @@ import {
   parse,
   prefixCommandLineForHost,
   readResource,
+  sortApplications,
 } from "../src/util.js";
 
 const test = tst("utils");
@@ -155,6 +156,16 @@ test("getIconFilename", () => {
   assert.equal(getIconFilename("/opt/foo/bar.png"), "/opt/foo/bar.png");
 
   Xdp.Portal.running_under_flatpak = running_under_flatpak;
+});
+
+test("sortApplications", () => {
+  const apps = ["a", "b", "c", "d"].map((id) => ({ get_id: () => id }));
+  const ids = (order) => sortApplications(apps, order).map((app) => app.get_id());
+
+  assert.equal(ids([]), ["a", "b", "c", "d"]);
+  assert.equal(ids(["c", "a"]), ["c", "a", "b", "d"]);
+  assert.equal(ids(["d", "x", "b"]), ["d", "b", "a", "c"]);
+  assert.equal(ids(["x"]), ["a", "b", "c", "d"]);
 });
 
 export default test;

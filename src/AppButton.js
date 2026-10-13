@@ -8,7 +8,7 @@ import XdpGtk4 from "gi://XdpGtk4";
 
 import { build } from "../troll/src/main.js";
 
-import { openWithApplication, getIconFilename, getKeyFile } from "./util.js";
+import { openWithApplication, getKeyFile, setAppIcon } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.blp" with { type: "uri" };
 
@@ -60,12 +60,7 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
   box.append(popoverMenu);
 
-  const icon = appInfo.get_icon();
-  if (icon instanceof Gio.ThemedIcon) {
-    image.set_from_gicon(icon);
-  } else if (icon instanceof Gio.FileIcon) {
-    image.set_from_file(getIconFilename(icon.get_file().get_path()));
-  }
+  setAppIcon(image, appInfo);
 
   function open(close_on_success) {
     const success = openWithApplication({

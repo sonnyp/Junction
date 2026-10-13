@@ -1,0 +1,13 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.PreferencesDialog dialog {
+  title: _("Application Order");
+  content-width: 420;
+
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup group {
+      description: _("Applications are shown in this order");
+    }
+  }
+}

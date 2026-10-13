@@ -5,9 +5,10 @@ import GLib from "gi://GLib";
 
 import { build } from "../troll/src/main.js";
 
-import { readResource, openWithAction } from "./util.js";
+import { readResource, openWithAction, sortApplications } from "./util.js";
 import Entry from "./Entry.js";
 import AppButton, { ShowInFolderButton } from "./AppButton.js";
+import AppOrderDialog from "./AppOrderDialog.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" with { type: "uri" };
 import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
@@ -28,9 +29,29 @@ export default function Window({ application, file }) {
     scheme,
   });
 
-  const applications = getApplications(content_type);
+  const applications = sortApplications(
+    getApplications(content_type),
+    settings.get_strv("app-order"),
+  );
 
   const options = [];
+  list.set_sort_func(
+    (a, b) => options.indexOf(a.get_child()) - options.indexOf(b.get_child()),
+  );
+
+  function sortOptions() {
+    applications.splice(
+      0,
+      applications.length,
+      ...sortApplications(applications, settings.get_strv("app-order")),
+    );
+    options.splice(
+      0,
+      applications.length,
+      ...applications.map((appInfo) => appInfo.button),
+    );
+    list.invalidate_sort();
+  }
 
   applications.forEach((appInfo) => {
     const button = AppButton({
@@ -99,6 +120,16 @@ export default function Window({ application, file }) {
   });
   copy.connect("activate", copyToClipboard);
   window.add_action(copy);
+
+  const reorder = new Gio.SimpleAction({
+    name: "reorder",
+    parameter_type: null,
+  });
+  reorder.connect("activate", () => {
+    AppOrderDialog({ applications, onChange: sortOptions });
+  });
+  reorder.enabled = applications.length > 1;
+  window.add_action(reorder);
 
   const toggleAppNames = settings.create_action("show-app-names");
   window.add_action(toggleAppNames);
