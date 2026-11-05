@@ -8,7 +8,7 @@ import XdpGtk4 from "gi://XdpGtk4";
 
 import { build } from "../troll/src/main.js";
 
-import { openWithApplication, getIconFilename, getKeyFile } from "./util.js";
+import { openWithApplication, getKeyFile, setAppIcon } from "./util.js";
 import { settings } from "./common.js";
 import Interface from "./AppButton.blp" with { type: "uri" };
 
@@ -43,8 +43,14 @@ export function TileButton({
   return button;
 }
 
-export default function AppButton({ appInfo, content_type, entry, window }) {
-  const { button, label, image, box } = build(Interface, {
+export default function AppButton({
+  appInfo,
+  content_type,
+  entry,
+  window,
+  position,
+}) {
+  const { button, label, image, box, number } = build(Interface, {
     onClicked() {
       open(true);
     },
@@ -60,12 +66,23 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const popoverMenu = Gtk.PopoverMenu.new_from_model(menu);
   box.append(popoverMenu);
 
-  const icon = appInfo.get_icon();
-  if (icon instanceof Gio.ThemedIcon) {
-    image.set_from_gicon(icon);
-  } else if (icon instanceof Gio.FileIcon) {
-    image.set_from_file(getIconFilename(icon.get_file().get_path()));
+  setAppIcon(image, appInfo);
+
+  // Position 9 is opened with the 0 key
+  number.label = position < 10 ? `${(position + 1) % 10}` : "";
+
+  function applyCompact() {
+    const compact = settings.get_boolean("compact");
+    const size = compact ? 48 : 92;
+    image.pixel_size = size;
+    image.width_request = size;
+    image.height_request = size;
+    button.width_request = compact ? 88 : 134;
+    button.height_request = compact ? 88 : 134;
+    label.margin_top = compact ? 2 : 6;
   }
+  applyCompact();
+  settings.connect("changed::compact", applyCompact);
 
   function open(close_on_success) {
     const success = openWithApplication({

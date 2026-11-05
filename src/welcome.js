@@ -1,13 +1,19 @@
 import Gtk from "gi://Gtk";
 import Gdk from "gi://Gdk";
+import Gio from "gi://Gio";
 
 import { build } from "../troll/src/main.js";
+import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
 
 import { spawn_sync } from "./util.js";
+import { settings } from "./common.js";
 import Interface from "./welcome.blp" with { type: "uri" };
 
 export default function Welcome({ application }) {
-  const { window } = build(Interface, {
+  const { window, content_box, test_link, compact_switch, tray_switch } = build(Interface, {
+    onApplications() {
+      application.activate_action("arrange", null);
+    },
     onInstall() {
       const success = setAsDefaultApplicationForWeb();
 
@@ -18,6 +24,11 @@ export default function Welcome({ application }) {
       );
     },
   });
+
+  content_box.insert_child_after(new ThemeSelector(), test_link);
+
+  settings.bind("compact", compact_switch, "active", Gio.SettingsBindFlags.DEFAULT);
+  settings.bind("show-tray", tray_switch, "active", Gio.SettingsBindFlags.DEFAULT);
 
   if (__DEV__) window.add_css_class("devel");
   window.set_application(application);

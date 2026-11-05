@@ -266,6 +266,25 @@ function isDocumentPortalExportedFile(path) {
   return /^\/run\/user\/\d+\/doc\/.+\/.+$/.test(path);
 }
 
+export function setAppIcon(image, appInfo) {
+  const icon = appInfo.get_icon();
+  if (icon instanceof Gio.ThemedIcon) {
+    image.set_from_gicon(icon);
+  } else if (icon instanceof Gio.FileIcon) {
+    image.set_from_file(getIconFilename(icon.get_file().get_path()));
+  }
+}
+
+// Applications listed in order come first, in that order;
+// the others keep their relative order after them
+export function sortApplications(applications, order) {
+  const rank = (appInfo) => {
+    const index = order.indexOf(appInfo.get_id());
+    return index === -1 ? order.length : index;
+  };
+  return applications.toSorted((a, b) => rank(a) - rank(b));
+}
+
 // https://github.com/flatpak/flatpak/issues/2538
 // https://github.com/sonnyp/Junction/issues/93
 export function getIconFilename(path) {
