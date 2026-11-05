@@ -17,7 +17,7 @@ Adw.ApplicationWindow window {
       }
     }
 
-    Box {
+    Box content_box {
       name: "content";
       orientation: vertical;
       valign: center;
@@ -31,11 +31,53 @@ Adw.ApplicationWindow window {
         pixel-size: 128;
       }
 
-      LinkButton {
+      LinkButton test_link {
         label: _("Test Junction");
         valign: center;
         halign: center;
         uri: "https://junction.sonny.re/demo";
+      }
+
+      Box {
+        halign: center;
+        spacing: 12;
+
+        Label {
+          label: _("Compact Mode");
+          valign: center;
+        }
+
+        Switch compact_switch {
+          valign: center;
+        }
+      }
+
+      Box {
+        halign: center;
+        spacing: 12;
+
+        Label {
+          label: _("Tray Icon");
+          valign: center;
+        }
+
+        Switch tray_switch {
+          valign: center;
+        }
+      }
+
+      Button {
+        label: _("URL Rules");
+        valign: center;
+        halign: center;
+        action-name: "app.preferences";
+      }
+
+      Button {
+        label: _("Arrange Applications");
+        valign: center;
+        halign: center;
+        clicked => $onApplications();
       }
 
       Button {

@@ -5,9 +5,11 @@ import GLib from "gi://GLib";
 
 import { build } from "../troll/src/main.js";
 
-import { readResource, openWithAction } from "./util.js";
+import { readResource, openWithAction, sortApplications } from "./util.js";
 import Entry from "./Entry.js";
+import { expandProfiles } from "./profiles.js";
 import AppButton, { ShowInFolderButton } from "./AppButton.js";
+import AppOrderDialog from "./AppOrderDialog.js";
 import { settings } from "./common.js";
 import Interface from "./window.blp" with { type: "uri" };
 import ThemeSelector from "../troll/src/widgets/ThemeSelector.js";
@@ -30,49 +32,54 @@ export default function Window({ application, file }) {
 
   const applications = getApplications(content_type);
 
-  const options = [];
-
-  applications.forEach((appInfo) => {
-    const button = AppButton({
-      appInfo,
-      content_type,
-      entry,
-      window,
-    });
-    appInfo.button = button;
-    options.push(button);
-    list.append(
-      new Gtk.FlowBoxChild({
-        focusable: false,
-        child: button,
-      }),
-    );
-  });
-
-  if (
-    scheme === "file" &&
-    !["inode/directory", "application/octet-stream"].includes(content_type)
-  ) {
-    const button = ShowInFolderButton({
-      file,
-      entry,
-      window,
-    });
-    options.push(button);
-    list.append(
-      new Gtk.FlowBoxChild({
-        focusable: false,
-        child: button,
-      }),
+  // Hidden applications are not offered at all
+  function visibleApplications() {
+    const hidden = settings.get_strv("hidden-apps");
+    return sortApplications(
+      applications.filter((appInfo) => !hidden.includes(appInfo.get_id())),
+      settings.get_strv("app-order"),
     );
   }
 
+  let options = [];
+
+  function populate() {
+    list.remove_all();
+    options = visibleApplications().map((appInfo, position) =>
+      AppButton({
+        appInfo,
+        content_type,
+        entry,
+        window,
+        position,
+      }),
+    );
+
+    if (
+      scheme === "file" &&
+      !["inode/directory", "application/octet-stream"].includes(content_type)
+    ) {
+      options.push(ShowInFolderButton({ file, entry, window }));
+    }
+
+    options.forEach((button) => {
+      list.append(new Gtk.FlowBoxChild({ focusable: false, child: button }));
+    });
+
+    // The grid is as wide as its tiles, so it stays centered with few apps
+    const count = Math.max(options.length, 1);
+    list.max_children_per_line = Math.min(count, 5);
+    list.min_children_per_line = Math.min(count, 3);
+  }
+  populate();
+
   function getButtonForKeyval(keyval) {
-    const keyname = Gdk.keyval_name(keyval);
+    // Top row digits are "1", the numeric keypad ones are "KP_1"
+    const keyname = Gdk.keyval_name(keyval)?.replace(/^KP_/, "");
     // Is not 0...9
     if (!/^\d$/.test(keyname)) return null;
     const n = +keyname;
-    return options[n - 1];
+    return options[n === 0 ? 9 : n - 1];
   }
 
   const eventController = new Gtk.EventControllerKey();
@@ -99,6 +106,46 @@ export default function Window({ application, file }) {
   });
   copy.connect("activate", copyToClipboard);
   window.add_action(copy);
+
+  const reorder = new Gio.SimpleAction({
+    name: "reorder",
+    parameter_type: null,
+  });
+  reorder.connect("activate", () => {
+    AppOrderDialog({
+      applications: sortApplications(
+        applications,
+        settings.get_strv("app-order"),
+      ),
+      onChange: populate,
+    });
+  });
+  reorder.enabled = applications.length > 1;
+  window.add_action(reorder);
+
+  const addRule = new Gio.SimpleAction({
+    name: "add-rule",
+    parameter_type: null,
+  });
+  addRule.connect("activate", () => {
+    application.activate_action(
+      "add-rule",
+      new GLib.Variant("s", entry.get_text()),
+    );
+  });
+  addRule.enabled = scheme === "http" || scheme === "https";
+  window.add_action(addRule);
+
+  function applyCompact() {
+    const compact = settings.get_boolean("compact");
+    // Room for three applications
+    window.width_request = compact ? 360 : 480;
+    window.set_default_size(compact ? 500 : 772, -1);
+  }
+  applyCompact();
+  settings.connect("changed::compact", applyCompact);
+  window.add_action(settings.create_action("compact"));
+  window.add_action(settings.create_action("show-tray"));
 
   const toggleAppNames = settings.create_action("show-app-names");
   window.add_action(toggleAppNames);
@@ -142,7 +189,7 @@ export function getApplications(content_type) {
   for (const appInfo of applications) {
     if (excluded_apps.includes(appInfo.get_id())) continue;
     if (!appInfo.should_show()) continue;
-    apps.push(appInfo);
+    apps.push(...expandProfiles(appInfo));
   }
 
   return apps;

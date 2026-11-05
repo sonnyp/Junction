@@ -6,6 +6,15 @@ Junction lets you choose the application to open files and links.
 
 ![screenshot](data/screenshot.png)
 
+> **Fork of [sonnyp/Junction](https://github.com/sonnyp/Junction)**, licensed under GPLv3 like the original. It adds:
+>
+> - URL rules (domain, contains, exact URL, regex) that open matching links directly in a chosen application, with a "+" button to create a rule from the current link
+> - browser profiles (Chrome, Edge, Chromium, Brave, Firefox) as separate applications
+> - reordering and hiding of applications, position numbers and shortcuts 1-0 (including the numeric keypad)
+> - compact mode, theme selector and a tray icon with quick actions
+>
+> Build it with `flatpak-builder --user --install --force-clean flatpak re.sonny.Junction.json`.
+
 <a href='https://flathub.org/apps/re.sonny.Junction'><img width='240' height='80' alt='Download on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/></a>
 
 ## Usage

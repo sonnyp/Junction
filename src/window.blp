@@ -3,9 +3,7 @@ using Adw 1;
 
 Adw.ApplicationWindow window {
   default-width: 772;
-  default-height: 218;
   width-request: 360;
-  height-request: 218;
   styles ["main"]
 
   // portrait
@@ -34,16 +32,19 @@ Adw.ApplicationWindow window {
         primary: true;
         styles ["circular", "flat"]
       }
+
     }
 
     content: WindowHandle {
       ScrolledWindow {
         vexpand: true;
+        propagate-natural-height: true;
+        hscrollbar-policy: never;
         FlowBox list {
           halign: center;
           valign: center;
           max-children-per-line: 5;
-          min-children-per-line: 2;
+          min-children-per-line: 3;
           homogeneous: true;
           styles ["list"]
           column-spacing: 12;
@@ -75,6 +76,14 @@ Adw.ApplicationWindow window {
         styles ["uri"]
       }
 
+      Button {
+        action-name: "win.add-rule";
+        icon-name: "list-add-symbolic";
+        tooltip-text: _("Add URL Rule for This Site");
+        valign: center;
+        styles ["circular", "flat"]
+      }
+
       WindowControls window_controls_bottom {
         decoration-layout: "close";
       }
@@ -96,12 +105,32 @@ menu menu_model {
     }
 
     item {
+      label: _("Compact Mode");
+      action: "win.compact";
+    }
+
+    item {
+      label: _("Show Tray Icon");
+      action: "win.show-tray";
+    }
+
+    item {
+      label: _("Arrange Applications…");
+      action: "win.reorder";
+    }
+
+    item {
       label: _("Copy to Clipboard");
       action: "win.copy";
     }
   }
 
   section {
+    item {
+      label: _("URL Rules");
+      action: "app.preferences";
+    }
+
     item {
       label: _("Keyboard Shortcuts");
       action: "app.shortcuts";

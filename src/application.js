@@ -4,10 +4,15 @@ import GLib from "gi://GLib";
 import Xdp from "gi://Xdp";
 import { gettext as _ } from "gettext";
 
-import Window from "./window.js";
+import Window, { getApplications } from "./window.js";
 import Welcome from "./welcome.js";
 import About from "./about.js";
 import ShortcutsWindow from "./ShortcutsWindow.js";
+import Preferences from "./preferences.js";
+import Tray from "./tray.js";
+import AppOrderDialog from "./AppOrderDialog.js";
+import { findRuleApp } from "./rules.js";
+import { readResource, openWithApplication, sortApplications } from "./util.js";
 import { settings } from "./common.js";
 
 import "./style.css";
@@ -52,6 +57,50 @@ export default function Application() {
   settings.connect("changed::color-scheme", updateColorScheme);
 
 
+  let tray;
+  function updateTray() {
+    if (settings.get_boolean("show-tray") === Boolean(tray)) return;
+
+    if (tray) {
+      tray.destroy();
+      tray = null;
+      return;
+    }
+
+    try {
+      const themes = [
+        [_("Follow System"), 0],
+        [_("Light"), 1],
+        [_("Dark"), 4],
+      ];
+      tray = Tray({
+        items: [
+          { label: _("Open Junction"), activate: () => application.activate() },
+          { label: _("URL Rules"), activate: () => application.activate_action("preferences", null) },
+          { label: _("Arrange Applications"), activate: () => application.activate_action("arrange", null) },
+          { separator: true },
+          {
+            label: _("Compact Mode"),
+            checked: () => settings.get_boolean("compact"),
+            activate: () => settings.set_boolean("compact", !settings.get_boolean("compact")),
+          },
+          { separator: true },
+          ...themes.map(([label, value]) => ({
+            label,
+            radio: true,
+            checked: () => settings.get_int("color-scheme") === value,
+            activate: () => settings.set_int("color-scheme", value),
+          })),
+          { separator: true },
+          { label: _("Quit"), activate: () => application.activate_action("quit", null) },
+        ],
+      });
+    } catch (err) {
+      console.warn("Tray icon disabled", err.message);
+    }
+  }
+  settings.connect("changed::show-tray", updateTray);
+
   application.connect("startup", () => {
     if (!application.get_is_remote()) {
       // Prevent application from quitting if no windows are open
@@ -59,6 +108,8 @@ export default function Application() {
     }
 
     updateColorScheme()
+
+    updateTray();
   });
 
   // FIXME: Cannot deal with mailto:, xmpp:, ... URIs
@@ -73,6 +124,14 @@ export default function Application() {
     // log(["open", files.length, hint]);
 
     files.forEach((file) => {
+      const { resource, scheme } = readResource(file);
+      if (scheme === "http" || scheme === "https") {
+        const appInfo = findRuleApp(resource);
+        if (appInfo && openWithApplication({ appInfo, location: resource })) {
+          return;
+        }
+      }
+
       Window({
         application,
         file,
@@ -137,6 +196,7 @@ export default function Application() {
   application.set_accels_for_action("app.quit", ["<Primary>Q"]);
 
   application.add_action(settings.create_action("color-scheme"));
+  application.add_action(settings.create_action("compact"));
 
   application.set_accels_for_action("window.close", ["<Primary>W", "Escape"]);
   application.set_accels_for_action("win.copy", ["<Primary>C"]);
@@ -149,6 +209,51 @@ export default function Application() {
     About({ application });
   });
   application.add_action(showAboutDialog);
+
+  let preferences;
+  function showPreferences() {
+    if (!preferences) {
+      preferences = Preferences({ application });
+      preferences.window.connect("close-request", () => {
+        preferences = null;
+        return false;
+      });
+    }
+    preferences.window.present();
+    return preferences;
+  }
+
+  const preferencesAction = new Gio.SimpleAction({
+    name: "preferences",
+    parameter_type: null,
+  });
+  preferencesAction.connect("activate", () => showPreferences());
+  application.add_action(preferencesAction);
+
+  const arrangeAction = new Gio.SimpleAction({
+    name: "arrange",
+    parameter_type: null,
+  });
+  arrangeAction.connect("activate", () => {
+    AppOrderDialog({
+      applications: sortApplications(
+        getApplications("x-scheme-handler/https"),
+        settings.get_strv("app-order"),
+      ),
+      onChange() {},
+    });
+  });
+  application.add_action(arrangeAction);
+
+  const addRuleAction = new Gio.SimpleAction({
+    name: "add-rule",
+    parameter_type: new GLib.VariantType("s"),
+  });
+  addRuleAction.connect("activate", (self, variant) => {
+    showPreferences().addRule(variant.unpack());
+  });
+  application.add_action(addRuleAction);
+  application.set_accels_for_action("app.preferences", ["<Primary>comma"]);
 
   const showShortCutsWindow = new Gio.SimpleAction({
     name: "shortcuts",

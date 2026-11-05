@@ -10,6 +10,7 @@
     "--socket=wayland",
     "--device=dri",
     "--talk-name=org.freedesktop.Flatpak",
+    "--talk-name=org.kde.StatusNotifierWatcher",
     "--filesystem=host:ro",
     "--filesystem=xdg-data/applications:ro",
     "--filesystem=xdg-data/flatpak:ro",
